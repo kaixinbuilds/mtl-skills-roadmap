@@ -243,35 +243,32 @@ function vRoads(){
  st.lens=st.tab;
  const keys=Object.keys(DATA.cat).filter(k=>DATA.cat[k].lens===st.lens);
  const sel=st.cats.filter(k=>keys.includes(k));const act=sel.length?sel:keys;
- const side=st.lay==="side";const Ls=(side||st.sL==="All")?["CL","ML","TL"]:[st.sL];const Ss=st.sS==="All"?[1,2,3,4]:[st.sS];const Cs=st.sC==="All"?["G1","G2","G3","H"]:[st.sC];
+ const Ls=st.sL==="All"?["CL","ML","TL"]:[st.sL];const Ss=st.sS==="All"?[1,2,3,4]:[st.sS];const Cs=st.sC==="All"?["G1","G2","G3","H"]:[st.sC];
+ const cn=c=>c==="H"?"HMT":(st.mode==="el"?DATA.courseEn[c]:c);
  // group tagged records into units
  const U=new Map();
  for(const r of DATA.recs){if(!Ls.includes(r.lang)||!Cs.includes(r.course)||!Ss.includes(r.sec))continue;const ks=(r.cats||[]).filter(k=>act.includes(k));if(!ks.length)continue;
-  const id=[r.lang,r.course,r.sec,r.book,r.unit].join("|");if(!U.has(id))U.set(id,{r,cats:new Set(),tasks:[],notes:new Set()});const u=U.get(id);ks.forEach(k=>u.cats.add(k));
+  const id=[r.lang,r.course,r.sec,r.book,r.unit].join("|");if(!U.has(id))U.set(id,{r,cats:new Set(),tasks:[]});const u=U.get(id);ks.forEach(k=>u.cats.add(k));
   const t=st.mode==="el"?r.task_en:(r.task_m||r.task_en);if(t&&!u.tasks.some(x=>x[0]===t))u.tasks.push([t,r.lang]);}
  const units=[...U.values()];
  const seg=(lab,cur,opts,attr)=>`<div class="seg"><span class="lab">${esc(lab)}</span>${opts.map(([v,l])=>`<button ${attr}="${v}" aria-pressed="${cur===v}">${esc(l)}</button>`).join("")}</div>`;
- let h=`<section><h2>${esc(T(st.lens==="c21"?"t_c21r":"t_iblr"))}</h2><p class="sub">${st.mode==="el"?(st.lens==="c21"?"Built from the 21CC tags in the CPDD teacher guides. Slice by language, course and competency.":"Built from the inquiry tags in the CPDD teacher guides. Slice by language, course and type of inquiry. Inquiry-based learning becomes a BVSS school approach from 2027."):""}</p>`;
- h+=`<div class="slicer">`+seg(Tm("layout"),st.lay,[["grid",Tm("lay_grid")],["side",Tm("lay_side")]],"data-lay")+(side?"":seg(Tm("language"),st.sL,[["All",Tm("allx")],["CL","CL"],["ML","ML"],["TL","TL"]],"data-sl"))
-  +seg(Tm("course"),st.sC,[["All",Tm("allx")],...["G1","G2","G3","H"].map(c=>[c,c==="H"?"HMT":(st.mode==="el"?DATA.courseEn[c]:c)])],"data-sc")
-  +seg(Tm("year"),String(st.sS),[["All",Tm("allx")],...[1,2,3,4].map(n=>[String(n),secName(n,st.sL==="All"?st.lang:st.sL)])],"data-ss")
+ let h=`<section><h2>${esc(T(st.lens==="c21"?"t_c21r":"t_iblr"))}</h2><p class="sub">${st.mode==="el"?(st.lens==="c21"?"Built from the 21CC tags in the CPDD teacher guides. Slice by language, course, year and competency.":"Built from the inquiry tags in the CPDD teacher guides. Slice by language, course, year and type of inquiry. Inquiry-based learning becomes a BVSS school approach from 2027."):""}</p>`;
+ h+=`<div class="slicer">`+seg(Tm("language"),st.sL,[["All",Tm("allx")],["CL","CL"],["ML","ML"],["TL","TL"]],"data-sl")
+  +seg(Tm("course"),st.sC,[["All",Tm("allx")],...["G1","G2","G3","H"].map(c=>[c,cn(c)])],"data-sc")
+  +seg(Tm("year"),String(st.sS),[["All",Tm("allx")],...[1,2,3,4].map(n=>[String(n),secName(n,st.lang)])],"data-ss")
   +`<div class="seg"><span class="lab">${esc(Tm("tags"))}</span>${keys.map(k=>`<button class="catbtn cat-${k}" data-cat="${k}" aria-pressed="${sel.includes(k)}">${esc(catName(k))}</button>`).join("")}${sel.length?`<button data-cat="__clear">${esc(Tm("clear"))}</button>`:""}</div></div>`;
- // heat table: tag x year
- const cnt=(k,s)=>units.filter(u=>u.r.sec===s&&u.cats.has(k)).length;const mx=Math.max(1,...act.map(k=>Math.max(...Ss.map(s=>cnt(k,s)))));
- h+=`<h3>${esc(Tm("bysec"))} · ${units.length} ${esc(Tm("units"))}</h3><div class="scroll" style="margin-bottom:14px"><table class="heat"><thead><tr><th>${esc(Tm("tags"))}</th>${Ss.map(s=>`<th style="text-align:center">${esc(secName(s,st.sL==="All"?st.lang:st.sL))}</th>`).join("")}</tr></thead><tbody>`
-  +act.map(k=>`<tr class="cat-${k}"><td><span class="tag">${esc(catName(k))}</span></td>${Ss.map(s=>{const n=cnt(k,s);return `<td class="num" style="--a:${n/mx}"><span>${n||"·"}</span></td>`}).join("")}</tr>`).join("")+`</tbody></table></div>`;
- // roadmap grid
+ // heat table: tag x (year x language)
+ const cnt=(k,s,L)=>units.filter(u=>u.r.sec===s&&u.r.lang===L&&u.cats.has(k)).length;
+ const mx=Math.max(1,...act.flatMap(k=>Ss.flatMap(s=>Ls.map(L=>cnt(k,s,L)))));
+ h+=`<h3>${esc(Tm("bysec"))} · ${units.length} ${esc(Tm("units"))}</h3><div class="scroll" style="margin-bottom:14px"><table class="heat"><thead><tr><th rowspan="2">${esc(Tm("tags"))}</th>${Ss.map(s=>`<th colspan="${Ls.length}" style="text-align:center;border-left:1px solid var(--line)">${esc(secName(s,st.lang))}</th>`).join("")}</tr><tr>${Ss.map(()=>Ls.map((L,i)=>`<th class="lc ${L}" style="text-align:center;${i===0?"border-left:1px solid var(--line)":""}">${L}</th>`).join("")).join("")}</tr></thead><tbody>`
+  +act.map(k=>`<tr class="cat-${k}"><td><span class="tag">${esc(catName(k))}</span></td>${Ss.map(s=>Ls.map((L,i)=>{const n=cnt(k,s,L);return `<td class="num" style="--a:${n/mx};${i===0?"border-left:1px solid var(--line)":""}"><span>${n||"·"}</span></td>`}).join("")).join("")}</tr>`).join("")+`</tbody></table></div>`;
+ // roadmap grid: rows = year x course, columns = languages
  const card=u=>`<div class="ucard"><span class="u">${esc(bk(u.r))} U${esc(u.r.unit)}</span><div>${[...u.cats].map(k=>`<span class="tag cat-${k}">${esc(catName(k))}</span>`).join("")}</div><div><b>${two(u.r.theme_m,u.r.theme_en,u.r.lang)}</b></div>${u.tasks.slice(0,3).map(t=>`<div class="note">${st.mode==="el"?esc(t[0]):`<span lang="${ML_[t[1]]}">${esc(t[0])}</span>`}</div>`).join("")}</div>`;
- if(!units.length){h+=`<p class="note">${esc(Tm("none"))}</p>`}else if(side){
+ if(!units.length){h+=`<p class="note">${esc(Tm("none"))}</p>`}else{
  h+=`<div class="scroll"><table class="road"><thead><tr><th class="s"></th>${Ls.map(L=>`<th class="lc ${L}">${esc(X(DATA.langNameM[L],DATA.langName[L]))}</th>`).join("")}</tr></thead><tbody>`;
- for(const c of Cs)for(const s of Ss){const row=units.filter(u=>u.r.course===c&&u.r.sec===s);
-  h+=`<tr><th class="s" scope="row">${esc(c==="H"?"HMT":(st.mode==="el"?DATA.courseEn[c]:c))} · ${esc(secName(s,st.lang))}</th>${Ls.map(L=>{const cell=row.filter(u=>u.r.lang===L);return `<td>${cell.length?cell.map(card).join(""):`<span class="empty">—</span>`}</td>`}).join("")}</tr>`}
- h+=`</tbody></table></div>`}else{
- h+=`<div class="scroll"><table class="road"><thead><tr><th class="s"></th>${Ss.map(s=>`<th>${esc(secName(s,st.sL==="All"?st.lang:st.sL))}</th>`).join("")}</tr></thead><tbody>`;
- for(const L of Ls)for(const c of Cs){const us=units.filter(u=>u.r.lang===L&&u.r.course===c);if(!us.length)continue;
-  h+=`<tr><th class="s" scope="row"><span class="lc ${L}">${L}</span> ${esc(crsName(c,L))}</th>`;
-  for(const s of Ss){const cell=us.filter(u=>u.r.sec===s);h+=`<td>${cell.length?cell.map(card).join(""):`<span class="empty">—</span>`}</td>`}
-  h+=`</tr>`}
+ for(const s of Ss){h+=`<tr class="band"><td colspan="${Ls.length+1}" style="background:var(--soft);font-weight:600;font-size:12.5px">${esc(secName(s,st.lang))}</td></tr>`;
+  for(const c of Cs){const row=units.filter(u=>u.r.course===c&&u.r.sec===s);
+  h+=`<tr><th class="s" scope="row">${esc(secName(s,st.lang))} · ${esc(cn(c))}</th>${Ls.map(L=>{const cell=row.filter(u=>u.r.lang===L);return `<td>${cell.length?cell.map(card).join(""):`<span class="empty">—</span>`}</td>`}).join("")}</tr>`}}
  h+=`</tbody></table></div>`}
  h+=`<div class="grid2" style="margin-top:14px">`+Ls.map(L=>`<div class="card"><h3 class="lc ${L}">${L}</h3><p style="margin:0;font-size:13.5px">${esc(st.lens==="c21"?X(DATA.c21[L],DATA.c21En[L]):X(DATA.iblTg[L],DATA.iblTgEn[L]))}</p></div>`).join("")+`</div></section>`;
  return h;
