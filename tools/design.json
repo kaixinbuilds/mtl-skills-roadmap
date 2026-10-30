@@ -66,5 +66,57 @@
    "ML": "Same JATi structure at every level; the difference is domain reach and function mix. G1 starts at Sekolah and Diri and reaches Rantau only in Sec 3 Unit 5; G2 reaches Dunia in Sec 4 Unit 3; G3 in 2B Unit 7; Higher Malay is Diri-Masyarakat-Dunia from 1A Unit 1. Higher Malay unit titles are proverbs.",
    "TL": "Same themes and cycle at every level. G1 writing is guided and multimodal; G3 and HTL practise summary from Sec 1 and add an argumentative essay and debate in Sec 3; HTL alone sits summary and word-joining in the exam."
   }
+ },
+ "evEn": {
+  "CL": "G1 Chinese teacher guides, Sec 1A to Sec 4, read in full; G2, G3 and HCL from the roadmap dataset and the guides' learning-content tables.",
+  "ML": "G1 Malay teacher guides 1A to 4 (Units 1 to 3) read in full; Domain rows read from every course's guides; G2, G3 and HML lesson design assumed to follow the same JATi structure (verify).",
+  "TL": "G1 Tamil unit overviews read for 1A to Sec 4; lesson-prep PDFs could not be text-extracted; G2, G3 and HTL from the roadmap dataset (verify)."
+ },
+ "cellsEn": {
+  "shape": {
+   "CL": "Every unit runs lead in, learn, practise, apply, assess, with separate blocks for listening and speaking, reading (an everyday practical text, then a core literary text) and writing, followed by a culture corner, an integrated task and extended reading. Three units per book.",
+   "ML": "A one-period opening-discussion hook, then three parts each led by a key question, framed by one intended understanding and one or two of six language functions. Four units per book; Sec 4 has three content units and three skills units.",
+   "TL": "One fixed cycle of about 15 periods: entry hook, think and discuss, read aloud and vocabulary, listening and viewing and reading comprehension, grammar and literature, language games, then the production task. Four or three units a book, seven in Sec 3, six in Sec 4."
+  },
+  "routines": {
+   "CL": "Listening and speaking: \"three looks, three talks\" (talk before viewing, after viewing, and beyond it). Reading: three readings anchored in the text (first, second and third read). Writing: say it, write it, then check it. Same routines in all four years; only the scaffolds thin.",
+   "ML": "Singapore Teaching Practice (STP) teaching actions head every lesson plan. Think-Pair-Share (about 140 uses in the G1 guides) and oral review (about 120) carry the lessons, with IRF questioning, See-Think-Wonder and other thinking routines, and a 3-2-1 exit pass.",
+   "TL": "The cycle itself is the routine: \"Let's think\" and \"Let's discuss\" before reading; \"Let's read\" with \"Let's learn the word meanings\"; then \"Let's discuss\" and \"Let's understand\"; \"Let's learn\" (grammar); and \"Let's create\" / \"I too am a creator\" to produce."
+  },
+  "writing": {
+   "CL": "Staged and scaffolded: SLS writing-guidance packages for reading the task and micro-practice; say first (oral rehearsal with word and sentence scaffolds), then write, then check (read to a partner, peer check against a checklist). G1 adds a typing-support corner in Sec 1 to 2.",
+   "ML": "Embedded in one part of the unit: discuss a model text (for example social-media comments), then write; no fixed check step. The response text is named and regular from Sec 3; Sec 4 Unit 6 is a writing-guides unit (formal email, response text, five expository types, speech).",
+   "TL": "One production task per unit, often multimodal (e-banner, comic strip, poster, brochure, résumé with email). Guided completion in Sec 1 gives way to typed and online texts in Sec 4. Assessment sheets for self and peer checking sit in the appendices."
+  },
+  "oral": {
+   "CL": "A video or animation every unit, taught through \"three looks, three talks\"; spoken-interaction learning points are marked #. Read-aloud technique is taught inside the second and third readings, but with no explicit guide.",
+   "ML": "An SLS video every unit. Guides for giving views rise from \"Let's share views\" (1A, 1B) to \"Developing views\" (1B), 5W1H and question-and-answer (Sec 2), \"Giving views\" (Sec 3) and the Sec 4 Unit 4 toolkit (discussion, debate, presenting from audio or video). A read-aloud guide appears from 1A.",
+   "TL": "Viewing comprehension and discussion every unit. From Sec 3 the objectives ask for speaking about pictures in spoken Tamil clearly, fluently and confidently. Read-aloud is taught inside \"Let's read\": pronunciation and pausing in Sec 1, intonation by Sec 4."
+  },
+  "reading": {
+   "CL": "Two texts a unit (an everyday practical text and a core literary text) with one named reading skill per unit that converges on the unit theme; \"reading magnifier\" questions, reading tips, and a digital text for decoding support.",
+   "ML": "Reading sits inside each part of the unit (dialogue, article, literature extract) and current-affairs news; no reading skill is named per unit. Sec 4 Unit 5 is a critical-reading toolkit (purpose, argument, annotation, lenses, text-to-self and text-to-world).",
+   "TL": "Reading comprehension with written answers every unit, plus prior-knowledge comprehension and current-affairs news from 2B."
+  },
+  "assess": {
+   "CL": "Workbook pages after each block; peer check in the \"check\" step of writing; teacher-guide answer keys; SLS auto-marked items suggested.",
+   "ML": "Anecdotal assessment is written into every lesson; activity book and SLS responses; the guide separates assessment for feedback from weighted assessment, and flags inquiry tasks usable as a WA.",
+   "TL": "Holistic assessment tagged on activities; self and peer assessment sheets in the appendices."
+  },
+  "examform": {
+   "CL": "Sec 4: all three writing units are replies to an online post. Sec 1 to 3 build the moves: text messages and posts, then emails giving a view, then discussion-forum responses.",
+   "ML": "Sec 3: half the writing tasks are response texts; Sec 4 adds the writing-guides unit. The exam form (personal response to an online post, at least 60 words) is practised from 1B Unit 8.",
+   "TL": "Only the last Sec 4 unit (comments on online posts). The G1 written-paper format is still unconfirmed, so confirm it before bringing the task forward."
+  },
+  "scope": {
+   "CL": "Spiral each semester; no CPDD domain tags. Domains on this page are inferred from theme wording.",
+   "ML": "Widens by design; every unit carries a CPDD Domain tag (self, family, school, society, region, world). The guide states that learning starts near the self before moving to society, nation and the world.",
+   "TL": "Theme rotation; the same theme and sub-theme in every course each year. Domains here are inferred from the theme wording."
+  },
+  "lod": {
+   "CL": "G1 keeps the same routines but adds picture-and-text and typing-support scaffolds in Sec 1 to 2, and sits one short online post in the exam. G2, G3 and HCL add essays (narrative, expository, argumentative) with stimulus-based composition in Sec 4; HCL adds summary writing and sentence correction from Sec 3. G2, G3 and HCL share Sec 1 to 2 themes; G1 shares most; themes split by course in Sec 3 to 4.",
+   "ML": "Same JATi structure at every level; the difference is domain reach and function mix. G1 starts at school and self and reaches the region only in Sec 3 Unit 5; G2 reaches the world in Sec 4 Unit 3; G3 in 2B Unit 7; Higher Malay is self-society-world from 1A Unit 1. Higher Malay unit titles are proverbs.",
+   "TL": "Same themes and cycle at every level. G1 writing is guided and multimodal; G3 and HTL practise summary from Sec 1 and add an argumentative essay and debate in Sec 3; HTL alone sits summary and word-joining in the exam."
+  }
  }
 }

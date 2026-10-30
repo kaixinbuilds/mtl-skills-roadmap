@@ -65,6 +65,19 @@ D["cat"].update({
  "PA_CL": {"lens":"pri","en":"Civic Literacy","zh":"公民素养","ms":"Literasi sivik","ta":"குடிமை அறிவு","desc":"willing to act on social and global issues from the Singapore context; discerning about online information"},
  "PA_CM": {"lens":"pri","en":"Communication","zh":"沟通","ms":"Komunikasi","ta":"தொடர்பு","desc":"courageous and spontaneous in voicing ideas, able to persuade; open-minded and empathetic across cultures"},
 })
+CAT_DESC = {  # one-line meaning of each 21CC / IBL tag, shown in the unit detail panel
+ "CAIT": "MOE 21CC domain: weighing evidence and views, generating new ideas, and adjusting thinking to new situations.",
+ "CCIS": "MOE 21CC domain: getting a message across to a reader or listener, working with others, and finding and using information.",
+ "CGC": "MOE 21CC domain: understanding the community, Singapore and the world, and engaging respectfully with other cultures.",
+ "SEC": "MOE 21CC domain: self-awareness, self-management, social awareness, relationship management and responsible decision-making.",
+ "DIG": "A teacher note in the guide prompting digital literacy at this point.",
+ "UG": "The CL teacher guide's appendix uses this unit as its worked example of building a 21CC unit goal.",
+ "INQ": "Students work from a question or problem and find out, plan, make or present something. CPDD-tagged where the ML guide flags the task as inquiry-based (usable as a weighted assessment); otherwise inferred from the task wording.",
+ "STAR": "ML syllabus teaching activity in four stages: Scenario Analysis, Team Inquiry, Application and Reflection. Students unpack a situation, investigate it in teams, apply what they found, then reflect.",
+ "EPED": "TL guide tag: an e-pedagogy activity planned as an inquiry-based learning experience.",
+}
+for _k, _d in CAT_DESC.items():
+    if _k in D["cat"]: D["cat"][_k]["desc"] = _d
 DERIVE = {"CAIT":["PA_AT","PA_IT"], "CCIS":["PA_CM"], "CGC":["PA_CL"], "SEC":["PA_AT"]}  # CPDD 21CC domain -> BVSS priority area
 PURP_VIEW = {"Give a view","Argue","Persuade","Propose","Recommend"}
 PURP_INTER = {"Reply","Respond","Give a view","Thank","Share","Apply","Report"}
