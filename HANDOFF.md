@@ -26,6 +26,7 @@ Two comparisons must always be easy: across languages for the same course, and w
 ## How to change things
 
 - **Edit a design fact**: change `tools/design.json`, then `python3 tools/enrich.py`. The script rewrites the embedded DATA in place and is idempotent.
+- **Edit page text** (also in `tools/design.json`, then rerun `enrich.py`): `about` is the "About this tab" box on each tab; `stp` is the STP Learning Orientations card on the IBL tab (PDF and KB links, how the MTL guides line up); `cellsEn` / `evEn` are the plain-English design text shown in EL mode.
 - **Edit or add an inference rule**: edit `RULES` in `tools/enrich.py` (id, test, 21CC cats, priority areas, one-line reason), rerun. Every unit is re-tagged; the rule list on the page updates itself.
 - **Change the CPDD-to-priority mapping**: `DERIVE` in `tools/enrich.py` (currently CAIT → AT + IT, CCIS → CM, CGC → CL, SEC → AT).
 - **Change ML domains**: the `ml(...)` lines in `tools/enrich.py` transcribe each guide's Gambaran Keseluruhan Domain row. CL and TL domain keywords are in `KW`.

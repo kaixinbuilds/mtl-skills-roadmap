@@ -118,5 +118,138 @@
    "ML": "Same JATi structure at every level; the difference is domain reach and function mix. G1 starts at school and self and reaches the region only in Sec 3 Unit 5; G2 reaches the world in Sec 4 Unit 3; G3 in 2B Unit 7; Higher Malay is self-society-world from 1A Unit 1. Higher Malay unit titles are proverbs.",
    "TL": "Same themes and cycle at every level. G1 writing is guided and multimodal; G3 and HTL practise summary from Sec 1 and add an argumentative essay and debate in Sec 3; HTL alone sits summary and word-joining in the exam."
   }
+ },
+ "stp": {
+  "pdf": "https://file.go.gov.sg/stp-learning-orientations.pdf",
+  "source": "MOE, Singapore Teaching Practice: An Overview of Learning Orientations",
+  "ibl": {
+   "kb": "https://go.gov.sg/stp-kb3-chapter14",
+   "feature": "Learning is guided by a driving question. Students sort through complex issues and problems from several perspectives and draw their own conclusions.",
+   "behaviours": [
+    "ask authentic questions",
+    "persist through uncertainty",
+    "engage in evidence-based reasoning",
+    "be curious about their world"
+   ],
+   "pedagogies": [
+    "Issue Investigation",
+    "Predict–Observe–Explain (POE)",
+    "Problem-based Learning"
+   ],
+   "c21": [
+    "Critical, Adaptive and Inventive Thinking",
+    "Communication, Collaboration and Information Skills"
+   ]
+  },
+  "bridge": [
+   "Driving question: every ML unit is framed by an enduring understanding and essential questions, and each part opens with a key question. This is the nearest thing in the MTL guides to an STP driving question.",
+   "ML STAR Team Inquiry (Scenario Analysis, Team Inquiry, Application, Reflection) is closest to Issue Investigation and Problem-based Learning: teams work a real scenario, then apply and reflect.",
+   "ML Sec 3 Unit 4 (G1 and G2): plan a business or social enterprise that helps the community. This is the clearest problem-based task in the guides, and the guide says it can be a weighted assessment.",
+   "TL G3 Book 2A Units 2 and 3 carry an e-pedagogy inquiry tag (newspaper report, formal email).",
+   "CL guides do not tag inquiry. Each CL unit's integrated task is inquiry-shaped but not yet in this dataset (HANDOFF.md, next step 2)."
+  ],
+  "others": [
+   [
+    "Dialogic Talk",
+    "Language structures thinking: students think aloud, ask clarifying questions and build on others' ideas. Already common in MTL lessons (CL's three looks, three talks; ML Think-Pair-Share; TL think and discuss).",
+    "https://go.gov.sg/stp-kb3-chapter20"
+   ],
+   [
+    "Embodied Learning",
+    "The body's part in making meaning, for example drama-based pedagogy.",
+    "https://go.gov.sg/stp-kb3-chapter18"
+   ],
+   [
+    "Experiential Learning",
+    "Learning through authentic experience and reflection, for example field-based, place-based or service learning.",
+    "https://go.gov.sg/stp-kb3-chapter17"
+   ],
+   [
+    "Disciplinary and Interdisciplinary Learning",
+    "Connections within and across subjects, for example concept-based or project-based learning, design thinking.",
+    "https://go.gov.sg/stpkb3chapt19"
+   ]
+  ]
+ },
+ "about": {
+  "over": {
+   "what": "The common frame. Under SEC 2027, CL, ML and TL share the same three papers and the same weights, so the department can plan once and adapt for each language.",
+   "points": [
+    "Weights shift by course: G1 puts 65% on Paper 3 (oral and listening); Higher puts 40% on writing.",
+    "Paper 1 tasks differ by language even within one course. At G1, all three ask for a short online response, but length and form differ (the TL G1 format is still to be confirmed).",
+    "The last section shows where CPDD documents already point to inquiry and 21CC."
+   ],
+   "use": "Start here, then open By language to go deep on one language."
+  },
+  "lang": {
+   "what": "One language in depth: its exam papers for each course, which strands its units teach and when, and how its guides differ from the other two.",
+   "points": [
+    "The Strand × Course bars count the Sec 1 to 4 units that name each strand; colour follows the exam paper.",
+    "'Where the three differ' compares unit structure, routines, writing, oral preparation and topic scope across CL, ML and TL.",
+    "The unit themes are listed at the end."
+   ],
+   "use": "Pick the language with the language buttons above."
+  },
+  "design": {
+   "what": "How each language's teaching package is designed, set side by side, and how far each one widens its topics from Sec 1 to 4.",
+   "points": [
+    "CL spirals from self to world every semester; ML widens by design, with a CPDD domain on every unit; TL rotates a fixed set of themes every year.",
+    "In the topic-scope ladder, each unit is a pill with dots for its topic domains. Solid dots come from the ML guides; dashed dots are inferred from CL and TL theme wording.",
+    "The side-by-side table covers nine aspects of design and ends with how G1 to Higher differ within each language."
+   ],
+   "use": "Switch the ladder between comparing languages (same course) and comparing courses (same language)."
+  },
+  "map": {
+   "what": "Every unit's learning points for one course, laid out by strand and year, set against that course's exam papers.",
+   "points": [
+    "Read along a row to see one strand build from Sec 1 to 4.",
+    "The paper cards at the top show what the exam asks for, so you can see which units build toward it.",
+    "'3 languages side by side' puts CL, ML and TL for the same course in one table."
+   ],
+   "use": "Choose the course at the top and narrow by year if needed."
+  },
+  "theme": {
+   "what": "The unit themes for each language, by year and course.",
+   "points": [
+    "Shows which themes all courses share and where themes split by course (mostly in Sec 3 and 4).",
+    "The side-by-side layout compares the three languages' themes for the same course."
+   ],
+   "use": "Use it with the Pedagogical design ladder to see each theme's topic domain."
+  },
+  "c21": {
+   "what": "Where the 21st century competencies (21CC) appear in each language's units, Sec 1 to 4.",
+   "points": [
+    "Only the TL guides tag 21CC activity by activity. The CL and ML guides hardly tag it, so most CL and ML tags here are inferred.",
+    "A solid tag is named in the CPDD guide; a dashed tag is inferred from the task wording by a rule. Treat inferred tags as proposals.",
+    "Click any unit card to see which tasks carry each tag and why."
+   ],
+   "use": "Filter by language, course, year, competency and source. Heat-table cells read CPDD+inferred."
+  },
+  "ibl": {
+   "what": "Where inquiry-based learning, a BVSS school approach from 2027, already sits in the MTL units, and where it could go.",
+   "points": [
+    "CPDD flags inquiry mainly in ML (STAR Team Inquiry in about a dozen units, and a community business plan in Sec 3 Unit 4), plus two TL G3 Sec 2 units. The CL guides do not tag it.",
+    "Dashed tags mark tasks that look inquiry-shaped (find out, plan, make or present) but are not tagged.",
+    "The STP card below sets out what MOE counts as inquiry: a driving question, and four student behaviours to look for."
+   ],
+   "use": "Click a unit card to see the task, the guide's note and the STP look-fors."
+  },
+  "pri": {
+   "what": "The four BVSS E21CC priority areas (Adaptive Thinking, Inventive Thinking, Civic Literacy, Communication) used as a lens on the units.",
+   "points": [
+    "No CPDD guide uses these areas, so every tag is either derived from a CPDD 21CC tag or inferred by rule.",
+    "Derived tags rest on a CPDD tag and are the stronger evidence; inferred tags are proposals to confirm in SOW planning.",
+    "Click a unit card to see the task behind each tag and the rule that placed it."
+   ],
+   "use": "Hover a priority-area button to see its descriptor from the school slide."
+  },
+  "syl": {
+   "what": "How each strand of the roadmap lines up with the MTL Syllabus 2021 skills and with each language's own syllabus learning outcomes.",
+   "points": [
+    "Use it to cite the syllabus outcome behind a unit's learning point in SOW documents.",
+    "The CL syllabus goals are also listed by course."
+   ],
+   "use": ""
+  }
  }
 }
