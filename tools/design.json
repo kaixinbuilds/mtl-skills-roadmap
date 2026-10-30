@@ -228,9 +228,9 @@
   "ibl": {
    "what": "Where inquiry-based learning, a BVSS school approach from 2027, already sits in the MTL units, and where it could go.",
    "points": [
+    "The essence section sets out what MOE's Singapore Teaching Practice means by inquiry: five key elements, the inquiry cycle, the 5E model, structured to open approaches, and what makes it work.",
     "CPDD flags inquiry mainly in ML (STAR Team Inquiry in about a dozen units, and a community business plan in Sec 3 Unit 4), plus two TL G3 Sec 2 units. The CL guides do not tag it.",
-    "Dashed tags mark tasks that look inquiry-shaped (find out, plan, make or present) but are not tagged.",
-    "The STP card below sets out what MOE counts as inquiry: a driving question, and four student behaviours to look for."
+    "Dashed tags mark tasks that look inquiry-shaped (find out, plan, make or present) but are not tagged. The STP card under the roadmap gives the student behaviours to look for."
    ],
    "use": "Click a unit card to see the task, the guide's note and the STP look-fors."
   },
@@ -251,5 +251,174 @@
    ],
    "use": ""
   }
+ },
+ "iblsg": {
+  "src": "STP Knowledge Base, Chapter 14: Inquiry-based Learning (IBL): Understanding and Enacting the Journey in Learning (Chue Kah Loong and Yvonne Seng)",
+  "kb": "https://go.gov.sg/stp-kb3-chapter14",
+  "essence": "In MOE's Singapore Teaching Practice, IBL is a constructivist approach: students explore a problem, issue, phenomenon or idea by working to resolve an inquiry question. The teacher shifts from telling to facilitating, so that students build 21CC (above all critical, adaptive and inventive thinking, and communication, collaboration and information skills) while still reaching the intended learning outcomes.",
+  "elements": [
+   [
+    "An inquiry question",
+    "the question students set out to resolve drives the learning"
+   ],
+   [
+    "An authentic context",
+    "the problem sits in the real world"
+   ],
+   [
+    "Growing self-direction",
+    "students take more ownership over time"
+   ],
+   [
+    "Teacher as facilitator",
+    "the teacher activates and guides rather than transmits"
+   ],
+   [
+    "Active learning",
+    "students research, try things out, discuss and make"
+   ]
+  ],
+  "cycle": [
+   [
+    "Orientation",
+    "Introduces the inquiry question or problem; sparks curiosity with a starter activity.",
+    "Start thinking about the problem; ask questions."
+   ],
+   [
+    "Conceptualisation",
+    "Links to prior knowledge; helps students form questions or hypotheses; clarifies concepts.",
+    "Connect to what they know; generate questions or hypotheses."
+   ],
+   [
+    "Investigation",
+    "Facilitates the activities; asks probing questions to deepen thinking.",
+    "Research or experiment; make sense of findings; propose solutions."
+   ],
+   [
+    "Conclusion",
+    "Checks understanding; summarises findings; leads reflection.",
+    "Synthesise and share findings; reflect; give peer feedback."
+   ]
+  ],
+  "discussion": "Discussion runs through every phase: students share findings, listen to others, give peer feedback and reflect.",
+  "approaches": [
+   [
+    "Structured",
+    "Teacher gives the question and a step-by-step method; the outcome may be known. Low autonomy; builds basic inquiry skills."
+   ],
+   [
+    "Guided",
+    "Teacher gives the question or problem; students decide the method and the solution. Medium to high complexity. For example problem-based or design-based learning."
+   ],
+   [
+    "Open",
+    "Teacher sets a broad theme; students frame the question, method and solution. Highest autonomy; needs mature learners and skilled facilitation. For example project-based or place-based learning."
+   ]
+  ],
+  "enablers": [
+   [
+    "Open-ended questions",
+    "Move students past yes-or-no answers to explain, connect and apply."
+   ],
+   [
+    "Scaffolding that fades",
+    "Support early, withdrawn as students gain skill. Too much stifles independence; too little leaves students lost."
+   ],
+   [
+    "Feedback that feeds forward",
+    "What went well, how to improve, what to explore next; aimed at the process and at self-regulation, not only the task."
+   ],
+   [
+    "Psychological safety",
+    "Students can ask questions and take risks without fear of judgement; teachers attend to how students feel."
+   ]
+  ],
+  "example": {
+   "label": "The chapter's language-subject example (English)",
+   "q": "How can we spot \"fake news\" and create awareness of it?",
+   "steps": [
+    [
+     "Orientation",
+     "the teacher shows some sensationalised news"
+    ],
+    [
+     "Conceptualisation",
+     "students ask what fake news is for and what it does"
+    ],
+    [
+     "Investigation",
+     "students research online"
+    ],
+    [
+     "Conclusion",
+     "students choose how to present what they found"
+    ]
+   ]
+  },
+  "mtl": "Our reading for MTL: most tasks in the CPDD guides sit at the structured end, and ML's STAR Team Inquiry is a guided approach. Moving a unit's task toward guided inquiry mostly means opening with a real question, letting students choose how to find out, and building discussion and feed-forward into each phase.",
+  "cycleNote": "The STP chapter uses Pedaste et al.'s (2015) general inquiry cycle, a synthesis of 32 published inquiry models. Teachers need not follow the phases in a fixed order; the cycle names what each part of an inquiry is for.",
+  "fiveE": {
+   "intro": "The 5E model (Bybee et al., 2006) is the inquiry cycle most teachers already know. The STP chapter presents it alongside the general cycle above.",
+   "phases": [
+    [
+     "Engage",
+     "Hook interest and surface what students already think, with a question, puzzle, image or short clip.",
+     "Orientation"
+    ],
+    [
+     "Explore",
+     "Students investigate first-hand, before formal teaching: try things, gather information, talk it through.",
+     "Conceptualisation + Investigation"
+    ],
+    [
+     "Explain",
+     "The teacher focuses attention on key aspects of what students found, and students put their understanding into words; terms and concepts are made explicit here.",
+     "Conclusion"
+    ],
+    [
+     "Elaborate",
+     "Students extend and apply the understanding to a new situation or task.",
+     "Investigation, applied to a new case"
+    ],
+    [
+     "Evaluate",
+     "Students judge their own progress with the teacher's help; the teacher checks the learning outcomes.",
+     "Conclusion (reflection)"
+    ]
+   ],
+   "mapNote": "The ≈ line on each card is our rough match to the STP cycle, not the chapter's.",
+   "mtl": "In an MTL unit, 5E maps onto routines that already exist. Engage is the unit's video or picture hook (CL three looks, three talks; ML opening discussion; TL think and discuss). Explore is reading and discussing the texts. Explain is the language point or text feature. Elaborate is the writing or speaking task. Evaluate is the peer check and self-assessment."
+  },
+  "modes": "Inquiry can run inductively (students experience first, then draw the idea out, as in 5E), deductively (students propose a hypothesis, then test it), or as a mix (experience first, then form a hypothesis to investigate).",
+  "terms": [
+   [
+    "Driving (inquiry) question",
+    "The open question the whole inquiry sets out to resolve."
+   ],
+   [
+    "Constructivism",
+    "Learners build knowledge from experience and from what they already know (Piaget); social constructivism adds that this happens through language and interaction (Vygotsky)."
+   ],
+   [
+    "Zone of proximal development",
+    "What a student can do with help but not yet alone; scaffolding works inside this zone."
+   ],
+   [
+    "Autonomy support and structure",
+    "Giving meaningful choices plus clear goals, scaffolds and feedback; together they build intrinsic motivation."
+   ],
+   [
+    "Deep vs surface learning",
+    "Making sense and connecting ideas, versus memorising; open questions push toward deep learning."
+   ],
+   [
+    "Feed up, feed back, feed forward",
+    "Where am I going, how am I doing, what next (Hattie and Timperley)."
+   ],
+   [
+    "Feedback levels",
+    "Task (is it right), process (how it was done), self-regulation (how the learner monitors and adjusts), self (personal praise, least useful)."
+   ]
+  ]
  }
 }
