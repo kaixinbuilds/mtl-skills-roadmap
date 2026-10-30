@@ -220,7 +220,7 @@
    "what": "Where the 21st century competencies (21CC) appear in each language's units, Sec 1 to 4.",
    "points": [
     "Only the TL guides tag 21CC activity by activity. The CL and ML guides hardly tag it, so most CL and ML tags here are inferred.",
-    "A solid tag is named in the CPDD guide; a dashed tag is inferred from the task wording by a rule. Treat inferred tags as proposals.",
+    "A blue tag is named in the CPDD guide; an amber tag is mapped from the task wording by a rule. Treat inferred tags as proposals.",
     "Click any unit card to see which tasks carry each tag and why."
    ],
    "use": "Filter by language, course, year, competency and source. Heat-table cells read CPDD+inferred."
@@ -230,7 +230,7 @@
    "points": [
     "The essence section sets out what MOE's Singapore Teaching Practice means by inquiry: five key elements, the inquiry cycle, the 5E model, structured to open approaches, and what makes it work.",
     "CPDD flags inquiry mainly in ML (STAR Team Inquiry in about a dozen units, and a community business plan in Sec 3 Unit 4), plus two TL G3 Sec 2 units. The CL guides do not tag it.",
-    "Dashed tags mark tasks that look inquiry-shaped (find out, plan, make or present) but are not tagged. The STP card under the roadmap gives the student behaviours to look for."
+    "Amber tags mark tasks that look inquiry-shaped (find out, plan, make or present) but are not tagged. The STP card under the roadmap gives the student behaviours to look for."
    ],
    "use": "Click a unit card to see the task, the guide's note and the STP look-fors."
   },
