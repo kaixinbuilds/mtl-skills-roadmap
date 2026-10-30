@@ -173,10 +173,15 @@
  },
  "about": {
   "over": {
-   "what": "The common frame. Under SEC 2027, CL, ML and TL share the same three papers and the same weights, so the department can plan once and adapt for each language.",
+   "headline": "Plan the four-year MTL learning journey",
+   "what": "See how CL, ML and TL skills build from Sec 1 to 4 towards SEC 2027, and where inquiry and E21CC already have a foothold in the CPDD guides.",
+   "takeaways": [
+    {"t": "Shared exam structure", "stat": "3 papers", "sl": "Same papers and weights in CL, ML and TL, for every course", "imp": "Plan common department milestones once, then adapt the tasks for each language.", "go": "lang", "gl": "Compare the languages"},
+    {"t": "Different course priorities", "stat": "{g1p3}%", "sl": "G1 · Paper 3 (oral and listening), all three languages. Higher puts {hp1}% on Paper 1 (writing).", "imp": "Weight lesson time to the course: spoken interaction for G1, sustained writing for Higher.", "go": "map", "gc": "G1", "gl": "Open the G1 course map"},
+    {"t": "Inquiry already in the guides", "stat": "{iblCpdd} units", "sl": "CPDD-tagged inquiry: ML {iblML}, TL {iblTL}, CL {iblCL}. {iblInf} more look inquiry-shaped by rule.", "imp": "Start IBL from tasks the guides already contain before designing new ones.", "go": "ibl", "gl": "Open the inquiry roadmap"}
+   ],
    "points": [
-    "Weights shift by course: G1 puts 65% on Paper 3 (oral and listening); Higher puts 40% on writing.",
-    "Paper 1 tasks differ by language even within one course. At G1, all three ask for a short online response, but length and form differ (the TL G1 format is still to be confirmed).",
+    "Paper 1 tasks differ by language even within one course. At G1, all three ask for a short online response, but length and form differ. The TL G1 format is provisional until it is checked against SEAB K122 with the TL team.",
     "The last section shows where CPDD documents already point to inquiry and 21CC."
    ],
    "use": "Start here, then open By language to go deep on one language."
@@ -202,8 +207,8 @@
   "map": {
    "what": "Every unit's learning points for one course, laid out by strand and year, set against that course's exam papers.",
    "points": [
-    "Read along a row to see one strand build from Sec 1 to 4.",
-    "The paper cards at the top show what the exam asks for, so you can see which units build toward it.",
+    "Read along a row to see one strand build from Sec 1 to 4. The summary shows each unit's skill focus; switch to Full detail for tasks and themes.",
+    "Click any unit to see everything it teaches. The exam papers for the course sit just above the table.",
     "'3 languages side by side' puts CL, ML and TL for the same course in one table."
    ],
    "use": "Choose the course at the top and narrow by year if needed."
@@ -223,7 +228,7 @@
     "A blue tag is named in the CPDD guide; an amber tag is mapped from the task wording by a rule. Treat inferred tags as proposals.",
     "Click any unit card to see which tasks carry each tag and why."
    ],
-   "use": "Filter by language, course, year, competency and source. Heat-table cells read CPDD+inferred."
+   "use": "Filter by language, course, year, competency and source. Each heat cell gives the unit total, then the guide-tagged and inferred counts."
   },
   "ibl": {
    "what": "Where inquiry-based learning, a BVSS school approach from 2027, already sits in the MTL units, and where it could go.",
@@ -241,7 +246,7 @@
     "Derived tags rest on a CPDD tag and are the stronger evidence; inferred tags are proposals to confirm in SOW planning.",
     "Click a unit card to see the task behind each tag and the rule that placed it."
    ],
-   "use": "Hover a priority-area button to see its descriptor from the school slide."
+   "use": "Each priority area's descriptor from the school slide is listed under the filter buttons."
   },
   "syl": {
    "what": "How each strand of the roadmap lines up with the MTL Syllabus 2021 skills and with each language's own syllabus learning outcomes.",
@@ -782,5 +787,15 @@
     "Write the opinion-expository essay using the interviews."
    ]
   }
- }
+ },
+ "plan": {
+  "map": {"f": "In {crs}, Paper 3 (oral and listening) is {w3}% of the exam and Paper 1 (writing) is {w1}%.", "i": "Check that the oral and listening rows build steadily from Sec 1 to 4 in line with that weight, not only in the term before the exam.", "go": "lang", "gl": "See strand counts by course"},
+  "c21": {"f": "{c21Inf}% of the units on this roadmap carry at least one 21CC tag that is inferred, not written into a guide. Only the TL guides tag 21CC activity by activity.", "i": "Treat inferred tags as proposals: confirm them with each unit team before counting them as coverage in the SOW.", "go": "pri", "gl": "See the E21CC priority lens"},
+  "ibl": {"f": "{iblCpdd} units carry a CPDD inquiry tag: ML {iblML}, TL {iblTL}, CL {iblCL}.", "i": "Pilot IBL in the ML and TL units the guides already flag. For CL, build from the 综合任务 integrated tasks, which are not in this dataset yet.", "go": "design", "gl": "Compare how each package is designed"},
+  "pri": {"f": "No CPDD guide tags the four priority areas. Of the {priN} units on this lens, {priDer} have at least one derived tag (resting on a CPDD 21CC tag); the rest rely on inference alone.", "i": "Use derived tags as starting points. Vet inferred ones with the unit teams and record the ones the department confirms.", "go": "c21", "gl": "See the CPDD 21CC tags behind them"},
+  "design": {"f": "CL widens from self to world within every semester, ML widens by design across the years, and TL rotates a fixed set of themes each year.", "i": "When setting a common department theme, check in the ladder where each language first reaches nation and world scope.", "go": "theme", "gl": "Compare unit themes"}
+ },
+ "provisional": [
+  {"lang": "TL", "course": "G1", "paper": "p1", "note": "Provisional: the TL G1 Paper 1 format is not yet confirmed against the SEAB K122 syllabus. Check with the TL team before planning to it."}
+ ]
 }
