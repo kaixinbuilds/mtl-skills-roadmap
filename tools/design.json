@@ -419,6 +419,368 @@
     "Feedback levels",
     "Task (is it right), process (how it was done), self-regulation (how the learner monitors and adjusts), self (personal praise, least useful)."
    ]
-  ]
+  ],
+  "sketchNote": "A department sketch built from the unit's theme and its actual task; it is not from the CPDD guide. Adapt it or replace it in SOW planning.",
+  "starNote": "STAR's stages line up with the cycle: Scenario Analysis covers Orientation and Conceptualisation, Team Inquiry is Investigation, and Application and Reflection form the Conclusion.",
+  "approachDims": {
+   "cols": [
+    "Task complexity",
+    "Information given",
+    "Student autonomy",
+    "Examples"
+   ],
+   "rows": {
+    "Structured": [
+     "Low",
+     "High",
+     "Low",
+     "School lab experiments"
+    ],
+    "Guided": [
+     "Medium to high",
+     "Medium",
+     "Medium",
+     "Problem-based learning; design-based learning"
+    ],
+    "Open": [
+     "High",
+     "Low",
+     "High",
+     "Project-based learning; place-based learning"
+    ]
+   }
+  }
+ },
+ "iblx": {
+  "CL|G1|4||5": {
+   "q": "What does it take to chase a dream, and is it always worth it?",
+   "approach": "Guided",
+   "phases": [
+    "Show a short clip or news story about a young Singaporean who chased an unusual dream.",
+    "Students list what they want to know (What did the person give up? Who helped?) and predict the answers.",
+    "In groups, read the unit texts plus one more story each, collecting striking sentences as evidence.",
+    "Each group gives its view in a short discussion and responds to other groups' views (the unit's oral task)."
+   ]
+  },
+  "ML|G1|2|2B|7": {
+   "q": "What do interviewers look for, and how can I show it?",
+   "approach": "Guided",
+   "phases": [
+    "Play a short mock interview that goes badly.",
+    "Students say what went wrong and list what an interviewer wants to find out.",
+    "Pairs read real job or CCA-leader ads and ask an adult who has interviewed people for common questions.",
+    "Build the interview-preparation checklist (the unit's writing task), try it in a role-play, then give peer feedback."
+   ]
+  },
+  "ML|G1|3||2": {
+   "q": "What makes a message really lift someone up?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: a classmate is discouraged before the exams. What do they need to hear?",
+    "Students suggest what makes a message motivating and guess which words carry the feeling (interjections).",
+    "Team inquiry: teams collect motivational posts and messages, then sort which work and why.",
+    "Application and reflection: write the motivational message, swap, say which lines worked, reflect."
+   ]
+  },
+  "ML|G1|3||3": {
+   "q": "What makes someone a role model, and how do I find out?",
+   "approach": "Guided",
+   "phases": [
+    "Show three very different people others call role models.",
+    "Students draft questions they would ask, then sort open from closed questions (the unit's language focus).",
+    "Each student picks a role model from family or community, finds out about them, then drafts and tests questions on a partner.",
+    "Finalise the interview script; carry out the interview; reflect on which questions drew the best answers."
+   ]
+  },
+  "ML|G1|3||4": {
+   "q": "How could a small business help our community?",
+   "approach": "Guided, moving to open",
+   "phases": [
+    "Show two or three local social enterprises.",
+    "Students name community needs near school and turn one into a problem to solve.",
+    "Teams find out more (observe, ask residents or family, look at similar businesses) and design the plan.",
+    "Present the plan in a format the team chooses; peer feedback. The guide says this can be a weighted assessment."
+   ]
+  },
+  "ML|G1|3||5": {
+   "q": "How do we decide whether a strange story online is true?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: share a viral 'mystery' post.",
+    "Students list what makes it believable or doubtful and propose other explanations.",
+    "Team inquiry: teams check sources, look for evidence and test each explanation.",
+    "Application and reflection: write the InstaPos post offering an alternative explanation with evidence; reflect on how they checked."
+   ]
+  },
+  "TL|G1|1|1A|4": {
+   "q": "Which life skill matters most for a Sec 1 student, and why?",
+   "approach": "Structured",
+   "phases": [
+    "Share short scenarios (managing time, honesty, kindness).",
+    "Students choose one skill and predict why it matters.",
+    "Ask two schoolmates or family members for a real example, and note the points.",
+    "Plan and give the short speech using those examples; class feedback."
+   ]
+  },
+  "TL|G1|3||5": {
+   "q": "Which parts of the Tamil way of life still shape our families today?",
+   "approach": "Guided",
+   "phases": [
+    "Show pictures of everyday customs (kolam, food, greetings).",
+    "Students ask which customs are still practised at home, and why.",
+    "Ask family members and note one moment when a custom happens.",
+    "Plan a story scene built around that custom; share and discuss what the class found."
+   ]
+  },
+  "TL|G1|4||1": {
+   "q": "What duties come with the rights we have as teenagers?",
+   "approach": "Guided",
+   "phases": [
+    "Present a news item or scenario where a teen's right clashes with a responsibility.",
+    "List rights; students generate questions about the matching duties.",
+    "Prepare interview notes and interview a parent, teacher or peer.",
+    "Share the findings; discuss where people agreed and disagreed."
+   ]
+  },
+  "TL|G1|4||2": {
+   "q": "Why do some traditions last while others fade?",
+   "approach": "Guided",
+   "phases": [
+    "Show an old and a recent photo of the same festival.",
+    "Students suggest reasons why the festival changed.",
+    "As reporters, prepare interview questions and interview an elder.",
+    "Report back; compare findings across the class."
+   ]
+  },
+  "ML|G2|1|1B|7": {
+   "q": "What helps people bend rather than break when things go wrong?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: a student who lost a competition they trained hard for.",
+    "Students suggest what helps people recover.",
+    "Team inquiry: teams gather stories (unit texts, family, peers) and spot the strategies they share.",
+    "Application and reflection: write 'How I overcame a difficulty' using a strategy found; reflect."
+   ]
+  },
+  "ML|G2|2|2A|4": {
+   "q": "Which place in Singapore is worth exploring, and how do we convince others?",
+   "approach": "Guided",
+   "phases": [
+    "Show a map of lesser-known places.",
+    "Each student picks a place and frames questions (how to get there, what is there, its history).",
+    "Find out online or by visiting; record the route with directional words.",
+    "Write the journal and the expository piece; classmates vote on where they would go."
+   ]
+  },
+  "ML|G2|3||1": {
+   "q": "Can we claim a right without taking on a responsibility?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: a social-media case of someone claiming free speech.",
+    "Students take a position and raise questions.",
+    "Team inquiry: teams gather views and examples from news and people they know.",
+    "Application and reflection: social-media response and expository description; reflect on how their view changed."
+   ]
+  },
+  "ML|G2|3||2": {
+   "q": "How do artists express who they are, and how should we respond to their work?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: watch a short local dance performance.",
+    "Students ask what the choreographer wanted to say.",
+    "Team inquiry: teams find out about the work and the artist and note specific details.",
+    "Application and reflection: a formal email of appreciation citing those details; a narrative using flashback; reflect."
+   ]
+  },
+  "ML|G2|3||4": {
+   "q": "What problem in our community could a social enterprise solve?",
+   "approach": "Guided, moving to open",
+   "phases": [
+    "Show a local social enterprise.",
+    "Students name problems and frame one as a 'how might we' question.",
+    "Teams look into the problem, its causes and existing solutions.",
+    "Write the problem-and-solution piece and the social-enterprise plan; respond on social media. Can be a weighted assessment."
+   ]
+  },
+  "ML|G2|3||5": {
+   "q": "How do we decide whether a strange story online is true?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: share a viral 'mystery' post.",
+    "Students list what makes it believable or doubtful and propose explanations.",
+    "Team inquiry: teams check sources and evidence.",
+    "Application and reflection: social-media response and a narrative story; reflect on how they checked."
+   ]
+  },
+  "TL|G2|4||1": {
+   "q": "Where should a teenager's rights end and their duties begin?",
+   "approach": "Guided",
+   "phases": [
+    "Present a scenario where a teen's right clashes with a duty.",
+    "Students frame questions to put to adults.",
+    "Prepare and carry out interviews with two adults in different roles.",
+    "Write the expository essay using the interview evidence."
+   ]
+  },
+  "ML|G3|1|1B|7": {
+   "q": "How do people find a way through a challenge?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: a short story stopped just before its climax.",
+    "Students predict how the character gets through it.",
+    "Team inquiry: teams compare how several stories build to a climax and resolve it.",
+    "Application and reflection: write a narrative with a clear climax and resolution; reflect."
+   ]
+  },
+  "ML|G3|1|1B|8": {
+   "q": "Is it really easier to build good habits when we are young?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: the proverb 'bend the bamboo while young' and a short scenario.",
+    "Students say whether they agree and why.",
+    "Team inquiry: teams ask older relatives about habits formed young or late and collect the stories.",
+    "Application and reflection: write a full narrative that shows the proverb; reflect."
+   ]
+  },
+  "ML|G3|2|2B|5": {
+   "q": "How does a group become 'us' instead of 'me and them'?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: a new student left out of a group.",
+    "Students raise questions about what makes people feel they belong.",
+    "Team inquiry: teams find out how a club or community welcomes newcomers.",
+    "Application and reflection: an expository process text on building an inclusive group; reflect."
+   ]
+  },
+  "ML|G3|3||1": {
+   "q": "How do we build a class where every voice counts?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: a class disagreement that went badly.",
+    "Students compare the rules in different classes.",
+    "Team inquiry: teams survey classmates on what matters and compare charters from elsewhere.",
+    "Application and reflection: the class charter and an expository comparison; reflect."
+   ]
+  },
+  "TL|G3|2|2A|1": {
+   "q": "What keeps a friendship going when friends change?",
+   "approach": "Guided",
+   "phases": [
+    "Show a short vlog about friendship.",
+    "Students ask questions and predict the answers.",
+    "Survey or interview friends; summarise the sources (the unit's summary practice).",
+    "Plan a vlog that presents what they found."
+   ]
+  },
+  "TL|G3|2|2A|2": {
+   "q": "Which hobbies are growing among teenagers at our school, and why?",
+   "approach": "Guided",
+   "phases": [
+    "Show a news report about a hobby trend.",
+    "Students suggest which hobbies are growing, and why.",
+    "Run a short online survey and gather the data.",
+    "Write a newspaper report on the findings."
+   ]
+  },
+  "TL|G3|2|2A|3": {
+   "q": "What one change would most reduce waste at our school?",
+   "approach": "Guided",
+   "phases": [
+    "Show photos of waste around the school.",
+    "Students suggest changes and predict their effect.",
+    "Check the waste in one area and find out what other schools do.",
+    "Write a formal email to the right person proposing the change."
+   ]
+  },
+  "TL|G3|2|2B|1": {
+   "q": "How has one everyday technology changed our lives, and where is it heading?",
+   "approach": "Guided",
+   "phases": [
+    "Show an old and a new version of the same device.",
+    "Students raise questions about how it changed.",
+    "Look up its history and ask an elder what it was like before.",
+    "Design an e-advertisement for its future version."
+   ]
+  },
+  "TL|G3|4||2": {
+   "q": "How are young Tamils in Singapore keeping traditions alive?",
+   "approach": "Guided, moving to open",
+   "phases": [
+    "Share an example of a tradition given a modern twist.",
+    "Students frame their own questions about it.",
+    "Plan and carry out an interview with a young person who practises a tradition.",
+    "Present the findings orally; the class compares them."
+   ]
+  },
+  "TL|G3|4||3": {
+   "q": "Who helped build the Singapore we live in, and what can we learn from them?",
+   "approach": "Guided",
+   "phases": [
+    "Use the unit's interview report as the hook.",
+    "Students choose a nation builder and frame questions.",
+    "Find out about that person, and interview an elder if possible.",
+    "Discuss the findings; write the essay on the topic."
+   ]
+  },
+  "CL|H|1|1B|5": {
+   "q": "What might our neighbourhood look like in 2050, and what will change it?",
+   "approach": "Guided",
+   "phases": [
+    "Show images of the same Singapore street, then and now.",
+    "Students suggest what will change and why.",
+    "Draft interview questions for an elder or a planner, and look up planned developments.",
+    "Write the time-machine visit to Future City and recount it orally."
+   ]
+  },
+  "CL|H|4||3": {
+   "q": "Does fear of failure hold teenagers back?",
+   "approach": "Guided, moving to open",
+   "phases": [
+    "Use the unit's survey material on fear of failure.",
+    "Students form a thesis.",
+    "Run their own class survey and compare it with the given data.",
+    "Write the argumentative essay proving the thesis, revise its language, and defend it orally."
+   ]
+  },
+  "ML|H|3||1": {
+   "q": "What does sharing fairly look like in our community today?",
+   "approach": "Guided (STAR)",
+   "phases": [
+    "Scenario analysis: two neighbours, one with plenty and one in need.",
+    "Students raise questions about what fair sharing means.",
+    "Team inquiry: teams gather real examples (food banks, neighbours, school projects).",
+    "Application and reflection: song lyrics or a poem, and a retelling essay; reflect."
+   ]
+  },
+  "ML|H|3||4": {
+   "q": "How can we best help a group in our community that needs support?",
+   "approach": "Guided, moving to open",
+   "phases": [
+    "Share the story of someone who needed help.",
+    "Students choose a group and frame questions about its needs.",
+    "Find out about the group's needs and the help that already exists.",
+    "Write the action plan and the story essay."
+   ]
+  },
+  "TL|H|4||1": {
+   "q": "How do people in different roles balance rights and duties?",
+   "approach": "Guided",
+   "phases": [
+    "Present a scenario about a nurse or volunteer facing a dilemma.",
+    "Students frame interview questions.",
+    "Interview someone in a role with clear duties.",
+    "Write up the interview."
+   ]
+  },
+  "TL|H|4||2": {
+   "q": "Should traditions change to stay alive?",
+   "approach": "Guided, moving to open",
+   "phases": [
+    "Show a tradition practised in two very different ways.",
+    "Students take a position and frame questions.",
+    "Interview people from two generations.",
+    "Write the opinion-expository essay using the interviews."
+   ]
+  }
  }
 }
