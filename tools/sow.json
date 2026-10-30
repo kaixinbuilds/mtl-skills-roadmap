@@ -1,0 +1,700 @@
+{
+ "_readme": "Redesigned SOW frame for BVSS MTL (CL, ML, TL; G1 to HMT; Sec 1 to 4). tools/enrich.py embeds this file as DATA.sow. The year plans on the 'Redesigned SOW' tab are generated at run time from DATA.recs, DATA.themes and the tags, using the calendar, assessment pattern and pacing rules below. Everything here is a department proposal for the 2027 SOW cycle: review with the three units.",
+ "version": "2026-10-31",
+ "about": {
+  "what": "A common SOW frame for all three languages, filled for every course and year from the CPDD unit data on this site, with the E21CC priority areas and inquiry opportunities written into each unit.",
+  "points": [
+   "One frame, ten columns, borrowed from the best of the department's existing CL, ML and TL planning documents (see the SOW stock-take).",
+   "Every unit card carries its skills, exam link, E21CC focus with provenance, inquiry sketch and assessment touchpoint. Click a card for the full detail.",
+   "The Department view shows, for every course and year, where the four priority areas and inquiry are thin, so the HOD can plan ahead."
+  ],
+  "use": "Pick a language, course and year. Switch to '3 languages side by side' to compare the same course across CL, ML and TL, or to 'Exemplars' for three fully worked units."
+ },
+ "calendar": {
+  "year": 2027,
+  "note": "Term dates follow the 2026 pattern (10 weeks a term). Replace with the 2027 school calendar once MOE publishes it. Sec 1 to 3 EOY exams run in Term 4 weeks 3 to 4, so Term 4 has about two teaching weeks.",
+  "terms": [
+   {
+    "t": 1,
+    "label": "Term 1",
+    "weeks": 10,
+    "teach": 9,
+    "events": [
+     "Sec 1 orientation (W1)",
+     "CNY celebration and MT Fortnight (W6 to 7)",
+     "HBL days"
+    ]
+   },
+   {
+    "t": 2,
+    "label": "Term 2",
+    "weeks": 10,
+    "teach": 8,
+    "events": [
+     "Sec 1 to 3 MTL oral exam on HBL days",
+     "Applied Learning Week (W9, no MTL lessons)",
+     "Good Friday, Labour Day, Hari Raya"
+    ]
+   },
+   {
+    "t": 3,
+    "label": "Term 3",
+    "weeks": 10,
+    "teach": 9,
+    "events": [
+     "Youth Day, National Day",
+     "Teachers' Day (W10)",
+     "Sec 4 prelim (written) from W5"
+    ]
+   },
+   {
+    "t": 4,
+    "label": "Term 4",
+    "weeks": 10,
+    "teach": 2,
+    "events": [
+     "Sec 1 to 3 EOY exams (W3 to 4)",
+     "Marking and checking of scripts",
+     "Sec 4 SEC MTL papers"
+    ]
+   }
+  ]
+ },
+ "assess": {
+  "note": "Weighted-assessment pattern as run in 2026 (BVSS MTL 2026 Assessment Overview), with the two 2027 changes recorded in the CL G3 four-year plan draft of 23 Oct 2026. Confirm the 2027 WA formats (paper or authentic assessment) at the department meeting before the SOWs are finalised.",
+  "1": [
+   {
+    "t": 1,
+    "code": "WA1",
+    "what": "Paper 2 component (language use and reading)",
+    "wt": "15%",
+    "form": "paper"
+   },
+   {
+    "t": 2,
+    "code": "WA2",
+    "what": "Paper 1 component (functional writing)",
+    "wt": "15%",
+    "form": "paper"
+   },
+   {
+    "t": 2,
+    "code": "Oral",
+    "what": "EOY Paper 3 oral: read aloud and video-prompted conversation, on an HBL day",
+    "wt": "part of EOY",
+    "form": "oral"
+   },
+   {
+    "t": 3,
+    "code": "WA3",
+    "what": "Authentic assessment: presentation (oral project with rubric)",
+    "wt": "15%",
+    "form": "aa"
+   },
+   {
+    "t": 4,
+    "code": "EOY",
+    "what": "Papers 1 and 2 (e-assessment for G1 P1 and P2, G2 P2) and listening comprehension",
+    "wt": "55%",
+    "form": "exam"
+   }
+  ],
+  "2": [
+   {
+    "t": 1,
+    "code": "WA1",
+    "what": "Paper 1 component (functional writing)",
+    "wt": "15%",
+    "form": "paper"
+   },
+   {
+    "t": 2,
+    "code": "WA2",
+    "what": "Authentic assessment: BVSS 40 Stories (interview a member of the school community, write a news report); department-wide, all three languages",
+    "wt": "15%",
+    "form": "aa"
+   },
+   {
+    "t": 2,
+    "code": "Oral",
+    "what": "EOY Paper 3 oral, on an HBL day",
+    "wt": "part of EOY",
+    "form": "oral"
+   },
+   {
+    "t": 3,
+    "code": "WA3",
+    "what": "Paper 2 component (language use and reading)",
+    "wt": "15%",
+    "form": "paper"
+   },
+   {
+    "t": 4,
+    "code": "EOY",
+    "what": "Papers 1 and 2 and listening comprehension",
+    "wt": "55%",
+    "form": "exam"
+   }
+  ],
+  "3": [
+   {
+    "t": 1,
+    "code": "WA1",
+    "what": "Paper 2 component (reading comprehension)",
+    "wt": "15%",
+    "form": "paper"
+   },
+   {
+    "t": 2,
+    "code": "WA2",
+    "what": "Paper 1 component (email or essay)",
+    "wt": "15%",
+    "form": "paper"
+   },
+   {
+    "t": 2,
+    "code": "Oral",
+    "what": "EOY Paper 3 oral, on an HBL day",
+    "wt": "part of EOY",
+    "form": "oral"
+   },
+   {
+    "t": 3,
+    "code": "WA3",
+    "what": "Authentic assessment: video, debate or campus report with rubric",
+    "wt": "15%",
+    "form": "aa"
+   },
+   {
+    "t": 4,
+    "code": "EOY",
+    "what": "Papers 1 and 2 and listening comprehension",
+    "wt": "55%",
+    "form": "exam"
+   }
+  ],
+  "4": [
+   {
+    "t": 1,
+    "code": "NWA1",
+    "what": "Non-weighted assessment in SEC format (Paper 2 component)",
+    "wt": "0%",
+    "form": "paper"
+   },
+   {
+    "t": 1,
+    "code": "Oral",
+    "what": "School MTL oral in SEC format, moved to Term 1 (HBL day) from 2027",
+    "wt": "practice",
+    "form": "oral",
+    "new": true
+   },
+   {
+    "t": 2,
+    "code": "TP",
+    "what": "Timed practice: full Paper 1 and Paper 2 (e-assessment for NT and NA)",
+    "wt": "practice",
+    "form": "paper"
+   },
+   {
+    "t": 3,
+    "code": "Prelim",
+    "what": "MTL preliminary exam; written papers from 29 Jul 2027 (recorded decision), oral and LC per school schedule",
+    "wt": "practice",
+    "form": "exam",
+    "new": true
+   },
+   {
+    "t": 4,
+    "code": "SEC",
+    "what": "SEC MTL papers (dates per SEAB)",
+    "wt": "national",
+    "form": "exam"
+   }
+  ]
+ },
+ "pacing": {
+  "note": "How units are laid across terms. Sec 1 and 2: Book A over Terms 1 and 2, Book B over Terms 3 and 4 with at most one unit in Term 4. Sec 3: two units in Term 1, one in Term 2 (oral exam and WA2 term), two or three in Term 3, the last in Term 4 only if the course has seven. Sec 4: content units over Terms 1 to 3, Term 4 is revision and the SEC. ML Sec 4 pairs each content unit (1 to 3) with a skills unit (4 to 6) in the same term, so the oral toolkit (Unit 4) lands in Term 1 with the oral exam.",
+  "sec12": {
+   "A": [
+    0.5,
+    0.5
+   ],
+   "B_t4_max": 1
+  },
+  "sec3": {
+   "6": [
+    2,
+    1,
+    2,
+    1
+   ],
+   "7": [
+    2,
+    2,
+    2,
+    1
+   ],
+   "5": [
+    2,
+    1,
+    2,
+    0
+   ]
+  },
+  "sec4": {
+   "5": [
+    2,
+    2,
+    1,
+    0
+   ],
+   "6": [
+    2,
+    2,
+    2,
+    0
+   ],
+   "ml": "pair"
+  }
+ },
+ "frame": {
+  "title": "The common SOW frame: ten columns",
+  "lead": "Each column is borrowed from a planning document the department already uses, so no unit has to learn a new habit; the frame only puts the habits side by side and adds the two 2027 school approaches.",
+  "cols": [
+   {
+    "k": "when",
+    "en": "Term, weeks and period budget",
+    "from": "CL weekly 教学进度表 (周次 with dates and 实体课 count); TL கண்ணோட்டம் gives periods per activity.",
+    "why": "Teachers plan by week; HBL days and events eat periods, so the budget is explicit."
+   },
+   {
+    "k": "unit",
+    "en": "Unit, theme and topic domain",
+    "from": "ML JATi Domain row (Diri, Keluarga, Sekolah, Masyarakat, Rantau, Dunia).",
+    "why": "Shows the self-to-world widening at a glance and keeps the three languages comparable."
+   },
+   {
+    "k": "lo",
+    "en": "Learning outcomes by skill, with the CPDD learning point",
+    "from": "ML Hasil Pembelajaran with syllabus codes (1.1, 3.4); CL 技能 listed under 读/听/说/写 in the 教学总览.",
+    "why": "The CPDD learning point is the non-negotiable; everything else in the row serves it."
+   },
+   {
+    "k": "exam",
+    "en": "Exam link and tiered success criteria",
+    "from": "CL 2025 教学总览 rows (阅读理解题型, 写作, 口语, 评鉴); CL 4EXP SOW's HR / MR / LR success indicators; ML Kriteria Kejayaan.",
+    "why": "Makes the SEC 2027 line of sight visible and gives the differentiation a home."
+   },
+   {
+    "k": "learn",
+    "en": "Learning experiences and the signature routine",
+    "from": "ML Pengalaman Pembelajaran (STP teaching actions, Fikir-Berpasangan-Berkongsi); CL 教学步骤（建议）; TL fixed activity cycle.",
+    "why": "Says how the lesson runs, not just what it covers, so a new teacher can pick the unit up."
+   },
+   {
+    "k": "e21",
+    "en": "E21CC priority focus and the student move",
+    "from": "New. Nearest existing practice: TL கல்வியமைச்சின் முயற்சிகள் column, which tags 21CC, SEL and ICT per activity.",
+    "why": "The school's 2027 approach: Adaptive Thinking, Inventive Thinking, Civic Literacy, Communication, written into the unit rather than bolted on."
+   },
+   {
+    "k": "ibl",
+    "en": "Inquiry opportunity",
+    "from": "New. ML STAR Team Inquiry and the inquiry-tagged tasks; CL 综合任务; TL நானும் ஒரு படைப்பாளி production tasks.",
+    "why": "Inquiry-based learning becomes a school approach in 2027; one guided inquiry per term is realistic."
+   },
+   {
+    "k": "assess",
+    "en": "Assessment touchpoint and feedback",
+    "from": "ML Alat Penilaian dan Kriteria Kejayaan (anecdotal, Buku Aktiviti); CL 成功指标 (1G2 SOW); TL முழுமையான மதிப்பீடு and peer-assessment sheets.",
+    "why": "Assessment for learning sits inside the unit; the WA or exam is only the touchpoint."
+   },
+   {
+    "k": "res",
+    "en": "Resources: CPDD, SLS and the BVSS bank",
+    "from": "CL G3 four-year plan column 'BVSS 现有资源'.",
+    "why": "Points to what already exists on the shared drive, so the same deck is not rebuilt each year."
+   },
+   {
+    "k": "adj",
+    "en": "Adjustments and gaps",
+    "from": "CL G3 four-year plan columns '调整说明' and '缺口 / 待补'.",
+    "why": "Records why the plan departs from the textbook order and what still has to be built. This is the column the HOD reads first."
+   }
+  ]
+ },
+ "e21moves": {
+  "PA_AT": {
+   "en": "Adaptive Thinking",
+   "move": "Students meet a dilemma, another perspective or an unfamiliar context, and adjust their approach or view because of it (CAIT 3-4). A theme about change is not enough: the student has to do the adapting.",
+   "prompt": "Where in this unit do students have to take another perspective or change their strategy, and how would we see it?",
+   "moe": "Apply learnt knowledge and skills strategically and flexibly in different or new and evolving contexts.",
+   "goals": "CAIT 3 Assesses different contexts and situations in order to make connections and draw new insights · CAIT 4 Manages complexities and ambiguities by adjusting one's perspective and strategies",
+   "lower": "3.3 Understand the similarities and differences between contexts and how this affects their perspective or approach · 4.3 Draw on different perspectives and strategies to adjust their approach, applying learnt knowledge and skills in unfamiliar contexts",
+   "upper": "3.4 Draw on similarities and differences between contexts to extract new insights that inform their perspective or approach · 4.4 Draw on different perspectives and strategies to adjust their approach when required, adapting learnt knowledge and skills in new and unexpected contexts to solve complex and unexpected problems"
+  },
+  "PA_IT": {
+   "en": "Inventive Thinking",
+   "move": "Students generate, compare and refine ideas or solutions to an issue (CAIT 5-6): proposals, designs, plans, improvements. Writing a story or making a poster is a product, not inventive thinking, unless the task asks for new ideas and a reason why they work.",
+   "prompt": "What issue do students respond to with ideas of their own, and where do they evaluate and refine those ideas?",
+   "moe": "Frame, investigate and explore issues, generate innovative ideas, and evaluate them to form novel and useful responses.",
+   "goals": "CAIT 5 Explores possibilities and generates novel and useful ideas · CAIT 6 Evaluates and refines ideas to formulate novel and useful solutions",
+   "lower": "5.3 Generate ideas that may involve modifying existing ones and explore different pathways appropriate to an issue or challenge · 6.3 Evaluate and refine their ideas using relevant strategies and criteria appropriate to the task or context",
+   "upper": "5.4 Generate ideas that are unique or modified substantially from existing ones and explore different pathways that lead to solutions · 6.4 Evaluate and refine their ideas iteratively, using relevant strategies and criteria appropriate to the task or context"
+  },
+  "PA_CL": {
+   "en": "Civic Literacy",
+   "move": "Students connect the theme to Singapore, their community or the world, and weigh sources and perspectives responsibly.",
+   "prompt": "Which community, national or global angle does the text open, and whose voice is missing?",
+   "moe": "Understand the nation's values, governance, context and realities, form one's civic identity, and constructively engage with and contribute to one's community and nation.",
+   "goals": "CGC 1 Demonstrates understanding of values, ideals and issues of personal, community and national significance · CGC 2 Plays active and constructive roles to improve the school, community and nation"
+  },
+  "PA_CM": {
+   "en": "Communication",
+   "move": "Students put a view or message across to a real reader or listener and respond to others' views.",
+   "prompt": "Who is the audience of the unit's oral and written tasks, and do students get a response?",
+   "moe": "Convey information and exchange ideas clearly and coherently through multimodal ways for specific purposes, audiences and contexts.",
+   "goals": "CCI 1 Effectively communicates information and co-constructs meaning · CCI 2 Engages empathetically with diverse perspectives"
+  }
+ },
+ "hod": {
+  "title": "Department view: what to plan for before the 2027 SOWs",
+  "lead": "Counts are units per course and year that carry each priority area or an inquiry opening in the CPDD guides (tagged, derived or inferred). A low count is not a gap in teaching; it says the guide gives few openings, so the department has to design them in.",
+  "decisions": [
+   {
+    "q": "Which 2027 WA formats stay as in 2026 (paper versus authentic assessment) for each level?",
+    "why": "Every SOW's Term 2 and Term 3 column depends on it; the S2 WA2 40 Stories and the S1 and S3 WA3 authentic assessments are the department's main E21CC and inquiry touchpoints.",
+    "owner": "HOD with level coordinators",
+    "by": "Term 4 2026 department meeting"
+   },
+   {
+    "q": "Confirm the Sec 4 oral in Term 1 and the prelim written date (29 Jul 2027) for all three languages.",
+    "why": "Recorded in the CL G3 four-year plan draft; the ML and TL SOWs need the same anchor dates.",
+    "owner": "HOD",
+    "by": "Before the 2027 calendar is released to teachers"
+   },
+   {
+    "q": "Confirm the TL G1 Paper 1 format with the TL unit against SEAB K122.",
+    "why": "The Overview still shows the format as provisional; the TL G1 SOW cannot fix when the exam writing form becomes regular until it is settled.",
+    "owner": "TL unit",
+    "by": "Term 4 2026"
+   },
+   {
+    "q": "Adopt the ten-column frame as the department SOW template, with a Word/Excel export for each unit.",
+    "why": "The stock-take shows three CL formats in use, none for ML and TL on the drive, and no column anywhere for E21CC or inquiry.",
+    "owner": "HOD, then level coordinators",
+    "by": "First SOW draft for Term 1 2027"
+   },
+   {
+    "q": "Choose one guided inquiry per term per level to run department-wide, starting from the sketches on the IBL roadmap.",
+    "why": "CL's guides tag no unit for inquiry (the 综合任务 and 文化探索 in every unit are the openings) and only two CL sketches exist; a department choice avoids each teacher inventing one.",
+    "owner": "Three units",
+    "by": "Term 1 2027 SOWs"
+   },
+   {
+    "q": "Decide what the department's E21CC evidence will be in 2027 (which WA or AA shows each priority area).",
+    "why": "Inferred tags are proposals; evidence of impact needs a product students make (the PLT direction from the LDC conversation).",
+    "owner": "HOD with PLT leads",
+    "by": "Term 1 2027"
+   }
+  ],
+  "planning": [
+   {
+    "find": "Communication is the priority area the guides open most often in every language and course.",
+    "impl": "Treat Communication as the default E21CC thread; spend design effort on the three thinner areas.",
+    "next": "Department view below: look down the AT, IT and CL columns."
+   },
+   {
+    "find": "Measured against MOE's definitions (CAIT 3 to 6), Adaptive Thinking appears in only about 17 units across all three languages and Inventive Thinking in 23, almost all in Sec 3 and 4: debates, adjusting register to the listener, role-based replies, a change of view; community plans, proposals and the food-waste email.",
+    "impl": "These two priority areas will not come from the textbooks. Design them into the authentic assessments and the term inquiry: a dilemma to decide, a perspective to take, an idea to generate and refine.",
+    "next": "Department view below: the AT and IT columns show where each course has nothing."
+   },
+   {
+    "find": "ML carries almost all CPDD inquiry tags (STAR Team Inquiry, inquiry tasks usable as a WA) and TL two. The CL guides name 引导——探究 as a teaching mode and end every unit with 文化探索 and 综合任务, which are inquiry-shaped but untagged.",
+    "impl": "Use ML's STAR shape (scenario, team inquiry, application, reflection) as the department's shared inquiry routine; map CL 综合任务 and TL production tasks onto it.",
+    "next": "Exemplars view: the three worked units each end in a STAR-shaped inquiry."
+   },
+   {
+    "find": "The existing CL SOWs are weekly pacing documents; the skills, exam link and assessment live in a separate yearly grid that only Sec 1 and Sec 2 have.",
+    "impl": "The redesigned SOW merges the two, so the pacing and the purpose sit in one row.",
+    "next": "Read the SOW stock-take (Planning menu)."
+   }
+  ]
+ },
+ "exemplars": [
+  {
+   "id": "CL|G3|1|1A|6",
+   "lang": "CL",
+   "course": "G3",
+   "sec": 1,
+   "book": "1B",
+   "unit": "6",
+   "title": "小人物 大贡献 · Small people, big contributions",
+   "weeks": "Term 3, weeks 8 to 10 (about 9 periods, 4 in-person lessons a week less HBL)",
+   "why": "Chosen because the 2026 1G3 SOW already teaches it with named learning goals, it feeds the Term 3 authentic assessment (presentation), and its theme is the department's clearest Civic Literacy opening in Sec 1.",
+   "domain": [
+    "community",
+    "nation"
+   ],
+   "lo": [
+    [
+     "Reading",
+     "理解和判断新闻中的事实与意见 (生活空间《我们的无名英雄》; 核心《我为狮城做贡献——走访地铁维修人员》)",
+     "P2 reading 2, open-ended: fact versus opinion items"
+    ],
+    [
+     "Listening",
+     "听出新闻中的事实与意见",
+     "P3 listening comprehension"
+    ],
+    [
+     "Speaking",
+     "根据事实发表意见 (口语互动 #)",
+     "P3 video-prompted conversation: give a view with reasons"
+    ],
+    [
+     "Writing",
+     "根据事实写出意见: 电邮三，分享经验并提出看法（无名英雄，如校工）",
+     "P1 functional writing: personal email with experience and view"
+    ],
+    [
+     "Language",
+     "了解新闻报道的结构",
+     "P2 language use"
+    ]
+   ],
+   "weeksPlan": [
+    {
+     "w": "W8",
+     "focus": "生活空间《我们的无名英雄》 + unit vocabulary",
+     "learn": "导入: who is an unsung hero in our school? Think-pair-share, then 初读 for gist; 再读 with 阅读放大镜 on what each worker does. Vocabulary: 凭、塔台、范围、警惕、一旦、不堪设想.",
+     "e21": "Civic Literacy: students name three people who keep the school running and what the school would lose without them.",
+     "assess": "活动本 单元六 生活空间; exit slip: one fact and one opinion from the text.",
+     "res": "CPDD 教师手册 1下 单元六; SLS 阅读配套; 2026 1G3 SOW W8 notes"
+    },
+    {
+     "w": "W9",
+     "focus": "核心《我为狮城做贡献》: news report structure, fact and opinion",
+     "learn": "初读 疏通词句; 再读 掌握新闻报道的结构 (headline, lead, body, quotes); 三读 sort statements into 事实 and 意见 and say how they know. Pairs rewrite one opinion as a fact and one fact as an opinion.",
+     "e21": "Civic Literacy and Adaptive Thinking: weigh what the reporter chose to include; whose voice is missing from the report?",
+     "assess": "活动本 核心 阅读理解; success criteria: HR explains how wording signals opinion; MR sorts six statements correctly; LR finds the facts with a word bank.",
+     "res": "活动本 单元六 核心; news clips on SLS"
+    },
+    {
+     "w": "W10",
+     "focus": "电邮三 (share experience, give a view) and the inquiry task",
+     "learn": "先说后写再查: oral rehearsal of the email in pairs using the 六何法 frame, write in class, peer check against the checklist (format, 经验, 看法, 建议). Inquiry task launched (see below).",
+     "e21": "Communication: a real reader (a school worker or the principal) and a response from them where possible.",
+     "assess": "电邮三 marked with the WA2 rubric for feedback only; checklist self-assessment.",
+     "res": "2026 电邮 学生版 and 教师版 notes; WA2 私人电邮 rubric"
+    },
+    {
+     "w": "T3 W10 to T4 W1",
+     "focus": "Guided inquiry and presentation (feeds WA3 authentic assessment)",
+     "learn": "STAR shape. Scenario: the school wants to thank its unsung heroes but does not know their stories. Team inquiry: groups interview one worker (five questions prepared in class, 口语互动), check facts against a second source. Application: a 150-character news-style report with one fact-based opinion, plus a two-minute presentation. Reflection: what changed in how you see their work?",
+     "e21": "All four: Adaptive (interview does not go to plan), Inventive (the report and poster), Civic (community contributors), Communication (presentation and response to questions).",
+     "assess": "WA3 presentation rubric (2026 面试101 rubric adapted): content, language, interaction, reflection.",
+     "res": "2026 1G3 WA3 面试101 package; 40 Stories interview guide"
+    }
+   ],
+   "inquiry": {
+    "q": "Who keeps our school running, and what do they wish we understood about their work?",
+    "approach": "Guided (STAR)",
+    "phases": [
+     "Orientation: the school's thank-you wall has no stories on it. Watch the unit's news clip; list who is missing from it.",
+     "Conceptualisation: groups pick a worker and draft five questions that will give facts, not just opinions.",
+     "Investigation: interview, record, check one fact with a second source; sort notes into fact and opinion.",
+     "Conclusion: news report plus presentation; the class decides which stories go on the wall and why."
+    ]
+   },
+   "adjust": [
+    "2026 taught only 生活空间 and 核心 before the WA3 submission; 巩固《小人物的心声》 moves to the T4 revision week as extended reading.",
+    "The 电邮三 topic is kept (unsung heroes) so the email and the inquiry share one body of knowledge.",
+    "Gap: no oral-interaction rubric for interviews in Sec 1; borrow from the 40 Stories Sec 2 rubric and simplify."
+   ]
+  },
+  {
+   "id": "ML|G3|1|1A|1",
+   "lang": "ML",
+   "course": "G3",
+   "sec": 1,
+   "book": "1A",
+   "unit": "1",
+   "title": "Perlu atau Mahu · Need or want",
+   "weeks": "Term 1, weeks 1 to 4 (about 15 periods; CPDD Skema Pengajaran allots M1 to M4)",
+   "why": "Chosen because CPDD's own Skema Pengajaran sample for JATi Ekspres 1A works this unit in full, with learning outcomes, STP routines, assessment tools and success criteria: it is the closest existing model for the redesigned frame.",
+   "domain": [
+    "self"
+   ],
+   "lo": [
+    [
+     "Listening and viewing",
+     "Mendengar ulasan produk dari video dan menyampaikan semula kandungannya (1.1)",
+     "P3 listening comprehension"
+    ],
+    [
+     "Speaking",
+     "Bertutur untuk menyampaikan idea tentang corak kasut yang dipilih (2.2); memberikan pandangan tentang evolusi fesyen remaja",
+     "P3 conversation: give and support a view"
+    ],
+    [
+     "Reading",
+     "Membaca artikel media sosial untuk membuat rumusan (3.4); membaca dan menyampaikan semula isi teks (3.2)",
+     "P2 reading"
+    ],
+    [
+     "Writing",
+     "Mengembangkan idea dengan perincian (4.1); menghasilkan teks refleksi dalam hantaran",
+     "P1 functional writing: forum or blog post"
+    ],
+    [
+     "Language",
+     "Ayat tanya; peribahasa dalam konteks",
+     "P2 language use"
+    ]
+   ],
+   "weeksPlan": [
+    {
+     "w": "W1",
+     "focus": "Pembuka Bicara: evolusi fesyen remaja",
+     "learn": "Lihat-Fikir-Tanya on the textbook pictures (hlm. 2 to 3); Fikir-Berpasangan-Berkongsi; IRF questioning to draw out views on personal appearance.",
+     "e21": "Communication: give a view and respond to a partner's view. Adaptive Thinking: notice how fashion changes and why.",
+     "assess": "Anecdotal: can students describe and justify a view on fashion evolution?",
+     "res": "Buku Teks hlm. 2 to 3; CPDD Skema Pengajaran Ekspres 1A, Unit 1"
+    },
+    {
+     "w": "W1 to 2",
+     "focus": "Bahagian 1 Fikirkan Dahulu: product review video 'Berbaloi', ayat tanya, Ehwal Semasa 'Kilang Peras Tenaga'",
+     "learn": "Read the Farid and jurujual transaction (hlm. 4 to 5), role-play with ayat tanya; T-I-P before the SLS video, then a short oral presentation using Panduan Membuat Penyampaian (hlm. 8); read the sweatshop news item and search Berita Harian via SLS.",
+     "e21": "Civic Literacy: connect the news item on sweatshops to the shoes students buy; who pays for cheap fashion? Communication: presentation with T-I-P.",
+     "assess": "Buku Aktiviti hlm. 2 (ayat tanya), hlm. 3 to 4 (video and news). Success criteria: can build questions to get information about a product; can retell a review with T-I-P.",
+     "res": "Video 'Berbaloi!' on SLS; Buku Aktiviti hlm. 2 to 4; Berita Harian, BeritaMediacorp"
+    },
+    {
+     "w": "W2 to 3",
+     "focus": "Bahagian 2 Ada Cara Lain?: the dilemma, peribahasa, designing a pattern",
+     "learn": "Whiteboarding: predict Farid's options and justify; peribahasa in context (hlm. 9, 11); explore traditional and modern patterns online and design a combined pattern (Buku Aktiviti hlm. 6 to 7); present it; 3-2-1 exit.",
+     "e21": "Inventive Thinking: a new pattern students can explain. Adaptive Thinking: the dilemma has no single right answer.",
+     "assess": "Buku Aktiviti hlm. 5 to 7; anecdotal on the whiteboard presentations. Success criteria: explains at least two options and their consequences; design shows one traditional and one modern element.",
+     "res": "Buku Teks hlm. 11 to 13; Buku Aktiviti hlm. 5 to 7"
+    },
+    {
+     "w": "W3 to 4",
+     "focus": "Bahagian 3 Cantik!: reflection post and the inquiry",
+     "learn": "Model a reflection post (hantaran); students draft with Panduan Menulis, peer review for perincian, publish on SLS and reply to two classmates' posts.",
+     "e21": "Communication: a real audience and replies. Adaptive Thinking: the reflection names what they would decide differently now.",
+     "assess": "Reflection post marked with the WA2 functional-writing rubric for feedback; replies checked for a view plus a reason.",
+     "res": "Buku Teks hlm. 14 to 16; SLS discussion board"
+    }
+   ],
+   "inquiry": {
+    "q": "Perlu atau mahu? How do we decide whether something is worth buying, and who else is affected by our choice?",
+    "approach": "Structured, moving to guided",
+    "phases": [
+     "Orientation: Farid's sneakers and the sweatshop news item; students list what they would want to know before buying.",
+     "Conceptualisation: groups agree three questions about one product a teenager buys (price, who made it, how long it lasts).",
+     "Investigation: find answers from two sources (a review and a news item), record as fact or opinion.",
+     "Conclusion: a one-minute recommendation to the class and a reflection post; the class votes on the most convincing reasoning, not the most popular product."
+    ]
+   },
+   "adjust": [
+    "CPDD allots four weeks; BVSS Term 1 loses W1 to orientation and W6 to 7 to CNY, so Unit 2 starts in W5 and runs to W9 with WA1 (P2) in W8.",
+    "Keep the Ehwal Semasa step: it is the unit's Civic Literacy opening and its only link to a real source.",
+    "Gap: no BVSS rubric yet for the short oral presentation with T-I-P; adapt the Sec 1 WA3 presentation rubric."
+   ]
+  },
+  {
+   "id": "TL|G1|1|1A|2",
+   "lang": "TL",
+   "course": "G1",
+   "sec": 1,
+   "book": "1A",
+   "unit": "2",
+   "title": "மரபும் பண்பாடும் · அறுவடைத் திருநாள் · Heritage and culture: the harvest festival",
+   "weeks": "Term 1, weeks 4 to 7 (15 periods per the CPDD பாடக் கண்ணோட்டம், spread over four weeks with CNY and MT Fortnight)",
+   "why": "Chosen because the CPDD overview already tags this unit for 21CC (civic literacy, global awareness, cross-cultural understanding) and values (harmony), and its production task (an e-banner) is a ready-made Inventive Thinking product for a G1 class with 65% of marks in oral and listening.",
+   "domain": [
+    "family",
+    "community"
+   ],
+   "lo": [
+    [
+     "Speaking",
+     "பொங்கலைப்பற்றி அறிந்த தகவல்களையொட்டிக் கலந்துரையாடுதல்; சூழலுக்கேற்பத் தன்னம்பிக்கையோடு பேசுதல்",
+     "P3 conversation (45%): speak about a familiar festival with confidence"
+    ],
+    [
+     "Reading",
+     "தமிழ் மாதங்களும் பழமொழிகளும்: பனுவலைத் தெளிவான உச்சரிப்போடும் சரளத்தோடும் படித்தல்; சொற்பொருள்",
+     "P3 read aloud; P2 reading MCQ"
+    ],
+    [
+     "Listening",
+     "கேட்டல் கருத்தறிதல்: festival audio",
+     "P3 listening comprehension (20%)"
+    ],
+    [
+     "Writing / production",
+     "கற்போம்; படைப்போம்: தகவல்களைச் சேகரித்து மின் பதாகை தயாரித்தல் (சிற்றேட்டின் கூறுகள்)",
+     "P1 social-media post (format provisional): short typed text for an audience"
+    ],
+    [
+     "Language",
+     "இனிய இலக்கணம்; மரபுத்தொடர்கள்",
+     "P2 grammar and idioms MCQ"
+    ]
+   ],
+   "weeksPlan": [
+    {
+     "w": "W4",
+     "focus": "நுழைவாயில்: Pongal video and discussion",
+     "learn": "Watch the Pongal clip; Think-Pair-Share what students already know; peer-assessment sheet for the discussion (பின்னிணைப்பு).",
+     "e21": "Civic Literacy: Pongal in Singapore versus Tamil Nadu; what is shared and what is local. Communication: speak in full sentences about a known topic.",
+     "assess": "Holistic (முழுமையான மதிப்பீடு): peer sheet on confidence and vocabulary.",
+     "res": "பாடநூல்; ஒளிக்காட்சி பொங்கல்; CPDD கண்ணோட்டம் 1A தொகுதி 2"
+    },
+    {
+     "w": "W5",
+     "focus": "படிப்போம்: Tamil months and proverbs; read aloud",
+     "learn": "Choral then paired read-aloud with attention to pronunciation and pausing; சொற்பொருள் அறிவோம் with picture cards; match proverbs to months.",
+     "e21": "Civic Literacy: proverbs as community knowledge; students ask a family member for one more saying.",
+     "assess": "Read-aloud checklist (pronunciation, pausing); workbook 2.1.",
+     "res": "பாடநூல் அறுவடைத் திருநாள்; பயிற்சிநூல் 2.1"
+    },
+    {
+     "w": "W6",
+     "focus": "கேட்டல் கருத்தறிதல்; இனிய இலக்கணம்; மொழி விளையாட்டு",
+     "learn": "Listening task with the audio clip; grammar point through a game; idiom of the week.",
+     "e21": "Adaptive Thinking: the listening text describes a festival celebrated differently; students adjust their earlier list.",
+     "assess": "Workbook listening item; quick grammar quiz on SLS.",
+     "res": "ஒலிப்பகுதி; பயிற்சிநூல்; SLS quiz"
+    },
+    {
+     "w": "W7",
+     "focus": "கற்போம்; படைப்போம்: the e-banner and the inquiry",
+     "learn": "Study the parts of a brochure (சிற்றேடு); groups collect three facts about how Singapore Tamil families celebrate Pongal today (one from a family interview), design an e-banner on Canva, present it in spoken Tamil for one minute.",
+     "e21": "Inventive Thinking: the banner. Communication: the one-minute presentation and answering one question from the class.",
+     "assess": "Self-assessment sheet (பின்னிணைப்பு) plus teacher holistic grade; presentation counts toward the Term 3 WA3 presentation rubric as a rehearsal.",
+     "res": "பாடநூல் சிற்றேடு; பயிற்சிநூல் 2.1 அ, ஆ; Canva template"
+    }
+   ],
+   "inquiry": {
+    "q": "How do Singapore Tamil families celebrate Pongal today, and what has changed since our grandparents' time?",
+    "approach": "Guided",
+    "phases": [
+     "Orientation: the Pongal video shows a village celebration; students list what looks different from their own homes.",
+     "Conceptualisation: each group chooses one aspect (food, kolam, clothes, games) and two questions to ask an older family member.",
+     "Investigation: short home interview in Tamil (or Tamil with support), photos or drawings, notes in the workbook.",
+     "Conclusion: e-banner and one-minute presentation; the class compares then and now and discusses why traditions change."
+    ]
+   },
+   "adjust": [
+    "CPDD's 15 periods run across CNY week and MT Fortnight; the MT Fortnight cultural booth can double as the e-banner showcase.",
+    "The P1 format for TL G1 is still provisional on this site; the e-banner caption is written as a short typed social-media post so it serves either outcome.",
+    "Gap: no TL G1 oral rubric for a one-minute presentation; adapt the G1 Oral Rubrics document in the TL folder."
+   ]
+  }
+ ],
+ "e21src": "Definitions, learning goals and secondary milestones: MOE 21st Century Competencies Office, Learning Goals and Developmental Milestones for Emerging 21CC (20 Oct 2023), read on OPAL2 on 31 Oct 2026; assessment principles: Guidelines on the Assessment of Emerging 21CC (Feb 2025). School descriptors: BVSS E21CC priority areas slide."
+}

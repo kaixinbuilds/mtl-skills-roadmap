@@ -60,10 +60,10 @@ D["domains"] = {"keys": DOM, "en": {"self":"Self","family":"Family","school":"Sc
 
 # ---------- 2. Provenance-tagged 21CC / IBL / E21CC priority tags ----------
 D["cat"].update({
- "PA_AT": {"lens":"pri","en":"Adaptive Thinking","zh":"适应性思维","ms":"Pemikiran adaptif","ta":"தகவமைப்புச் சிந்தனை","desc":"confident without established answers, resilient in failure, responds nimbly to changing contexts"},
- "PA_IT": {"lens":"pri","en":"Inventive Thinking","zh":"创造性思维","ms":"Pemikiran inventif","ta":"புத்தாக்கச் சிந்தனை","desc":"curious and reflective, driven by purpose, cognitively flexible in problem-solving"},
- "PA_CL": {"lens":"pri","en":"Civic Literacy","zh":"公民素养","ms":"Literasi sivik","ta":"குடிமை அறிவு","desc":"willing to act on social and global issues from the Singapore context; discerning about online information"},
- "PA_CM": {"lens":"pri","en":"Communication","zh":"沟通","ms":"Komunikasi","ta":"தொடர்பு","desc":"courageous and spontaneous in voicing ideas, able to persuade; open-minded and empathetic across cultures"},
+ "PA_AT": {"lens":"pri","en":"Adaptive Thinking","zh":"适应性思维","ms":"Pemikiran adaptif","ta":"தகவமைப்புச் சிந்தனை","desc":"MOE LG&M: the ability to apply learnt knowledge and skills strategically and with flexibility in different or new and evolving contexts (CAIT 3 assesses contexts to draw new insights; CAIT 4 manages complexity and ambiguity by adjusting perspective and strategies). BVSS slide: confident without established answers, resilient in failure, responds nimbly to changing contexts."},
+ "PA_IT": {"lens":"pri","en":"Inventive Thinking","zh":"创造性思维","ms":"Pemikiran inventif","ta":"புத்தாக்கச் சிந்தனை","desc":"MOE LG&M: the ability to frame, investigate and explore issues, generate innovative ideas, and evaluate them to form novel and useful responses (CAIT 5 explores possibilities and generates novel and useful ideas; CAIT 6 evaluates and refines ideas into solutions). BVSS slide: curious and reflective, driven by purpose, cognitively flexible in problem-solving."},
+ "PA_CL": {"lens":"pri","en":"Civic Literacy","zh":"公民素养","ms":"Literasi sivik","ta":"குடிமை அறிவு","desc":"MOE LG&M: the ability to understand the nation's values, governance, context and realities, form one's civic identity, and constructively engage with and contribute to one's community and nation (CGC 1 understands values, ideals and issues of personal, community and national significance; CGC 2 plays active and constructive roles). BVSS slide: willing to act on social and global issues from the Singapore context; discerning about online information."},
+ "PA_CM": {"lens":"pri","en":"Communication","zh":"沟通","ms":"Komunikasi","ta":"தொடர்பு","desc":"MOE LG&M: the ability to convey information and exchange ideas clearly and coherently through multimodal ways for specific purposes, audiences and contexts (CCI 1 effectively communicates information and co-constructs meaning; CCI 2 engages empathetically with diverse perspectives). BVSS slide: courageous and spontaneous in voicing ideas, able to persuade; open-minded and empathetic across cultures."},
 })
 CAT_DESC = {  # one-line meaning of each 21CC / IBL tag, shown in the unit detail panel
  "CAIT": "MOE 21CC domain: weighing evidence and views, generating new ideas, and adjusting thinking to new situations.",
@@ -78,16 +78,27 @@ CAT_DESC = {  # one-line meaning of each 21CC / IBL tag, shown in the unit detai
 }
 for _k, _d in CAT_DESC.items():
     if _k in D["cat"]: D["cat"][_k]["desc"] = _d
-DERIVE = {"CAIT":["PA_AT","PA_IT"], "CCIS":["PA_CM"], "CGC":["PA_CL"], "SEC":["PA_AT"]}  # CPDD 21CC domain -> BVSS priority area
+# CPDD 21CC domain -> BVSS priority area. Tightened 31 Oct 2026 against MOE's Learning Goals and Developmental
+# Milestones for Emerging 21CC (20 Oct 2023): a CPDD CAIT tag covers Critical, Adaptive AND Inventive thinking, so it
+# is mapped to Adaptive Thinking only where the task shows adaptive moves (CAIT 3-4) and to Inventive Thinking only
+# where it shows inventive moves (CAIT 5-6). CCIS -> Communication and CGC -> Civic Literacy stay as fixed mappings.
+# SEC (social-emotional) no longer maps to Adaptive Thinking: the LG&M lists SE skills as supports, not as the competency.
+INVENT = re.compile(r"\b(design|invent|innovat|improv(e|es|ing|ement)|solution|solve|propos(e|al|es|ing)|recommend|suggest(ion)?s?|plan (a|an|the|for)|planning|campaign|dream board|brainstorm|possibilit|alternative|what if|creat(e|ing) (a |an )?(new|own|original)|new (idea|way|product|version|use)|redesign|rewrite the ending|enterprise|business)\b|创新|设计|发明|改进|建议|方案|策划|构想|reka|cipta|inovasi|cadangan|merancang|rancangan|penyelesaian|புத்தாக்க|வடிவமை|திட்டமிட|தீர்வு|ஆலோசனை", re.I)
+ADAPT = re.compile(r"perspective|point of view|viewpoint|换位|角度|立场|dilemma|两难|decide between|choose between|adjust|adapt|unfamiliar|new situation|role-?play|角色扮演|scenario|what would you do|如果你是|假设你是|if you were|as the .{0,30}(head|manager|leader|reporter|officer)|in (his|her|their) shoes|different (context|situation|setting|culture)|compare .*(context|situation|culture)|transfer|strateg|debate|辩论|changes? (your|his|her|my) (mind|view)|改变了.{0,6}看法|perspektif|dilema|main peranan|sekiranya anda|seandainya|bayangkan anda|andaikan|menyesuaikan|situasi baharu|perbahasan|berbahas|பார்வை|தீர்மான|மாற்று|சூழ(ல்|லில்)|பாத்திரமேற்று", re.I)
+def _invent(r): return r["purpose"] in {"Propose","Recommend"} or bool(INVENT.search(r["task_en"]+" "+r["sub_en"]+" "+(r.get("task_m") or "")+" "+(r.get("sub_m") or "")))
+def _adapt(r): return bool(ADAPT.search(r["task_en"]+" "+r["sub_en"]+" "+(r.get("task_m") or "")+" "+(r.get("sub_m") or "")))
+DERIVE = {"CCIS":["PA_CM"], "CGC":["PA_CL"]}  # fixed mappings
+DERIVE_COND = {"CAIT":[("PA_IT", _invent, "CAIT tag plus an inventive move in the task (CAIT 5-6: generate, evaluate and refine ideas or solutions)"),
+                        ("PA_AT", _adapt, "CAIT tag plus an adaptive move in the task (CAIT 3-4: take another perspective, adjust strategy, apply skills in a new context)")]}
 PURP_VIEW = {"Give a view","Argue","Persuade","Propose","Recommend"}
 PURP_INTER = {"Reply","Respond","Give a view","Thank","Share","Apply","Report"}
 RULES = [  # (id, test(rec)->bool, cats, priority areas, explanation)
  ("R1 view",  lambda r: r["purpose"] in PURP_VIEW or "arg" in (r["strand"], r["also"]), ["CAIT"], ["PA_CM"], "states and supports a view (critical thinking; courageous in voicing ideas)"),
  ("R2 interact", lambda r: (r["strand"]=="fw" and (r["purpose"] in PURP_INTER or re.search(r"reply|respond|post|comment|e-?mail|message|forum", r["task_en"], re.I))) or (r["strand"]=="oral" and re.search(r"respond|views?|discuss|interact|listener|conversation|audience", r["task_en"]+" "+r["sub_en"], re.I)), ["CCIS"], ["PA_CM"], "responds to a reader or listener (communication; open-minded, empathetic)"),
- ("R3 civic", lambda r: re.search(r"singapore|lion city|nation|citizen|red dot|communit|society|heritage|cultur|tradition|environment|earth|global|world|harmony|dialect|green|volunteer", r["theme_en"]+" "+r["task_en"], re.I), ["CGC"], ["PA_CL"], "unit theme or task is about community, Singapore, culture or the world (civic literacy)"),
- ("R4 discern", lambda r: re.search(r"fact|opinion|author'?s view|critical|evaluat|reliab|fake|media|news|advert|source|evidence|mystery|true\?|discern|inference", r["sub_en"]+" "+r["task_en"], re.I), ["CAIT"], ["PA_CL"], "weighs facts, opinions, sources or media (discerning information)"),
- ("R5 invent", lambda r: r["strand"] in ("lit","nar") or re.search(r"creat|design|imagin|story|poem|comic|scene|meme|slogan|advert|banner|poster|brochure|dream board|product|script|podcast", r["task_en"], re.I), ["CAIT"], ["PA_IT"], "creates or designs something new (inventive thinking)"),
- ("R6 adapt", lambda r: re.search(r"challeng|resilien|change|adapt|problem|solution|failure|new beginning|grow(ing)? up|dream|future|career|habit|cope|setback|discover", r["theme_en"]+" "+r["task_en"]+" "+r["sub_en"], re.I), [], ["PA_AT"], "theme or task is about coping with change, challenge or the future (adaptive thinking)"),
+ ("R3 civic", lambda r: re.search(r"singapore|lion city|nation|citizen|red dot|communit|society|heritage|cultur|tradition|environment|earth|global|world|harmony|dialect|green|volunteer", r["theme_en"]+" "+r["task_en"], re.I), ["CGC"], ["PA_CL"], "unit theme or task is about community, Singapore, culture or the world (civic literacy: CGC 1, understanding values and issues of community and national significance)"),
+ ("R4 discern", lambda r: re.search(r"fact|opinion|author'?s view|critical|evaluat|reliab|fake|media|news|advert|source|evidence|mystery|true\?|discern|inference", r["sub_en"]+" "+r["task_en"], re.I), ["CAIT"], ["PA_CL"], "weighs facts, opinions, sources or media (critical thinking; discerning information, the school's Civic Literacy descriptor)"),
+ ("R5 invent", _invent, ["CAIT"], ["PA_IT"], "task asks students to generate, design, propose or refine ideas or solutions to an issue (MOE CAIT 5-6, Inventive Thinking). Writing a story, poem or poster no longer counts on its own"),
+ ("R6 adapt", _adapt, [], ["PA_AT"], "task asks students to take another perspective, weigh a dilemma, adjust a strategy or apply skills in a new or unfamiliar context (MOE CAIT 3-4, Adaptive Thinking). A theme about change or challenge no longer counts on its own"),
  ("R7 inquiry", lambda r: re.search(r"search|find (out|information)|research|survey|interview|investigat|collect|plan a|design a|project|exhibit|present(ation)? (from|on)|integrated task|综合任务|explore", r["task_en"]+" "+r["sub_en"], re.I), ["INQ"], [], "task needs students to find out, plan, make or present (inquiry-shaped, not tagged by CPDD)"),
 ]
 for r in D["recs"]:
@@ -99,6 +110,10 @@ for r in D["recs"]:
     for k in r.get("cats", []): add(k, "cpdd", "tagged in the CPDD guide")
     for k in r.get("cats", []):
         for p in DERIVE.get(k, []): add(p, "derived", f"derived from the CPDD {k} tag")
+        for p, test, why in DERIVE_COND.get(k, []):
+            try: ok = bool(test(r))
+            except Exception: ok = False
+            if ok: add(p, "derived", f"derived: {why}")
     for rid, test, cats, pris, why in RULES:
         try: ok = bool(test(r))
         except Exception: ok = False
@@ -106,11 +121,21 @@ for r in D["recs"]:
         for k in cats + pris: add(k, "infer", f"{rid}: {why}")
     r["tags"] = tags
 D["prov"] = {"cpdd":"CPDD-tagged","derived":"Derived from a CPDD tag","infer":"Inferred by rule"}
-D["rules"] = [{"id": rid, "cats": cats + pris, "why": why} for rid, _, cats, pris, why in RULES] + [{"id":"DERIVE","cats":sum(DERIVE.values(),[]),"why":"CPDD 21CC domain tags mapped to BVSS E21CC priority areas: CAIT → Adaptive + Inventive Thinking; CCIS → Communication; CGC → Civic Literacy; SEC → Adaptive Thinking"}]
-D["priNote"] = "BVSS E21CC priority areas (school approach from 2027): Adaptive Thinking, Inventive Thinking, Civic Literacy, Communication. No CPDD guide tags these, so every priority-area tag is either derived from a CPDD 21CC tag or inferred from the task by rule. Treat inferred tags as proposals to confirm in SOW planning."
+D["rules"] = [{"id": rid, "cats": cats + pris, "why": why} for rid, _, cats, pris, why in RULES] + [{"id":"DERIVE","cats":["PA_CM","PA_CL","PA_IT","PA_AT"],"why":"CPDD 21CC domain tags mapped to BVSS E21CC priority areas: CCIS → Communication; CGC → Civic Literacy; CAIT → Inventive Thinking only where the task shows an inventive move (CAIT 5-6) and Adaptive Thinking only where it shows an adaptive move (CAIT 3-4); SEC no longer maps to a priority area (tightened 31 Oct 2026 against MOE's LG&M for E21CC)"}]
+D["priNote"] = "BVSS E21CC priority areas (school approach from 2027): Adaptive Thinking, Inventive Thinking, Civic Literacy, Communication. No CPDD guide tags these, so every priority-area tag is either derived from a CPDD 21CC tag or inferred from the task by rule, using the definitions and learning goals in MOE's Learning Goals and Developmental Milestones for Emerging 21CC (20 Oct 2023): Adaptive Thinking = CAIT 3-4, Inventive Thinking = CAIT 5-6, Communication = CCI 1-2, Civic Literacy = CGC 1-2. Tightened 31 Oct 2026: a narrative or creative text no longer counts as Inventive Thinking, and a theme about change no longer counts as Adaptive Thinking; the task must show the move. Treat inferred tags as proposals to confirm in SOW planning."
 
 # ---------- 3. Pedagogical design facts ----------
 D["design"] = json.loads((ROOT / "tools" / "design.json").read_text(encoding="utf-8"))
+
+# ---------- 4. Redesigned SOW frame (tools/sow.json) ----------
+D["sow"] = json.loads((ROOT / "tools" / "sow.json").read_text(encoding="utf-8"))
+D["design"].setdefault("about", {})["sow"] = D["sow"]["about"]
+D["ui"]["t_sow"] = {"en":"Redesigned SOW","zh":"重新设计的教学进度表","ms":"Skema Pengajaran baharu","ta":"புதிய பாடத்திட்டம்"}
+D["ui"]["t_stock"] = {"en":"SOW stock-take","zh":"教学进度表盘点","ms":"Stok Skema Pengajaran","ta":"பாடத்திட்ட ஆய்வு"}
+
+# ---------- 5. CL inquiry wording (recheck of all 44 CL 教师手册 PDFs, 31 Oct 2026) ----------
+D["iblTg"]["CL"] = "《华文伴我行》教师手册 do not tag units for inquiry. Every book's 差异教学 notes name 引导——探究 (guided inquiry) as one of two teaching modes, and every unit ends with 文化探索 (look it up and share) and a 综合任务 (integrated task: 展示、交流、反思). 探究 itself appears once or twice per book; 综合任务 about twenty times."
+D["iblTgEn"]["CL"] = "The CL guides don't tag units for inquiry. Every book's differentiated-instruction notes name guided inquiry (引导——探究) as one of two teaching modes, and every unit ends with a culture-exploration extension (look it up online and share) and an integrated task (make, present, reflect). The word inquiry appears once or twice per book; the integrated task about twenty times."
 
 new = json.dumps(D, ensure_ascii=False)
 HTML.write_text(h[:i] + new + h[i+end:], encoding="utf-8")

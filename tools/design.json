@@ -1,14 +1,41 @@
 {
  "aspects": [
-  ["shape", "How a unit is built"],
-  ["routines", "Signature routines"],
-  ["writing", "How writing is taught"],
-  ["oral", "Oral and read-aloud"],
-  ["reading", "Reading"],
-  ["assess", "Assessment inside the unit"],
-  ["examform", "When the exam writing form becomes regular"],
-  ["scope", "Topic-scope progression"],
-  ["lod", "Within the language: how levels of demand differ"]
+  [
+   "shape",
+   "How a unit is built"
+  ],
+  [
+   "routines",
+   "Signature routines"
+  ],
+  [
+   "writing",
+   "How writing is taught"
+  ],
+  [
+   "oral",
+   "Oral and read-aloud"
+  ],
+  [
+   "reading",
+   "Reading"
+  ],
+  [
+   "assess",
+   "Assessment inside the unit"
+  ],
+  [
+   "examform",
+   "When the exam writing form becomes regular"
+  ],
+  [
+   "scope",
+   "Topic-scope progression"
+  ],
+  [
+   "lod",
+   "Within the language: how levels of demand differ"
+  ]
  ],
  "glance": {
   "CL": "A self-to-world spiral every semester. Each book runs self or school, then family or community, then Singapore or the world, and the next book starts again. Progression is carried by the communicative move (narrate, describe, explain, give a view, respond), not by widening topics.",
@@ -146,7 +173,7 @@
    "ML STAR Team Inquiry (Scenario Analysis, Team Inquiry, Application, Reflection) is closest to Issue Investigation and Problem-based Learning: teams work a real scenario, then apply and reflect.",
    "ML Sec 3 Unit 4 (G1 and G2): plan a business or social enterprise that helps the community. This is the clearest problem-based task in the guides, and the guide says it can be a weighted assessment.",
    "TL G3 Book 2A Units 2 and 3 carry an e-pedagogy inquiry tag (newspaper report, formal email).",
-   "CL guides do not tag inquiry. Each CL unit's integrated task is inquiry-shaped but not yet in this dataset (HANDOFF.md, next step 2)."
+   "CL guides name 引导——探究 as one of two teaching modes (示范——模仿 or 引导——探究) in the differentiated-instruction section of every book (checked across all 44 CL 教师手册 PDFs on the drive, 31 Oct 2026), and every unit ends with a 文化探索 extension (look something up online and share) and a 综合任务 (integrated task with 展示、交流和反思). None is tagged per unit, and the integrated tasks are not yet records in this dataset (HANDOFF.md, next step 2)."
   ],
   "others": [
    [
@@ -209,12 +236,13 @@
    "use": "Choose the course at the top and narrow by year if needed."
   },
   "theme": {
-   "what": "The unit themes for each language, by year and course.",
+   "what": "The unit themes of all three languages, year by year, with a header for each year that explains the thread behind the textbook's theme order and whether the courses share it.",
    "points": [
-    "Shows which themes all courses share and where themes split by course (mostly in Sec 3 and 4).",
-    "The side-by-side layout compares the three languages' themes for the same course."
+    "'3 languages side by side' opens each year with three headers, one per language: the path of topic domains, the thread that holds the year, and what it asks students to make meaning of.",
+    "'One language' puts G1, G2, G3 and HMT in columns, with one summary per year saying whether the themes are identical across courses and, where they differ, what the difference says about the level of demand. Differing units are highlighted.",
+    "Filter by course and year in either layout."
    ],
-   "use": "Use it with the Pedagogical design ladder to see each theme's topic domain."
+   "use": "Read the header first, then scan the rows under it."
   },
   "c21": {
    "what": "Where the 21st century competencies (21CC) appear in each language's units, Sec 1 to 4.",
@@ -229,7 +257,7 @@
    "what": "Where inquiry-based learning, a BVSS school approach from 2027, already sits in the MTL units, and where it could go.",
    "points": [
     "The essence section sets out what MOE's Singapore Teaching Practice means by inquiry: five key elements, the inquiry cycle, the 5E model, structured to open approaches, and what makes it work.",
-    "CPDD flags inquiry mainly in ML (STAR Team Inquiry in about a dozen units, and a community business plan in Sec 3 Unit 4), plus two TL G3 Sec 2 units. The CL guides do not tag it.",
+    "CPDD flags inquiry mainly in ML (STAR Team Inquiry in about a dozen units, and a community business plan in Sec 3 Unit 4), plus two TL G3 Sec 2 units. The CL guides name 引导——探究 (guided inquiry) as a teaching mode in every book's differentiated-instruction notes, and every CL unit ends with a 文化探索 extension and a 综合任务, but no CL unit is tagged, so CL inquiry on this page is inferred.",
     "Amber tags mark tasks that look inquiry-shaped (find out, plan, make or present) but are not tagged. The STP card under the roadmap gives the student behaviours to look for."
    ],
    "use": "Click a unit card to see the task, the guide's note and the STP look-fors."
@@ -781,6 +809,96 @@
     "Interview people from two generations.",
     "Write the opinion-expository essay using the interviews."
    ]
+  }
+ },
+ "themeThread": {
+  "note": "One header per language per year: the path the unit themes take (topic domains in order), the thread that holds the year together, and what that asks students to make meaning of. ML domains are CPDD's own tags; CL and TL domains are inferred from theme wording. Written by the department from the unit lists, 31 Oct 2026.",
+  "CL": {
+   "1": {
+    "path": "school → family → nation ‖ self → self → community",
+    "thread": "Two near-to-far spirals, one per semester. 1A starts in the new classroom, pulls back to the family at reunion, then pushes out to Singapore as a place to explore. 1B turns inward to character (habit, creativity) and ends with the unsung people who keep the community running.",
+    "meaning": "The year builds a double identity: a new secondary student and a young Singaporean. The 1B pairing of habit → change → contribution says: what I do with myself becomes what I can give. Skills stay descriptive and narrative (people, cause and effect, detail), so the themes are ground students already stand on."
+   },
+   "2": {
+    "path": "family → self & others → community ‖ self → nation → world",
+    "thread": "The object of care widens: love at home, then animals, then the environment. The object of belonging widens: my own growth, then home as Singapore (HDB, rain trees), then a connected but noisy world (fake news).",
+    "meaning": "Sec 2 is where views and reasons begin in CL, and the themes give something to argue about at each ring. The last unit's 别上假信息的当 is the first place the guide asks students to weigh sources, the hinge into Sec 3 argument."
+   },
+   "3": {
+    "path": "self → self → community → community → school → self",
+    "thread": "The adolescent's social world, shared by every course: companionship, health choices, the neighbourhood, dialogue and media, lifelong learning, then truth, goodness and beauty. No nation or world unit: the year is relational, not civic.",
+    "meaning": "Sec 3 carries the argumentative load (举例、引用、对比、多方面论证), so CPDD keeps topics inside lived experience where students can reason from evidence they own. The closing 真善美 unit uses literary texts (micro-fiction) to make values the object of judgement rather than rules."
+   },
+   "4": {
+    "path": "G1 self → self → nation → community → self · G2 self → self → community → school → self · G3 community → world → self → community → self · HCL self × 5",
+    "thread": "The leaving student: who am I, what do I stand for, where do I belong, what next. Themes split by course for the first time. G1 and G2 keep one Singapore or Nanyang-culture unit; G3 and HCL go philosophical (literature, balance, time, parting).",
+    "meaning": "The SEC year does not widen scope further; it deepens stance. Every course ends on dreams, inclusion or time, which is the territory of the material-based and argumentative essay and of the oral's view questions. HCL's five self-domain units are reflective essay prompts in disguise."
+   }
+  },
+  "ML": {
+   "1": {
+    "path": "school/self (1A) → family, community (1B) · HML: self + community + world from Unit 1",
+    "thread": "CPDD's own Domain row sets the order: identity, appearance, choices and music close to the student, then food, family and shared culture as the bridge into the community, with Arif Budiman values rising through the year (courtesy, giving, perseverance). Higher Malay opens at the community-world scale at once and titles every unit with a proverb.",
+    "meaning": "The question of the year is who I am in my community, asked through describing and expressing. The proverb titles in HML, and the Nilai Budaya column in every unit, make the culture itself the text: students learn the language through the values it carries."
+   },
+   "2": {
+    "path": "self → self/family → self/family → self ‖ self/community → self/family/community → self/school/community → all four · HML adds world throughout",
+    "thread": "Adolescence under pressure: time, body, growing up and aspiration in 2A; trends and pop culture, love, effort and knowledge, dreams in 2B. The community enters through peers and culture rather than through institutions.",
+    "meaning": "The year forms values where they are tested: by peers (trends), by feelings (love) and by setbacks (effort). It is the natural home of view-giving (Panduan Memberikan Pandangan) because every unit asks students to take a position on something they live with."
+   },
+   "3": {
+    "path": "self/family/community → self/community → family/community → self/community → community/world → self/community/world",
+    "thread": "The citizen: rights and responsibilities, voice, role models, service (the community business or social-enterprise plan in Unit 4), discernment about what is true online, then stewardship of one shared Earth.",
+    "meaning": "The clearest civic year in any of the three languages, and the inquiry year: STAR Team Inquiry and the Unit 4 plan the guide says can be a weighted assessment. The response text (Teks Respons) becomes regular here, so students respond in writing to issues the units have made real."
+   },
+   "4": {
+    "path": "self/community → self/community → community/world, then three self-domain skills units",
+    "thread": "Three content units ask where I am going (technology as companion, aspirations) and whether my language and people endure (Am I Malay?, the ark of my people, Malays will never vanish, thrive wherever you land). Three skills units then close the exam: listen and speak, read critically, master writing.",
+    "meaning": "Sec 4 answers the Sec 1 question. 'Who are we' becomes 'will we last', which is Arif Budiman as a stance rather than a value label. The skills units say plainly that the exam year is for transfer, not new ground."
+   }
+  },
+  "TL": {
+   "1": {
+    "path": "self → community → self → self → self → self → community",
+    "thread": "TL runs a fixed wheel of themes every year (relationships, heritage and culture, health, nature and environment, science and technology, life skills, leisure and arts, society and the world) and changes the sub-theme. Sec 1 anchors the wheel in the new student: change and new beginnings, the harvest festival, 'Tamil and me', goals; then the practical world of health, the internet and water.",
+    "meaning": "Progression is carried by the sub-theme, not by widening domains: 'change' is new beginnings here and will be traditions in flux by Sec 4. The year makes being Tamil in Singapore personal (festival, language, goals) before it becomes social."
+   },
+   "2": {
+    "path": "self → self → community → community → self → self → nation/community",
+    "thread": "The same wheel, one step out: friendship, hobbies, protecting the environment as a duty, heritage as history (cultural norms, Tamil kings), technology across time, money, and the first society-and-nation unit (youth and society).",
+    "meaning": "From 'me' to 'me among others'. The year's last unit is the first explicit civic one, which is why the department's Sec 2 authentic assessment (40 Stories: interview and news report) sits naturally here."
+   },
+   "3": {
+    "path": "self → self → self → self → community → self → world",
+    "thread": "Maturity: the arts, my relationships as my responsibility, leadership, living in harmony with nature, the Tamil way of life, mental well-being, then Tamil and the world. Seven units, all courses share them.",
+    "meaning": "Sec 3 asks for views in spoken Tamil with reasons, so the sub-themes are ones students have a stake in (leadership, mental health). The world appears for the first time, through the Tamil diaspora, so 'us' becomes global before Sec 4 asks about duties."
+   },
+   "4": {
+    "path": "self → community → nation/community → self → self → world",
+    "thread": "The citizen and the future: rights and duties, traditions in change, nation-building, enterprise, invention, a brand-new Earth. One wheel turn at full width.",
+    "meaning": "The exam year is the widest year in TL. It ends on a global issue with the online-post task (comments on online posts), so the SEC writing form arrives together with the largest scope: students comment on the world as Singapore Tamils who have, by now, spoken about every theme four times."
+   }
+  }
+ },
+ "themeCourse": {
+  "note": "One summary per language per year for the one-language view: are the themes the same across G1, G2, G3 and HMT, and where they differ, what the difference says about the level of demand. Units whose theme differs from the other courses are highlighted in the rows.",
+  "CL": {
+   "1": "Identical in all four courses: the same six themes in the same order (G3 and HCL simply number Book 1B as Units 4 to 6). Demand is set elsewhere: the 核心 literary text is longer and the word list larger as the course rises, G1 adds 图文 and 打写 scaffolds, and the writing task runs from a typed post (G1) to an email plus essay (G2, G3, HCL). Meaning-making is shared: one school and family year that every Sec 1 student can talk about, whatever the class.",
+   "2": "Identical in all four courses. The six themes widen care and belonging from family to world for everyone; what differs is what students are asked to do with them. G1 gives a view in a post, G2 and G3 begin the explanatory-argumentative essay (如何……、为什么……), and HCL reads the same 核心 texts for stance and structure. The shared theme set lets the department set one Sec 2 authentic assessment (40 Stories) across courses.",
+   "3": "Nearly identical: four of six themes are word-for-word the same, and two are reworded by course. Unit 2 is 我的健康我做主 (my health, my call) for G1 but 健康生活 for the others; Unit 5 is 人生学堂 (school of life) for G1 and G2 but 学无止境 (learning never ends) for G3 and HCL. The rewording is the demand signal: G1 is turned toward personal agency and practical life skills, G3 and HCL toward lifelong learning as a value to argue for. Same social world, different stance expected.",
+   "4": "Different in every course: Sec 4 is the only CL year where the four courses carry four separate theme sets. G1 stays concrete and Singapore-anchored (发现自我、面对挑战、情牵小红点、文化调色板、勇于追梦), which serves the oral and the short post. G2 keeps culture and inclusion (南洋华彩、关爱与包容) with essay-friendly life themes. G3 moves to abstraction (心手相连、文学世界、平衡之道、知己知彼). HCL is five reflective abstractions (适应、态度、成功、离别、时间) that read as essay prompts. Demand here equals abstraction: the higher the course, the further the theme is from a place or an act and the closer to an idea."
+  },
+  "ML": {
+   "1": "Different titles in every course, same skeleton. All four open with identity at school (Teguh Bersatu, Which one?, Need or want?, Usul Menunjukkan Asal), spend 1A on the self (appearance, choices, music), and use 1B for food and ties, resilience and giving. The demand shows in the title register: G1 statements (I can!), G2 and G3 questions and dilemmas (Want it? Afford it?; No pain, no gain), HML proverbs that must be interpreted before the unit can begin. CPDD's domain tags widen with the course: G1 stays in self and school until 1B, HML is self, community and world from Unit 1.",
+   "2": "Different titles, shared anchors: time (U1), health and self-care (U2), growing up and change (U3), aspiration (U4), trends and pop culture (U5), love (U6), effort and knowledge (U7), dreams (U8). G1 keeps them concrete and imperative (Use it well!, Health first!), G3 abstracts them (Waves of change, Spread your wings), HML turns them into metaphor (Still waters, Nature is a teacher, Love like the pattern on a plate) and adds the world domain to almost every unit. Same adolescence, read at four depths.",
+   "3": "Different titles, one civic thread: rights and responsibility (U1), expression (U2), role models (U3), community action or enterprise (U4), truth online (U5), one shared Earth (U6). G1 and G2 titles are plain questions (Is it true?, Rights without responsibility?); G3 and HML titles are idioms and proverbs (Not like the palm in the thicket, Strong because of its knot, Prop up the leaning, help the weak). The inquiry tasks (STAR, the Unit 4 business plan) sit in the same slots in every course, so the department can run one Sec 3 inquiry across courses with the title register as the differentiation.",
+   "4": "Same structure in every course, different titles: three content units (technology and the future, aspirations, Malay identity) and the same three skills units (listening and speaking, reading, writing), which each guide titles in its own words (G1 Listen carefully, speak precisely; G3 Dancing pen, active mind; the G2 and HML dataset rows carry generic labels). The content titles grade the identity question: G1 asks Am I Malay? (personal), G2 Ark of my people, G3 Malays will never vanish, HML Thrive wherever you land (community and world). Demand runs from personal belonging to collective destiny, while the skills units say the exam year is the same job for everyone."
+  },
+  "TL": {
+   "1": "One theme set, three small rewordings. 1A Unit 3 'Tamil and me' is filed under Relationships in G1, G3 and HTL but under Heritage and culture in G2; 1A Unit 4 'Life skills' is 'Character' in G1 and 'Goals' in the other three; HTL's Unit 1 is 'New experiences' rather than 'New beginnings'. None changes what the unit is about. TL demand is never thematic: it sits in text length, the grammar and literature load, HTL's summary writing from Sec 1, and the production task (guided completion in G1, independent writing in G3 and HTL).",
+   "2": "Identical except one sub-theme: 2A Unit 4 is 'Cultural norms and values' for G1 and HTL but 'Kings of Tamil history' for G2 and G3, both under Heritage and culture. Everything else is the same wheel, one turn out. The courses diverge in what they produce (G1 multimodal and guided, G3 and HTL extended writing) rather than in what they read about.",
+   "3": "Identical in all four courses: the same seven units in the same order, from the arts to Tamil and the world. This is where G3 and HTL add the argumentative essay and debate while G1 and G2 keep to views with reasons in spoken Tamil, so the same theme (leadership, mental well-being, the diaspora) is handled as a position paper in one class and a discussion in another.",
+   "4": "Identical in all four courses: rights and duties, traditions in change, nation-building, entrepreneurship, invention, a brand-new Earth. The exam components carry the demand: HTL alone sits summary and word joining, G3 and HTL write the longer essay, G1 writes the typed post. One theme wheel, four exam destinations."
   }
  }
 }
