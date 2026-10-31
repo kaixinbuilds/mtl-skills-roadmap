@@ -11,6 +11,17 @@ A department wall chart of what the CPDD 2021-syllabus teacher guides teach in C
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
+## Planner is the home page (31 Oct 2026, eighth update)
+
+The Scheme of work 2027 term grid is now the landing page (a visit with no hash opens it; the brand links to it) and sits first in the navigation under **Planner**, with the Writing task bank. Everything else is under Curriculum & exam, Pedagogy and 2027 school approaches as before.
+
+- **Layer toggles** (`PLAYERS`, `PPRESET`, `PROWS()` in the script): every grid row can be switched on and off, grouped Topics, Skills, Writing, 2027 approaches, Assessment and calendar. Presets: Planning core (default), Topics and skills, Writing, IBL and E21CC, Assessment, Everything. The school vision band is a layer (`vmv`).
+- **New rows** in `gridRows`: `wtypes` (writing types met each term from `wbank`, with a glowing "new" chip in the year colour when the course meets a type for the first time) and `c21` (21CC roadmap tags per term, CPDD + inferred counts).
+- **E21CC slicer**: choose which of the four priority areas show in the E21CC row, and CPDD + inferred / CPDD only / inferred only for the E21CC and 21CC rows.
+- **All four years**: the year selector has an "All four years" option that stacks Sec 1 to 4 in one grid with a year band per year.
+- State is kept in the hash (`#sow-CL-G3?s=0&rows=...&pa=...&psrc=...`), so a filtered planner can be shared as a link; the CSV export follows the visible layers and years.
+- CL 综合任务 texts in the inquiry row now fold into a one-line summary that opens on click.
+
 ## School colours, SVG scenes and writing-type corrections (31 Oct 2026, seventh update)
 
 **Writing-type corrections** (`tools/sow.json` `wbank.items`; 57 items re-read and corrected by hand, each keeps its old type in `was` and shows a "re-sorted" badge in the task bank):

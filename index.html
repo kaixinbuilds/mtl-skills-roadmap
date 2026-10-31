@@ -349,11 +349,41 @@ table.wbfirst tr.sec td,table.wbfirst tr.sec th{background:var(--p1bg)!important
 .wi-fw{--ic:var(--b1)}.wi-nar{--ic:var(--g1)}.wi-des{--ic:#c98a00}.wi-exp{--ic:var(--y3)}.wi-arg{--ic:#b23a48}.wi-lit{--ic:#7a4fc0}.wi-oth{--ic:var(--muted)}.wi-int{--ic:#0f7a6a}
 table.wbgrid thead th.yh{border-top:5px solid var(--yc)}
 .badge.rc{color:var(--p3);background:var(--p3bg);border-color:transparent;margin-left:4px;cursor:help}
+/* planner layers */
+.layers{position:relative;display:flex;flex-direction:column;gap:10px;margin:6px 0 14px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 8px 24px -18px rgba(26,79,163,.45)}
+.layers .lt{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.layers .lh{font-family:var(--f-m);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--b1);font-weight:600;margin-right:4px}
+.layers .pre{display:flex;flex-wrap:wrap;gap:6px}
+.layers button{font:inherit;font-size:12.5px;cursor:pointer;border-radius:999px;transition:background .15s,border-color .15s,color .15s,box-shadow .15s}
+.layers .pre button,.layers .psrc{border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:4px 11px}
+.layers .pre button[aria-pressed="true"],.layers .psrc[aria-pressed="true"]{background:var(--b1);border-color:var(--b1);color:#fff}
+.layers .lg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 14px}
+.layers .lgrp{display:flex;flex-wrap:wrap;gap:4px;align-content:flex-start;padding:8px 10px;border-radius:10px;background:var(--soft)}
+.layers .lgrp .gl{width:100%;font-family:var(--f-m);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--paper);color:var(--muted);padding:3px 10px 3px 6px}
+.lchip i{width:22px;height:12px;border-radius:999px;background:var(--line);position:relative;transition:background .15s}.lchip i::after{content:"";position:absolute;top:2px;left:2px;width:8px;height:8px;border-radius:50%;background:#fff;transition:transform .15s}
+.lchip[aria-pressed="true"]{color:var(--ink);border-color:color-mix(in srgb,var(--g1) 55%,var(--line));background:color-mix(in srgb,var(--g1) 8%,var(--paper))}
+.lchip[aria-pressed="true"] i{background:var(--g1)}.lchip[aria-pressed="true"] i::after{transform:translateX(10px)}
+.layers .tag.pa{border:0;border-left:4px solid var(--k);padding:3px 9px;border-radius:6px;font-size:12px}
+.layers .tag.pa[aria-pressed="true"]{background:color-mix(in srgb,var(--k) 18%,var(--paper));color:var(--ink);font-weight:600}
+
+table.tgrid tr.yr th{background:var(--paper);color:var(--ink);font-family:var(--f-d);font-size:20px;font-weight:650;padding:16px 10px 8px;border-bottom:3px solid var(--yc);position:static;text-align:left}
+table.tgrid tr.yr th .yd{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--yc);margin-right:10px;box-shadow:0 0 0 4px color-mix(in srgb,var(--yc) 25%,transparent)}
+table.tgrid tr.yr th small{font-family:var(--f-m);font-size:11px;color:var(--muted);margin-left:10px;font-weight:400}
+table.tgrid tr.grp th{background:linear-gradient(90deg,var(--b1),color-mix(in srgb,var(--b1) 70%,var(--g1)))}
+table.tgrid thead th.tm{border-top:4px solid var(--tc)}.tm.t1{--tc:var(--y1)}.tm.t2{--tc:var(--y2)}.tm.t3{--tc:var(--y3)}.tm.t4{--tc:var(--y4)}
+.wtc{display:inline-flex;align-items:center;gap:5px;margin:0 5px 5px 0;padding:2px 8px 2px 3px;border-radius:999px;font-size:12px;background:color-mix(in srgb,var(--ic) 10%,var(--paper));border:1px solid color-mix(in srgb,var(--ic) 30%,var(--line))}
+.wtc svg{width:18px;height:18px;color:var(--ic)}.wtc b{font-family:var(--f-m);font-size:11px}
+.wtc em{font-style:normal;font-family:var(--f-m);font-size:9.5px;text-transform:uppercase;letter-spacing:.06em;background:var(--yc);color:#fff;border-radius:999px;padding:0 6px}
+.wtc.y1 em{color:#3a2b00}
+.wtc.new{box-shadow:0 0 0 2px color-mix(in srgb,var(--yc) 55%,transparent)}
+@media (prefers-reduced-motion:no-preference){.wtc.new{animation:wtcGlow 3s ease-in-out infinite}}
+@keyframes wtcGlow{50%{box-shadow:0 0 0 2px var(--yc),0 0 12px 1px var(--yc)}}
 </style>
 
 <header class="site">
  <div class="inner top">
-  <a class="brand" href="#over" data-tab="over"><span class="mark" aria-hidden="true"><svg viewBox="0 0 40 40"><rect width="40" height="40" fill="#1a4fa3"/><circle cx="28" cy="13" r="8" fill="#f5c400" opacity=".35"/><circle cx="28" cy="13" r="5" fill="#f5c400"/><path d="M0 31 C8 21 15 21 22 27 S34 24 40 20 V40 H0Z" fill="#1f9d55"/><path d="M0 35 C10 29 20 33 40 29 V40 H0Z" fill="#7fd09a"/></svg></span><span class="bt"><b id="h1"></b><small>BVSS · Sec 1–4 · CL · ML · TL</small></span></a>
+  <a class="brand" href="#sow" data-tab="sow"><span class="mark" aria-hidden="true"><svg viewBox="0 0 40 40"><rect width="40" height="40" fill="#1a4fa3"/><circle cx="28" cy="13" r="8" fill="#f5c400" opacity=".35"/><circle cx="28" cy="13" r="5" fill="#f5c400"/><path d="M0 31 C8 21 15 21 22 27 S34 24 40 20 V40 H0Z" fill="#1f9d55"/><path d="M0 35 C10 29 20 33 40 29 V40 H0Z" fill="#7fd09a"/></svg></span><span class="bt"><b id="h1"></b><small>BVSS · Sec 1–4 · CL · ML · TL</small></span></a>
   <div class="seg" id="modeSeg"></div>
  </div>
  <nav class="inner" aria-label="Sections"><div class="seg tabs" id="tabs"></div><select id="navSel" aria-label="Go to section"></select></nav>
@@ -387,12 +417,12 @@ const NONEN=/[\u3400-\u9fff\u0b80-\u0bff]/;window.__miss=new Set();
 const enOf=s=>{const e=(DATA.en||{})[s];if(e!=null)return e;if(!/^(CL|ML|TL)\|/.test(s)&&(NONEN.test(s)||(window.__MSR&&window.__MSR.test(s))))window.__miss.add(s);return null};
 const esc=s=>{s=String(s??"");if(typeof st!=="undefined"&&st.mode==="el"&&s){const e=enOf(s);if(e!=null)s=e}return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));}
 const ML_={CL:"zh",ML:"ms",TL:"ta"};
-let st={tab:"over",lang:"CL",crs:"G3",mode:"el",mdet:"sum",lens:"c21",sL:"All",sC:"All",cats:[],src:"all",dlay:"lang",dsec:"All",ssec:1};
+let st={tab:"sow",rows:null,pa:["PA_AT","PA_IT","PA_CL","PA_CM"],psrc:"all",lang:"CL",crs:"G3",mode:"el",mdet:"sum",lens:"c21",sL:"All",sC:"All",cats:[],src:"all",dlay:"lang",dsec:"All",ssec:1};
 const TABS=["over","lang","design","map","theme","syl","c21","ibl","pri","sow","write"];
 try{Object.assign(st,JSON.parse(localStorage.getItem("mtlrm2")||"{}"))}catch(e){}
-if(st.mode!=="mtl"&&st.mode!=="el")st.mode="el";if(!["c21","ibl"].includes(st.lens))st.lens="c21";if(st.tab==="roads")st.tab="c21";if(!TABS.includes(st.tab))st.tab="over";if(![1,2,3,4].includes(st.ssec))st.ssec=1;if(!["All","CL","ML","TL"].includes(st.sL))st.sL="All";if(!["All","G1","G2","G3","H"].includes(st.sC))st.sC="All";if(!Array.isArray(st.cats))st.cats=[];if(!["grid","side"].includes(st.lay))st.lay="grid";if(!["grid","side"].includes(st.tlay))st.tlay="grid";if(!["grid","side"].includes(st.mlay))st.mlay="grid";if(!["sum","full"].includes(st.mdet))st.mdet="sum";if(!["All",1,2,3,4].includes(st.sS))st.sS="All";
+if(st.mode!=="mtl"&&st.mode!=="el")st.mode="el";if(!["c21","ibl"].includes(st.lens))st.lens="c21";if(st.tab==="roads")st.tab="c21";if(!TABS.includes(st.tab))st.tab="over";if(![0,1,2,3,4].includes(st.ssec))st.ssec=1;if(!Array.isArray(st.rows))st.rows=null;if(!Array.isArray(st.pa))st.pa=["PA_AT","PA_IT","PA_CL","PA_CM"];if(!["all","cpdd","infer"].includes(st.psrc))st.psrc="all";if(!location.hash)st.tab="sow";if(!["All","CL","ML","TL"].includes(st.sL))st.sL="All";if(!["All","G1","G2","G3","H"].includes(st.sC))st.sC="All";if(!Array.isArray(st.cats))st.cats=[];if(!["grid","side"].includes(st.lay))st.lay="grid";if(!["grid","side"].includes(st.tlay))st.tlay="grid";if(!["grid","side"].includes(st.mlay))st.mlay="grid";if(!["sum","full"].includes(st.mdet))st.mdet="sum";if(!["All",1,2,3,4].includes(st.sS))st.sS="All";
 function parseHash(){const raw=location.hash.slice(1);if(!raw)return;const [path,q]=raw.split("?");const h=path.split("-");if(TABS.includes(h[0]))st.tab=h[0];if(["CL","ML","TL"].includes(h[1]))st.lang=h[1];if(["G1","G2","G3","H"].includes(h[2]))st.crs=h[2];
- if(q){const p=new URLSearchParams(q);const l=p.get("l"),c=p.get("c"),s=p.get("s"),src=p.get("src"),cats=p.get("cats");if(["All","CL","ML","TL"].includes(l))st.sL=l;if(["All","G1","G2","G3","H"].includes(c))st.sC=c;if(s==="All")st.sS="All";else if(["1","2","3","4"].includes(s)){st.sS=+s;st.ssec=+s}if(["all","cpdd","infer"].includes(src))st.src=src;if(cats!==null)st.cats=cats?cats.split(","):[]}}
+ if(q){const p=new URLSearchParams(q);const l=p.get("l"),c=p.get("c"),s=p.get("s"),src=p.get("src"),cats=p.get("cats");if(["All","CL","ML","TL"].includes(l))st.sL=l;if(["All","G1","G2","G3","H"].includes(c))st.sC=c;if(s==="All")st.sS="All";else if(["1","2","3","4"].includes(s)){st.sS=+s;st.ssec=+s}if(["all","cpdd","infer"].includes(src))st.src=src;if(cats!==null)st.cats=cats?cats.split(","):[];if(s==="0")st.ssec=0;const rw=p.get("rows"),pa=p.get("pa"),ps=p.get("psrc");if(rw!==null)st.rows=rw?rw.split(","):[];if(pa!==null)st.pa=pa?pa.split(","):[];if(["all","cpdd","infer"].includes(ps))st.psrc=ps}}
 parseHash();
 const lc=()=>st.mode==="el"?"en":ML_[st.lang];
 const T=k=>{const u=DATA.ui[k];if(!u)return k;return st.mode==="el"?u.en:u[ML_[st.lang]]};
@@ -408,7 +438,7 @@ const two=(m,e,L)=>{const la=ML_[L||st.lang];if(st.mode==="el")return `<span>${e
 const pur=(p,L)=>{if(!p)return"";const d=DATA.purpose[p];if(st.mode==="el"||!d)return p;return d[ML_[L||st.lang]]||p};
 
 const UX=()=>(DATA.design&&DATA.design.ux)||{};
-const NAV=[["Curriculum & exam",[["over","t_over"],["lang","t_lang"],["map","t_map"],["theme","t_theme"],["syl","t_syl"]]],["Pedagogy",[["design","t_design"]]],["2027 school approaches",[["c21","t_c21r"],["ibl","t_iblr"],["pri","t_pri"]]],["Planning",[["sow","t_sow"],["write","t_write"]]]];
+const NAV=[["Planner",[["sow","t_sow"],["write","t_write"]]],["Curriculum & exam",[["over","t_over"],["lang","t_lang"],["map","t_map"],["theme","t_theme"],["syl","t_syl"]]],["Pedagogy",[["design","t_design"]]],["2027 school approaches",[["c21","t_c21r"],["ibl","t_iblr"],["pri","t_pri"]]]];
 function controls(){
  $("#tabs").innerHTML=NAV.map(([g,ts])=>`<span class="grp"><span class="gl">${esc(g)}</span><span class="btns">${ts.map(([k,l,u])=>u?`<a class="lnk" href="${esc(u)}">${esc(Tm(l))} ↗</a>`:`<button data-tab="${k}" aria-pressed="${st.tab===k}">${esc(Tm(l))}</button>`).join("")}</span></span>`).join("");
  $("#navSel").innerHTML=NAV.map(([g,ts])=>`<optgroup label="${esc(g)}">${ts.map(([k,l,u])=>`<option value="${u?"url:"+esc(u):k}"${st.tab===k?" selected":""}>${esc(Tm(l))}${u?" ↗":""}</option>`).join("")}</optgroup>`).join("");
@@ -417,7 +447,7 @@ function controls(){
  $("#crsSeg").innerHTML=`<span class="lab">${esc(Tm("course"))}</span>`+["G1","G2","G3","H"].map(c=>`<button data-crs="${c}" aria-pressed="${st.crs===c}">${esc(c==="H"?"HMT":DATA.courseEn[c])}</button>`).join("");
  $("#crsSeg").hidden=!["map","sow","write"].includes(st.tab)||(st.tab==="map"&&st.mlay==="side");$("#langSeg").hidden=["c21","ibl","pri","design"].includes(st.tab)||(st.tab==="theme"&&st.tlay==="side")||(st.tab==="map"&&st.mlay==="side");
  const sseg=(id,lab,cur,opts,attr)=>{$(id).innerHTML=`<span class="lab">${esc(lab)}</span>`+opts.map(([v,l])=>`<button ${attr}="${esc(v)}" aria-pressed="${String(cur)===String(v)}">${esc(l)}</button>`).join("")};
- sseg("#yearSeg",Tm("year"),st.ssec,[1,2,3,4].map(s=>[s,secName(s,st.lang)]),"data-ssec");$("#yearSeg").hidden=st.tab!=="sow";
+ sseg("#yearSeg",Tm("year"),st.ssec,[...[1,2,3,4].map(s=>[s,secName(s,st.lang)]),[0,isEL()?"All four years":Tm("allx")]],"data-ssec");$("#yearSeg").hidden=st.tab!=="sow";
  const roads=["c21","ibl","pri"].includes(st.tab),cnm=c=>c==="H"?"HMT":DATA.courseEn[c];
  sseg("#fl",Tm("language"),st.sL,[["All",Tm("allx")],["CL","CL"],["ML","ML"],["TL","TL"]],"data-sl");sseg("#fc",Tm("course"),st.sC,[["All",Tm("allx")],...["G1","G2","G3","H"].map(c=>[c,cnm(c)])],"data-sc");sseg("#fs",Tm("year"),String(st.sS),[["All",Tm("allx")],...[1,2,3,4].map(n=>[String(n),secName(n,st.lang)])],"data-ss");const SX=UX().src||{};sseg("#fsrc",SX.label||"Source",st.src,(st.tab==="pri"?SX.pri:SX.other)||[["all","CPDD + inferred"],["cpdd","CPDD-tagged only"],["infer","Inferred only"]],"data-src");
  ["#fl","#fc","#fs","#fsrc"].forEach(id=>$(id).hidden=!roads);
@@ -654,13 +684,16 @@ function gridRows(L,c,s,T){const cal=(SOW.calendar||{}).terms||[];const E=DATA.e
  R.push(["comp","Composition","narrative, descriptive, expository, argumentative, literary, summary",[0,1,2,3].map(t=>li(taskRows(t,"comp")))]);
  R.push(["oral","Oral","CL 听说 · ML Bertutur / Interaksi Lisan · TL பேசுதல்",[0,1,2,3].map(t=>{let items=taskRows(t,"oral");if(L==="ML")items=items.concat(T[t].flatMap(u=>listenOf(u).filter(x=>/\((2|5)\.\d\)/.test(x)).map(x=>`<li><span class="u">${uLab(u)}</span><span lang="${LG("ms")}">${esc(x)}</span></li>`)));return li(items)})]);
  R.push(["listen","Listening","CL 听力理解 · ML Mendengar dan Melihat · TL கேட்டல் கருத்தறிதல்",[0,1,2,3].map(t=>{let items=[];if(L==="ML")items=T[t].flatMap(u=>listenOf(u).filter(x=>/\(1\.\d\)/.test(x)).map(x=>`<li><span class="u">${uLab(u)}</span><span lang="${LG("ms")}">${esc(x)}</span></li>`));else if(L==="TL")items=T[t].flatMap(u=>listenOf(u).map(x=>`<li><span class="u">${uLab(u)} ${esc(x.act)}</span><span lang="${LG("ta")}">${esc(x.name)}${x.obj&&x.obj!==x.name?": "+esc(x.obj):""}</span>${x.res?` <span class="note" lang="${LG("ta")}">(${esc(x.res)})</span>`:""}</li>`));else if(T[t].length)items=[`<li><span class="u">${T[t].map(uLab).join(", ")}</span>Every unit: the listening-and-speaking block (听说; oral row above) and the activity-book listening comprehension (听力理解); recording script in the teacher's guide (教师手册 听力录音文本)</li>`];return li(items)})]);
+  R.push(["wtypes","Writing types this term","CPDD writing bank · colour = year first met",[0,1,2,3].map(t=>{const ids=new Set(T[t].map(uidOf));const xs=WB().filter(x=>ids.has(x.uid));if(!xs.length)return `<span class="note">—</span>`;const firstOf={};WB().filter(x=>{const q=x.uid.split("|");return q[0]===L&&q[1]===c}).sort(wbSort).forEach(x=>{if(!firstOf[x.type])firstOf[x.type]=x.uid});return WTY().filter(ty=>xs.some(x=>x.type===ty[0])).map(ty=>{const n=xs.filter(x=>x.type===ty[0]).length,nw=xs.some(x=>x.type===ty[0]&&x.uid===firstOf[ty[0]]);return `<span class="wtc wi-${ty[0]}${nw?" new y"+s:""}" title="${nw?"First time this course meets this type":""}">${wIco(ty[0])}${esc(ty[1])} <b>${n}</b>${nw?`<em>new</em>`:""}</span>`}).join("")})]);
  R.push(["grp","Teaching"]);
- R.push(["act","Teaching activities and inquiry","TL கற்பித்தல் நடவடிக்கைகள் / ML Pengalaman Pembelajaran",[0,1,2,3].map(t=>{const items=[],rest=[];for(const u of T[t]){const sk=IXS[uidOf(u)];const {inq}=unitTags(unitRecs(u));if(sk)items.push(`<li><span class="u">${uLab(u)}</span><b>Inquiry:</b> ${esc(sk.q)} <span class="note">(${esc(sk.approach||"")})</span></li>`);else if(inq)items.push(`<li><span class="u">${uLab(u)}</span><span class="note">CPDD ${inq.k==="STAR"?"star":"inquiry"} task tagged; no department sketch yet</span></li>`);else rest.push(u)}if(rest.length)items.push(`<li><span class="u">${rest.map(uLab).join(", ")}</span><span class="note">No sketch yet. Openings: ${L==="CL"?"the integrated task (综合任务) and culture exploration (文化探索) at the end of each unit":L==="ML"?"the three key questions and the Rumusan task":"the \"I am a creator too\" task (நானும் ஒரு படைப்பாளி) and the SLS activity"}</span></li>`);for(const u of T[t]){for(const x of (CT[uidOf(u)]||[]).filter(x=>x.kind==="integrated"))items.push(`<li><span class="u">${uLab(u)}</span><b>${isEL()?"Integrated task (综合任务)":"综合任务"}</b><div class="full" lang="${LG("zh")}">${esc(x.task)}</div></li>`)}return li(items)})]);
+ R.push(["act","Teaching activities and inquiry","TL கற்பித்தல் நடவடிக்கைகள் / ML Pengalaman Pembelajaran",[0,1,2,3].map(t=>{const items=[],rest=[];for(const u of T[t]){const sk=IXS[uidOf(u)];const {inq}=unitTags(unitRecs(u));if(sk)items.push(`<li><span class="u">${uLab(u)}</span><b>Inquiry:</b> ${esc(sk.q)} <span class="note">(${esc(sk.approach||"")})</span></li>`);else if(inq)items.push(`<li><span class="u">${uLab(u)}</span><span class="note">CPDD ${inq.k==="STAR"?"star":"inquiry"} task tagged; no department sketch yet</span></li>`);else rest.push(u)}if(rest.length)items.push(`<li><span class="u">${rest.map(uLab).join(", ")}</span><span class="note">No sketch yet. Openings: ${L==="CL"?"the integrated task (综合任务) and culture exploration (文化探索) at the end of each unit":L==="ML"?"the three key questions and the Rumusan task":"the \"I am a creator too\" task (நானும் ஒரு படைப்பாளி) and the SLS activity"}</span></li>`);for(const u of T[t]){for(const x of (CT[uidOf(u)]||[]).filter(x=>x.kind==="integrated"))items.push(`<li><span class="u">${uLab(u)}</span><details class="fmt"><summary><b>${isEL()?"Integrated task (综合任务)":"综合任务"}</b> <span lang="${LG("zh")}">${esc(x.task.slice(0,28))}…</span></summary><div class="full" lang="${LG("zh")}">${esc(x.task)}</div></details></li>`)}return li(items)})]);
  const guide={CL:"教师手册 (unit pages), 课本, 作业",ML:"Panduan Guru, Buku Teks, Buku Aktiviti",TL:"ஆசிரியர் கையேடு, பாடநூல், பயிற்சிநூல்"}[L];const drive=`02 Curriculum and Instruction Materials/${L}/${c==="H"?"G3 H"+L:c}/S${s}`;
  R.push(["res","Resources","TL துணைக்கருவிகள் / ML Bahan Pengajaran",[`${esc(guide)} · SLS lesson packages · CPDD resources (2021 Syllabus) on the drive · BVSS bank: ${esc(drive)}`+(L==="TL"?` · audio clips (ஒலிப்பகுதிகள்) and videos (ஒளிக்காட்சிகள்) on SLS (see the listening row)`:"")]]);
  R.push(["grp","MOE and BVSS competencies"]);
  R.push(["moe","MOE 21CC tags in the CPDD guide","TL கல்வியமைச்சின் முனைப்புகள்",[0,1,2,3].map(t=>{const xs=[...new Set(recsT(t).map(r=>(isEL()?r.c21_en:r.c21)||"").filter(Boolean))];return xs.length?`<ul>${xs.slice(0,8).map(x=>`<li>${esc(x)}</li>`).join("")}${xs.length>8?`<li class="note">+${xs.length-8} more</li>`:""}</ul>`:`<span class="note">${L==="TL"||!T[t].length?"—":"No activity-level tags in the "+(L==="CL"?"CL":"ML")+" guide"}</span>`})]);
- R.push(["e21","BVSS E21CC focus and student outcomes","Strategic Plan 2027 to 2031",[0,1,2,3].map(t=>{const cover={};T[t].forEach(u=>{const {pv}=unitTags(unitRecs(u));PA.forEach(k=>{if(pv[k]){cover[k]=cover[k]||{n:0,src:"infer"};cover[k].n++;if(rank[pv[k]]<rank[cover[k].src])cover[k].src=pv[k]}})});if(!T[t].length)return `<span class="note">—</span>`;return PA.map(k=>{const d=vmvFor(k),x=cover[k];return `<div><span class="tag cat-${k}${x?"":" off"}">${esc(DATA.cat[k].en)}</span> ${x?`${x.n} unit${x.n>1?"s":""} <span class="note">(${esc(x.src)})</span>`:`<span class="note">no unit tagged</span>`}${d?`<div class="note">→ ${esc(d.dso)} · ${esc(s<=2?d.lower:d.upper)}</div>`:""}</div>`}).join("")})]);
+  const okSrc=x=>st.psrc==="all"||(st.psrc==="cpdd"?x!=="infer":x==="infer");
+ R.push(["c21","21CC tags (CPDD and inferred)","Same tags as the 21CC roadmap · solid = CPDD, number after + = inferred",[0,1,2,3].map(t=>{const cnt={};recsT(t).forEach(r=>(r.tags||[]).forEach(g=>{if((DATA.cat[g.k]||{}).lens!=="c21"||!okSrc(g.src))return;const o=cnt[g.k]=cnt[g.k]||{c:0,i:0};g.src==="infer"?o.i++:o.c++}));const ks=Object.keys(cnt);return ks.length?ks.map(k=>`<span class="tag cat-${k}" title="${esc(DATA.cat[k].en)}">${esc(DATA.cat[k].en)} <b>${cnt[k].c}${cnt[k].i?"+"+cnt[k].i:""}</b></span>`).join(" "):`<span class="note">—</span>`})]);
+ R.push(["e21","BVSS E21CC focus and student outcomes","Strategic Plan 2027 to 2031",[0,1,2,3].map(t=>{const cover={};T[t].forEach(u=>{const {pv}=unitTags(unitRecs(u));PA.forEach(k=>{if(pv[k]&&okSrc(pv[k])){cover[k]=cover[k]||{n:0,src:"infer"};cover[k].n++;if(rank[pv[k]]<rank[cover[k].src])cover[k].src=pv[k]}})});if(!T[t].length)return `<span class="note">—</span>`;return PA.filter(k=>st.pa.includes(k)).map(k=>{const d=vmvFor(k),x=cover[k];return `<div><span class="tag cat-${k}${x?"":" off"}">${esc(DATA.cat[k].en)}</span> ${x?`${x.n} unit${x.n>1?"s":""} <span class="note">(${esc(x.src)})</span>`:`<span class="note">no unit tagged</span>`}${d?`<div class="note">→ ${esc(d.dso)} · ${esc(s<=2?d.lower:d.upper)}</div>`:""}</div>`}).join("")})]);
  R.push(["grp","Assessment and calendar"]);
  const WA=(((SOW.wa||{}).by||{})[L]||{})[`${c}|${s}`]||{};
  R.push(["assess","Assessment and formats","ML Alat Penilaian dan Kriteria Kejayaan · 2026 standardisation",[0,1,2,3].map(t=>{const as=termAssess(s,t+1);return as.length?as.map(a=>{const f=a.comp&&WA[a.comp];return `<div class="asr">${asPill(a)} <b>${esc(a.wk||"")}</b><div class="note">${esc(a.what)} · ${esc(a.wt)}</div>${f?`<details class="fmt"><summary>Format (2026 standardisation)</summary><div>${esc(f).replace(/\n+/g,"<br>")}</div></details>`:""}</div>`}).join(""):`<span class="note">—</span>`})]);
@@ -669,14 +702,28 @@ function gridRows(L,c,s,T){const cal=(SOW.calendar||{}).terms||[];const E=DATA.e
  R.push(["align","Exam alignment (CPDD learning points → SEAB papers)","",[0,1,2,3].map(t=>{const rs=recsT(t);if(!rs.length)return `<span class="note">—</span>`;return ["P1","P2","P3"].map(p=>{const xs=rs.filter(r=>(SK[r.strand]||{}).p===p);const d=xs.filter(r=>/^Direct/i.test(r.exam||"")).length,b=xs.length-d;return `<div><span class="pill ${p}">${esc(pname(p))}</span> ${xs.length?`<b>${d}</b> direct${b?` · ${b} builds toward`:""}`:`<span class="note">none this term</span>`}</div>`}).join("")})]);
  R.push(["events","School and MT events","2027 BVSS calendar",[0,1,2,3].map(t=>{const ev=((cal[t]||{}).events||[]).filter(e=>e.mt||(e.sec&&e.sec.includes(s))||/HBL/.test(e.what));return ev.length?`<ul>${ev.map(e=>`<li><span class="u">W${esc(e.w)} · ${esc(e.d)}</span>${esc(e.what)}</li>`).join("")}</ul>`:`<span class="note">—</span>`})]);
  return R}
-function vSow(){const L=st.lang,c=st.crs,s=st.ssec,E=DATA.exam[L][c],T=alloc(L,c,s),cal=(SOW.calendar||{}).terms||[];
- let h=`<section><h2>Scheme of work 2027 · ${esc(SOW.version||"")}</h2><p class="sub">Four term columns, one row per planning header. Use the side panel to switch language, course and year.</p>`;
- h+=vmvBand(L,c,s);
- h+=`<div class="eyebrow">${esc(DATA.langName[L])} · ${esc(c==="H"?"HMT":DATA.courseEn[c])} · ${esc(secName(s,L))} · ${esc(E.code)} ${prov(L,c)}</div>`;
- h+=`<div class="rowbar"><button class="csvb" data-csv="sow">Download this grid as CSV</button><span class="note">Click a unit for its full detail. ${esc((SOW.calendar||{}).note||"")}</span></div>`;
- h+=`<div class="scroll"><table class="tgrid"><thead><tr><th class="rh">Planning header</th>${[0,1,2,3].map(t=>{const x=cal[t]||{};return `<th>${esc(x.label||"Term "+(t+1))}<small>${esc(x.start||"")} to ${esc(x.end||"")} · ${x.weeks||10} weeks</small></th>`}).join("")}</tr></thead><tbody>`;
- for(const r of gridRows(L,c,s,T)){if(r[0]==="grp"){h+=`<tr class="grp"><th colspan="5">${esc(r[1])}</th></tr>`;continue}const [k,lab,src,cells]=r;h+=`<tr class="r-${k}"><th class="rh" scope="row">${lab}</th>${cells.length===1?`<td colspan="4">${cells[0]}</td>`:cells.map(x=>`<td>${x}</td>`).join("")}</tr>`}
- h+=`</tbody></table></div><p class="note">${esc((SOW.assess||{}).note||"")}</p><p class="note">${esc((SOW.pacing||{}).note||"")}</p><p class="note">Listening and speaking sources: ${esc((SOW.listen||{}).note||"")}</p></section>`;
+/* Planner (home): the SOW term grid with layer toggles, presets and E21CC slicers (31 Oct 2026) */
+const PLAYERS=[["Topics",[["units","Units"],["theme","Themes"],["values","Values and domains"]]],["Skills",[["skills","Language skills"],["lo","Learning outcomes"],["func","Language functions"],["oral","Oral"],["listen","Listening"]]],["Writing",[["fw","Functional writing"],["comp","Composition"],["wtypes","Writing types"]]],["2027 approaches",[["vmv","School vision and E21CC goals"],["act","Inquiry (IBL) and activities"],["c21","21CC tags"],["moe","21CC guide text"],["e21","BVSS E21CC"]]],["Assessment and calendar",[["assess","Assessment"],["align","Exam alignment"],["seab","SEAB syllabus"],["events","Events"],["res","Resources"]]]];
+const PALL=PLAYERS.flatMap(g=>g[1].map(x=>x[0]));
+const PPRESET=[["core","Planning core",["units","theme","values","skills","lo","fw","comp","wtypes","oral","listen","act","e21","assess"]],["topics","Topics and skills",["units","theme","values","skills","lo","oral","listen"]],["write","Writing",["units","fw","comp","wtypes","assess"]],["e21","IBL and E21CC",["units","theme","vmv","act","c21","e21"]],["assess","Assessment",["units","skills","assess","align","seab","events"]],["all","Everything",PALL]];
+const PROWS=()=>st.rows?PALL.filter(k=>st.rows.includes(k)):PPRESET[0][2];
+function plannerBar(){const on=PROWS(),pre=PPRESET.find(p=>p[2].length===on.length&&p[2].every(k=>on.includes(k)));const SX=UX().src||{};
+ let h=`<div class="layers" role="group" aria-label="Show or hide rows"><div class="lt"><span class="lh">Show</span><div class="pre">${PPRESET.map(([k,l])=>`<button data-preset="${k}" aria-pressed="${pre&&pre[0]===k}">${esc(l)}</button>`).join("")}</div></div><div class="lg">`;
+ h+=PLAYERS.map(([g,xs])=>`<div class="lgrp"><span class="gl">${esc(g)}</span>${xs.map(([k,l])=>`<button class="lchip" data-row="${k}" aria-pressed="${on.includes(k)}"><i></i>${esc(l)}</button>`).join("")}</div>`).join("")+`</div>`;
+ if(on.includes("e21")||on.includes("c21")||on.includes("vmv"))h+=`<div class="lt sl"><span class="lh">E21CC</span>${PA.map(k=>`<button class="tag cat-${k} pa${st.pa.includes(k)?"":" off"}" data-pa="${k}" aria-pressed="${st.pa.includes(k)}">${esc(DATA.cat[k].en)}</button>`).join("")}<span class="lh" style="margin-left:10px">Tags</span>${[["all","CPDD + inferred"],["cpdd","CPDD only"],["infer","Inferred only"]].map(([v,l])=>`<button class="psrc" data-psrc="${v}" aria-pressed="${st.psrc===v}">${esc(l)}</button>`).join("")}</div>`;
+ return h+`</div>`}
+function plannerBody(L,c,ys){const on=PROWS(),cal=(SOW.calendar||{}).terms||[];let h="";
+ for(const s of ys){const T=alloc(L,c,s);if(ys.length>1)h+=`<tr class="yr y${s}"><th colspan="5"><span class="yd"></span>${esc(secName(s,L))}<small>${T.flat().length} units</small></th></tr>`;let grp=null;
+  for(const r of gridRows(L,c,s,T)){if(r[0]==="grp"){grp=r[1];continue}const [k,lab,src,cells]=r;if(!on.includes(k))continue;if(grp){h+=`<tr class="grp"><th colspan="5">${esc(grp)}</th></tr>`;grp=null}h+=`<tr class="r-${k}"><th class="rh" scope="row">${lab}${src&&ys.length===1?`<small>${esc(src)}</small>`:""}</th>${cells.length===1?`<td colspan="4">${cells[0]}</td>`:cells.map(x=>`<td>${x}</td>`).join("")}</tr>`}}
+ return h}
+function vSow(){const L=st.lang,c=st.crs,s=st.ssec,E=DATA.exam[L][c],cal=(SOW.calendar||{}).terms||[];const ys=s?[s]:[1,2,3,4];
+ let h=`<section class="planner"><div class="eyebrow">${esc(DATA.langName[L])} · ${esc(c==="H"?"HMT":DATA.courseEn[c])} · ${s?esc(secName(s,L)):"Sec 1 to 4"} · ${esc(E.code)} ${prov(L,c)}</div><h2>Scheme of work 2027 · ${esc(SOW.version||"")}</h2><p class="sub">Four terms across, one row per planning layer. Switch layers on and off below, or pick a preset. Choose language, course and year in the side panel; "All four years" stacks Sec 1 to 4. Click a unit for its full detail.</p>`;
+ h+=plannerBar();
+ if(s&&PROWS().includes("vmv"))h+=vmvBand(L,c,s);
+ h+=`<div class="rowbar"><button class="csvb" data-csv="sow">Download what is shown as CSV</button><span class="note">${esc((SOW.calendar||{}).note||"")}</span></div>`;
+ h+=`<div class="scroll"><table class="tgrid"><thead><tr><th class="rh">Planning layer</th>${[0,1,2,3].map(t=>{const x=cal[t]||{};return `<th class="tm t${t+1}">${esc(x.label||"Term "+(t+1))}<small>${esc(x.start||"")} to ${esc(x.end||"")} · ${x.weeks||10} weeks</small></th>`}).join("")}</tr></thead><tbody>${plannerBody(L,c,ys)}</tbody></table></div>`;
+ if(!PROWS().length)h+=`<p class="note">All layers are switched off. Pick a preset above.</p>`;
+ h+=`<p class="note">${esc((SOW.assess||{}).note||"")}</p><p class="note">${esc((SOW.pacing||{}).note||"")}</p><p class="note">Listening and speaking sources: ${esc((SOW.listen||{}).note||"")}</p></section>`;
  return h}
 function sowPanel(id){const u=DATA.themes.find(t=>uidOf(t)===id);if(!u)return;const rs=unitRecs(u),{pv,why,inq}=unitTags(rs),sk=IXS[id],L=u.lang,c=u.course,s=u.sec;const DM=DMEN();const T=alloc(L,c,s);let ti=T.findIndex(a=>a.some(x=>uidOf(x)===id));if(ti<0)ti=0;const cal=((SOW.calendar||{}).terms||[])[ti]||{};const as=termAssess(s,ti+1);const t=tlU(u);const lis=listenOf(u);
  let h=`<button class="x" data-close>Close</button><div class="eyebrow">${esc(DATA.langName[L])} · ${esc(c==="H"?"HMT":c)} · ${esc(secName(s,L))} · ${esc(cal.label||"Term "+(ti+1))}</div><h3 style="margin:4px 0 10px">${uLab(u)} · ${two(u.theme_m,u.theme_en,L)}</h3>`;
@@ -697,9 +744,9 @@ document.addEventListener("click",e=>{const b=e.target.closest("[data-sow]");if(
 function dl(name,text){const b=new Blob(["﻿"+text],{type:"text/csv;charset=utf-8"});const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500)}
 const csvq=v=>`"${String(v??"").replace(/"/g,'""')}"`;
 const strip=h=>{const d=document.createElement("div");d.innerHTML=String(h).replace(/<\/li>|<br\s*\/?>|<\/div>/g,"\n");return d.textContent.replace(/\n{2,}/g,"\n").trim()};
-function sowCSV(){const L=st.lang,c=st.crs,s=st.ssec,T=alloc(L,c,s),cal=(SOW.calendar||{}).terms||[];const rows=[["Planning header","Source",...[0,1,2,3].map(t=>(cal[t]||{}).label||"Term "+(t+1))]];
- for(const r of gridRows(L,c,s,T)){if(r[0]==="grp"){rows.push([r[1],"","","","",""]);continue}const [k,lab,src,cells]=r;rows.push([strip(lab),src,...(cells.length===1?[strip(cells[0]),"","",""]:cells.map(strip))])}
- dl(`BVSS_SOW2027_${L}_${c}_Sec${s}.csv`,rows.map(r=>r.map(csvq).join(",")).join("\n"))}
+function sowCSV(){const L=st.lang,c=st.crs,ys=st.ssec?[st.ssec]:[1,2,3,4],on=PROWS(),cal=(SOW.calendar||{}).terms||[];const rows=[["Year","Planning layer","Source",...[0,1,2,3].map(t=>(cal[t]||{}).label||"Term "+(t+1))]];
+ for(const s of ys){const T=alloc(L,c,s);for(const r of gridRows(L,c,s,T)){if(r[0]==="grp")continue;const [k,lab,src,cells]=r;if(!on.includes(k))continue;rows.push([secName(s,L),strip(lab),src,...(cells.length===1?[strip(cells[0]),"","",""]:cells.map(strip))])}}
+ dl(`BVSS_SOW2027_${L}_${c}_${st.ssec?"Sec"+st.ssec:"Sec1-4"}.csv`,rows.map(r=>r.map(csvq).join(",")).join("\n"))}
 /* ===== Writing task bank (added 31 Oct 2026) ===== */
 const WB=()=>((SOW.wbank||{}).items||[]);
 const WTY=()=>((SOW.wbank||{}).types||[]);
@@ -746,7 +793,7 @@ function hero(){const a=(DATA.design&&DATA.design.about||{})[st.tab]||{what:"",p
    <div class="card"><div class="t">Inquiry already in the guides</div><div class="big">${nIx} units</div><p>carry a department inquiry sketch, and ML's guides tag inquiry tasks that can double as a weighted assessment.</p><p class="imp">Build 2027's inquiry from tasks the guides already set.</p></div>
   </div>`;
   $("#heroUse").hidden=true;$("#heroUse").innerHTML="";
- }else{$("#heroT").textContent=Tm(t[1]);$("#heroLead").textContent=a.what;
+ }else{$("#heroT").textContent=st.tab==="sow"&&el?"MTL planner 2027":Tm(t[1]);$("#heroLead").textContent=st.tab==="sow"?(el?"One page for the year: units, skills, writing, inquiry, E21CC and assessment term by term. Turn layers on and off to see only what you need.":a.what):a.what;
   $("#heroPts").innerHTML=a.points.length?`<details class="more"><summary>What is on this page</summary><ol>${a.points.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>${a.use?`<p><b>How to use:</b> ${esc(a.use)}</p>`:""}</details>`:"";
   $("#heroUse").hidden=true;$("#heroUse").innerHTML="";}
  document.title=`${Tm(t[1])} · MTL Skills Roadmap`}
@@ -824,6 +871,10 @@ function render(){
  document.querySelectorAll("[data-lang2]").forEach(b=>b.onclick=()=>{st.lang=b.dataset.lang2;render()});
  document.querySelectorAll("[data-crs2]").forEach(b=>b.onclick=()=>{st.crs=b.dataset.crs2;render()});
  document.querySelectorAll("[data-ssec]").forEach(b=>b.onclick=()=>{st.ssec=+b.dataset.ssec;render()});
+ document.querySelectorAll("[data-row]").forEach(b=>b.onclick=()=>{const k=b.dataset.row,on=PROWS();st.rows=on.includes(k)?on.filter(x=>x!==k):[...on,k];render()});
+ document.querySelectorAll("[data-preset]").forEach(b=>b.onclick=()=>{st.rows=[...PPRESET.find(p=>p[0]===b.dataset.preset)[2]];render()});
+ document.querySelectorAll("[data-pa]").forEach(b=>b.onclick=()=>{const k=b.dataset.pa;st.pa=st.pa.includes(k)?st.pa.filter(x=>x!==k):PA.filter(x=>x===k||st.pa.includes(x));render()});
+ document.querySelectorAll("[data-psrc]").forEach(b=>b.onclick=()=>{st.psrc=b.dataset.psrc;render()});
  document.querySelectorAll("[data-csv]").forEach(b=>b.onclick=()=>{b.dataset.csv==="sow"?sowCSV():b.dataset.csv==="wb"?wbCSV():roadsCSV()});
  document.querySelectorAll("[data-sl]").forEach(b=>b.onclick=()=>{st.sL=b.dataset.sl;if(st.sL!=="All")st.lang=st.sL;render()});
  document.querySelectorAll("[data-mlay]").forEach(b=>b.onclick=()=>{st.mlay=b.dataset.mlay;render()});
@@ -838,7 +889,7 @@ function render(){
  document.querySelectorAll("[data-dlay]").forEach(b=>b.onclick=()=>{st.dlay=b.dataset.dlay;render()});
  document.querySelectorAll("[data-cat]").forEach(b=>b.onclick=()=>{const k=b.dataset.cat;if(k==="__clear")st.cats=[];else st.cats=st.cats.includes(k)?st.cats.filter(x=>x!==k):[...st.cats,k];render()});
  try{localStorage.setItem("mtlrm2",JSON.stringify(st))}catch(e){}
- const hs=`#${st.tab}-${st.lang}-${st.crs}`+(["c21","ibl","pri"].includes(st.tab)?`?l=${st.sL}&c=${st.sC}&s=${st.sS}&src=${st.src}${st.cats.length?"&cats="+st.cats.join(","):""}`:st.tab==="sow"?`?s=${st.ssec}`:"");try{if(location.hash!==hs)history.replaceState(null,"",hs)}catch(e){}
+ const hs=`#${st.tab}-${st.lang}-${st.crs}`+(["c21","ibl","pri"].includes(st.tab)?`?l=${st.sL}&c=${st.sC}&s=${st.sS}&src=${st.src}${st.cats.length?"&cats="+st.cats.join(","):""}`:st.tab==="sow"?`?s=${st.ssec}&rows=${PROWS().join(",")}${st.pa.length<4?"&pa="+st.pa.join(","):""}${st.psrc!=="all"?"&psrc="+st.psrc:""}`:"");try{if(location.hash!==hs)history.replaceState(null,"",hs)}catch(e){}
   markScroll();
 }
 const applyHash=parseHash;
