@@ -1,6 +1,6 @@
 # MTL Skills Roadmap: handoff for Claude Code
 
-Updated October 31, 2026 by HOD/MTL Mdm Chun Kai Xin
+Updated November 1, 2026 by HOD/MTL Mdm Chun Kai Xin
 
 Repo: `kaixinbuilds/mtl-skills-roadmap`. Live page: https://kaixinbuilds.github.io/mtl-skills-roadmap/
 One page, no build step: `index.html` (single-file app: CSS, the embedded `const DATA={...}` JSON and the JS views). Open it in a browser.
@@ -10,6 +10,13 @@ One page, no build step: `index.html` (single-file app: CSS, the embedded `const
 A department wall chart of what the CPDD 2021-syllabus teacher guides teach in CL, ML and TL, Sec 1 to 4, G1 to HMT, mapped to SEC 2027 and to two BVSS school approaches from 2027: inquiry-based learning (IBL) and the E21CC priority areas (Adaptive Thinking, Inventive Thinking, Civic Literacy, Communication). From 31 Oct it also carries the department's planning layer: a scheme of work (SOW) for 2027 laid out as four term columns for every language, course and year.
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
+
+## All content by Term 3 (1 Nov 2026, eleventh update)
+
+No new content is taught in Term 4. For Sec 1 to 3, Term 4 is EOY revision and the EOY exams (30 Sep to 13 Oct). For Sec 4 the MTL national exam ends in Term 4: SEC written papers on 15 to 16 Sep (Term 4 Week 1) and listening on 20 to 21 Sep (Term 4 Week 2). The MT prelim is on 29 Jul (Term 3 Week 5), so Sec 4 content must be finished by Term 3 Week 4. All dates were rechecked against the (Students) Bukit View Secondary 2026 Google calendar on 1 Nov 2026. That check also added the S4/5 National Exam Study Programme, which runs from 21 Jul.
+
+- `alloc()` now reads one table per level from `sow.json` `pacing` (`sec12`, `sec3`, `sec4`, keyed by unit count, Term 4 always 0). Units are spread in book order over Terms 1 to 3, with any extra unit in the earlier terms: 6 units [2,2,2], 7 [3,2,2], 8 [3,3,2]. Sec 4: 5 units [2,2,1], 6 [3,2,1], so at most one content unit falls in the four weeks of Term 3 before the prelim. ML Sec 4 keeps the content-and-skills pairing [U1+U4, U2+U5, U3+U6], which puts two units in Term 3; check this with the ML team.
+- In the units row, the Term 4 cell reads "No new content: EOY revision and EOY exams…" (Sec 1 to 3) or "No new content: SEC written papers… then revision" (Sec 4). For Sec 4 the Term 3 cell says "finish by Week 4, before the MT prelim on 29 Jul". `calendar.terms[3].teach` is 0.
 
 ## Clickable writing charts, PSLE to SEC tab, WA labels (31 Oct 2026, tenth update)
 
@@ -130,7 +137,7 @@ The HOD found the first planning layer too much to digest. It was replaced:
 
 1. **Confirm the TL G1 written-paper format** with the TL unit against SEAB K122; then remove the `prov()` badge.
 2. **Add CL 综合任务 and 文化探索 as records** (strand `oral` or `fw`, sub "综合任务 Integrated task" / "文化探索 Culture exploration", `ibl` note). Source: each 教师手册's 各单元教学建议 and the 延伸活动 block (实践活动 / 文化探索 / 生活写作 / 综合活动). Rule R7 will then tag them and CL will stop looking thin on the IBL tab and in the SOW inquiry column.
-3. **Review the term placement of units with the three units**: pacing rules in `tools/sow.json` are department defaults (Book A over Terms 1 and 2, Book B over Terms 3 and 4 with one unit in Term 4; Sec 3 `[2,1,2,1]`; Sec 4 content in Terms 1 to 3; ML Sec 4 pairs content unit n with skills unit n+3). Confirm the 2027 WA formats (the standardisation sheets are a draft for discussion) and the WA weeks.
+3. **Confirm the WA formats and weeks**: the 2027 WA formats (the standardisation sheets are a draft for discussion) and the WA weeks. Term placement follows the HOD's rule of 1 Nov 2026 (all content in Terms 1 to 3); see the update below.
 4. **Fill the ML listening gaps**: Sec 4 Units 4 to 6 (skills units) and the JATi 2B Ekspres guide (18 outcome blocks, not 16) need hand entry in `sow.json` `listen.ML`.
 5. **CL listening**: add the per-unit 听力理解 topic from each 教师手册 听力录音文本 if the level wants it in the grid.
 6. **Success criteria per unit**: the assessment row carries the WA format only; add unit-level criteria under a new `criteria` key in `sow.json` when levels write them.

@@ -6,14 +6,14 @@
   "points": [
    "Row headers follow the CPDD Tamil unit overview, with the extra columns from the Malay Skema Pengajaran sample added; the same frame serves all three languages.",
    "Writing, oral and listening rows list what the CPDD teacher guides themselves suggest for each unit. Click a unit for the full detail.",
-   "Assessment timing follows the 2026 pattern on the 2027 school calendar: Sec 4 oral in Term 1, prelim written on 29 July, SEC written in September."
+   "All new content is taught in Terms 1 to 3. Term 4 is EOY revision and the EOY exams for Sec 1 to 3; for Sec 4 content ends before the 29 July prelim (Term 3 Week 5), and the SEC MTL written papers and listening are in Term 4 Weeks 1 and 2 (15 to 21 September)."
   ],
   "use": "Pick a language, course and year. The top band shows how the school's vision maps to the E21CC focus areas and to MTL."
  },
  "calendar": {
   "year": 2027,
   "source": "(Staff) and (Students) Bukit View Secondary 2026 Google calendars, 2027 entries as at 31 Oct 2026. Weeks run Monday to Friday; W1 of each term starts on the Monday shown.",
-  "note": "Term 4 has two teaching weeks for Sec 1 to 3 before the EOY exams (30 Sep to 13 Oct). Sec 4 teaching effectively ends at the Term 3 prelim; SEC MTL papers are on 15 to 16 Sep with listening on 20 to 21 Sep.",
+  "note": "All new content is taught in Terms 1 to 3. Term 4 has no new content: Sec 1 to 3 revise for and sit the EOY exams (30 Sep to 13 Oct); Sec 4 sit the SEC MTL written papers (15 to 16 Sep, Term 4 Week 1) and listening (20 to 21 Sep, Term 4 Week 2). Sec 4 content ends by Term 3 Week 4, before the MT prelim written papers on 29 Jul (Term 3 Week 5); from 21 Jul the S4/5 National Exam Study Programme runs alongside.",
   "terms": [
    {
     "t": 1,
@@ -162,6 +162,14 @@
       "mt": true
      },
      {
+      "w": 4,
+      "d": "21 Jul onwards",
+      "what": "S4/5 National Exam Study Programme begins (twice a week to the SEC)",
+      "sec": [
+       4
+      ]
+     },
+     {
       "w": 5,
       "d": "26 to 27 Jul",
       "what": "MT Fortnight recess cultural booths, Sec 1 to 3",
@@ -203,7 +211,7 @@
     "start": "13 Sep",
     "end": "19 Nov",
     "weeks": 10,
-    "teach": 2,
+    "teach": 0,
     "events": [
      {
       "w": 1,
@@ -471,30 +479,43 @@
   ]
  },
  "pacing": {
-  "note": "How units are laid across terms. Sec 1 and 2: Book A over Terms 1 and 2, Book B over Terms 3 and 4 with at most one unit in Term 4. Sec 3: two units in Term 1, one in Term 2 (oral exam and WA2 term), two or three in Term 3, the last in Term 4 only if the course has seven. Sec 4: content units over Terms 1 to 3, Term 4 is revision and the SEC. ML Sec 4 pairs each content unit (1 to 3) with a skills unit (4 to 6) in the same term, so the oral toolkit (Unit 4) lands in Term 1 with the oral exam.",
+  "note": "How units are laid across terms. All new content is taught in Terms 1 to 3; Term 4 is EOY revision and the EOY exams for Sec 1 to 3, and the SEC written papers and listening for Sec 4. Units are spread in book order over Terms 1 to 3, the extra unit going to the earlier terms. Sec 4: content must be finished by Term 3 Week 4, before the MT prelim on 29 Jul (Term 3 Week 5), so Term 3 carries at most one content unit; the SEC oral is in Term 3 Week 3 and the SEC MTL written papers are in Term 4 Weeks 1 and 2. ML Sec 4 pairs each content unit (1 to 3) with a skills unit (4 to 6) in the same term, so the oral toolkit (Unit 4) lands in Term 1 with the school oral exam.",
   "sec12": {
-   "A": [
-    0.5,
-    0.5
-   ],
-   "B_t4_max": 1
-  },
-  "sec3": {
    "6": [
     2,
-    1,
     2,
-    1
+    2,
+    0
    ],
    "7": [
+    3,
     2,
     2,
-    2,
-    1
+    0
    ],
+   "8": [
+    3,
+    3,
+    2,
+    0
+   ]
+  },
+  "sec3": {
    "5": [
     2,
     1,
+    2,
+    0
+   ],
+   "6": [
+    2,
+    2,
+    2,
+    0
+   ],
+   "7": [
+    3,
+    2,
     2,
     0
    ]
@@ -507,9 +528,9 @@
     0
    ],
    "6": [
+    3,
     2,
-    2,
-    2,
+    1,
     0
    ],
    "ml": "pair"
