@@ -479,7 +479,7 @@
   ]
  },
  "pacing": {
-  "note": "How units are laid across terms. All new content is taught in Terms 1 to 3; Term 4 is EOY revision and the EOY exams for Sec 1 to 3. Sec 1 to 3 units are spread in book order over Terms 1 to 3, the extra unit going to the earlier terms. Sec 4 finishes the whole syllabus by the end of Term 2, because the MT prelim is on 29 Jul (Term 3 Week 5): Term 3 is the SEC oral (Week 3), the prelim and revision, and Term 4 is the SEC written papers (Weeks 1 and 2). ML Sec 4 keeps the oral toolkit (Unit 4) in Term 1 with the school oral exam: Units 1, 2 and 4 in Term 1, Units 3, 5 and 6 in Term 2.",
+  "note": "How units are laid across terms (department default until the teams' collective discussion). Units stay in textbook order and are spread over the terms available, the extra unit going to the earlier terms. Sec 1 to 3 use Terms 1 to 3; Term 4 is EOY revision and the EOY exams. Sec 4 use Terms 1 and 2; Term 3 is the SEC oral, the 29 Jul prelim and revision, and Term 4 is the SEC written papers.",
   "sec12": {
    "6": [
     2,
@@ -532,8 +532,7 @@
     3,
     0,
     0
-   ],
-   "ml": "pair"
+   ]
   }
  },
  "e21moves": {
@@ -10221,6 +10220,90 @@
     "PSLE: SEAB syllabuses examined in 2026 (no 2027 PSLE format page yet). SEC: the 2027 syllabuses."
    ],
    "use": "Pick a language in the side panel. The highlighted column is what the course has to teach between PSLE and SEC."
+  }
+ },
+ "constraints": {
+  "title": "Time constraints for 2027",
+  "intro": "Rules every SOW must respect. Read these before placing units. Dates come from the (Students) Bukit View Secondary 2026 calendar, checked 1 Nov 2026.",
+  "groups": [
+   {
+    "who": "All levels",
+    "sec": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "items": [
+     {
+      "rule": "No new content in Term 4.",
+      "why": "Term 4 has about two school weeks before the exams: SEC MTL written papers from 15 Sep, Sec 1 to 3 EOY from 30 Sep."
+     },
+     {
+      "rule": "Units are taught in textbook order.",
+      "why": "Any change to the order is decided by the language team at the collective discussion, not in individual SOWs."
+     },
+     {
+      "rule": "Units are spread evenly across the terms available, with the extra unit in the earlier terms.",
+      "why": "This is the department default shown in the grid, and it is open for discussion."
+     }
+    ]
+   },
+   {
+    "who": "Sec 1 to 3",
+    "sec": [
+     1,
+     2,
+     3
+    ],
+    "items": [
+     {
+      "rule": "Finish all chapters by the end of Term 3 (3 Sep).",
+      "why": "Term 4 only has time for overall EOY revision before the EOY exams (30 Sep to 13 Oct)."
+     },
+     {
+      "rule": "Plan oral preparation into Term 2.",
+      "why": "MT oral exams: Sec 3 on 2 Apr, Sec 2 on 22 Apr, Sec 1 on 14 May."
+     },
+     {
+      "rule": "Term 3 is busy: plan lighter units or fewer periods.",
+      "why": "WA3 and the MT Fortnight programmes and booths (19 to 27 Jul) fall in Term 3."
+     }
+    ]
+   },
+   {
+    "who": "Sec 4",
+    "sec": [
+     4
+    ],
+    "items": [
+     {
+      "rule": "Finish the whole syllabus by the end of Term 2 (28 May).",
+      "why": "The MT prelim written papers are on 29 Jul (Term 3 Week 5), and the SEC oral is on 12 to 16 Jul (Term 3 Week 3)."
+     },
+     {
+      "rule": "Plan oral preparation into Term 1.",
+      "why": "The school MT oral exam in SEC format is on 1 Mar (HBL 2, Term 1 Week 9)."
+     },
+     {
+      "rule": "Term 3 is for the SEC oral, the prelim and revision.",
+      "why": "The S4/5 National Exam Study Programme also runs from 21 Jul."
+     },
+     {
+      "rule": "Term 4 is the SEC.",
+      "why": "The MTL written papers are on 15 to 16 Sep (Term 4 Week 1) and listening comprehension on 20 to 21 Sep (Term 4 Week 2)."
+     }
+    ]
+   }
+  ],
+  "discuss": {
+   "title": "For the collective discussion",
+   "items": [
+    "Whether any unit should move out of textbook order. For example, ML Sec 4 could bring its oral skills unit (Unit 4) into Term 1, before the school oral exam on 1 Mar.",
+    "Sec 4 fits 5 or 6 units into Terms 1 and 2, which is about 3 per term. Which units or activities can be shortened, combined or set as self-study?",
+    "Sec 1 to 3 Term 3 load: two units alongside WA3 and the MT Fortnight.",
+    "The WA weeks and formats for 2027 (the standardisation sheets are still a draft)."
+   ]
   }
  }
 }
