@@ -900,5 +900,102 @@
    "3": "Identical in all four courses: the same seven units in the same order, from the arts to Tamil and the world. This is where G3 and HTL add the argumentative essay and debate while G1 and G2 keep to views with reasons in spoken Tamil, so the same theme (leadership, mental well-being, the diaspora) is handled as a position paper in one class and a discussion in another.",
    "4": "Identical in all four courses: rights and duties, traditions in change, nation-building, entrepreneurship, invention, a brand-new Earth. The exam components carry the demand: HTL alone sits summary and word joining, G3 and HTL write the longer essay, G1 writes the typed post. One theme wheel, four exam destinations."
   }
+ },
+ "ux": {
+  "_note": "Interface copy added 31 Oct 2026 (labels, course-map summary, scroll cue, planning cards). index.html reads DATA.design.ux; rerun tools/enrich.py after editing.",
+  "mode": {
+   "label": "Content language",
+   "mtl": "Original",
+   "mtlTip": "Unit themes, tasks and syllabus terms in CL, ML or TL. Comparison and design text stays in English.",
+   "el": "English",
+   "elTip": "Everything in English"
+  },
+  "src": {
+   "label": "Source",
+   "pri": [
+    [
+     "all",
+     "Derived + inferred"
+    ],
+    [
+     "cpdd",
+     "Derived only"
+    ],
+    [
+     "infer",
+     "Inferred only"
+    ]
+   ],
+   "other": [
+    [
+     "all",
+     "CPDD + inferred"
+    ],
+    [
+     "cpdd",
+     "CPDD-tagged only"
+    ],
+    [
+     "infer",
+     "Inferred only"
+    ]
+   ]
+  },
+  "mapDetail": {
+   "label": "Detail",
+   "sum": "Summary",
+   "full": "Full detail",
+   "legend": "Summary: each entry is a unit's skill focus in that strand, as the guide names it, with the unit and an Examined badge where the exam tests it directly. A dashed line means the strand is a secondary focus of the unit. A blank cell means the guides do not name the strand in that year, not that it is never practised. Click an entry for its tasks, theme and syllabus area, or choose Full detail to see them all in the table.",
+   "open": "Show details",
+   "strandHead": "This strand in this unit",
+   "allHead": "Everything this unit teaches"
+  },
+  "scrollCue": "Scroll sideways for more →",
+  "plan": {
+   "title": "What this means for planning",
+   "data": "From the data",
+   "sugg": "Department suggestion",
+   "next": "Next step",
+   "cards": {
+    "over": [
+     {
+      "find": "G1 places 65% of marks on oral and listening; G2 and G3 place 30% on writing and Higher 40%.",
+      "impl": "Review how often each course rehearses spoken interaction and the exam writing form, term by term.",
+      "next": "Open the Course map for the course, then the Redesigned SOW year plan."
+     },
+     {
+      "find": "Paper 1 at G1 is one short online post in all three languages, but length and form differ, and the TL G1 format is provisional.",
+      "impl": "Confirm the TL format with the TL unit before fixing when the exam writing form becomes regular in the TL G1 SOW.",
+      "next": "By language → Tamil, exam cards."
+     },
+     {
+      "find": "The department's SOWs are in three formats for CL and none on the drive for ML and TL.",
+      "impl": "Adopt the ten-column frame on the Redesigned SOW tab as the common template for 2027.",
+      "next": "Planning → SOW stock-take."
+     }
+    ],
+    "c21": [
+     {
+      "find": "Only the TL guides tag 21CC activity by activity; CL and ML tags on this page are mostly inferred from task wording.",
+      "impl": "Treat an amber tag as a question for the unit meeting (is this competency really taught here?), not as evidence that it is.",
+      "next": "Use the Source filter: 'CPDD-tagged only' shows what the guides themselves claim."
+     }
+    ],
+    "ibl": [
+     {
+      "find": "ML carries almost every CPDD inquiry tag and TL two. The CL guides name guided inquiry (引导——探究) as a teaching mode and give every unit a 文化探索 extension and a 综合任务, but tag no unit, so CL looks thin here for documentary reasons.",
+      "impl": "Choose one guided inquiry per term per level department-wide, starting from the sketches on the cards, and record it in the Redesigned SOW's inquiry column.",
+      "next": "Open a unit card for its inquiry sketch, then the Redesigned SOW tab to see where it falls in the year."
+     }
+    ],
+    "pri": [
+     {
+      "find": "Communication is opened most often in every language. Measured against MOE's CAIT 3 to 6 definitions, Adaptive Thinking appears in about 17 units and Inventive Thinking in 23, nearly all in Sec 3 and 4.",
+      "impl": "Spend design effort on Adaptive and Inventive Thinking: a dilemma to decide, a perspective to take, an idea to generate and refine, built into the authentic assessments rather than read off the textbook theme.",
+      "next": "Department view on the Redesigned SOW tab shows the counts per course and year."
+     }
+    ]
+   }
+  }
  }
 }

@@ -11,6 +11,22 @@ A department wall chart of what the CPDD 2021-syllabus teacher guides teach in C
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
+## Four interface features from the closed design PR (31 Oct 2026, sixth update)
+
+PR #2 (`design/implement-feedback-2026-10-30`) was closed because main had already redone most of the redesign. Four parts were still missing and were rebuilt to fit the current layout (sidebar filter panel, takeaway cards, planning cards):
+
+1. **Compact course map.** The Course map opens in a **Summary** layout: each cell lists the unit's skill focus in that strand, the unit reference and the Examined badge (`.mi` buttons). Clicking an entry opens `mapPanel(id, strand)`, a dialog with the full entries for that strand plus everything the unit teaches. **Full detail** keeps the old matrix. Works in both layouts (one language, and 3 languages side by side). State `st.mdet` (`sum` | `full`, default `sum`). Below 640 px the summary table stacks, with each cell labelled by year (or language in the side-by-side layout).
+2. **Scroll-sideways cue.** `markScroll()` runs after every render and on resize and marks any `.scroll` box whose table overflows (`.ovf`): a right-edge shadow and the label "Scroll sideways for more →".
+3. **Clearer labels.** On the E21CC priorities tab the Source filter reads *Derived + inferred / Derived only / Inferred only* (on the 21CC and inquiry tabs it stays *CPDD + inferred / CPDD-tagged only / Inferred only*); the filter logic is unchanged. The display toggle reads **Content language: Original / English**, with a tooltip on each. Internally the modes are still `mtl` and `el`, and these notes still call them MTL mode and EL mode. On phones the site title may wrap to two lines so the toggle fits.
+4. **Planning cards.** Each "What this means for planning" card now has a shaded **From the data** box (what the documents show) and a dashed **Department suggestion** box (what the department proposes, with the next step), so evidence and proposals are not confused.
+
+New copy lives in `tools/design.json` under `ux` (embedded as `DATA.design.ux` by `enrich.py`; edit and rerun):
+- `ux.mode`: `label`, `mtl`, `mtlTip`, `el`, `elTip` (display toggle).
+- `ux.src`: `label`, `pri` (E21CC tab options) and `other` (21CC and inquiry tabs), each a list of `[value, label]`; values `all`, `cpdd`, `infer` must not change.
+- `ux.mapDetail`: `label`, `sum`, `full`, `legend` (the note above the summary), `open` (tooltip), `strandHead`, `allHead` (dialog headings).
+- `ux.scrollCue`: the sideways-scroll label.
+- `ux.plan`: `title`, `data`, `sugg`, `next` (card labels) and `cards` keyed by tab (`over`, `c21`, `ibl`, `pri`), each card `{find, impl, next}`. The card text moved here from the script unchanged; some `next` lines still name the earlier "Redesigned SOW" and "SOW stock-take" and need rewording.
+
 ## EL mode covers the whole site (31 Oct 2026, fifth update)
 
 The HOD found that with the EL toggle on, the Writing task bank and the Scheme of work still showed CL, ML and TL text with no English (textbook prompts, Panduan Guru outcomes, TL overview activities, themes, listening tasks, SEAB assessment objectives). Now every string on every tab and in every unit dialog has an English rendering in EL mode; MTL mode is unchanged.
