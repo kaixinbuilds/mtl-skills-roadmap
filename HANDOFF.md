@@ -3,15 +3,26 @@
 Updated October 31, 2026 by HOD/MTL Mdm Chun Kai Xin
 
 Repo: `kaixinbuilds/mtl-skills-roadmap`. Live page: https://kaixinbuilds.github.io/mtl-skills-roadmap/
-Two pages, no build step: `index.html` (single-file app: CSS, the embedded `const DATA={...}` JSON and the JS views) and `sow-stocktake.html` (standalone companion page with its own embedded inventory JSON). Open either file in a browser.
+One page, no build step: `index.html` (single-file app: CSS, the embedded `const DATA={...}` JSON and the JS views). Open it in a browser.
 
 ## What the pages are for
 
-A department wall chart of what the CPDD 2021-syllabus teacher guides teach in CL, ML and TL, Sec 1 to 4, G1 to HMT, mapped to SEC 2027 and to two BVSS school approaches from 2027: inquiry-based learning (IBL) and the E21CC priority areas (Adaptive Thinking, Inventive Thinking, Civic Literacy, Communication). From 31 Oct it also carries the department's planning layer: a redesigned scheme-of-work (SOW) frame filled for every course and year, and a stock-take of the SOW documents in use.
+A department wall chart of what the CPDD 2021-syllabus teacher guides teach in CL, ML and TL, Sec 1 to 4, G1 to HMT, mapped to SEC 2027 and to two BVSS school approaches from 2027: inquiry-based learning (IBL) and the E21CC priority areas (Adaptive Thinking, Inventive Thinking, Civic Literacy, Communication). From 31 Oct it also carries the department's planning layer: a scheme of work (SOW) for 2027 laid out as four term columns for every language, course and year.
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
-## What was added on 31 Oct 2026
+## What changed later on 31 Oct 2026 (second update)
+
+The HOD found the first planning layer too much to digest. It was replaced:
+
+1. **`Scheme of work 2027` tab (`vSow`, `gridRows`, `sowPanel`, `sowCSV` in the script; data in `tools/sow.json`).** One grid per language, course and year. Columns are Term 1 to Term 4 (2027 dates from the school calendar). Rows are the planning headers, leftmost: the CPDD Tamil unit-overview (கண்ணோட்டம்) headers (தொகுதி and பாட வேளை, கருப்பொருள், மொழித்திறன்கள், கற்பித்தல் நடவடிக்கைகள், கற்பித்தல் நோக்கங்கள், துணைக்கருவிகள், கல்வியமைச்சின் முனைப்புகள்) plus the columns only the Malay Skema Pengajaran sample has (Fungsi Bahasa, Nilai Budaya / Arif Budiman, Hasil Pembelajaran, Alat Penilaian dan Kriteria Kejayaan), then four rows of CPDD-suggested tasks (functional writing, composition, oral, listening), the BVSS E21CC focus mapped to the desired student outcomes, assessment with the 2026 component formats, and school and MT events. No week-by-week layout. Units are placed in terms by the pacing rules in `sow.json`; click a unit for its detail dialog. CSV export of the grid.
+2. **VMV band** at the top of the tab (`vmvBand`): vision, mission, values and motto from the Strategic Plan 2027 to 2031 draft; one card per desired student outcome (Adaptive Learners, Caring Leaders, Ethical Changemakers) with its value, I-statement, E21CC focus area and learning goals (lower or upper secondary by year), what it looks like in MTL, and how many units in the chosen year carry that move. Data: `sow.json` `vmv`.
+3. **2027 calendar** (`sow.json` `calendar`), read from the (Staff) and (Students) Bukit View Secondary Google calendars on 31 Oct 2026: term dates, HBL days, MT CNY (5 Feb), Hari Raya showcase (29 Mar), MT Fortnight (19 to 27 Jul), Deepavali showcase (18 Oct), MT oral exams (Sec 4 and 5 on 1 Mar, Sec 3 on 2 Apr, Sec 2 on 22 Apr, Sec 1 on 14 May), SEC MTL oral (12 to 16 Jul), Sec 4 and 5 MT prelim written (29 Jul), SEC MTL written (15 to 16 Sep) and listening (20 to 21 Sep), Sec 1 to 3 EOY (30 Sep to 13 Oct).
+4. **Assessment pattern** (`sow.json` `assess`): the 2026 pattern (WA1 Term 1, WA2 Term 2, WA3 Term 3, EOY Term 4) placed in the same weeks on the 2027 calendar; Sec 4 school oral in Term 1, prelim written 29 Jul, SEC in September. **Component formats** (`sow.json` `wa`): the 2026 MTL Assessment Component Standardisation sheets (CL, ML, TL) keyed by course and year, shown under `Format (2026 standardisation)` in the assessment row. **Oral coaching framework** (`sow.json` `oralfw`) from the 2026 deployment workbook.
+5. **Listening and speaking tasks** (`sow.json` `listen`): TL from every CPDD கண்ணோட்டம் (activities named கேட்டல் கருத்தறிதல் or using an ஒலிப்பகுதி/ஒளிக்காட்சி; 101 of 108 units), ML from the Panduan Guru Hasil Pembelajaran coded 1.x, 2.x and 5.x (79 of 112 units; Sec 4 Units 4 to 6 and the JATi 2B Ekspres guide did not parse), CL as a note per term (听说 block and workbook 听力理解). `sow.json` `tlUnits` carries the CPDD theme, sub-theme and period count per TL unit. Extraction scripts were run in the session scratchpad (docx table parsing for TL, `pypdf` text plus block counting for ML); rerun from the drive if the guides change.
+6. **Removed**: the SOW stock-take page (`sow-stocktake.html`, `tools/stocktake*.py`, `tools/stocktake.json`), the ten-column frame, exemplars and department views, and the `v=` and `hl=` hash parameters. The SOW hash is now `#sow-CL-G3?s=1`.
+
+## What was added on 31 Oct 2026 (first update; items 1 and 2 superseded above)
 
 1. **Planning group in the navigation**: `Redesigned SOW` tab (`vSow` in the script, data in `tools/sow.json` embedded as `DATA.sow`) and `SOW stock-take` (link to `sow-stocktake.html`).
    - Views: Year plan (one language, course and year: units laid across four terms with week ranges, assessment touchpoints and the E21CC thread per term), 3 languages side by side (same course and year), The frame (the ten columns and where each is borrowed from, the E21CC student moves, the assessment pattern by level), Exemplars (three fully worked units: CL 1G3 1B Unit 6, ML 1G3 1A Unit 1, TL 1G1 1A Unit 2) and Department view (planning cards, a coverage matrix of priority areas and inquiry per course and year, decisions needed before 2027).
@@ -28,30 +39,32 @@ Two comparisons must always be easy: across languages for the same course, and w
 ## How to change things
 
 - **Edit a design fact or page text**: change `tools/design.json`, then `python3 tools/enrich.py`. Keys: `about` (hero text per tab, now including `sow`), `iblsg`, `iblx` (inquiry sketches), `stp`, `cellsEn` / `evEn`, `themeThread` (per language and year), `themeCourse` (per language and year).
-- **Edit the SOW frame, calendar, assessment pattern, pacing, E21CC moves, HOD decisions or exemplars**: `tools/sow.json`, then rerun `enrich.py`. The year plans themselves are computed in the browser (`alloc`, `weeksFor` in the script), so changing `pacing` or `assess` re-lays every course.
+- **Edit the SOW grid data** (calendar and events, assessment pattern and WA formats, pacing, E21CC moves, VMV mapping, listening tasks, row labels): `tools/sow.json`, then rerun `enrich.py`. The grids themselves are computed in the browser (`alloc`, `gridRows`), so changing `pacing` or `assess` re-lays every course.
 - **Edit or add an inference rule**: `RULES` in `tools/enrich.py`, rerun. **CPDD-to-priority mapping**: `DERIVE`. **ML domains**: the `ml(...)` lines; CL and TL domain keywords in `KW`.
-- **Refresh the stock-take**: `python3 tools/stocktake_gen.py "<drive>/BVSS MTL T&L/2026" tools/stocktake.json` (add new documents to its `DOCS` list), then `python3 tools/build_stocktake.py`. Update `NOTES` and the feature matrices in `sow-stocktake.html` by hand.
 - **Verify before pushing**: there is no `node` on the department Mac; `jsc` (JavaScriptCore) is used instead. Extract the script, syntax-check with `new Function`, and run the stub-DOM harness that renders every tab, both theme layouts, every SOW view and every unit panel (the harness used on 31 Oct is in the session scratchpad; recreate from the description if needed). Then open the page in a browser and click every tab in EL and MTL mode; check the console is clean.
 
 ## Data model (per record in `DATA.recs`)
 
-`lang, course, sec, book, unit, theme_m, theme_en, strand, also, sub_m, sub_en, purpose, task_m, task_en, exam, syl, c21, ibl, cats, tags` (unchanged). `DATA.themes[*]` has `dom` and `domSrc`. Top-level keys added since 30 Oct: `sow` (from `tools/sow.json`), `design.themeThread`, `design.themeCourse`, `ui.t_sow`, `ui.t_stock`.
+`lang, course, sec, book, unit, theme_m, theme_en, strand, also, sub_m, sub_en, purpose, task_m, task_en, exam, syl, c21, ibl, cats, tags` (unchanged). `DATA.themes[*]` has `dom` and `domSrc`. Top-level keys added since 30 Oct: `sow` (from `tools/sow.json`: `calendar`, `assess`, `wa`, `oralfw`, `listen`, `tlUnits`, `vmv`, `grid`, `pacing`, `e21moves`), `design.themeThread`, `design.themeCourse`, `ui.t_sow`.
 
 ## Known gaps and next steps (in priority order)
 
 1. **Confirm the TL G1 written-paper format** with the TL unit against SEAB K122; then remove the `prov()` badge.
 2. **Add CL 综合任务 and 文化探索 as records** (strand `oral` or `fw`, sub "综合任务 Integrated task" / "文化探索 Culture exploration", `ibl` note). Source: each 教师手册's 各单元教学建议 and the 延伸活动 block (实践活动 / 文化探索 / 生活写作 / 综合活动). Rule R7 will then tag them and CL will stop looking thin on the IBL tab and in the SOW inquiry column.
-3. **Review the generated SOW year plans with the three units**: pacing rules in `tools/sow.json` are department defaults (Book A over Terms 1 and 2, Book B over Terms 3 and 4 with one unit in Term 4; Sec 3 `[2,1,2,1]`; Sec 4 content in Terms 1 to 3; ML Sec 4 pairs content unit n with skills unit n+3). Confirm the 2027 WA formats and the Sec 4 oral-in-Term-1 and prelim dates department-wide.
-4. **Tiered success criteria** in the SOW row are a generic scaffold per paper; replace with unit-specific criteria as levels write them (store per unit in `sow.json` under a new `criteria` key, keyed like `iblx`).
-5. **Review the inferred tags** (rules are deliberately broad); consider a `confirmed` provenance value for department-vetted tags.
-6. **Get the missing guides**: ML Sec 4 Units 4 to 6 Panduan Guru; TL 4G1 Unit 6 lesson prep; TL lesson-prep PDFs need OCR or Word versions.
-7. **Design-matrix text for G2, G3 and HMT** on the Pedagogical design tab.
-8. **Translations** for the new SOW and planning text (English only in MTL mode, the page's convention for overview text).
-9. **SOW export to Word or Excel per unit**: the CSV covers the data; a formatted ten-column export is the next step if teachers want to edit offline.
+3. **Review the term placement of units with the three units**: pacing rules in `tools/sow.json` are department defaults (Book A over Terms 1 and 2, Book B over Terms 3 and 4 with one unit in Term 4; Sec 3 `[2,1,2,1]`; Sec 4 content in Terms 1 to 3; ML Sec 4 pairs content unit n with skills unit n+3). Confirm the 2027 WA formats (the standardisation sheets are a draft for discussion) and the WA weeks.
+4. **Fill the ML listening gaps**: Sec 4 Units 4 to 6 (skills units) and the JATi 2B Ekspres guide (18 outcome blocks, not 16) need hand entry in `sow.json` `listen.ML`.
+5. **CL listening**: add the per-unit 听力理解 topic from each 教师手册 听力录音文本 if the level wants it in the grid.
+6. **Success criteria per unit**: the assessment row carries the WA format only; add unit-level criteria under a new `criteria` key in `sow.json` when levels write them.
+7. **Review the inferred tags** (rules are deliberately broad); consider a `confirmed` provenance value for department-vetted tags.
+8. **Get the missing guides**: ML Sec 4 Units 4 to 6 Panduan Guru; TL 4G1 Unit 6 lesson prep; TL lesson-prep PDFs need OCR or Word versions.
+9. **Design-matrix text for G2, G3 and HMT** on the Pedagogical design tab.
+10. **Translations** for the SOW grid labels (English only in MTL mode, the page's convention for overview text).
+11. **SOW export to Word or Excel**: the CSV covers the grid; a formatted export is the next step if teachers want to edit offline.
 
 ## Sources read for the 31 Oct update
 
-- Dept drive `02 Curriculum and Instruction Materials/CL`: all 2025 and 2026 SOW documents listed on the stock-take page; `BVSS_CL_G3_四年教学计划_草稿.xlsx` (23 Oct 2026).
+- Dept drive `02 Curriculum and Instruction Materials/CL`: the 2025 and 2026 SOW documents; `BVSS_CL_G3_四年教学计划_草稿.xlsx` (23 Oct 2026).
+- Second update: `2026 MTL Assessment Component Standardisation.xlsx`, `2026 MTL Dept Deployment.xlsx` (Assessment Dates and Modes, Oral Exam Qn Coaching Framework), `BVSS_Strategic_Planning_e21cc.docx`, `20260901_BVSS_Envisioning_VMV Updates.pptx`; all TL கண்ணோட்டம் Word files and all ML Panduan Guru PDFs under `CPDD resources (2021 Syllabus)`; the (Staff) and (Students) Bukit View Secondary 2026 Google calendars (2027 entries).
 - `CPDD resources (2021 Syllabus)`: ML `Teachers Guidebook/*/M1_SOW Sampel *.docx`; TL `TL Teachers Guide/1G1 TG` and `3G3 TG` கண்ணோட்டம் (Word); all 44 CL 教师手册 PDFs for the 探究 recheck.
 - `03 Assessment and Examiners' Report/School Assessment/2026_BVSS_MTL_Assessment_Overview.md` (WA and EOY pattern, authentic assessments).
 - `01 Admin Matters/MTL Dept Handbook/BVSS MTL Handbook (20260410 Edition).docx` (level coordinator role: common SOW, pacing and WAs; e21CC focus) and the 2026 department meeting minutes.
