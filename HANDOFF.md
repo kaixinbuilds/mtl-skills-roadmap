@@ -11,6 +11,15 @@ A department wall chart of what the CPDD 2021-syllabus teacher guides teach in C
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
+## School colours, SVG scenes and writing-type corrections (31 Oct 2026, seventh update)
+
+**Writing-type corrections** (`tools/sow.json` `wbank.items`; 57 items re-read and corrected by hand, each keeps its old type in `was` and shows a "re-sorted" badge in the task bank):
+- CL: tasks that 记叙 then add 议论 or 看法 (G1 3/U3, G2 2B U4, G3 and HMT 2B U4) are narrative, not argumentative. G1 now has **no argumentative writing**; CL argumentative starts at Sec 3 U3 in G2, G3 and HMT. 描写 is taught inside 记叙文 in the CL books, so the three "descriptive" tasks are narrative and the CL descriptive row is gone. G3 and HMT 3/U5 forum post (对比论证法) is argumentative in both courses (was functional in G3 only). HMT 4/U5 借物喻理散文 is literary. G1 textbook pages that the book labels 书面互动 but which are guided recounts keep the functional type, with sub-type "Guided recount (书面互动 page)" instead of the wrong "Functional"/"Letter".
+- ML: "ekspositori jenis deskripsi" and informative scripts are expository, not literary; "teks deskriptif tentang latar cerita" is descriptive; the speech in HMT 1B U7 had sub-type Email.
+- TL: விவாதம் (G1 3/U6, G2 3/U2, G3 3/U2, HMT 3/U2) is a spoken debate, now "Other: Debate (spoken)"; TL argumentative writing (விவாதக் கட்டுரை) starts at Sec 3 U6 in G3 and HMT. நேரடி வருணனை (G2 3/U4) is spoken live commentary; vlog-making activities are not narrative. Reports, circulars, news reports, forms, emcee scripts, résumés, online comments and dialogues are functional writing.
+
+**Visual theme**: BVSS blue `#1a4fa3`, green `#1f9d55`, yellow `#f5c400` on white, as a token layer at the end of the stylesheet (light and dark). Tri-colour stripe on the header, section tops and footer. SVG brand mark (hill and sun). Hero carries an animated SVG hill scene with an S1 to S4 trail and flag (sun glow, drifting clouds, marching trail; all motion off under `prefers-reduced-motion`). Year colours `--y1..--y4` (S1 yellow, S2 green, S3 teal, S4 blue) are used by the writing tab: each course cell has a four-bar chart scaled within the row, and the bar for the first year glows. Writing types carry line icons (`WICO`).
+
 ## Four interface features from the closed design PR (31 Oct 2026, sixth update)
 
 PR #2 (`design/implement-feedback-2026-10-30`) was closed because main had already redone most of the redesign. Four parts were still missing and were rebuilt to fit the current layout (sidebar filter panel, takeaway cards, planning cards):
