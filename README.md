@@ -6,7 +6,7 @@ Live: https://kaixinbuilds.github.io/mtl-skills-roadmap/
 
 ## Pages
 
-- `index.html`: the roadmap. Tabs: Overview, By language, Course map, Unit themes, Syllabus map, Pedagogical design, 21CC roadmap, Inquiry (IBL) roadmap, E21CC priorities, Scheme of work 2027 (one term-by-term grid per language, course and year, with the school's VMV and E21CC focus mapped to the MTL curriculum).
+- `index.html`: the roadmap. Tabs: Overview, By language, Course map, Unit themes, Syllabus map, Pedagogical design, 21CC roadmap, Inquiry (IBL) roadmap, E21CC priorities, Scheme of work 2027, Writing task bank (every CPDD writing task by type and year, with when each type first appears). Scheme of work 2027 is one term-by-term grid per language, course and year, with the school's VMV and E21CC focus mapped to the MTL curriculum).
 
 ## Source files and build
 

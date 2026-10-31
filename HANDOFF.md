@@ -11,6 +11,18 @@ A department wall chart of what the CPDD 2021-syllabus teacher guides teach in C
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
+## Writing task bank tab (31 Oct 2026, fourth update)
+
+`Writing task bank` (完整写作题库) in the Planning group (`vWrite`, `wbCSV`; data `tools/sow.json` `wbank`). Two tables for the language and course chosen in the side panel:
+- **When each writing type first appears**: for every course, the first year and unit where each writing type appears, with task counts for Sec 1 to 4, plus what SEC 2027 Paper 1 asks for and a link to the syllabus.
+- **Task bank**: writing types (functional, narrative, descriptive, expository, argumentative, creative and literary, other, integrated tasks) down the side, Sec 1 to 4 across. Unit labels open the unit dialog. CSV export.
+
+Sources by language:
+- **CL**: the exact textbook prompts in `cltasks` (179 prompts, all 92 units), classified by the kind the textbook gives (书面互动 = functional) and by the 写作学习点 wording (说明 → expository; 论证/论点/看法 → argumentative; 文学创作/续写 → literary; otherwise narrative). Functional tasks get a sub-type (email, forum post, online post, message, report, postcard, letter, speech).
+- **ML**: the Panduan Guru have no printed prompts on the drive, but each unit's Hasil Pembelajaran name its writing outcomes, coded 4.x (Menulis) and 6.x (Interaksi Penulisan). Those outcomes are the ML bank (about 140 across 93 units). The JATi 2B Ekspres guide (18 outcome blocks instead of 16) and Sec 4 Units 4 to 6 did not parse and are missing.
+- **TL**: the production activities in every கண்ணோட்டம் (கற்போம்; படைப்போம், நானும் ஒரு படைப்பாளி, and activities naming கட்டுரை, மின்னஞ்சல் or கடிதம்), with activity number and periods. The TL overview extraction was redone with a Word-run pattern that ignores tab elements; this also cleaned leftover markup out of the TL listening data used by the SOW tab.
+- Classification is by keyword and should be reviewed by each language team; edit `sow.json` `wbank.items[].type` to correct a task.
+
 ## Third update on 31 Oct 2026 (UX pass)
 
 1. **Sticky filter panel.** Language, course, year (SOW), the roadmap filters (language, course, year, source) and the paper key now live in a left panel (`<aside id="side">`, built in `controls()`) that stays in view while scrolling; below 900 px it becomes a sticky bar under the header. The per-tab slicers that duplicated these controls were removed. The header height is exposed as `--hh` for the sticky offsets.
@@ -53,7 +65,7 @@ The HOD found the first planning layer too much to digest. It was replaced:
 
 ## Data model (per record in `DATA.recs`)
 
-`lang, course, sec, book, unit, theme_m, theme_en, strand, also, sub_m, sub_en, purpose, task_m, task_en, exam, syl, c21, ibl, cats, tags` (unchanged). `DATA.themes[*]` has `dom` and `domSrc`. Top-level keys added since 30 Oct: `sow` (from `tools/sow.json`: `calendar`, `assess`, `wa`, `oralfw`, `listen`, `tlUnits`, `vmv`, `grid`, `pacing`, `e21moves`, `seab`, `cltasks`), `design.themeThread`, `design.themeCourse`, `ui.t_sow`.
+`lang, course, sec, book, unit, theme_m, theme_en, strand, also, sub_m, sub_en, purpose, task_m, task_en, exam, syl, c21, ibl, cats, tags` (unchanged). `DATA.themes[*]` has `dom` and `domSrc`. Top-level keys added since 30 Oct: `sow` (from `tools/sow.json`: `calendar`, `assess`, `wa`, `oralfw`, `listen`, `tlUnits`, `vmv`, `grid`, `pacing`, `e21moves`, `seab`, `cltasks`, `wbank`, `wbankAbout`), `design.themeThread`, `design.themeCourse`, `ui.t_sow`.
 
 ## Known gaps and next steps (in priority order)
 
