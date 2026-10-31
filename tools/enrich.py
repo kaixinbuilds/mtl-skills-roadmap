@@ -101,6 +101,15 @@ RULES = [  # (id, test(rec)->bool, cats, priority areas, explanation)
  ("R6 adapt", _adapt, [], ["PA_AT"], "task asks students to take another perspective, weigh a dilemma, adjust a strategy or apply skills in a new or unfamiliar context (MOE CAIT 3-4, Adaptive Thinking). A theme about change or challenge no longer counts on its own"),
  ("R7 inquiry", lambda r: re.search(r"search|find (out|information)|research|survey|interview|investigat|collect|plan a|design a|project|exhibit|present(ation)? (from|on)|integrated task|综合任务|explore", r["task_en"]+" "+r["sub_en"], re.I), ["INQ"], [], "task needs students to find out, plan, make or present (inquiry-shaped, not tagged by CPDD)"),
 ]
+# CPDD 21CC tags read unit by unit from the guides (tools/cpdd21.json, built by tools/cpdd21.py, 31 Oct 2026).
+# Attached once per unit (to its first record), so counts mean "units the guide tags", plus the E21CC area where the guide names the competency.
+C21 = json.loads((ROOT / "tools" / "cpdd21.json").read_text(encoding="utf-8"))["units"]
+ukey = lambda r: f'{r["lang"]}|{r["course"]}|{r["sec"]}|{r.get("book","")}|{r["unit"]}'
+first_of, unit_cats = {}, {}
+for r in D["recs"]:
+    first_of.setdefault(ukey(r), id(r)); unit_cats.setdefault(ukey(r), set()).update(r.get("cats", []))
+PA_WHY = {"PA_IT":"the guide names inventive or creative thinking on its own, or problem solving (CAIT 5-6)", "PA_AT":"the guide names adaptive thinking (CAIT 3-4)",
+          "PA_CM":"the guide names communication (CCI 1-2)", "PA_CL":"the guide names civic literacy (CGC 1-2)"}
 for r in D["recs"]:
     tags = []
     seen = set()
@@ -114,6 +123,16 @@ for r in D["recs"]:
             try: ok = bool(test(r))
             except Exception: ok = False
             if ok: add(p, "derived", f"derived: {why}")
+    if first_of.get(ukey(r)) == id(r):
+        for k, x in C21.get(ukey(r), {}).items():
+            src = "; ".join(x["src"][:4]) + (f" (+{len(x['src'])-4} more)" if len(x["src"]) > 4 else "")
+            add(k, "cpdd", "CPDD guide: " + src)
+            for p in x["pa"]: add(p, "derived", f"derived: {PA_WHY[p]}. Source: {x.get('pasrc', {}).get(p, src)}")
+            if k == "CAIT" and not x["pa"] and k not in unit_cats[ukey(r)]:
+                for p, test, why in DERIVE_COND["CAIT"]:
+                    try: ok = bool(test(r))
+                    except Exception: ok = False
+                    if ok: add(p, "derived", f"derived: {why}")
     for rid, test, cats, pris, why in RULES:
         try: ok = bool(test(r))
         except Exception: ok = False
@@ -138,6 +157,13 @@ D["ui"]["t_sow"] = {"en":"Scheme of work 2027","zh":"2027教学进度表","ms":"
 # ---------- 5. CL inquiry wording (recheck of all 44 CL 教师手册 PDFs, 31 Oct 2026) ----------
 D["iblTg"]["CL"] = "《华文伴我行》教师手册 do not tag units for inquiry. Every book's 差异教学 notes name 引导——探究 (guided inquiry) as one of two teaching modes, and every unit ends with 文化探索 (look it up and share) and a 综合任务 (integrated task: 展示、交流、反思). 探究 itself appears once or twice per book; 综合任务 about twenty times."
 D["iblTgEn"]["CL"] = "The CL guides don't tag units for inquiry. Every book's differentiated-instruction notes name guided inquiry (引导——探究) as one of two teaching modes, and every unit ends with a culture-exploration extension (look it up online and share) and an integrated task (make, present, reflect). The word inquiry appears once or twice per book; the integrated task about twenty times."
+
+# ---------- 5b. What each language's guides tag for 21CC (recheck of every guide, 31 Oct 2026) ----------
+D["c21En"]["CL"] = "Not tagged on unit pages. Every guide ends with the 21CC goals and stages; the Sec 1 and Sec 3 guides add one worked example each with MOE codes: Sec 1 Unit 3 《相约狮城》 (CCI 1.3, CCI 5.3, CGC 1.3) and Sec 3 Unit 6 《发现真善美》 (CAIT 3.4, CAIT 5.4, CCI 2.4). Teachers are asked to set 2-3 21CC unit goals themselves for the other units."
+D["c21"]["CL"] = "Not tagged on unit pages. 每册附录列出21世纪技能目标及发展阶段；中一、中三手册各有一个示例：中一单元三《相约狮城》(CCI 1.3, CCI 5.3, CGC 1.3)，中三单元六《发现真善美》(CAIT 3.4, CAIT 5.4, CCI 2.4)。其他单元由教师自行设定2-3个单元综合目标。"
+D["c21En"]["ML"] = "Not tagged per unit. Only the G1 Sec 4 Panduan Guru adds 21CC notes: digital literacy (Unit 1), civic literacy (Unit 2) and cross-cultural literacy (Unit 3). No other ML guide on the drive mentions 21CC."
+D["c21"]["ML"] = "Not tagged per unit. Only the G1 Sec 4 Panduan Guru adds 'Penerapan Kemahiran Abad ke-21': Literasi Digital (Unit 1), Literasi Sivik (Unit 2), Literasi Silang Budaya (Unit 3)."
+D["c21En"]["TL"] = "Tagged activity by activity in the MOE-initiatives column of the unit overviews: critical and inventive thinking, communication and information skills, civic and global literacy, social-emotional competencies. 96 of 108 units carry at least one tag."
 
 # ---------- 6. English renderings for EL mode (tools/en.json: exact source string -> English) ----------
 D["en"] = json.loads((ROOT / "tools" / "en.json").read_text(encoding="utf-8")).get("map", {})

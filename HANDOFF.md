@@ -11,6 +11,14 @@ A department wall chart of what the CPDD 2021-syllabus teacher guides teach in C
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
+## CPDD 21CC tags re-read from every guide (31 Oct 2026, ninth update)
+
+`tools/cpdd21.py` reads the guides on the drive and writes `tools/cpdd21.json` (unit → 21CC domain → E21CC area named, with the activity and original wording); `tools/enrich.py` attaches each domain once per unit as a `cpdd` tag and adds the E21CC area as `derived` only where the guide names the specific competency.
+- **CL**: unit pages carry no 21CC tags. Every 教师手册 ends with 21世纪技能目标及发展阶段; the Sec 1 and Sec 3 guides of all four courses add one worked example (附录三) with MOE codes: Sec 1 U3 《相约狮城》 CCI 1.3, CCI 5.3, CGC 1.3; Sec 3 U6 《发现真善美》 CAIT 3.4 (Adaptive), CAIT 5.4 (Inventive), CCI 2.4 (Communication). Sec 2 and Sec 4 guides print the goals table only, and the guide asks teachers to set 2-3 unit goals themselves. Before this update only G1 Sec 1 U3 was marked, with no codes. The 2025 revised PDFs in `2021 完整电子课文/教师手册` are image-only.
+- **ML**: only the G1 Sec 4 Panduan Guru has "Penerapan Kemahiran Abad ke-21" notes: Literasi Digital (U1), Literasi Sivik (U2), Literasi Silang Budaya (U3, added). No other ML guide or sample SOW on the drive mentions 21CC (full-text sweep of all 39 files).
+- **TL**: the MOE-initiatives column (கல்வியமைச்சின் முயற்சிகள்) tags 21CC activity by activity, written as 21-ஆம் நூற்றாண்டுத் திறன்கள், 21-ஆம் நூ. தி. or 21CC. The earlier extraction missed whole books (all of 4G1, 3G3 and others); 96 of 108 TL units now carry CPDD tags (was 54).
+- **E21CC from CPDD wording**: "நுண்ணாய்வுச் சிந்தனையும் புத்தாக்கச் சிந்தனையும்" is the older name of the whole CAIT domain, so it does not count as Inventive Thinking on its own. Inventive needs inventive or creative thinking named alone, or problem solving; Adaptive needs தகவமைவு named; Communication needs கருத்துப்பரிமாற்றம், not collaboration or information skills alone; Civic Literacy needs குடியியல், not global awareness or cross-cultural alone. Plain CAIT domain tags still go through the task-move test.
+
 ## Planner is the home page (31 Oct 2026, eighth update)
 
 The Scheme of work 2027 term grid is now the landing page (a visit with no hash opens it; the brand links to it) and sits first in the navigation under **Planner**, with the Writing task bank. Everything else is under Curriculum & exam, Pedagogy and 2027 school approaches as before.
