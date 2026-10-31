@@ -2902,7 +2902,7 @@
     "title": "相约狮城"
    }
   ],
-  "CL|G1|1|1下|1": [
+  "CL|G1|1|1下|4": [
    {
     "kind": "fw",
     "skill": "在记叙时加入语言描写和行动描写。",
@@ -2918,7 +2918,7 @@
     "title": "习惯的力量"
    }
   ],
-  "CL|G1|1|1下|2": [
+  "CL|G1|1|1下|5": [
    {
     "kind": "fw",
     "skill": "通过空间的转换写出游览的经过。",
@@ -2934,7 +2934,7 @@
     "title": "创新与改变"
    }
   ],
-  "CL|G1|1|1下|3": [
+  "CL|G1|1|1下|6": [
    {
     "kind": "fw",
     "skill": "根据事实写出意见。",
@@ -3235,7 +3235,7 @@
     "title": "相约狮城"
    }
   ],
-  "CL|G2|1|1下|1": [
+  "CL|G2|1|1下|4": [
    {
     "kind": "comp",
     "skill": "在记叙时加入语言描写和行动描写。",
@@ -3251,7 +3251,7 @@
     "title": "习惯的力量"
    }
   ],
-  "CL|G2|1|1下|2": [
+  "CL|G2|1|1下|5": [
    {
     "kind": "comp",
     "skill": "通过空间的转换写出游览的经过。",
@@ -3267,7 +3267,7 @@
     "title": "创新与改变"
    }
   ],
-  "CL|G2|1|1下|3": [
+  "CL|G2|1|1下|6": [
    {
     "kind": "comp",
     "skill": "根据事实写出意见。",
@@ -4362,7 +4362,7 @@
     "gist_en": "Packing list for a foreign friend"
    },
    {
-    "uid": "CL|G1|1|1下|1",
+    "uid": "CL|G1|1|1下|4",
     "type": "fw",
     "sub": "Guided recount (书面互动 page)",
     "skill": "在记叙时加入语言描写和行动描写。",
@@ -4373,7 +4373,7 @@
     "gist_en": "Recount a lesson from being late"
    },
    {
-    "uid": "CL|G1|1|1下|1",
+    "uid": "CL|G1|1|1下|4",
     "type": "int",
     "sub": "",
     "skill": "",
@@ -4384,7 +4384,7 @@
     "gist_en": "21-day good habit challenge"
    },
    {
-    "uid": "CL|G1|1|1下|2",
+    "uid": "CL|G1|1|1下|5",
     "type": "fw",
     "sub": "Guided recount (书面互动 page)",
     "skill": "通过空间的转换写出游览的经过。",
@@ -4395,7 +4395,7 @@
     "gist_en": "Recount a trip to Future City"
    },
    {
-    "uid": "CL|G1|1|1下|2",
+    "uid": "CL|G1|1|1下|5",
     "type": "int",
     "sub": "",
     "skill": "",
@@ -4406,7 +4406,7 @@
     "gist_en": "Product invention proposal"
    },
    {
-    "uid": "CL|G1|1|1下|3",
+    "uid": "CL|G1|1|1下|6",
     "type": "fw",
     "sub": "Report",
     "skill": "根据事实写出意见。",
@@ -4417,7 +4417,7 @@
     "gist_en": "Report thanking a canteen stallholder"
    },
    {
-    "uid": "CL|G1|1|1下|3",
+    "uid": "CL|G1|1|1下|6",
     "type": "int",
     "sub": "",
     "skill": "",
@@ -4814,7 +4814,7 @@
     "gist_en": "Poster recommending souvenirs"
    },
    {
-    "uid": "CL|G2|1|1下|1",
+    "uid": "CL|G2|1|1下|4",
     "type": "nar",
     "sub": "",
     "skill": "在记叙时加入语言描写和行动描写。",
@@ -4825,7 +4825,7 @@
     "gist_en": "Recount a lesson from being late"
    },
    {
-    "uid": "CL|G2|1|1下|1",
+    "uid": "CL|G2|1|1下|4",
     "type": "int",
     "sub": "",
     "skill": "",
@@ -4836,7 +4836,7 @@
     "gist_en": "21-day good habit challenge"
    },
    {
-    "uid": "CL|G2|1|1下|2",
+    "uid": "CL|G2|1|1下|5",
     "type": "nar",
     "sub": "",
     "skill": "通过空间的转换写出游览的经过。",
@@ -4847,7 +4847,7 @@
     "gist_en": "Recount a trip to Future City"
    },
    {
-    "uid": "CL|G2|1|1下|2",
+    "uid": "CL|G2|1|1下|5",
     "type": "int",
     "sub": "",
     "skill": "",
@@ -4858,7 +4858,7 @@
     "gist_en": "Product invention proposal"
    },
    {
-    "uid": "CL|G2|1|1下|3",
+    "uid": "CL|G2|1|1下|6",
     "type": "fw",
     "sub": "Report",
     "skill": "根据事实写出意见。",
@@ -4869,7 +4869,7 @@
     "gist_en": "Report thanking an unsung hero"
    },
    {
-    "uid": "CL|G2|1|1下|3",
+    "uid": "CL|G2|1|1下|6",
     "type": "int",
     "sub": "",
     "skill": "",

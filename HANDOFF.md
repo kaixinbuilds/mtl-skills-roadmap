@@ -11,6 +11,14 @@ A department wall chart of what the CPDD 2021-syllabus teacher guides teach in C
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
+## Unit numbering checked against the sources (1 Nov 2026, twelfth update)
+
+Every unit number in all three languages was checked against the CPDD sources on the drive. CL used the 2021 电子课文 headings (单元一 to 单元六), ML the Panduan Guru unit numbers, and TL the கண்ணோட்டம் file ranges.
+
+- **Fixed**: CL G1 and G2 Sec 1 Book 1下 (1B) units were numbered 1 to 3 and are now 4 to 6, matching the textbook (单元四 习惯的力量, 单元五 创新与改变, 单元六 小人物 大贡献) and every other CL course. The change covers `DATA.themes` and `DATA.recs` (30 rows), plus the `sow.json` `cltasks` keys and `wbank.items[].uid` (12 items).
+- **Correct as is**: CL Book A is Units 1 to 3 and Book B is Units 4 to 6 in Sec 1 and 2; Sec 3 has 6 units and Sec 4 has 5, all titles matching the 电子课文. ML Book A is Units 1 to 4 and Book B is Units 5 to 8; Sec 3 and Sec 4 have 6 units each. TL Book A is தொகுதி 1 to 4, and Book B **restarts at தொகுதி 1 to 3**: that is the CPDD's own numbering, so TL Book B is labelled "1B U1" to "1B U3".
+- Every `cltasks` key and `wbank` uid matches a unit (no orphans).
+
 ## Content by Term 3, Sec 4 by Term 2 (1 Nov 2026, eleventh update)
 
 The HOD set two rules: no new content in Term 4, and the Sec 4 syllabus finishes by the end of Term 2. For Sec 1 to 3, Term 4 is EOY revision and the EOY exams (30 Sep to 13 Oct). For Sec 4, Term 3 is the SEC oral (12 to 16 Jul), the MT prelim written papers (29 Jul, Term 3 Week 5) and revision. The MTL national exam ends in Term 4: SEC written papers on 15 to 16 Sep (Week 1) and listening on 20 to 21 Sep (Week 2). All dates were rechecked against the (Students) Bukit View Secondary 2026 Google calendar on 1 Nov 2026. That check also added the S4/5 National Exam Study Programme, which runs from 21 Jul.
