@@ -11,12 +11,12 @@ A department wall chart of what the CPDD 2021-syllabus teacher guides teach in C
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
-## All content by Term 3 (1 Nov 2026, eleventh update)
+## Content by Term 3, Sec 4 by Term 2 (1 Nov 2026, eleventh update)
 
-No new content is taught in Term 4. For Sec 1 to 3, Term 4 is EOY revision and the EOY exams (30 Sep to 13 Oct). For Sec 4 the MTL national exam ends in Term 4: SEC written papers on 15 to 16 Sep (Term 4 Week 1) and listening on 20 to 21 Sep (Term 4 Week 2). The MT prelim is on 29 Jul (Term 3 Week 5), so Sec 4 content must be finished by Term 3 Week 4. All dates were rechecked against the (Students) Bukit View Secondary 2026 Google calendar on 1 Nov 2026. That check also added the S4/5 National Exam Study Programme, which runs from 21 Jul.
+The HOD set two rules: no new content in Term 4, and the Sec 4 syllabus finishes by the end of Term 2. For Sec 1 to 3, Term 4 is EOY revision and the EOY exams (30 Sep to 13 Oct). For Sec 4, Term 3 is the SEC oral (12 to 16 Jul), the MT prelim written papers (29 Jul, Term 3 Week 5) and revision. The MTL national exam ends in Term 4: SEC written papers on 15 to 16 Sep (Week 1) and listening on 20 to 21 Sep (Week 2). All dates were rechecked against the (Students) Bukit View Secondary 2026 Google calendar on 1 Nov 2026. That check also added the S4/5 National Exam Study Programme, which runs from 21 Jul.
 
-- `alloc()` now reads one table per level from `sow.json` `pacing` (`sec12`, `sec3`, `sec4`, keyed by unit count, Term 4 always 0). Units are spread in book order over Terms 1 to 3, with any extra unit in the earlier terms: 6 units [2,2,2], 7 [3,2,2], 8 [3,3,2]. Sec 4: 5 units [2,2,1], 6 [3,2,1], so at most one content unit falls in the four weeks of Term 3 before the prelim. ML Sec 4 keeps the content-and-skills pairing [U1+U4, U2+U5, U3+U6], which puts two units in Term 3; check this with the ML team.
-- In the units row, the Term 4 cell reads "No new content: EOY revision and EOY exams…" (Sec 1 to 3) or "No new content: SEC written papers… then revision" (Sec 4). For Sec 4 the Term 3 cell says "finish by Week 4, before the MT prelim on 29 Jul". `calendar.terms[3].teach` is 0.
+- `alloc()` reads one table per level from `sow.json` `pacing` (`sec12`, `sec3`, `sec4`, keyed by unit count). Sec 1 to 3 units are spread in book order over Terms 1 to 3, with any extra unit in the earlier terms: 6 units [2,2,2,0], 7 [3,2,2,0], 8 [3,3,2,0]. Sec 4: 5 units [3,2,0,0], 6 [3,3,0,0]. ML Sec 4 (`ml: "pair"`) puts Units 1, 2 and 4 in Term 1, so the oral toolkit sits with the school oral exam, and Units 3, 5 and 6 in Term 2.
+- Empty term cells in the units row read "No new content: …" with that term's exams. The Sec 4 Term 2 cell adds "syllabus complete by end of Term 2". `calendar.terms[3].teach` is 0.
 
 ## Clickable writing charts, PSLE to SEC tab, WA labels (31 Oct 2026, tenth update)
 

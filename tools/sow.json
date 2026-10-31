@@ -6,14 +6,14 @@
   "points": [
    "Row headers follow the CPDD Tamil unit overview, with the extra columns from the Malay Skema Pengajaran sample added; the same frame serves all three languages.",
    "Writing, oral and listening rows list what the CPDD teacher guides themselves suggest for each unit. Click a unit for the full detail.",
-   "All new content is taught in Terms 1 to 3. Term 4 is EOY revision and the EOY exams for Sec 1 to 3; for Sec 4 content ends before the 29 July prelim (Term 3 Week 5), and the SEC MTL written papers and listening are in Term 4 Weeks 1 and 2 (15 to 21 September)."
+   "Sec 1 to 3 finish all new content in Terms 1 to 3; Term 4 is EOY revision and the EOY exams. Sec 4 finish the syllabus by the end of Term 2: Term 3 is the SEC oral, the 29 July prelim and revision, and the SEC MTL written papers and listening are in Term 4 Weeks 1 and 2 (15 to 21 September)."
   ],
   "use": "Pick a language, course and year. The top band shows how the school's vision maps to the E21CC focus areas and to MTL."
  },
  "calendar": {
   "year": 2027,
   "source": "(Staff) and (Students) Bukit View Secondary 2026 Google calendars, 2027 entries as at 31 Oct 2026. Weeks run Monday to Friday; W1 of each term starts on the Monday shown.",
-  "note": "All new content is taught in Terms 1 to 3. Term 4 has no new content: Sec 1 to 3 revise for and sit the EOY exams (30 Sep to 13 Oct); Sec 4 sit the SEC MTL written papers (15 to 16 Sep, Term 4 Week 1) and listening (20 to 21 Sep, Term 4 Week 2). Sec 4 content ends by Term 3 Week 4, before the MT prelim written papers on 29 Jul (Term 3 Week 5); from 21 Jul the S4/5 National Exam Study Programme runs alongside.",
+  "note": "All new content is taught in Terms 1 to 3 for Sec 1 to 3; Term 4 has no new content: Sec 1 to 3 revise for and sit the EOY exams (30 Sep to 13 Oct). Sec 4 finishes the syllabus by the end of Term 2: Term 3 is the SEC oral (12 to 16 Jul), the MT prelim written papers (29 Jul, Term 3 Week 5) and revision, with the S4/5 National Exam Study Programme from 21 Jul; Term 4 is the SEC MTL written papers (15 to 16 Sep, Week 1) and listening (20 to 21 Sep, Week 2).",
   "terms": [
    {
     "t": 1,
@@ -479,7 +479,7 @@
   ]
  },
  "pacing": {
-  "note": "How units are laid across terms. All new content is taught in Terms 1 to 3; Term 4 is EOY revision and the EOY exams for Sec 1 to 3, and the SEC written papers and listening for Sec 4. Units are spread in book order over Terms 1 to 3, the extra unit going to the earlier terms. Sec 4: content must be finished by Term 3 Week 4, before the MT prelim on 29 Jul (Term 3 Week 5), so Term 3 carries at most one content unit; the SEC oral is in Term 3 Week 3 and the SEC MTL written papers are in Term 4 Weeks 1 and 2. ML Sec 4 pairs each content unit (1 to 3) with a skills unit (4 to 6) in the same term, so the oral toolkit (Unit 4) lands in Term 1 with the school oral exam.",
+  "note": "How units are laid across terms. All new content is taught in Terms 1 to 3; Term 4 is EOY revision and the EOY exams for Sec 1 to 3. Sec 1 to 3 units are spread in book order over Terms 1 to 3, the extra unit going to the earlier terms. Sec 4 finishes the whole syllabus by the end of Term 2, because the MT prelim is on 29 Jul (Term 3 Week 5): Term 3 is the SEC oral (Week 3), the prelim and revision, and Term 4 is the SEC written papers (Weeks 1 and 2). ML Sec 4 keeps the oral toolkit (Unit 4) in Term 1 with the school oral exam: Units 1, 2 and 4 in Term 1, Units 3, 5 and 6 in Term 2.",
   "sec12": {
    "6": [
     2,
@@ -522,15 +522,15 @@
   },
   "sec4": {
    "5": [
+    3,
     2,
-    2,
-    1,
+    0,
     0
    ],
    "6": [
     3,
-    2,
-    1,
+    3,
+    0,
     0
    ],
    "ml": "pair"
