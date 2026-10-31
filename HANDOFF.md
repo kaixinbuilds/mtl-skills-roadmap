@@ -11,6 +11,14 @@ A department wall chart of what the CPDD 2021-syllabus teacher guides teach in C
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
+## Third update on 31 Oct 2026 (UX pass)
+
+1. **Sticky filter panel.** Language, course, year (SOW), the roadmap filters (language, course, year, source) and the paper key now live in a left panel (`<aside id="side">`, built in `controls()`) that stays in view while scrolling; below 900 px it becomes a sticky bar under the header. The per-tab slicers that duplicated these controls were removed. The header height is exposed as `--hh` for the sticky offsets.
+2. **Scheme of work row headers are English only**; the CPDD source names moved out of the grid (they remain in `tools/sow.json` `grid.rows[].src`).
+3. **Full textbook writing prompts for CL** (`tools/sow.json` `cltasks`, keyed by unit id; kinds `comp`, `fw`, `integrated`): the exact 课本 wording of each unit's writing task, transcribed from page images of the 2021 课本 PDFs on the drive (the PDFs' embedded fonts make their text unextractable, and the 教师手册 does not reprint the prompt). The functional-writing and composition rows show the full prompt under the skill; 综合任务 prompts show in the teaching-activities row; the unit dialog lists all of them with page numbers. Rebuild from the transcription files with the merge script described in the session notes if the textbooks change.
+4. **SEAB 2027 syllabus links and alignment** (`tools/sow.json` `seab`): the twelve syllabus PDFs (K120 to K357) and the SEAB syllabus pages, the paper weighting, the assessment objectives extracted from each PDF (Chinese and Malay by text; Tamil transcribed from the page images because the PDFs' Tamil text is not machine-readable), and an `Exam alignment` row that counts, per term and paper, the CPDD learning points marked Direct or Builds toward.
+5. **Hash navigation** scrolls to the top when the tab changes; the SOW hash is `#sow-CL-G3?s=1`.
+
 ## What changed later on 31 Oct 2026 (second update)
 
 The HOD found the first planning layer too much to digest. It was replaced:
@@ -45,7 +53,7 @@ The HOD found the first planning layer too much to digest. It was replaced:
 
 ## Data model (per record in `DATA.recs`)
 
-`lang, course, sec, book, unit, theme_m, theme_en, strand, also, sub_m, sub_en, purpose, task_m, task_en, exam, syl, c21, ibl, cats, tags` (unchanged). `DATA.themes[*]` has `dom` and `domSrc`. Top-level keys added since 30 Oct: `sow` (from `tools/sow.json`: `calendar`, `assess`, `wa`, `oralfw`, `listen`, `tlUnits`, `vmv`, `grid`, `pacing`, `e21moves`), `design.themeThread`, `design.themeCourse`, `ui.t_sow`.
+`lang, course, sec, book, unit, theme_m, theme_en, strand, also, sub_m, sub_en, purpose, task_m, task_en, exam, syl, c21, ibl, cats, tags` (unchanged). `DATA.themes[*]` has `dom` and `domSrc`. Top-level keys added since 30 Oct: `sow` (from `tools/sow.json`: `calendar`, `assess`, `wa`, `oralfw`, `listen`, `tlUnits`, `vmv`, `grid`, `pacing`, `e21moves`, `seab`, `cltasks`), `design.themeThread`, `design.themeCourse`, `ui.t_sow`.
 
 ## Known gaps and next steps (in priority order)
 

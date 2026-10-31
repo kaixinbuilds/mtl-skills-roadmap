@@ -14,6 +14,6 @@ No build step for the pages themselves, but the embedded data is generated:
 
 - `tools/enrich.py`: rebuilds the embedded `DATA` in `index.html` (domains, provenance-tagged 21CC / IBL / E21CC tags, design facts, SOW frame). Run `python3 tools/enrich.py` after editing any of the files below.
 - `tools/design.json`: pedagogical design facts, hero text, inquiry sketches, theme-thread and course-comparison summaries.
-- `tools/sow.json`: the SOW grid data: 2027 school calendar and MT events, assessment pattern and 2026 component formats, oral coaching framework, pacing rules, E21CC moves (with MOE definitions and milestones), VMV and desired-student-outcome mapping, CPDD listening and speaking tasks per unit.
+- `tools/sow.json`: the SOW grid data: 2027 school calendar and MT events, assessment pattern and 2026 component formats, oral coaching framework, pacing rules, E21CC moves (with MOE definitions and milestones), VMV and desired-student-outcome mapping, CPDD listening and speaking tasks per unit, the full CL textbook writing prompts, and the SEAB 2027 syllabus links with assessment objectives.
 
 See `HANDOFF.md` for what changed on each date, how to change things, the data model and the open gaps.
