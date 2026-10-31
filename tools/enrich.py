@@ -130,8 +130,8 @@ D["design"] = json.loads((ROOT / "tools" / "design.json").read_text(encoding="ut
 # ---------- 4. Redesigned SOW frame (tools/sow.json) ----------
 D["sow"] = json.loads((ROOT / "tools" / "sow.json").read_text(encoding="utf-8"))
 D["design"].setdefault("about", {})["sow"] = D["sow"]["about"]
-D["ui"]["t_sow"] = {"en":"Redesigned SOW","zh":"重新设计的教学进度表","ms":"Skema Pengajaran baharu","ta":"புதிய பாடத்திட்டம்"}
-D["ui"]["t_stock"] = {"en":"SOW stock-take","zh":"教学进度表盘点","ms":"Stok Skema Pengajaran","ta":"பாடத்திட்ட ஆய்வு"}
+D["ui"].pop("t_stock", None)
+D["ui"]["t_sow"] = {"en":"Scheme of work 2027","zh":"2027教学进度表","ms":"Skema Pengajaran 2027","ta":"2027 பாடத்திட்டம்"}
 
 # ---------- 5. CL inquiry wording (recheck of all 44 CL 教师手册 PDFs, 31 Oct 2026) ----------
 D["iblTg"]["CL"] = "《华文伴我行》教师手册 do not tag units for inquiry. Every book's 差异教学 notes name 引导——探究 (guided inquiry) as one of two teaching modes, and every unit ends with 文化探索 (look it up and share) and a 综合任务 (integrated task: 展示、交流、反思). 探究 itself appears once or twice per book; 综合任务 about twenty times."

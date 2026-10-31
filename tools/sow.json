@@ -1,213 +1,450 @@
 {
- "_readme": "Redesigned SOW frame for BVSS MTL (CL, ML, TL; G1 to HMT; Sec 1 to 4). tools/enrich.py embeds this file as DATA.sow. The year plans on the 'Redesigned SOW' tab are generated at run time from DATA.recs, DATA.themes and the tags, using the calendar, assessment pattern and pacing rules below. Everything here is a department proposal for the 2027 SOW cycle: review with the three units.",
- "version": "2026-10-31",
+ "_readme": "Scheme of work 2027 data for BVSS MTL (CL, ML, TL; G1 to HMT; Sec 1 to 4). tools/enrich.py embeds this file as DATA.sow. The term grid on the 'Scheme of work 2027' tab is generated at run time from DATA.recs, DATA.themes and the tags, using the calendar, assessment pattern, pacing rules, WA formats, listening tasks and VMV mapping below. Edit here, then run python3 tools/enrich.py.",
+ "version": "2026-10-31b",
  "about": {
-  "what": "A common SOW frame for all three languages, filled for every course and year from the CPDD unit data on this site, with the E21CC priority areas and inquiry opportunities written into each unit.",
+  "what": "One scheme of work per language, course and year, laid out as four term columns so a teacher can see at a glance what Term 1 to Term 4 are expected to cover: units, themes, skills, CPDD tasks, 21CC, E21CC and assessment.",
   "points": [
-   "One frame, ten columns, borrowed from the best of the department's existing CL, ML and TL planning documents (see the SOW stock-take).",
-   "Every unit card carries its skills, exam link, E21CC focus with provenance, inquiry sketch and assessment touchpoint. Click a card for the full detail.",
-   "The Department view shows, for every course and year, where the four priority areas and inquiry are thin, so the HOD can plan ahead."
+   "Row headers follow the CPDD Tamil unit overview, with the extra columns from the Malay Skema Pengajaran sample added; the same frame serves all three languages.",
+   "Writing, oral and listening rows list what the CPDD teacher guides themselves suggest for each unit. Click a unit for the full detail.",
+   "Assessment timing follows the 2026 pattern on the 2027 school calendar: Sec 4 oral in Term 1, prelim written on 29 July, SEC written in September."
   ],
-  "use": "Pick a language, course and year. Switch to '3 languages side by side' to compare the same course across CL, ML and TL, or to 'Exemplars' for three fully worked units."
+  "use": "Pick a language, course and year. The top band shows how the school's vision maps to the E21CC focus areas and to MTL."
  },
  "calendar": {
   "year": 2027,
-  "note": "Term dates follow the 2026 pattern (10 weeks a term). Replace with the 2027 school calendar once MOE publishes it. Sec 1 to 3 EOY exams run in Term 4 weeks 3 to 4, so Term 4 has about two teaching weeks.",
+  "source": "(Staff) and (Students) Bukit View Secondary 2026 Google calendars, 2027 entries as at 31 Oct 2026. Weeks run Monday to Friday; W1 of each term starts on the Monday shown.",
+  "note": "Term 4 has two teaching weeks for Sec 1 to 3 before the EOY exams (30 Sep to 13 Oct). Sec 4 teaching effectively ends at the Term 3 prelim; SEC MTL papers are on 15 to 16 Sep with listening on 20 to 21 Sep.",
   "terms": [
    {
     "t": 1,
     "label": "Term 1",
+    "start": "4 Jan",
+    "end": "12 Mar",
     "weeks": 10,
     "teach": 9,
     "events": [
-     "Sec 1 orientation (W1)",
-     "CNY celebration and MT Fortnight (W6 to 7)",
-     "HBL days"
+     {
+      "w": 1,
+      "d": "4 to 5 Jan",
+      "what": "Sec 1 orientation"
+     },
+     {
+      "w": 5,
+      "d": "3 to 5 Feb",
+      "what": "MT CNY cultural booths (3 to 4 Feb) and CNY celebration (5 Feb), Sec 1 to 5",
+      "mt": true
+     },
+     {
+      "w": 6,
+      "d": "8 to 9 Feb",
+      "what": "CNY public holiday and day off in lieu"
+     },
+     {
+      "w": 7,
+      "d": "17 Feb",
+      "what": "HBL 1 (Sec 1 to 5)"
+     },
+     {
+      "w": 9,
+      "d": "1 Mar",
+      "what": "HBL 2 · Sec 4 and 5 MT oral exam (school, SEC format)",
+      "mt": true,
+      "sec": [
+       4
+      ]
+     },
+     {
+      "w": 10,
+      "d": "10 Mar",
+      "what": "Hari Raya Puasa public holiday"
+     }
     ]
    },
    {
     "t": 2,
     "label": "Term 2",
+    "start": "22 Mar",
+    "end": "28 May",
     "weeks": 10,
-    "teach": 8,
+    "teach": 9,
     "events": [
-     "Sec 1 to 3 MTL oral exam on HBL days",
-     "Applied Learning Week (W9, no MTL lessons)",
-     "Good Friday, Labour Day, Hari Raya"
+     {
+      "w": 2,
+      "d": "29 Mar",
+      "what": "MT Hari Raya Puasa showcase, Sec 1 to 3 (rehearsal 25 Mar)",
+      "mt": true
+     },
+     {
+      "w": 2,
+      "d": "2 Apr",
+      "what": "HBL 3 · Sec 3 MT oral exam",
+      "mt": true,
+      "sec": [
+       3
+      ]
+     },
+     {
+      "w": 4,
+      "d": "13 Apr",
+      "what": "HBL 4"
+     },
+     {
+      "w": 5,
+      "d": "22 Apr",
+      "what": "HBL 5 · Sec 2 MT oral exam",
+      "mt": true,
+      "sec": [
+       2
+      ]
+     },
+     {
+      "w": 7,
+      "d": "7 May",
+      "what": "Sec 3, 4 and 5 MT oral make-up (PM)",
+      "mt": true,
+      "sec": [
+       3,
+       4
+      ]
+     },
+     {
+      "w": 8,
+      "d": "14 May",
+      "what": "HBL 6 · Sec 1 MT oral exam",
+      "mt": true,
+      "sec": [
+       1
+      ]
+     },
+     {
+      "w": 9,
+      "d": "17 and 20 May",
+      "what": "Hari Raya Haji and Vesak Day public holidays"
+     },
+     {
+      "w": 10,
+      "d": "28 May",
+      "what": "Sec 1 and 2 MT oral make-up (PM) · STAR meeting",
+      "mt": true,
+      "sec": [
+       1,
+       2
+      ]
+     }
     ]
    },
    {
     "t": 3,
     "label": "Term 3",
+    "start": "28 Jun",
+    "end": "3 Sep",
     "weeks": 10,
     "teach": 9,
     "events": [
-     "Youth Day, National Day",
-     "Teachers' Day (W10)",
-     "Sec 4 prelim (written) from W5"
+     {
+      "w": 2,
+      "d": "5 to 6 Jul",
+      "what": "Youth Day holiday · HBL 7"
+     },
+     {
+      "w": 3,
+      "d": "12 to 16 Jul",
+      "what": "SEC MTL and EL oral examination (HBL 8 for Sec 1 to 5)",
+      "mt": true,
+      "sec": [
+       4
+      ]
+     },
+     {
+      "w": 4,
+      "d": "19 to 22 Jul",
+      "what": "MT Fortnight programmes: Sec 1 (19 Jul), Sec 2 (20 Jul), Sec 3 (22 Jul), PM",
+      "mt": true
+     },
+     {
+      "w": 5,
+      "d": "26 to 27 Jul",
+      "what": "MT Fortnight recess cultural booths, Sec 1 to 3",
+      "mt": true
+     },
+     {
+      "w": 5,
+      "d": "29 Jul",
+      "what": "HBL 9 · Sec 4 and 5 MT prelim written papers (HMT, G3, G2, G1) · Sec 3 HMT timed practice on the G3 paper",
+      "mt": true,
+      "sec": [
+       3,
+       4
+      ]
+     },
+     {
+      "w": 7,
+      "d": "9 to 10 Aug",
+      "what": "National Day holidays"
+     },
+     {
+      "w": 9,
+      "d": "23 Aug to 2 Sep",
+      "what": "Sec 4 and 5 prelim exam II (other subjects)",
+      "sec": [
+       4
+      ]
+     },
+     {
+      "w": 10,
+      "d": "2 to 3 Sep",
+      "what": "Teachers' Day concert and holiday"
+     }
     ]
    },
    {
     "t": 4,
     "label": "Term 4",
+    "start": "13 Sep",
+    "end": "19 Nov",
     "weeks": 10,
     "teach": 2,
     "events": [
-     "Sec 1 to 3 EOY exams (W3 to 4)",
-     "Marking and checking of scripts",
-     "Sec 4 SEC MTL papers"
+     {
+      "w": 1,
+      "d": "15 to 16 Sep",
+      "what": "SEC written papers: MTL (G1, G2, G3, HMTL) Papers 1 and 2, PM",
+      "mt": true,
+      "sec": [
+       4
+      ]
+     },
+     {
+      "w": 2,
+      "d": "20 to 21 Sep",
+      "what": "HBL 10 · SEC MTL listening comprehension, PM",
+      "mt": true,
+      "sec": [
+       4
+      ]
+     },
+     {
+      "w": 3,
+      "d": "30 Sep to 13 Oct",
+      "what": "Sec 1 to 3 EOY exams (MT EOY P1 and P2 standardisation 5 to 7 Oct)",
+      "mt": true,
+      "sec": [
+       1,
+       2,
+       3
+      ]
+     },
+     {
+      "w": 5,
+      "d": "14 to 20 Oct",
+      "what": "Marking days and checking of scripts"
+     },
+     {
+      "w": 6,
+      "d": "18 Oct",
+      "what": "MT Deepavali showcase, Sec 1 to 3 · Sec 1 MT CCM level 1 (19, 21, 26 Oct)",
+      "mt": true
+     },
+     {
+      "w": 7,
+      "d": "29 Oct",
+      "what": "Last day of school (Deepavali holiday 28 Oct)"
+     }
     ]
    }
   ]
  },
  "assess": {
-  "note": "Weighted-assessment pattern as run in 2026 (BVSS MTL 2026 Assessment Overview), with the two 2027 changes recorded in the CL G3 four-year plan draft of 23 Oct 2026. Confirm the 2027 WA formats (paper or authentic assessment) at the department meeting before the SOWs are finalised.",
+  "note": "Pattern as run in 2026 (WA1 in Term 1, WA2 in Term 2, WA3 in Term 3, EOY in Term 4), placed in the same weeks as 2026 where the 2027 calendar allows. Component formats are the 2026 MTL Assessment Component Standardisation sheets (draft for discussion). Confirm at the Term 4 2026 department meeting.",
   "1": [
    {
     "t": 1,
     "code": "WA1",
-    "what": "Paper 2 component (language use and reading)",
+    "what": "Paper 2 component",
+    "wk": "W8",
     "wt": "15%",
-    "form": "paper"
+    "form": "paper",
+    "comp": "P2 Component"
    },
    {
     "t": 2,
     "code": "WA2",
-    "what": "Paper 1 component (functional writing)",
+    "what": "Paper 1 component",
+    "wk": "W6 to 7",
     "wt": "15%",
-    "form": "paper"
+    "form": "paper",
+    "comp": "P1 Component"
    },
    {
     "t": 2,
     "code": "Oral",
-    "what": "EOY Paper 3 oral: read aloud and video-prompted conversation, on an HBL day",
-    "wt": "part of EOY",
+    "what": "EOY Paper 3 oral on HBL 6",
+    "wk": "W8 · 14 May",
+    "wt": "EOY",
     "form": "oral"
    },
    {
     "t": 3,
     "code": "WA3",
-    "what": "Authentic assessment: presentation (oral project with rubric)",
+    "what": "Authentic assessment",
+    "wk": "W7 to 8",
     "wt": "15%",
-    "form": "aa"
+    "form": "aa",
+    "comp": "Authentic Assessment"
    },
    {
     "t": 4,
     "code": "EOY",
-    "what": "Papers 1 and 2 (e-assessment for G1 P1 and P2, G2 P2) and listening comprehension",
+    "what": "Papers 1 and 2 and listening comprehension",
+    "wk": "30 Sep to 13 Oct",
     "wt": "55%",
-    "form": "exam"
+    "form": "exam",
+    "comp": "End-of-Year Exam Format"
    }
   ],
   "2": [
    {
     "t": 1,
     "code": "WA1",
-    "what": "Paper 1 component (functional writing)",
+    "what": "Paper 1 component",
+    "wk": "W8",
     "wt": "15%",
-    "form": "paper"
+    "form": "paper",
+    "comp": "P1 Component"
    },
    {
     "t": 2,
     "code": "WA2",
-    "what": "Authentic assessment: BVSS 40 Stories (interview a member of the school community, write a news report); department-wide, all three languages",
+    "what": "Authentic assessment (2026: BVSS 40 Stories, all three languages)",
+    "wk": "W6 to 7",
     "wt": "15%",
-    "form": "aa"
+    "form": "aa",
+    "comp": "Authentic Assessment"
    },
    {
     "t": 2,
     "code": "Oral",
-    "what": "EOY Paper 3 oral, on an HBL day",
-    "wt": "part of EOY",
+    "what": "EOY Paper 3 oral on HBL 5",
+    "wk": "W5 · 22 Apr",
+    "wt": "EOY",
     "form": "oral"
    },
    {
     "t": 3,
     "code": "WA3",
-    "what": "Paper 2 component (language use and reading)",
+    "what": "Paper 2 component",
+    "wk": "W7 to 8",
     "wt": "15%",
-    "form": "paper"
+    "form": "paper",
+    "comp": "P2 Component"
    },
    {
     "t": 4,
     "code": "EOY",
     "what": "Papers 1 and 2 and listening comprehension",
+    "wk": "30 Sep to 13 Oct",
     "wt": "55%",
-    "form": "exam"
+    "form": "exam",
+    "comp": "End-of-Year Exam Format"
    }
   ],
   "3": [
    {
     "t": 1,
     "code": "WA1",
-    "what": "Paper 2 component (reading comprehension)",
+    "what": "Paper 2 component",
+    "wk": "W8",
     "wt": "15%",
-    "form": "paper"
+    "form": "paper",
+    "comp": "P2 Component"
    },
    {
     "t": 2,
     "code": "WA2",
-    "what": "Paper 1 component (email or essay)",
+    "what": "Paper 1 component",
+    "wk": "W6 to 7",
     "wt": "15%",
-    "form": "paper"
+    "form": "paper",
+    "comp": "P1 Component"
    },
    {
     "t": 2,
     "code": "Oral",
-    "what": "EOY Paper 3 oral, on an HBL day",
-    "wt": "part of EOY",
+    "what": "EOY Paper 3 oral on HBL 3",
+    "wk": "W2 · 2 Apr",
+    "wt": "EOY",
     "form": "oral"
    },
    {
     "t": 3,
     "code": "WA3",
-    "what": "Authentic assessment: video, debate or campus report with rubric",
+    "what": "Authentic assessment (HMT: timed practice on the G3 prelim paper, 29 Jul)",
+    "wk": "W7 to 8",
     "wt": "15%",
-    "form": "aa"
+    "form": "aa",
+    "comp": "Authentic Assessment"
    },
    {
     "t": 4,
     "code": "EOY",
     "what": "Papers 1 and 2 and listening comprehension",
+    "wk": "30 Sep to 13 Oct",
     "wt": "55%",
-    "form": "exam"
+    "form": "exam",
+    "comp": "End-of-Year Exam Format"
    }
   ],
   "4": [
    {
     "t": 1,
     "code": "NWA1",
-    "what": "Non-weighted assessment in SEC format (Paper 2 component)",
+    "what": "Non-weighted assessment in SEC format",
+    "wk": "W8",
     "wt": "0%",
-    "form": "paper"
+    "form": "paper",
+    "comp": "P2 Component"
    },
    {
     "t": 1,
     "code": "Oral",
-    "what": "School MTL oral in SEC format, moved to Term 1 (HBL day) from 2027",
-    "wt": "practice",
+    "what": "School MT oral exam in SEC format, on HBL 2",
+    "wk": "W9 · 1 Mar",
+    "wt": "school",
     "form": "oral",
     "new": true
    },
    {
     "t": 2,
     "code": "TP",
-    "what": "Timed practice: full Paper 1 and Paper 2 (e-assessment for NT and NA)",
+    "what": "Timed practice: full Paper 1 and Paper 2",
+    "wk": "W6 to 7",
     "wt": "practice",
-    "form": "paper"
+    "form": "paper",
+    "comp": "P1 Component"
+   },
+   {
+    "t": 3,
+    "code": "SEC oral",
+    "what": "SEC MTL oral examination",
+    "wk": "W3 · 12 to 16 Jul",
+    "wt": "national",
+    "form": "oral"
    },
    {
     "t": 3,
     "code": "Prelim",
-    "what": "MTL preliminary exam; written papers from 29 Jul 2027 (recorded decision), oral and LC per school schedule",
-    "wt": "practice",
+    "what": "MT prelim written papers (HMT, G3, G2, G1) on HBL 9",
+    "wk": "W5 · 29 Jul",
+    "wt": "prelim",
     "form": "exam",
+    "comp": "End-of-Year Exam Format",
     "new": true
    },
    {
     "t": 4,
     "code": "SEC",
-    "what": "SEC MTL papers (dates per SEAB)",
+    "what": "SEC MTL Papers 1 and 2 (15 to 16 Sep) and listening (20 to 21 Sep)",
+    "wk": "W1 to 2",
     "wt": "national",
     "form": "exam"
    }
@@ -258,72 +495,6 @@
    "ml": "pair"
   }
  },
- "frame": {
-  "title": "The common SOW frame: ten columns",
-  "lead": "Each column is borrowed from a planning document the department already uses, so no unit has to learn a new habit; the frame only puts the habits side by side and adds the two 2027 school approaches.",
-  "cols": [
-   {
-    "k": "when",
-    "en": "Term, weeks and period budget",
-    "from": "CL weekly 教学进度表 (周次 with dates and 实体课 count); TL கண்ணோட்டம் gives periods per activity.",
-    "why": "Teachers plan by week; HBL days and events eat periods, so the budget is explicit."
-   },
-   {
-    "k": "unit",
-    "en": "Unit, theme and topic domain",
-    "from": "ML JATi Domain row (Diri, Keluarga, Sekolah, Masyarakat, Rantau, Dunia).",
-    "why": "Shows the self-to-world widening at a glance and keeps the three languages comparable."
-   },
-   {
-    "k": "lo",
-    "en": "Learning outcomes by skill, with the CPDD learning point",
-    "from": "ML Hasil Pembelajaran with syllabus codes (1.1, 3.4); CL 技能 listed under 读/听/说/写 in the 教学总览.",
-    "why": "The CPDD learning point is the non-negotiable; everything else in the row serves it."
-   },
-   {
-    "k": "exam",
-    "en": "Exam link and tiered success criteria",
-    "from": "CL 2025 教学总览 rows (阅读理解题型, 写作, 口语, 评鉴); CL 4EXP SOW's HR / MR / LR success indicators; ML Kriteria Kejayaan.",
-    "why": "Makes the SEC 2027 line of sight visible and gives the differentiation a home."
-   },
-   {
-    "k": "learn",
-    "en": "Learning experiences and the signature routine",
-    "from": "ML Pengalaman Pembelajaran (STP teaching actions, Fikir-Berpasangan-Berkongsi); CL 教学步骤（建议）; TL fixed activity cycle.",
-    "why": "Says how the lesson runs, not just what it covers, so a new teacher can pick the unit up."
-   },
-   {
-    "k": "e21",
-    "en": "E21CC priority focus and the student move",
-    "from": "New. Nearest existing practice: TL கல்வியமைச்சின் முயற்சிகள் column, which tags 21CC, SEL and ICT per activity.",
-    "why": "The school's 2027 approach: Adaptive Thinking, Inventive Thinking, Civic Literacy, Communication, written into the unit rather than bolted on."
-   },
-   {
-    "k": "ibl",
-    "en": "Inquiry opportunity",
-    "from": "New. ML STAR Team Inquiry and the inquiry-tagged tasks; CL 综合任务; TL நானும் ஒரு படைப்பாளி production tasks.",
-    "why": "Inquiry-based learning becomes a school approach in 2027; one guided inquiry per term is realistic."
-   },
-   {
-    "k": "assess",
-    "en": "Assessment touchpoint and feedback",
-    "from": "ML Alat Penilaian dan Kriteria Kejayaan (anecdotal, Buku Aktiviti); CL 成功指标 (1G2 SOW); TL முழுமையான மதிப்பீடு and peer-assessment sheets.",
-    "why": "Assessment for learning sits inside the unit; the WA or exam is only the touchpoint."
-   },
-   {
-    "k": "res",
-    "en": "Resources: CPDD, SLS and the BVSS bank",
-    "from": "CL G3 four-year plan column 'BVSS 现有资源'.",
-    "why": "Points to what already exists on the shared drive, so the same deck is not rebuilt each year."
-   },
-   {
-    "k": "adj",
-    "en": "Adjustments and gaps",
-    "from": "CL G3 four-year plan columns '调整说明' and '缺口 / 待补'.",
-    "why": "Records why the plan departs from the textbook order and what still has to be built. This is the column the HOD reads first."
-   }
-  ]
- },
  "e21moves": {
   "PA_AT": {
    "en": "Adaptive Thinking",
@@ -358,343 +529,2227 @@
    "goals": "CCI 1 Effectively communicates information and co-constructs meaning · CCI 2 Engages empathetically with diverse perspectives"
   }
  },
- "hod": {
-  "title": "Department view: what to plan for before the 2027 SOWs",
-  "lead": "Counts are units per course and year that carry each priority area or an inquiry opening in the CPDD guides (tagged, derived or inferred). A low count is not a gap in teaching; it says the guide gives few openings, so the department has to design them in.",
-  "decisions": [
+ "e21src": "Definitions, learning goals and secondary milestones: MOE 21st Century Competencies Office, Learning Goals and Developmental Milestones for Emerging 21CC (20 Oct 2023), read on OPAL2 on 31 Oct 2026; assessment principles: Guidelines on the Assessment of Emerging 21CC (Feb 2025). School descriptors: BVSS E21CC priority areas slide.",
+ "wa": {
+  "source": "2026 MTL Assessment Component Standardisation.xlsx (sheets CL, ML, TL; draft for discussion, Oct 2026)",
+  "by": {
+   "CL": {
+    "G1|1": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Sentence Writing - 2 Pictures with helping words provided. Students to write complete sentences based on the pictures.\n\n(Note: transition writing task to bridge to Social Media Post response from S2 onwards)",
+     "P2 Component": "• 40 min\n• 25 marks\n• Section A (15 marks): Language Application (15 MCQ, Passage type - conversation and short text)\n• Section B (10 marks): Comprehension 2 (5 MCQ, Passage type - 2 short passages)\n\nWA Prep Vocab list - 20 selected vocab",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam Format": "Paper 1: Writing (10%)\nDuration: 30 mins | 10 marks\n\nPaper 2: Language Application & Comprehension (25%)\nDuration: 40 mins | 25 marks\n\nPaper 3: Oral (45%)\nDuration: 10-15 mins | 45 marks  (already completed in Semester 1)\n\nPaper 3: Listening Comprehension (20%)\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nFunctional Writing: Response to a Social Media Post (网络贴文回应), 1 question, 10 marks\nMinimum 50 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nSection A: Language Application (语文应用) — vocabulary, 1 short dialogue or passage, multiple-choice, 5 questions, 5 marks\nSection B: Comprehension 1 (阅读理解一) — functional texts such as posters, advertisements and notices, multiple-choice, 5 questions, 10 marks\nSection C: Comprehension 2 (阅读理解二) — 2 short texts, multiple-choice, 5 questions, 10 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nReading Aloud (朗读), 1 short passage, 15 marks\nSpoken Interaction (会话) based on a video stimulus, 30 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — 30 words from the Secondary 1 syllabus."
+    },
+    "G1|2": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Comment on a Social Media Post",
+     "P2 Component": "• 40 min\n• 25 marks\n• Section A (5 marks): Language Application (5 MCQ, Passage type - conversation and short text)\n• Section B (10 marks): Comprehension 1 (5 MCQ, Passage type - authentic text e.g. promotional posters, advertisement, announcements etc)\n• Section C (10 marks): Comprehension 2 (5 MCQ, Passage type - 2 short passages)\n\nNote: Full paper aligned to SEAB P2 Format\n\nWA Prep Vocab list - 20 selected vocab",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam Format": "Paper 1: Writing (10%)\nDuration: 30 mins | 10 marks\n\nPaper 2: Language Application & Comprehension (25%)\nDuration: 40 mins | 25 marks\n\nPaper 3: Oral (45%)\nDuration: 10-15 mins | 45 marks  (already completed in Semester 1)\n\nPaper 3: Listening Comprehension (20%)\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nFunctional Writing: Response to a Social Media Post (网络贴文回应), 1 question, 10 marks\nMinimum 50 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nSection A: Language Application (语文应用) — vocabulary, 1 short dialogue or passage, multiple-choice, 5 questions, 5 marks\nSection B: Comprehension 1 (阅读理解一) — functional texts such as posters, advertisements and notices, multiple-choice, 5 questions, 10 marks\nSection C: Comprehension 2 (阅读理解二) — 2 short texts, multiple-choice, 5 questions, 10 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nReading Aloud (朗读), 1 short passage, 15 marks\nSpoken Interaction (会话) based on a video stimulus, 30 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions (minimum 2 points)\n  Q3: Opinion question requiring higher-order thinking (minimum 1 point)\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — 30 words from the Secondary 2 syllabus."
+    },
+    "G1|3": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Comment on a Social Media Post",
+     "P2 Component": "• 40 min\n• 25 marks\n• Section A (5 marks): Language Application (5 MCQ, Passage type - conversation and short text)\n• Section B (10 marks): Comprehension 1 (5 MCQ, Passage type - authentic text e.g. promotional posters, advertisement, announcements etc)\n• Section C (10 marks): Comprehension 2 (5 MCQ, Passage type - 2 short passages)\n\nNote: Full paper aligned to SEAB P2 Format\n\nWA Prep Vocab list - 20 selected vocab",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam Format": "Paper 1: Writing (10%)\nDuration: 30 mins | 10 marks\n\nPaper 2: Language Application & Comprehension (25%)\nDuration: 40 mins | 25 marks\n\nPaper 3: Oral (45%)\nDuration: 10-15 mins | 45 marks  (already completed in Semester 1)\n\nPaper 3: Listening Comprehension (20%)\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nFunctional Writing: Response to a Social Media Post (网络贴文回应), 1 question, 10 marks\nMinimum 75 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nSection A: Language Application (语文应用) — vocabulary, 1 short dialogue or passage, multiple-choice, 5 questions, 5 marks\nSection B: Comprehension 1 (阅读理解一) — functional texts such as posters, advertisements and notices, multiple-choice, 5 questions, 10 marks\nSection C: Comprehension 2 (阅读理解二) — 2 short texts, multiple-choice, 5 questions, 10 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nReading Aloud (朗读), 1 short passage, 15 marks\nSpoken Interaction (会话) based on a video stimulus, 30 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions\n  Q3: Opinion question requiring higher-order thinking (minimum 2 points)\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — 30 words from the Secondary 3 syllabus."
+    },
+    "G1|4": {
+     "P1 Component": "• Non-weighted - use past year questions (internal/external)\n• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Comment on a Social Media Post\n\nNote: Full paper aligned to SEAB P1 Format",
+     "P2 Component": "• Non-weighted - use past year questions (internal/external)\n• 40 min\n• 25 marks\n• Section A (5 marks): Language Application (5 MCQ, Passage type - conversation and short text)\n• Section B (10 marks): Comprehension 1 (5 MCQ, Passage type - authentic text e.g. promotional posters, advertisement, announcements etc)\n• Section C (10 marks): Comprehension 2 (5 MCQ, Passage type - 2 short passages)\n\nNote: Full paper aligned to SEAB P2 Format\n\nNWA Prep Vocab list - none",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam Format": "Paper 1: Writing\nDuration: 30 mins | 10 marks\n\nPaper 2: Language Application & Comprehension\nDuration: 40 mins | 25 marks\n\nPaper 3: Oral\nDuration: 10-15 mins | 45 marks\n\nPaper 3: Listening Comprehension\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nFunctional Writing: Response to a Social Media Post (网络贴文回应), 1 question, 10 marks\nMinimum 75 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nSection A: Language Application (语文应用) — vocabulary, 1 short dialogue or passage, multiple-choice, 5 questions, 5 marks\nSection B: Comprehension 1 (阅读理解一) — functional texts such as posters, advertisements and notices, multiple-choice, 5 questions, 10 marks\nSection C: Comprehension 2 (阅读理解二) — 2 short texts, multiple-choice, 5 questions, 10 marks\n\nPAPER 3 — ORAL\nReading Aloud (朗读), 1 short passage, 15 marks\nSpoken Interaction (会话) based on a video stimulus, 30 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions\n  Q3: Opinion question requiring higher-order thinking\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — cumulative, covering Secondary 1 to Secondary 4."
+    },
+    "G2|1": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - choose 1 to answer\n• Functional Writing - Informal Email\n\nNote: aligned with suggested completion time of SEAB Paper 1 functional writing task (40-50min out of 2h)",
+     "P2 Component": "• 45 min\n• 30 marks\n• Section A (10 marks): Cloze Passage (5 questions, Passage type - 1 short text)\n• Section B (6 marks): Comprehension 1 (3 MCQ, Passage type - 1 authentic texts e.g. promotional posters, advertisement, news article etc)\n• Section C (14 marks): Comprehension 2 (4 open-ended questions, Passage type - 1 short text, narrative/prose)\n\nNote: proportional half of SEAB full Paper 2 (1.5h)\n\nWA Prep Vocab list - 20 selected vocab",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam Format": "Paper 1: Writing (30%)\nDuration: 2 hours | 60 marks\n\nPaper 2: Language Application & Comprehension (30%)\nDuration: 1 hr 30 mins | 60 marks\n\nPaper 3: Oral (30%)\nDuration: 10-15 mins | 60 marks  (already completed in Semester 1)\n\nPaper 3: Listening Comprehension (10%)\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Informal Email (私人电邮), choose 1 of 2 questions, 20 marks\nMinimum 100 words.\nSection 2: Composition — Narrative (记叙文), choose 1 of 2 questions, 40 marks\nMinimum 200 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nSection 1: Language Application (语文应用) — Word Cloze (词语填充) — 10 independent sentences; answers chosen from a given word bank of 12 words (12 words for 10 blanks), 10 questions, 10 marks\nSection 2: Comprehension 1 (阅读理解一) — 2-3 passages (narrative/expository texts or functional texts such as advertisements, flyers and news reports), multiple-choice, 10 questions, 20 marks\nSection 3: Comprehension 2 (阅读理解二) — 2 passages, 4 questions each, open-ended, 8 questions, 30 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nReading Aloud (朗读), 1 short passage, 20 marks\nSpoken Interaction (会话) based on a video stimulus, 40 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — 50 words from the Secondary 1 syllabus."
+    },
+    "G2|2": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - choose 1 to answer\n• Functional Writing - Informal Email\n\nNote: aligned with suggested completion time of SEAB Paper 1 functional writing task (40-50min out of 2h)",
+     "P2 Component": "• 45 min\n• 30 marks\n• Section A (10 marks): Cloze Passage (5 MCQ, Passage type - 1 short text)\n• Section B (6 marks): Comprehension 1 (3 MCQ, Passage type - 1-2 authentic texts e.g. promotional posters, advertisement, news article etc)\n• Section C (14 marks): Comprehension 2 (4 open-ended questions, Passage type - 1 short text, narrative/prose)\n\nNote: proportional half of SEAB full Paper 2 (1.5h)\n\nWA Prep Vocab list - 20 selected vocab",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam Format": "Paper 1: Writing (30%)\nDuration: 2 hours | 60 marks\n\nPaper 2: Language Application & Comprehension (30%)\nDuration: 1 hr 30 mins | 60 marks\n\nPaper 3: Oral (30%)\nDuration: 10-15 mins | 60 marks  (already completed in Semester 1)\n\nPaper 3: Listening Comprehension (10%)\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Informal Email (私人电邮), choose 1 of 2 questions, 20 marks\nMinimum 100 words.\nSection 2: Composition — Narrative (记叙文), choose 1 of 2 questions, 40 marks\nMinimum 200 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nSection 1: Language Application (语文应用) — Cloze Passage (短文填空) — 2 short passages, each offering 6 words for 5 blanks; answers chosen from a given word bank of 12 words, 10 questions, 10 marks\nSection 2: Comprehension 1 (阅读理解一) — 2-3 passages (narrative/expository texts or functional texts such as advertisements, flyers and news reports), multiple-choice, 10 questions, 20 marks\nSection 3: Comprehension 2 (阅读理解二) — 2 passages, 4 questions each, open-ended, 8 questions, 30 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nReading Aloud (朗读), 1 short passage, 20 marks\nSpoken Interaction (会话) based on a video stimulus, 40 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions (minimum 2 points)\n  Q3: Opinion question requiring higher-order thinking (minimum 1 point)\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — 50 words from the Secondary 2 syllabus."
+    },
+    "G2|3": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - choose 1 to answer\n• Functional Writing - Informal Email & Formal Email\n\nNote: aligned with suggested completion time of SEAB Paper 1 functional writing task (40-50min out of 2h)",
+     "P2 Component": "• 45 min\n• 30 marks\n• Section A (5 marks): Cloze Passage (5 MCQ, Passage type - 1 short text)\n• Section B (10 marks): Comprehension 1 (5 MCQ, Passage type - 2-3 authentic texts e.g. promotional posters, advertisement, news article etc)\n• Section C (15 marks): Comprehension 2 (4 open-ended questions, Passage type - 1 short text, narrative/prose/argumentative essay)\n\nNote: proportional half of SEAB full Paper 2 (1.5h)\n\nWA Prep Vocab list - 30 selected vocab",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam Format": "Paper 1: Writing (30%)\nDuration: 2 hours | 60 marks\n\nPaper 2: Language Application & Comprehension (30%)\nDuration: 1 hr 30 mins | 60 marks\n\nPaper 3: Oral (30%)\nDuration: 10-15 mins | 60 marks  (already completed in Semester 1)\n\nPaper 3: Listening Comprehension (10%)\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Informal Email (私人电邮) and Formal Email (公务电邮), choose 1 of 2 questions, 20 marks\nMinimum 120 words.\nSection 2: Composition — Narrative (记叙文) and Argumentative (议论文), choose 1 of 3 questions, 40 marks\nMinimum 240 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nSection 1: Language Application (语文应用) — Cloze Passage (综合填空) — 1 passage, multiple-choice, no word bank, 10 questions, 10 marks\nSection 2: Comprehension 1 (阅读理解一) — 2-3 passages (narrative/expository texts or functional texts such as advertisements, flyers and news reports), multiple-choice, 10 questions, 20 marks\nSection 3: Comprehension 2 (阅读理解二) — 2 passages, 4 questions each, open-ended, 8 questions, 30 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nReading Aloud (朗读), 1 short passage, 20 marks\nSpoken Interaction (会话) based on a video stimulus, 40 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions\n  Q3: Opinion question requiring higher-order thinking (minimum 2 points)\n  Q3 requires the use of illustration and comparison reasoning (举例论证、对比论证).\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — 50 words from the Secondary 3 syllabus."
+    },
+    "G2|4": {
+     "P1 Component": "• Non-weighted - use past year questions (internal/external)\n• 40 min\n• 20 marks\n• 2 questions - choose 1 to answer\n• Functional Writing - Informal Email & Formal Email\n\nNote: aligned with suggested completion time of SEAB Paper 1 functional writing task (40-50min out of 2h)\n\nKIV possibility of doing full paper as Timed Practice in Term 2",
+     "P2 Component": "• Non-weighted - use past year questions (internal/external)\n• 45 min\n• 30 marks\n• Section A (5 marks): Cloze Passage (5 MCQ, Passage type - 1 short text)\n• Section B (10 marks): Comprehension 1 (5 MCQ, Passage type - 2-3 authentic texts e.g. promotional posters, advertisement, news article etc)\n• Section C (15 marks): Comprehension 2 (4 open-ended questions, Passage type - 1 short text, narrative/prose/argumentative essay)\n\nNote: proportional half of SEAB full Paper 2 (1.5h)\n\nWA Prep Vocab list - none",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam Format": "Paper 1: Writing\nDuration: 2 hours | 60 marks\n\nPaper 2: Language Application & Comprehension\nDuration: 1 hr 30 mins | 60 marks\n\nPaper 3: Oral\nDuration: 10-15 mins | 60 marks\n\nPaper 3: Listening Comprehension\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Informal Email (私人电邮) and Formal Email (公务电邮), choose 1 of 2 questions, 20 marks\nMinimum 120 words.\nSection 2: Composition — Narrative (记叙文), Expository (说明文) and Argumentative (议论文), choose 1 of 3 questions, 40 marks\nMinimum 240 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nSection 1: Language Application (语文应用) — Cloze Passage (综合填空) — 1 passage, multiple-choice, no word bank, 10 questions, 10 marks\nSection 2: Comprehension 1 (阅读理解一) — 2-3 passages (narrative/expository texts or functional texts such as advertisements, flyers and news reports), multiple-choice, 10 questions, 20 marks\nSection 3: Comprehension 2 (阅读理解二) — 2 passages, 4 questions each, open-ended, 8 questions, 30 marks\n\nPAPER 3 — ORAL\nReading Aloud (朗读), 1 short passage, 20 marks\nSpoken Interaction (会话) based on a video stimulus, 40 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions\n  Q3: Opinion question requiring higher-order thinking\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — cumulative, covering Secondary 1 to Secondary 4."
+    },
+    "G3|1": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - choose 1 to answer\n• Functional Writing - Informal Email\n\nNote: aligned with suggested completion time of SEAB Paper 1 functional writing task (40-50min out of 2h)",
+     "P2 Component": "• 45 min\n• 35 marks\n• Section A (12 marks): Language Application - Cloze Passage (6 questions, Passage type - 1-2 short texts)\n• Section B (6 marks): Comprehension 1 (3 MCQ, Passage type - 1 authentic texts e.g. promotional posters, advertisement, news article, story etc)\n• Section C (17 marks): Comprehension 2 (5 open-ended questions, Passage type - 1 narrative short text (450-500 words) )\n\nNote: proportional half of SEAB full Paper 2 (1.5h)\n\nWA Prep Vocab list - 30 selected vocab",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam Format": "Paper 1: Writing (30%)\nDuration: 2 hours | 60 marks\n\nPaper 2: Language Application & Comprehension (35%)\nDuration: 1 hr 30 mins | 70 marks\n\nPaper 3: Oral (25%)\nDuration: 10-15 mins | 50 marks  (already completed in Semester 1)\n\nPaper 3: Listening Comprehension (10%)\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Informal Email (私人电邮), choose 1 of 2 questions, 20 marks\nMinimum 120 words.\nSection 2: Composition — Narrative (记叙文), choose 1 of 2 questions, 40 marks\nMinimum 250 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nLanguage Application (语文应用), 15 marks:\n  Section A: Cloze Passage (综合填空) — 5 independent sentences; answers chosen from a given word bank of 6 words (6 words for 5 blanks), 5 questions, 5 marks\n  Section B: Vocabulary Discrimination (词语辨析) — 5 independent sentences, multiple-choice, 5 questions, 10 marks\nComprehension 1 (阅读理解一) — 2-3 passages (narrative/expository texts or functional texts such as advertisements, flyers and news reports), multiple-choice, 10 questions, 20 marks\nComprehension 2 (阅读理解二) — 2 passages, open-ended, 10 questions, 35 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nReading Aloud (朗读), 1 short passage, 10 marks\nSpoken Interaction (会话) based on a video stimulus, 40 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — 60 words from the Secondary 1 syllabus."
+    },
+    "G3|2": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - choose 1 to answer\n• Functional Writing - Informal Email\n\nNote: aligned with suggested completion time of SEAB Paper 1 functional writing task (40-50min out of 2h)",
+     "P2 Component": "• 45 min\n• 35 marks\n• Section A (12 marks): Language Application - Cloze Passage (6 questions, Passage type - 1-2 short texts)\n• Section B (6 marks): Comprehension 1 (3 MCQ, Passage type - 1 authentic texts e.g. promotional posters, advertisement, news article, narrative etc)\n• Section C (17 marks): Comprehension 2 (5 open-ended questions, Passage type - 1 narrative short text (450-500 words) )\n\nNote: proportional half of SEAB full Paper 2 (1.5h)\n\nWA Prep Vocab list - 30 selected vocab",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam Format": "Paper 1: Writing (30%)\nDuration: 2 hours | 60 marks\n\nPaper 2: Language Application & Comprehension (35%)\nDuration: 1 hr 30 mins | 70 marks\n\nPaper 3: Oral (25%)\nDuration: 10-15 mins | 50 marks  (already completed in Semester 1)\n\nPaper 3: Listening Comprehension (10%)\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Informal Email (私人电邮) and Formal Email (公务电邮), choose 1 of 2 questions, 20 marks\nMinimum 120 words.\nSection 2: Composition — Narrative (记叙文) and Argumentative (议论文), choose 1 of 2 questions, 40 marks\nMinimum 250 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nLanguage Application (语文应用), 15 marks:\n  Section A: Cloze Passage (综合填空) — 1 short passage; answers chosen from a given word bank of 6 words (6 words for 5 blanks), 5 questions, 5 marks\n  Section B: Vocabulary Discrimination (词语辨析) — 5 independent sentences, multiple-choice, 5 questions, 10 marks\nComprehension 1 (阅读理解一) — 2-3 passages (narrative/expository texts or functional texts such as advertisements, flyers and news reports), multiple-choice, 10 questions, 20 marks\nComprehension 2 (阅读理解二) — 2 passages, open-ended, 10 questions, 35 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nReading Aloud (朗读), 1 short passage, 20 marks\nSpoken Interaction (会话) based on a video stimulus, 40 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions (minimum 2 points)\n  Q3: Opinion question requiring higher-order thinking (minimum 1 point)\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — 60 words from the Secondary 2 syllabus."
+    },
+    "G3|3": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - choose 1 to answer\n• Functional Writing - Informal Email & Formal Email",
+     "P2 Component": "• 45 min\n• 35 marks\n• Section A (12 marks): Language Application - Vocabulary Replacement (6 questions, Passage type - 1 short text)\n• Section B (6 marks): Comprehension 1 (3 MCQ, Passage type - 1 authentic texts e.g. promotional posters, advertisement, news article, narrative etc)\n• Section C (17 marks): Comprehension 2 (5 open-ended questions, Passage type - 1 short text (500 words), narrative/prose/argumentative essay)\n\nNote: proportional half of SEAB full Paper 2 (1.5h)\n\nWA Prep Vocab list - none",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam Format": "Paper 1: Writing (30%)\nDuration: 2 hours | 60 marks\n\nPaper 2: Language Application & Comprehension (35%)\nDuration: 1 hr 30 mins | 70 marks\n\nPaper 3: Oral (25%)\nDuration: 10-15 mins | 50 marks  (already completed in Semester 1)\n\nPaper 3: Listening Comprehension (10%)\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Informal Email (私人电邮) and Formal Email (公务电邮), choose 1 of 2 questions, 20 marks\nMinimum 150 words.\nSection 2: Composition — Narrative (记叙文), Argumentative (议论文) and Expository (说明文), choose 1 of 3 questions, 40 marks\nMinimum 300 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nLanguage Application (语文应用), 15 marks:\n  Section A: Cloze Passage (综合填空) — 1 passage, multiple-choice, no word bank, 5 questions, 5 marks\n  Section B: Word Replacement (词语替换) — 1 passage, open-ended, 5 questions, 10 marks\nComprehension 1 (阅读理解一) — 2-3 passages (narrative/expository texts or functional texts such as advertisements, flyers and news reports), multiple-choice, 10 questions, 20 marks\nComprehension 2 (阅读理解二) — 2 passages, open-ended, 10 questions, 35 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nReading Aloud (朗读), 1 short passage, 10 marks\nSpoken Interaction (会话) based on a video stimulus, 40 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions\n  Q3: Opinion question requiring higher-order thinking (minimum 2 points)\n  Q3 requires the use of illustration and comparison reasoning (举例论证、对比论证).\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — 60 words from the Secondary 3 syllabus."
+    },
+    "G3|4": {
+     "P1 Component": "NIL: Term 2 - Prelim full paper",
+     "P2 Component": "• Non-weighted - use past year questions (internal/external)\n• 45 min\n• 35 marks\n• Section A (12 marks): Language Application - Vocabulary Replacement (6 questions, Passage type - 1 short text)\n• Section B (6 marks): Comprehension 1 (3 MCQ, Passage type - 1 authentic texts e.g. promotional posters, advertisement, news article, narrative etc)\n• Section C (17 marks): Comprehension 2 (5 open-ended questions, Passage type - 1 short text, narrative/prose/argumentative essay)\n\nNote: proportional half of SEAB full Paper 2 (1.5h)\n\nWA Prep Vocab list - none",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam Format": "Paper 1: Writing\nDuration: 2 hours | 60 marks\n\nPaper 2: Language Application & Comprehension\nDuration: 1 hr 30 mins | 70 marks\n\nPaper 3: Oral\nDuration: 10-15 mins | 50 marks\n\nPaper 3: Listening Comprehension\nDuration: about 30 mins | 20 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Informal Email (私人电邮) and Formal Email (公务电邮), choose 1 of 2 questions, 20 marks\nMinimum 150 words.\nSection 2: Composition — Narrative (记叙文), Expository (说明文) and Argumentative (议论文), choose 1 of 3 questions, 40 marks\nMinimum 300 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nLanguage Application (语文应用), 15 marks:\n  Section A: Cloze Passage (综合填空) — 1 passage, multiple-choice, no word bank, 5 questions, 5 marks\n  Section B: Word Replacement (词语替换) — 1 passage, open-ended, 5 questions, 10 marks\nComprehension 1 (阅读理解一) — 2-3 passages (narrative/expository texts or functional texts such as advertisements, flyers and news reports), multiple-choice, 10 questions, 20 marks\nComprehension 2 (阅读理解二) — 2 passages, open-ended, 10 questions, 35 marks\n\nPAPER 3 — ORAL\nReading Aloud (朗读), 1 short passage, 10 marks\nSpoken Interaction (会话) based on a video stimulus, 40 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions\n  Q3: Opinion question requiring higher-order thinking\n\nPAPER 3 — LISTENING COMPREHENSION\nMultiple-choice, 10 questions, 20 marks\n\nVocabulary revision list: provided by the subject teacher — cumulative, covering Secondary 1 to Secondary 4."
+    },
+    "H|1": {
+     "P1 Component": "Duration: 40 min\nMarks: 20 marks\n\nFunctional Writing\nInformal Email (G3 Syllabus)\n2 questions - choose 1 to answer",
+     "P2 Component": "Duration: 50 min\nMarks: 40 marks\n\nSection 1 Language Application (14 marks, 7 questions)\nCloze Passage/Fill-in-the-blank/Fill in the correct Chinese characters \n*flexible mode, as long as it meets language application skills\nWA Prep Vocab list - 30 selected vocab\n\nSection 2 Comprehension 1 (6 marks, 3 MCQ)\nONE Narrative Passage (max 300~400 words)\n\nSection 3 Comprehension 2 (20 marks, Open Ended)\nONE Narrative Passage (max 500~600 words)",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam Format": "Paper 1: Writing (40%)\nDuration: 2 hours | 80 marks\n\nPaper 2: Language Application & Comprehension (40%)\nDuration: 1 hr 45 mins | 80 marks\n\nPaper 3: Oral (20%)\nDuration: 10-15 mins | 40 marks  (already completed in Semester 1)",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Informal Email (私人电邮), choose 1 of 2 questions, 20 marks\nMinimum 180 words.\nSection 2: Composition — Narrative (记叙文), choose 1 of 2 questions, 60 marks\nMinimum 400 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nLanguage Application (语文应用), 20 marks:\n  Cloze Passage (短文填充) — 1 passage, multiple-choice, 5 questions, 10 marks\n  Word Replacement (词语替换) — 5 independent sentences, open-ended, 5 questions, 10 marks\nComprehension 1 (阅读理解一) — 3 short texts (narrative, expository and news), multiple-choice, 10 questions, 20 marks\nComprehension 2 (阅读理解二) — 2 passages (narrative), open-ended, 10 questions, 40 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nSpoken Interaction (会话) based on a video stimulus, 3 questions, 40 marks\n  Q1: Sharing personal experience and perspective taking\n  Q2: Giving reasons and impact, and providing suggestions (minimum 2 points)\n  Q3: Opinion question requiring higher-order thinking (minimum 1 point)\n\nVocabulary revision list: provided by the subject teacher — 80 words from the Secondary 1 syllabus."
+    },
+    "H|2": {
+     "P1 Component": "Duration: 40 min\nMarks: 20 marks\n\nFunctional Writing\nInformal Email (G3 Syllabus)\n2 questions - choose 1 to answer",
+     "P2 Component": "Duration: 50 min\nMarks: 40 marks\n\nSection 1 Language Application (14 marks, 7 questions)\nCloze Passage/Fill-in-the-blank/Fill in the correct Chinese characters \n*flexible mode, as long as it meets language application skills\nWA Prep Vocab list - 30 selected vocab\n\nSection 2 Comprehension 1 (6 marks, 3 MCQ)\nONE Expository Passage (max 300~400 words) 【说明文】\n\nSection 3 Comprehension 2 (20 marks, Open Ended)\nONE Narrative Passage (max 500~600 words)【记叙文】",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam Format": "Paper 1: Writing (40%)\nDuration: 2 hours | 80 marks\n\nPaper 2: Language Application & Comprehension (40%)\nDuration: 1 hr 45 mins | 80 marks\n\nPaper 3: Oral (20%)\nDuration: 10-15 mins | 40 marks  (already completed in Semester 1)",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Informal Email (私人电邮) and Formal Email (公务电邮), choose 1 of 2 questions, 20 marks\nMinimum 180 words.\nSection 2: Composition — Narrative (记叙文) and Expository/Argumentative (论说文), choose 1 of 2 questions, 60 marks\nMinimum 400 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nLanguage Application (语文应用), 20 marks:\n  Cloze Passage (短文填充) — 1 passage, multiple-choice, 5 questions, 10 marks\n  Word Replacement (词语替换) — 5 independent sentences, open-ended, 5 questions, 10 marks\nComprehension 1 (阅读理解一) — 3 short texts (narrative, expository and news), multiple-choice, 10 questions, 20 marks\nComprehension 2 (阅读理解二) — 2 passages (narrative), open-ended, 10 questions, 40 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nOral Presentation (口头报告) based on a video stimulus, 20 marks\n  Two supporting points are required.\nSpoken Interaction (会话) based on the video stimulus, 2 questions, 20 marks\n  Q1: Giving reasons and impact\n  Q2: Providing suggestions\n\nVocabulary revision list: provided by the subject teacher — 80 words from the Secondary 2 syllabus."
+    },
+    "H|3": {
+     "P1 Component": "Duration: 40 min\nMarks: 20 marks\n\nFunctional Writing\nFormal Email Reply/Forum Post (HCL syllabus)\n2 questions - choose 1 to answer",
+     "P2 Component": "Duration: 50 min\nMarks: 40 marks\n\nSection 1 Language Application (10 marks, 5 questions)\nLanguage Editing (one short text, ~180 words)\n\nSection 2 Comprehension 1 (10 marks: 3 MCQ, 2 Open Ended)\nONE Narrative/Expository Passage (~500 words)\n\nSection 3 Comprehension 2 (20 marks, Open Ended)\nONE Argumentative Passage (~600 words)",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam Format": "Paper 1: Writing (40%)\nDuration: 2 hours | 80 marks\n\nPaper 2: Language Application & Comprehension (40%)\nDuration: 1 hr 45 mins | 80 marks\n\nPaper 3: Oral (20%)\nDuration: 10-15 mins | 40 marks  (already completed in Semester 1)",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Forum Post (论坛), choose 1 of 2 questions, 20 marks\nMinimum 220 words.\nSection 2: Composition — Narrative (记叙文), Argumentative (议论文) and Material-based Writing (材料作文), choose 1 of 3 questions, 60 marks\nMinimum 500 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nLanguage Application (语文应用), 20 marks:\n  Cloze Passage (短文填充) — 1 passage, multiple-choice, 5 questions, 10 marks\n  Sentence Correction (病句改正) — open-ended, 10 marks\nComprehension 1 (阅读理解一) — 1 passage, 5 questions (3 multiple-choice and 2 open-ended), 10 marks\nComprehension 2 (阅读理解二) — 2 passages, open-ended, 9 questions, 38 marks\nSummary Writing (片段缩写) — open-ended, 12 marks\n\nPAPER 3 — ORAL  (already completed in Semester 1)\nOral Presentation (口头报告) based on a video stimulus, 20 marks\nSpoken Interaction (讨论) based on the oral presentation, 20 marks\n  Elaboration and explanation\n  Reasoning — supporting an opinion, providing evidence and giving suggestions\n\nVocabulary revision list: provided by the subject teacher — 80 words from the Secondary 3 syllabus."
+    },
+    "H|4": {
+     "P1 Component": "Non-weighted - use past year questions (internal/external)\nDuration: 50 min\nMarks: 20 marks\n\nFunctional Writing\nFormal Email Reply & Forum Post (HCL Syllabus)\n2 questions - choose 1 to answer\n\nKIV possibility of doing full paper as Timed Practice in Term 2",
+     "P2 Component": "Non-weighted - use past year questions (internal/external)\n\nDuration: 50 min\nMarks: 40 marks\n\nSection 1 Language Application (10 marks, 5 questions)\nLanguage Editing (short text, 350~400 words)\n\nSection 2 Comprehension 1 (10 marks: 3 MCQ, 2 Open Ended)\nONE Narrative/Expository Passage (~500 words)\n\nSection 3 Comprehension 2 (20 marks, Open Ended)\nONE Argumentative Passage (~600 words)",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam Format": "Paper 1: Writing\nDuration: 2 hours | 80 marks\n\nPaper 2: Language Application & Comprehension\nDuration: 1 hr 45 mins | 80 marks\n\nPaper 3: Oral\nDuration: 10-15 mins | 40 marks",
+     "End-of-Year Exam Topics/Details": "PAPER 1 — WRITING\nSection 1: Functional Writing — Formal Email (公务电邮) and Forum Post (论坛), choose 1 of 2 questions, 20 marks\nMinimum 220 words.\nSection 2: Composition — Narrative (记叙文), Argumentative (议论文) and Material-based Writing (材料作文), choose 1 of 3 questions, 60 marks\nMinimum 500 words.\nA dictionary is allowed for Paper 1 (see SEAB website for the approved list).\n\nPAPER 2 — LANGUAGE APPLICATION & COMPREHENSION\nLanguage Application (语文应用), 20 marks:\n  Cloze Passage (短文填充) — 1 passage, multiple-choice, 5 questions, 10 marks\n  Sentence Correction (病句改正) — open-ended, 10 marks\nComprehension 1 (阅读理解一) — 1 passage, 5 questions (3 multiple-choice and 2 open-ended), 10 marks\nComprehension 2 (阅读理解二) — 2 passages, open-ended, 9 questions, 38 marks\nSummary Writing (片段缩写) — open-ended, 12 marks\n\nPAPER 3 — ORAL\nOral Presentation (口头报告) based on a video stimulus, 20 marks\nSpoken Interaction (讨论) based on the oral presentation, 20 marks\n  Elaboration and explanation\n  Reasoning — supporting an opinion, providing evidence and giving suggestions\n\nVocabulary revision list: provided by the subject teacher — cumulative, covering Secondary 1 to Secondary 4."
+    }
+   },
+   "ML": {
+    "G1|1": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Informal Email",
+     "P2 Component": "• 40 min\n• 25 marks\nSection A: Grammar MCQ\nSection B & C: Comprehension MCQ",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1: Writing (10%)\nDuration : 30 mins\nMarks:10\n\nPaper 2: Language Application and Comprehension (25%)\nDuration: 40 mins\nMarks: 25\n\n Paper 2 Oral (45%)\nDuration:10-15 mins\nMarks: 45\n \nPaper 3 Listening Comprehension (20%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Response (10 Marks)\n\n\n\nSection 1: Objective Cloze Passage (5 marks)\nSection 2: Objective Comprehension 1 (10 marks)\nSection 3: Objective Comprehension 2 (10 marks)\n\n\nSection 1: Reading Aloud, 1 short passage (15 marks)\nSection 2: Spoken Interaction based on Video Stimulus (30 marks)\n\n\nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G1|2": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Informal Email",
+     "P2 Component": "• 40 min\n• 25 marks\nSection A: Grammar MCQ\nSection B & C: Comprehension MCQ",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam": "Paper 1: Writing (10%)\nDuration : 30 mins\nMarks:10\n\nPaper 2: Language Application and Comprehension (25%)\nDuration: 40 mins\nMarks: 25\n\n Paper 2 Oral (45%)\nDuration:10-15 mins\nMarks: 45\n \nPaper 3 Listening Comprehension (20%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Response (10 marks)\n\n\n\nSection 1: Objective Cloze Passage (5 marks)\nSection 2: Objective Comprehension 1 (10 marks)\nSection 3: Objective Comprehension 2 (10 marks)\n\n\nSection 1: Reading Aloud, 1 short passage (15 marks)\nSection 2: Spoken Interaction based on Video Stimulus (30 marks)\n\n\nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G1|3": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Response",
+     "P2 Component": "• 40 min\n• 25 marks\nSection A: Grammar MCQ\nSection B & C: Comprehension MCQ",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1: Writing (10%)\nDuration : 30 mins\nMarks:10\n\nPaper 2: Language Application and Comprehension (25%)\nDuration: 40 mins\nMarks: 25\n\n Paper 2 Oral (45%)\nDuration:10-15 mins\nMarks: 45\n \nPaper 3 Listening Comprehension (20%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Post (10 Marks)\n\n\n\nSection 1: Objective Cloze Passage (5 marks)\nSection 2: Objective Comprehension 1 (10 marks)\nSection 3: Objective Comprehension 2 (10 marks)\n\n\nSection 1: Reading Aloud, 1 short passage (15 marks)\nSection 2: Spoken Interaction based on Video Stimulus (30 marks)\n\n\nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G1|4": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Informal Email",
+     "P2 Component": "• 40 min\n• 25 marks\nSection A: Grammar MCQ\nSection B & C: Comprehension MCQ",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam": "Prelim - same format as SEAB exam paper"
+    },
+    "G2|1": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 1 question\n• Functional Writing - Informal Email",
+     "P2 Component": "• 50 min\n• 30 marks\n• Comprehension (6 Open-Ended Qns + 4 vocab qns)",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hours\nMarks: 60\n\nPaper 2 (30%)\nDuration: 1 hr 30 mins\nMarks: 60\n \nPaper 3 Oral (30%)\nDuration: 10-15 mins\nMarks: 60\n \nPaper 3 Listening \nComprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Response (1 Question) (20 marks)\nSection 2: Essay Writing: Descriptive/ Narrative (Choose 1 out of 2 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n\nSection 1: Cloze Passage (MCQ) (10 marks)\nSection 2: Comprehension (20 marks)\nSection 3: Subjective Comprehension (30 marks)\nSection 1: Reading Aloud (20 marks)\nSection 2: Spoken Interaction based on Video Stimulus\n(40 marks)\nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G2|2": {
+     "P1 Component": "• 50 min\n• 40 marks\n• 1 question\n• Narrative Writing",
+     "P2 Component": "• 50 min\n• 30 marks\n• Comprehension (6 Open-Ended Qns + 4 vocab qns)",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hours\nMarks: 60\n\nPaper 2 (30%)\nDuration: 1 hr 30 mins\nMarks: 60\n \nPaper 3 Oral (30%)\nDuration: 10-15 mins\nMarks: 60\n \nPaper 3 Listening \nComprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing:  Response (1 Question) (20 marks)\nSection 2: Essay Writing: Descriptive/ Narrative (Choose 1 out of 2 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary) \n\nSection 1: Cloze Passage (MCQ) (10 marks)\nSection 2: Comprehension (20  marks)\nSection 3: Subjective Comprehension (30 marks)\n \nSection 1: Reading Aloud (20 marks)\nSection 2: Spoken Interaction based on Video Stimulus\n(40 marks)\n \nListening Comprehension (20 marks)\n10  multiple choice questions"
+    },
+    "G2|3": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One\n• Functional Writing - Response/ Formal Email",
+     "P2 Component": "• 50 min\n• 30 marks\n• Comprehension (6 Open-Ended Qns + 4 vocab qns)",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hrs\nMarks: 60\n\nPaper 2 (30%)\nDuration: 1 hr 30 mins\nMarks: 60\n\nPaper 3 Oral (30%)\nDuration: 10-15 mins\nMarks: 60\n\nPaper 3 Listening Comprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Response (choose 1 out of 2 questions) (20 marks)\nSection 2: Essay Writing: Narrative/ Expository (choose 1 out of 3 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection 1: Cloze Passage (MCQ) (10 marks)\nSection 2: Comprehension (20  marks)\nSection 3: Subjective Comprehension (30 marks)\n\nSection 1: Reading Aloud (20 marks)\nSection 2: Spoken Interaction based on Video Stimulus  (40 marks)\n \n \nListening Comprehension (20 marks)\n10  multiple choice questions"
+    },
+    "G2|4": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One\n• Functional Writing - Informal/ Formal Email",
+     "P2 Component": "• 50 min\n• 30 marks\n• Comprehension (6 Open-Ended Qns + 4 vocab qns)",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam": "Prelim - same format as SEAB exam paper"
+    },
+    "G3|1": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 1 question\n• Functional Writing - Informal Email",
+     "P2 Component": "• 50 min\n• 30 marks\n• Comprehension (6 Open-Ended Qns + 2 vocab qns)",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hours\nMarks: 60\n\n\n\n\nPaper 2 (35%)\nDuration: 1 hr 30 mins\nMarks: 70\n\n \nPaper 3 Oral (25%)\nDuration: 10-15 mins\nMarks: 50\n\nPaper 3 Listening \nComprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Response (1 question) (20 marks)\nSection 2: Essay Writing: Descriptive/ Narrative (Choose 1 out of 2 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary) \n\nSection 1: Vocabulary (20 marks)\nSection 2: Objective Comprehension (20 marks)\nSection 3: Subjective Comprehension (30 marks)\n \nSection 1: Reading Aloud (10 marks)\nSection 2: Spoken Interaction based on Video Stimulus\n(40 marks)\n \nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G3|2": {
+     "P1 Component": "• 50 min\n• 40 marks\n• 1 question\n• Narrative Writing",
+     "P2 Component": "• 50 min\n• 30 marks\n• Comprehension (6 Open-Ended Qns + 2 vocab qns)",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hours\nMarks: 60\n\nPaper 2 (35%)\nDuration: 1 hr 30 mins\nMarks: 70\n\nPaper 3 Oral (25%)\nDuration: 10-15 mins\nMarks: 50\n\nPaper 3 Listening \nComprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Response (1 question) (20 marks)\nSection 2: Essay Writing: Narrative/ Expository (Choose 1 out of 2 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary) \n\nSection 1: Vocabulary (20 marks)\nSection 2: Objective Comprehension (20 marks)\nSection 3: Subjective Comprehension (30 marks)\n \nSection 1: Reading Aloud (10 marks)\nSection 2: Spoken Interaction based on Video Stimulus\n(40 marks)\n \nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G3|3": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One\n• Functional Writing - Response/ Formal Email",
+     "P2 Component": "• 50 min\n• 30 marks\n• Comprehension (6 Open-Ended Qns + 2 vocab qns)",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hrs\nMarks: 60\n \nPaper 2 (35%)\nDuration: 1 hr 30 mins\nMarks: 70\n \nPaper 3 Oral (25%)\nDuration: 10-15 mins\nMarks: 50\n \nPaper 3 Listening Comprehension (10%)",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Response (Choose 1 out of 2 questions) (20 marks)\nSection 2: Essay Writing: Narrative/ Expository (Choose 1 out of 3 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection 1: Language Use (20 marks)\nSection 2: Comprehension (20 marks)\nSection 3: Subjective Comprehension (30 marks)\n \nSection 1:  Reading Aloud (10 marks)\nSection 2: Spoken Interaction based on Video Stimulus  (40 marks)\n \n \nListening Comprehension (20 marks)\n10 multiple choice  questions"
+    },
+    "G3|4": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One\n• Functional Writing - Informal/ Formal Email",
+     "P2 Component": "• 50 min\n• 30 marks\n• Comprehension (6 Open-Ended Qns + 2 vocab qns)",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam": "Prelim - same format as SEAB exam paper"
+    },
+    "H|1": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 1 question\n• Functional Writing - Informal Email",
+     "P2 Component": "• 50 min\n• 32 marks\n• Comprehension 1: 2 MCQ + 3 Open-Ended + Comprehension 2: 5 Open-Ended Questions",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (40%)\nDuration: 2 hours\nMarks: 80\n\n\n\n\n\nPaper 2 (40%)\nDuration: 1 hr 45 mins\nMarks: 80\n\n\nPaper 3 Oral (20%)\nDuration: 10-15 mins\nMarks: 40",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Formal E-mail (1 question)\n(20 marks)\nSection 2: Essay Writing: Expository\n(Choose 1 out of 2 questions) (60 marks)\n\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n\nSection 1: Vocabulary (20 marks)\nSection 2: Objective Comprehension (10 marks)\nSection 3: Subjective Comprehension (38 marks)\nSection 4: Summary Writing (12 marks)\n\nSection 1: Oral presentation based on video stimulus (20 marks)\nSection 2: Spoken interaction based on oral presentation (20 marks)"
+    },
+    "H|2": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One\n• Functional Writing - Informal Email/ Blog",
+     "P2 Component": "• 50 min\n• 28 marks\n• Comprehension 1: 2 MCQ + 2 Open-Ended + 3 Vocab + 1 Summary",
+     "End-of-Year Exam": "Paper 1 (40%)\nDuration: 2 hours\nMarks: 80\n\nPaper 2 (40%)\nDuration: 1 hr 45 mins\nMarks: 80\n \n\nPaper 3 Oral (20%)\nDuration: 10-15 mins\nMarks: 40",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Response (1 question)  (20 marks)\nSection 2: Essay Writing: Descriptive Narrative (Choose 1 out of 2 questions) (60 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary) \n\nSection 1: Vocabulary  and editing (20 marks)\nSection 2: Objective Comprehension (10 marks)\nSection 3: Subjective Comprehension (38 marks)\nSection 4: Summary Writing (12 marks)\n\nSection 1: Oral presentation based on video stimulus (20 marks)\nSection 2: Spoken interaction based on oral presentation (20 marks)"
+    },
+    "H|3": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One\n• Functional Writing - Formal Email/ Forum Informal",
+     "P2 Component": "• 50 min\n• 28 marks\n• Comprehension 1: 2 MCQ + 2 Open-Ended + 3 Vocab + 1 Summary",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (40%)\nDuration: 2 hrs\nMarks: 80\n \nPaper 2 (40%)\nDuration: 1 hr 45 mins\nMarks: 80\n \n \n \nPaper 3 Oral (20%)\nDuration: 10-15 mins\nMarks: 40",
+     "End-of-Year Exam Topics/Details": "Section 1: Functional Writing: Response (Choose 1 out of 2 questions) (20 marks)\nSection 2: Essay Writing: Narrative/ Expository (Choose 1 out of 3 questions) (60 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection 1: Cloze Passage (10 marks)\nSection 2: Editing (10 marks)\nSection 3: Objective and Subjective Comprehension 1 (10 marks)\nSection 4: Objective and Subjective Comprehension 2 (38 marks)\nSection 5: Summary (12 marks)\n \nSection 1: Oral Presentation based on Video Stimulus (20 Marks)\nSection 2: Spoken Interaction based on Oral Presentation  (20 marks)"
+    },
+    "H|4": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One\n• Functional Writing - Formal Email/ Forum",
+     "P2 Component": "• 50 min\n• ? marks\n• Comprehension 1: 6 Open-Ended Questions",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam": "Prelim - same format as SEAB exam paper"
+    }
+   },
+   "TL": {
+    "G1|1": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Comment on a Social Media Post\n\nWord: 30 words",
+     "P2 Component": "• 40 min\n• 25 marks\n• Section A (5 marks): Language Application (5 MCQ, Passage type-2 short texts)\n• Section B (4 marks): Idioms and Phrases (2 MCQ with 3 options each)\n• Section C (16 marks): \nStimulus Comprehension (6 marks) (3 MCQ, Passage type - authentic text e.g. promotional posters, advertisement, announcements etc)\nComprehension (10 marks): Comprehension 2 (5 MCQ, Passage type - 2 short passages)\nNote: Full paper aligned to SEAB P2 Format",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1: Writing (10%)\nDuration : 30 mins\nMarks:10\n\nPaper 2: Language Application and Comprehension (25%)\nDuration: 40 mins\nMarks: 25\n \n\n\n\nPaper 3 Oral (45%)\nDuration:10-15 mins\nMarks: 45\n\nPaper 3 Listening Comprehension (20%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Functional Writing: Comment on Social Media Post (10 marks)\n\nSection A:\nComprehension Cloze- 1 :  2 Questions (MCQ)  (2 Marks)\nComprehension Cloze 2 :   3 questions (MCQ)   (3 marks)\nSection B:\nIdioms and Phrases: 2 Questions (MCQ)  (4 marks)\nSection C:\nGraphic Stimulus Comprehension — functional texts such as posters, advertisements and notices - 3 questions (MCQ) (6 marks)\nComprehension 1&2 - 2 short texts, 5 questions (MCQ), (10 marks)\n\nSection 1: Reading Aloud, 1 short passage (15 marks)\nSection 2: Spoken Interaction based on Video Stimulus (30 marks)\n\nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G1|2": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Comment on a Social Media Post\n\nWord: 40 words",
+     "P2 Component": "• 40 min\n• 25 marks\n• Section A (5 marks): Language Application (5 MCQ, Passage type-2 short texts)\n• Section B (4 marks): Idioms and Phrases (2 MCQ with 3 options each)\n• Section C (16 marks): \nStimulus Comprehension (6 marks) (3 MCQ, Passage type - authentic text e.g. promotional posters, advertisement, announcements etc)\nComprehension (10 marks): Comprehension 2 (5 MCQ, Passage type - 2 short passages)\nNote: Full paper aligned to SEAB P2 Format",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam": "Paper 1: Writing (10%)\nDuration : 30 mins\nMarks:10\n\nPaper 2: Language Application and Comprehension (25%)\nDuration: 40 mins\nMarks: 25\n \n\n\n\n\n\n\nPaper 3 Oral (45%)\nDuration:10-15 mins\nMarks: 45\n\n \n\nPaper 3 Listening Comprehension (20%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Functional Writing: Comment on Social Media Post (10 marks)\n\nSection A:\nComprehension Cloze- 1 :  2 Questions (MCQ)  (2 Marks)\nComprehension Cloze 2 :   3 questions (MCQ)   (3 marks)\nSection B:\nIdioms and Phrases: 2 Questions (MCQ)  (4 marks)\nSection C:\nGraphic Stimulus Comprehension — functional texts such as posters, advertisements and notices - 3 questions (MCQ) (6 marks)\nComprehension 1&2 - 2 short texts, 5 questions (MCQ), (10 marks)\n\nSection 1: Reading Aloud, 1 short passage (15 marks)\nSection 2: Spoken Interaction based on Video Stimulus (30 marks)\n\n\n\n\nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G1|3": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Comment on a Social Media Post",
+     "P2 Component": "• 40 min\n• 25 marks\n• Section A (5 marks): Language Application (5 MCQ, Passage type-2 short texts)\n• Section B (4 marks): Idioms and Phrases (2 MCQ with 3 options each)\n• Section C (16 marks): \nStimulus Comprehension (6 marks) (3 MCQ, Passage type - authentic text e.g. promotional posters, advertisement, announcements etc)\nComprehension (10 marks): Comprehension 2 (5 MCQ, Passage type - 2 short passages)\nNote: Full paper aligned to SEAB P2 Format",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1: Writing (10%)\nDuration : 30 mins\nMarks:10\n\nPaper 2: Language Application and Comprehension (25%)\nDuration: 40 mins\nMarks: 25\n \n\n\n\n\n\n\n\nPaper 3 Oral (45%)\nDuration:10-15 mins\nMarks: 45\n\n \n\nPaper 3 Listening Comprehension (20%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Functional Writing: Comment on Social Media Post (10 marks)\n\nSection A:\nComprehension Cloze- 1 :  2 Questions (MCQ)  (2 Marks)\nComprehension Cloze 2 :   3 questions (MCQ)   (3 marks)\n\nSection B:\nIdioms and Phrases: 2 Questions (MCQ)  (4 marks)\n\nSection C:\nGraphic Stimulus Comprehension — functional texts such as posters, advertisements and notices - 3 questions (MCQ) (6 marks)\nComprehension 1&2 - 2 short texts, 5 questions (MCQ), (10 marks)\n\n\n\nSection 1: Reading Aloud, 1 short passage (15 marks)\nSection 2: Spoken Interaction based on Video Stimulus (30 marks)\n\n\n\n\nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G1|4": {
+     "P1 Component": "• 30 min\n• 10 marks\n• 1 question\n• Functional Writing - Comment on a Social Media Post\n\nWord count: 50 words",
+     "P2 Component": "• 40 min\n• 25 marks\n• Section A (5 marks): Language Application (5 MCQ, Passage type-2 short texts)\n• Section B (4 marks): Idioms and Phrases (2 MCQ with 3 options each)\n• Section C (16 marks): \nStimulus Comprehension (6 marks) (3 MCQ, Passage type - authentic text e.g. promotional posters, advertisement, announcements etc)\nComprehension (10 marks): Comprehension 2 (5 MCQ, Passage type - 2 short passages)\nNote: Full paper aligned to SEAB P2 Format",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam": "Prelim - same format as SEAB exam paper"
+    },
+    "G2|1": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 1 question\n• Functional Writing - Informal Email\nTheme: From 1A(4 units)/1B (First unit)",
+     "P2 Component": "• 45 min\n• 30 marks\n• Section A (10 marks): Idioms and Phrases - 5 Questions & Cloze Passage-5 Questions\n• Section B (4 marks): MCQ Comprehension (4 Marks) - 2 Questions \n• Section C (16 marks): Comprehension (3 open-ended questions) & 1 Vocuabulary",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hours\nMarks: 60\n \n\n\n\nPaper 2 (30%)\nDuration: 1 hr 30 mins\nMarks: 60\n\n \n\n\n\n\n\nPaper 3 Oral (30%)\nDuration: 10-15 mins\nMarks: 60\n\nPaper 3 Listening Comprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section A: Functional Writing: E-mail (Choose 1 out of 2 Questions) (20 marks)\nSection B: Essay Writing: Narrative, Expository and Story Writing (Choose 1 out of 3 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection A: \nIdioms and phrases - 5 questions(MCQ) (5 Marks) \nCloze passage - 5 questions (MCQ)  (5 marks)\nSection B: \nObjective Comprehension - 5 questions (MCQ)  (10 marks) \nGrammar Editing - 5 questions (10  marks)\nSection C: \nSubjective Comprehension- 5 Open-Ended Questions and 3 vocabulary questions (30 marks)\n\nSection 1: Reading Aloud (20 marks)\nSection 2: Spoken Interaction based on Video Stimulus\n(40 marks)\n \nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G2|2": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 1 question.\n• Functional Writing - Informal Email\nTheme: From Sec 1 & 2A(First 2 units)",
+     "P2 Component": "• 45 min\n• 30 marks\n• Section A (10 marks): Idioms and Phrases - 4 Questions & Editing-3 Questions\n• Section B (4 marks): MCQ Comprehension (4 Marks) - 2 Questions \n• Section C (16 marks): Comprehension (3 open-ended questions) & 1 Vocuabulary",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hours\nMarks: 60\n \n\n\n\nPaper 2 (30%)\nDuration: 1 hr 30 mins\nMarks: 60\n\n \n\n\n\n\n\nPaper 3 Oral (30%)\nDuration: 10-15 mins\nMarks: 60\n\nPaper 3 Listening Comprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section A: Functional Writing: E-mail (Choose 1 out of 2 Questions) (20 marks)\nSection B: Essay Writing: Narrative, Expository and Story Writing (Choose 1 out of 3 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection A: \nIdioms and phrases - 5 questions(MCQ) (5 Marks) \nCloze passage - 5 questions (MCQ)  (5 marks)\nSection B: \nObjective Comprehension - 5 questions (MCQ)  (10 marks) \nGrammar Editing - 5 questions (10  marks)\nSection C: \nSubjective Comprehension- 5 Open-Ended Questions and 3 vocabulary questions (30 marks)\n\nSection 1: Reading Aloud (20 marks)\nSection 2: Spoken Interaction based on Video Stimulus\n(40 marks)\n \nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G2|3": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One Question\n• Functional Writing - Formal / Informal Email\nTheme: All",
+     "P2 Component": "• 45 min\n• 35 marks\n• Section A (10 marks): Idioms and Phrases - 5 Questions & Cloze Passage - 5 Questions \n• Section B (10 marks)   : Editing-5 Questions\n• Section C (15 marks): Comprehension (3 open-ended questions) & 2 Vocuabulary Questions",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hours\nMarks: 60\n \n\n\n\nPaper 2 (30%)\nDuration: 1 hr 30 mins\nMarks: 60\n\n \n\n\n\n\n\nPaper 3 Oral (30%)\nDuration: 10-15 mins\nMarks: 60\n\nPaper 3 Listening Comprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section A: Functional Writing: E-mail (Choose 1 out of 2 Questions) (20 marks)\nSection B: Essay Writing: Narrative, Expository and Story Writing (Choose 1 out of 3 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection A: \nIdioms and phrases - 5 questions(MCQ) (5 Marks) \nCloze passage - 5 questions (MCQ)  (5 marks)\nSection B: \nObjective Comprehension - 5 questions (MCQ)  (10 marks) \nGrammar Editing - 5 questions (10  marks)\nSection C: \nSubjective Comprehension- 5 Open-Ended Questions and 3 vocabulary questions (30 marks)\n\nSection 1: Reading Aloud (20 marks)\nSection 2: Spoken Interaction based on Video Stimulus\n(40 marks)\n \nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G2|4": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One Question\n• Functional Writing - Formal / Informal Email\nTheme: All",
+     "P2 Component": "• 45 min\n• 35 marks\n• Section A (10 marks): Idioms and Phrases - 5 Questions & Cloze Passage - 5 Questions \n• Section B (10 marks)   : Editing-5 Questions\n• Section C (15 marks): Comprehension (3 open-ended questions) & 2 Vocuabulary Questions",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam": "Prelim - same format as SEAB exam paper"
+    },
+    "G3|1": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 1 question\n• Functional Writing - Informal Email\nTheme: From 1A(4 units)/1B (First unit)",
+     "P2 Component": "• 45 min\n• 35 marks\n• Section A (10 marks): Idioms and Phrases 5 Questions\n• Section B (7 marks): Editing (3 Marks) - 3 Questions and MCQ Comprehension (4 Marks) - 2 Questions \n• Section C (18 marks): Comprehension (3 open-ended questions) & 2 Vocuabulary",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hours\nMarks: 60\n \n\n\n\nPaper 2 (35%)\nDuration: 1 hr 30 mins\nMarks: 70\n\n\n\n\n\n\n\nPaper 3 Oral (25%)\nDuration:10-15 mins\nMarks: 50\n \nPaper 3 Listening Comprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section A: Functional Writing: E-mail (Choose 1 out of 2 Questions) (20 marks)\nSection B: Essay Writing: Narrative, Expository and Story Writing (Choose 1 out of 3 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection A: \nIdioms and phrases - 5 questions(MCQ) (10 Marks) \nCloze passage - 5 questions (MCQ)  (10 marks)\nSection B: \nObjective Comprehension - 5 questions (MCQ)  (10 marks) \nGrammar Editing - 5 questions (10  marks)\nSection C: \nSubjective Comprehension- 5 Open-Ended Questions and 5 vocabulary questions (30 marks)\n\nSection 1: Reading Aloud (10 marks)\nSection 2: Spoken Interaction based on Video Stimulus\n(40 marks)\n \nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G3|2": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 1 question.\n• Functional Writing - Formal Email\nTheme: From Sec 1 & 2A(First 2 units)",
+     "P2 Component": "• 45 min\n• 35 marks\n• Section A (8 marks): Idioms and Phrases - 4 Questions \n• Section B (10 marks)   : Editing-3 Questions & MCQ Comprehension 2-Questions\n• Section C (17 marks): Comprehension (3 open-ended questions) & 2 Vocuabulary Questions",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hours\nMarks: 60\n \n\n\n\nPaper 2 (35%)\nDuration: 1 hr 30 mins\nMarks: 70\n\n\n\n\n\n\n\nPaper 3 Oral (25%)\nDuration:10-15 mins\nMarks: 50\n \nPaper 3 Listening Comprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section A: Functional Writing: E-mail (Choose 1 out of 2 Questions) (20 marks)\nSection B: Essay Writing: Narrative, Expository and Story Writing (Choose 1 out of 3 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection A: \nIdioms and phrases - 5 questions(MCQ) (10 Marks) \nCloze passage - 5 questions (MCQ)  (10 marks)\nSection B: \nObjective Comprehension - 5 questions (MCQ)  (10 marks) \nGrammar Editing - 5 questions (10  marks)\nSection C: \nSubjective Comprehension- 5 Open-Ended Questions and 5 vocabulary questions (30 marks)\n\nSection 1: Reading Aloud (10 marks)\nSection 2: Spoken Interaction based on Video Stimulus\n(40 marks)\n \nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G3|3": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One Question\n• Functional Writing - Formal / Informal Email\nTheme: All",
+     "P2 Component": "• 45 min\n• 40 marks\n• Section A (14 marks)     : Idioms and Phrases - 4 Questions & Cloze Passage - 3 Question\n• Section B (10 marks)     : Editing-5 Questions\n• Section C (16 marks)      : Comprehension (3 open-ended questions) & 3 Vocuabulary Questions",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (30%)\nDuration: 2 hours\nMarks: 60\n \n\n\n\nPaper 2 (35%)\nDuration: 1 hr 30 mins\nMarks: 70\n\n\n\n\n\n\n\nPaper 3 Oral (25%)\nDuration:10-15 mins\nMarks: 50\n \nPaper 3 Listening Comprehension (10%)\nDuration: about 30 mins\nMarks: 20",
+     "End-of-Year Exam Topics/Details": "Section A: Functional Writing: E-mail (Choose 1 out of 2 Questions) (20 marks)\nSection B: Essay Writing: Narrative, Expository and Story Writing (Choose 1 out of 3 questions) (40 marks)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection A: \nIdioms and phrases - 5 questions(MCQ) (10 Marks) \nCloze passage - 5 questions (MCQ)  (10 marks)\nSection B: \nObjective Comprehension - 5 questions (MCQ)  (10 marks) \nGrammar Editing - 5 questions (10  marks)\nSection C: \nSubjective Comprehension- 5 Open-Ended Questions and 5 vocabulary questions (30 marks)\n\nSection 1: Reading Aloud (10 marks)\nSection 2: Spoken Interaction based on Video Stimulus\n(40 marks)\n \nListening Comprehension (20 marks)\n10 multiple choice questions"
+    },
+    "G3|4": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One Question\n• Functional Writing - Formal / Informal Email\nTheme: All",
+     "P2 Component": "• 45 min\n• 40 marks\n• Section A (11 marks)   : Idioms and Phrase - 5 Question Cloze Passage - 3 Questions \n• Section B (16 marks)   : MCQ Comprehension - 3 Questions and Editing-5 Questions\n• Section C (13 marks)   : Comprehension (Open Ended Questions - 2 & Vocabulary Questions -3)",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam": "Prelim - same format as SEAB exam paper"
+    },
+    "H|1": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 1 question\n• Functional Writing - Informal Email\nTheme: From 1A(4 units)/1B (First unit)",
+     "P2 Component": "• 45 min\n• 35 marks\n• Section A (5 marks)     : Combining Words(Grammar) - 5 Questions \n• Section B (14 marks)   : Cloze Passage - 4 Questions & Editing-5 Questions\n• Section C (16 marks)   : Comprehension (Open Ended - 3 Questions & 1 Vocabulary Question)",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (40%)\nDuration: 2 hours\nMarks: 80\n\n\n\n\n\nPaper 2 (40%)\nDuration: 1 hr 45 mins\nMarks: 80\n\n\n\n\n\n\n\n\n\nPaper 3 Oral (20%)\nDuration: 10-15 mins\nMarks: 40",
+     "End-of-Year Exam Topics/Details": "Section A: Functional Writing:  E-mail/Forum writing (20 marks) (1 out of 2 Questions)\nSection B: Essay Writing: Narrative, Expository, and Argumentative (60 marks) (Choose 1 out of 3 questions)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection A: \nCloze passage - 5 Questions (10 marks)\nGrammar Editing - 5 Questions (10 marks)\nSection B: \nGrammar (Transformation of words) - 5 Questions  (10 Marks)\nSection C: \nObjective Comprehension - 3 questions (MCQ)(6 marks)\nIdentification of Grammar  - 2 questions (4 marks)\nSummary writing - 1 question (12 Marks)\nSubjective Comprehension - 4 Open-Ended questions and 4 vocabulary questions  (28 marks)\n \nSection 1: Oral Presentation (20 marks)\nSection 2: Spoken Interaction based on Video Stimulus"
+    },
+    "H|2": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 1 question.\n• Functional Writing - Formal Email\nTheme: From Sec 1 & 2A(First 2 units)",
+     "P2 Component": "• 45 min\n• 35 marks\n• Section A (5 marks)     : Combining Words Grammar - 5 Questions \n• Section B (14 marks)   : MCQ Comprehension - 2 Questions & Editing-5 Questions\n• Section C (16 marks)   : Comprehension (3 Question ) + 1 Vocabulary Question",
+     "Authentic Assessment": "40 Stories - People of BVSS\n\nGroup project — 4 components (100 marks):\nComponent 1: Interview evidence (video/audio recording) — 5 marks\nComponent 2: Newspaper article in MTL — 45 marks\nComponent 3: Group oral video presentation — 45 marks (10 marks video production + 35 marks individual oral delivery)\nComponent 4: Personal reflection, written in class in MTL — 5 marks",
+     "End-of-Year Exam": "Paper 1 (40%)\nDuration: 2 hours\nMarks: 80\n\n\n\n\n\nPaper 2 (40%)\nDuration: 1 hr 45 mins\nMarks: 80\n\n\n\n\n\n\n\n\n\nPaper 3 Oral (20%)\nDuration: 10-15 mins\nMarks: 40",
+     "End-of-Year Exam Topics/Details": "Section A: Functional Writing:  E-mail/Forum writing (20 marks) (1 out of 2 Questions)\nSection B: Essay Writing: Narrative, Expository, and Argumentative (60 marks) (Choose 1 out of 3 questions)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection A: \nCloze passage - 5 Questions (10 marks)\nGrammar Editing - 5 Questions (10 marks)\nSection B: \nGrammar (Transformation of words) - 5 Questions  (10 Marks)\nSection C: \nObjective Comprehension - 3 questions (MCQ)(6 marks)\nIdentification of Grammar  - 2 questions (4 marks)\nSummary writing - 1 question (12 Marks)\nSubjective Comprehension - 4 Open-Ended questions and 4 vocabulary questions  (28 marks)\n \nSection 1: Oral Presentation (20 marks)\nSection 2: Spoken Interaction based on Video Stimulus"
+    },
+    "H|3": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One Question\n• Functional Writing - Formal / Forum Writing\nTheme: All",
+     "P2 Component": "• 45 min\n• 35 marks\n• Section A (4 marks)     : Idioms and Phrases - 4 Questions \n• Section B (14 marks)   : MCQ Comprehension - 2 Questions & Editing-5 Questions\n• Section C (17 marks)   : Comprehension (3 open-ended questions) & 2 Vocuabulary Questions",
+     "Authentic Assessment": "TBC",
+     "End-of-Year Exam": "Paper 1 (40%)\nDuration: 2 hours\nMarks: 80\n\n\n\n\n\nPaper 2 (40%)\nDuration: 1 hr 45 mins\nMarks: 80\n\n\n\n\n\n\n\n\n\nPaper 3 Oral (20%)\nDuration: 10-15 mins\nMarks: 40",
+     "End-of-Year Exam Topics/Details": "Section A: Functional Writing:  E-mail/Forum writing (20 marks) (1 out of 2 Questions)\nSection B: Essay Writing: Narrative, Expository, and Argumentative (60 marks) (Choose 1 out of 3 questions)\n(Use of Dictionary is allowed for Paper 1. See SEAB website for approved list of dictionary)\n \nSection A: \nCloze passage - 5 Questions (10 marks)\nGrammar Editing - 5 Questions (10 marks)\nSection B: \nGrammar (Transformation of words) - 5 Questions  (10 Marks)\nSection C: \nObjective Comprehension - 3 questions (MCQ)(6 marks)\nIdentification of Grammar  - 2 questions (4 marks)\nSummary writing - 1 question (12 Marks)\nSubjective Comprehension - 4 Open-Ended questions and 4 vocabulary questions  (28 marks)\n \nSection 1: Oral Presentation (20 marks)\nSection 2: Spoken Interaction based on Video Stimulus"
+    },
+    "H|4": {
+     "P1 Component": "• 40 min\n• 20 marks\n• 2 questions - Choose One Question\n• Functional Writing - Formal / Forum Writing\nTheme: All",
+     "P2 Component": "• 45 min\n• 30 marks\n• Section A (8 marks)     : Cloze Passage - 4 Questions \n• Section B (10 marks)   : Editing-5 Questions\n• Section C (12 marks)   : Comprehension Summary Writing - 1 Question",
+     "Authentic Assessment": "NIL",
+     "End-of-Year Exam": "Prelim - same format as SEAB exam paper"
+    }
+   }
+  }
+ },
+ "listen": {
+  "note": "TL: activities named கேட்டல் கருத்தறிதல் or using an ஒலிப்பகுதி/ஒளிக்காட்சி in the CPDD unit overviews (கண்ணோட்டம்). ML: Hasil Pembelajaran coded 1.x (Mendengar dan Melihat), 2.x (Bertutur) and 5.x (Interaksi Lisan) in the Panduan Guru. CL: every unit has a 听说 block (on this site as the oral strand) and a workbook 听力理解 exercise with its recording script in the 教师手册.",
+  "TL": {
+   "TL|G1|1|A|1": [
+    {
+     "act": "1.1",
+     "name": "ஒளிக்காட்சி-தமிழ்வகுப்பில் முதல் நாள் / பாடநூல் – நண்பர்களை அறிவோம்",
+     "obj": "சமூக மனவுணர்வு சார்ந்த திறன்கள்: / சுய விழிப்புணர்வு; உறவுகளை நிர்வகித்தல்",
+     "res": ""
+    },
+    {
+     "act": "1.3",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதிலளித்துத் தங்கள் புரிந்துணர்வை வெளிப்படுத்துவர்.",
+     "res": "ஒலிப்பகுதி -  சமைத்துப் பார்ப்போம்! பயிற்சிநூல் - பயிற்சி 1.1"
+    }
+   ],
+   "TL|G1|1|A|2": [
+    {
+     "act": "2.1",
+     "name": "பாடநூல் / ஒளிக்காட்சி-  பொங்கல்  / சக மாணவர் மதிப்பீடு",
+     "obj": "21-ஆம் நூ. தி. – குடியியல்சார் அறிவு, உலகளாவிய விழிப்புணர்வு, பல்லினக் கலாசாரப் புரிந்துணர்வு / விழுமியம்: நல்லிணக்கம்  / முழுமையான மதிப்பீடு",
+     "res": ""
+    },
+    {
+     "act": "2.4",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதிலளித்துத் தங்கள் புரிந்துணர்வை வெளிப்படுத்துவர்.",
+     "res": "ஒலிப்பகுதி -  எங்கள் படைப்பு பயிற்சிநூல் - பயிற்சி 2.2"
+    }
+   ],
+   "TL|G1|1|A|3": [
+    {
+     "act": "3.6",
+     "name": "ஒளிக்காட்சியைப் பார்த்துத் தகவல்களைத் தெரிந்துகொள்வர்; தங்கள் முன்னறிவோடு ஒப்பிட்டுப் பார்த்துப் புரிந்துணர்வை வெளிப்படு",
+     "obj": "பயிற்சிநூல் – பயிற்சி 3.2 தமிழும் நானும்",
+     "res": ""
+    }
+   ],
+   "TL|G1|1|A|4": [
+    {
+     "act": "4.3",
+     "name": "ஒளிக்காட்சியைப் பார்த்து அதனையொட்டிக் கலந்துரையாடுவர். / அறிஞர்களின் கூற்றுகளையும் அவற்றிற்குரிய விளக்கத்தையும் அறிந்துக",
+     "obj": "ஒளிக்காட்சி – ஒவ்வொருவரும் பங்களிப்போம் / பாடநூல்",
+     "res": "சமுக மனவுணர்வு சார்ந்த திறன்கள்- பொறுப்போடு முடிவெடுத்தல்"
+    },
+    {
+     "act": "4.5",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதிலளித்து தங்கள் புரிந்துணர்வை வெளிப்படுத்துவர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 4.2  / ஒலிப்பகுதி சோதனையும் சாதனையும்"
+    }
+   ],
+   "TL|G1|1|B|1": [
+    {
+     "act": "1.1",
+     "name": "பாடநூல் –ஒளிக்காட்சி - உடல்நலம் பேணல்",
+     "obj": "மாணவர் கற்றல் தளம்  / விழுமியம்: பொறுப்புணர்வு",
+     "res": ""
+    },
+    {
+     "act": "1.4",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதில் அளிப்பர். (கேட்டல்)",
+     "res": "ஒலிப்பகுதி -   நலமாக வாழ்வோம் / பயிற்சிநூல் –பயிற்சி 1.1"
+    }
+   ],
+   "TL|G1|1|B|2": [
+    {
+     "act": "2.3",
+     "name": "ஒளிப்பகுதியைக் கவனமாகப் பார்த்துப் புரிந்துகொண்டு வினாக்களுக்குப் பொருத்தமாகப் பதில் அளிப்பர். (கேட்டல்)",
+     "obj": "ஒளிக்காட்சி – எங்கும் புதுமை! எதிலும் புதுமை!   பயிற்சிநூல் - பயிற்சி 2.1",
+     "res": ""
+    }
+   ],
+   "TL|G1|1|B|3": [
+    {
+     "act": "3.5",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதில் அளிப்பர். (கேட்டல்)",
+     "res": "பயிற்சிநூல்-3.2 வற்றாத தலைமுறைக் கிணறு"
+    }
+   ],
+   "TL|G2|1|A|1": [
+    {
+     "act": "1.9",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்கு விடையளிப்பர். / தகவல்களை ஒப்பிட்டு அவற்றிலுள்ள ஒற்றுமை வேற்றுமைகளைக் கண்டறிந்து கூறுவர்.",
+     "res": "பயிற்சிநூல் (பயிற்சி 1.6) காட்சிக்கூடங்கள்"
+    }
+   ],
+   "TL|G2|1|A|2": [
+    {
+     "act": "2.1",
+     "name": "<w:tab w:val=\"left\" w:pos=\"72\"/></w:tabs><w:ind w:left=\"271\" w:hanging=\"270\"/><w:contextualSpacing w:val=\"0\"/><w:rPr><w:",
+     "obj": "பாடநூல்  / மாணவர் கற்றல் தளம் – பொங்கல்  பண்டிகை பற்றிய ஒளிக்காட்சி / பயிற்சிநூல்    (பயிற்சி 2.1)",
+     "res": "21-ஆம் நூ. தி – தகவல் மற்றும் கருத்துப்பரிமாற்றத் திறன்கள்"
+    },
+    {
+     "act": "2.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "<w:tab w:val=\"left\" w:pos=\"72\"/></w:tabs><w:ind w:left=\"271\" w:hanging=\"270\"/><w:contextualSpacing w:val=\"0\"/><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:cs/></w:rPr></w",
+     "res": "பயிற்சிநூல்  / (பயிற்சி 2.7)  பொங்கலோ பொங்கல்!"
+    }
+   ],
+   "TL|G2|1|A|3": [
+    {
+     "act": "3.7",
+     "name": "ஒளிக்காட்சியையொட்டிப் பேச்சுத்தமிழில் கலந்துரையாடிப் பயிற்சியைச் செய்வர்.",
+     "obj": "பயிற்சிநூல் / (பயிற்சி 3.6) தமிழும் நானும்",
+     "res": "விழுமியம் – பொறுப்புணர்வு"
+    }
+   ],
+   "TL|G2|1|A|4": [
+    {
+     "act": "4.1",
+     "name": "பாடநூல் / ஒளிக்காட்சி -  முன் செல்லடா முன்னே செல்லடா",
+     "obj": "விழுமியம் –  / மீளுந்தன்மை",
+     "res": ""
+    }
+   ],
+   "TL|G2|1|B|1": [
+    {
+     "act": "1.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கொடுக்கப்பட்டிருக்கும் கேள்விகளையொட்டிப் பேச்சுத்தமிழில் கலந்துரையாடுவர். / ஒலிப்பகுதியைப்பற்றிக் கலந்துரையாடிய பின்னர்க் கொடுக்கப்பட்டிருக்கும் கேள்விகளுக்கு விடை எழுதுவர்.",
+     "res": "பயிற்சிநூல் 1.3"
+    }
+   ],
+   "TL|G2|1|B|2": [
+    {
+     "act": "2.7",
+     "name": "<w:tab w:val=\"left\" w:pos=\"72\"/></w:tabs><w:ind w:left=\"271\" w:hanging=\"270\"/><w:contextualSpacing w:val=\"0\"/><w:rPr><w:",
+     "obj": "பயிற்சிநூல் 2.6",
+     "res": "21-ஆம் நூ. தி – பொறுப்பான முறையில் முடிவெடுத்தல், சமூக விழிப்புணர்வு, பொறுப்பான முறையில் முடிவெடுத்தல், சுய விழிப்புணர்வு, உறவுநிலை ஆளுமை போன்ற திறன்களைப் பெறுவ"
+    }
+   ],
+   "TL|G2|1|B|3": [
+    {
+     "act": "3.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "‘குடிநீர்ப் பங்கீடு’ என்னும் பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் (பயிற்சி 3.5)"
+    }
+   ],
+   "TL|G3|1|A|1": [
+    {
+     "act": "1.1",
+     "name": "பாடநூல் – பக்கம் 1 / ஒளிக்காட்சி – தமிழ் வகுப்பில் முதல் நாள்",
+     "obj": "21-ஆம் நூ.தி.- தகவல் மற்றும் கருத்துப்பரிமாற்றத் திறன்கள்  / த.தொ.தி – பல்லூடகங்களைப் பயன்படுத்திக் கற்றல்",
+     "res": ""
+    },
+    {
+     "act": "1.5",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடைளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 1.1 / ஒலிப்பகுதி – காட்சிக்கூடங்கள்"
+    }
+   ],
+   "TL|G3|1|A|2": [
+    {
+     "act": "1.1",
+     "name": "பாடநூல் – பக்கம் 24 / ஒளிக்காட்சி – பொங்கல்",
+     "obj": "21-ஆம் நூ. தி. – குடியியல்சார் அறிவு, உலகளாவிய விழிப்புணர்வு, பல்லினக் கலாசாரப் புரிந்துணர்வு / த.தொ.தி – பல்லூடகங்களைப் பயன்படுத்திக் கற்றல்",
+     "res": ""
+    },
+    {
+     "act": "1.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடைளிப்பர்.",
+     "res": "பயிற்சிநூல் -  பயிற்சி 2.4 / ஒலிப்பகுதி – பொங்கலோ பொங்கல்!"
+    }
+   ],
+   "TL|G3|1|A|3": [
+    {
+     "act": "1.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "<w:rPr><w:rFonts w:ascii=\"Anjal InaiMathi\" w:eastAsia=\"Times New Roman\" w:hAnsi=\"Anjal InaiMathi\" w:cs=\"Anjal InaiMathi\"/><w:color w:val=\"000000\" w:themeColor=\"text1\"/><w:cs/><w:lang w:val=\"it-IT\"/></w:rPr></w:pPr><w:bookmarkStart w:id=\"3\" w:name=\"_Hlk68374055",
+     "res": "பயிற்சிநூல் - பயிற்சி 3.4 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி (பயன்கள் பலவிதம்)"
+    },
+    {
+     "act": "1.11",
+     "name": "ஒளிக்காட்சியின்வழிப் பெறப்படும் தகவல்களைக் கவனமாகக் கேட்டும் பார்த்தும் அவை உணர்த்தும் பொருள் குறித்த புரிந்துணர்வை வெளி",
+     "obj": "பயிற்சிநூல் - பயிற்சி 3.7 / மாணவர் கற்றல் தளம் – ஒளிக்காட்சி (தமிழும் நானும்)",
+     "res": "21-ஆம் நூற்றாண்டுத் திறன்கள் / அக்கறைகொண்ட குடிமகன்"
+    }
+   ],
+   "TL|G3|1|A|4": [
+    {
+     "act": "1.2",
+     "name": "ஒளிக்காட்சியாகப் பெறப்படும் தகவல்களைக் கவனமாகக் கேட்டும் பார்த்தும் அவை உணர்த்தும் நேரடிப்பொருள் குறித்த புரிந்துணர்வை வ",
+     "obj": "பயிற்சிநூல் - பயிற்சி 4.1",
+     "res": "சிங்கப்பூர்க் கற்பித்தல் முறைமை                             / 21-ஆம் நூற்றாண்டுத் திறன்கள்                - பொறுப்பான முறையில் முடிவெடுத்தல்             - உடனிண"
+    }
+   ],
+   "TL|G3|1|B|1": [
+    {
+     "act": "1.1",
+     "name": "பாடநூல் – பக்கம் 1 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி",
+     "obj": "21-ஆம் நூற்றாண்டுத் திறன்கள்   / நுண்ணாய்வுச் சிந்தனை மற்றும் புத்தாக்கச் சிந்தனை / சுய முனைப்புடன் கற்பவர்",
+     "res": ""
+    },
+    {
+     "act": "1.4",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "<w:tab w:val=\"left\" w:pos=\"72\"/></w:tabs><w:ind w:left=\"271\" w:hanging=\"270\"/><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:color w:val=\"00",
+     "res": "பயிற்சிநூல் – பயிற்சி 1.1 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி"
+    }
+   ],
+   "TL|G3|1|B|2": [
+    {
+     "act": "2.6",
+     "name": "<w:tab w:val=\"left\" w:pos=\"2585\"/></w:tabs><w:ind w:left=\"244\"/><w:contextualSpacing/><w:rPr><w:rFonts w:ascii=\"Anjal Ne",
+     "obj": "பயிற்சிநூல் – பயிற்சி 2.5 / மாணவர் கற்றல் தளம் – ஒளிக்காட்சி",
+     "res": ""
+    }
+   ],
+   "TL|G3|1|B|3": [
+    {
+     "act": "3.1",
+     "name": "சிறு துளி என்னும் ஒளிக்காட்சியைப் பார்த்து நீர் சேமிப்பையொட்டித் தெளிவாகவும் தன்னம்பிக்கையுடனும் வகுப்பில் கலந்துரையாடுவ",
+     "obj": "பாடநூல் – பக்கம் 39 / மாணவர் கற்றல் தளம் – ஒளிக்காட்சி",
+     "res": "21-ஆம் நூற்றாண்டுத் திறன்கள் – குடியியல்சார் அறிவு, உலகளாவிய விழிப்புணர்வு, பல்லினக் கலாசாரப் புரிந்துணர்வு / தகவல் தொடர்புத் தொழில்நுட்பத் திறன் – பல்லூடகங்களை"
+    },
+    {
+     "act": "3.6",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "சென்றேன்! கற்றேன்! என்னும் ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 3.3"
+    }
+   ],
+   "TL|H|1|A|1": [
+    {
+     "act": "1.10",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடையைத் தேர்ந்தெடுத்து எழுதுவர்.",
+     "res": "பயிற்சிநூல்  பயிற்சி 1.11 / ஆண் என்ன? பெண் என்ன? \\ சமைத்துக் காட்டுவோம்!"
+    }
+   ],
+   "TL|H|1|A|2": [
+    {
+     "act": "2.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர். வினாக்களுக்கு ஏற்ற விடையை எழுதுவர்.",
+     "res": "பயிற்சிநூல் / பயிற்சி 2.1"
+    }
+   ],
+   "TL|H|1|A|3": [
+    {
+     "act": "3.10",
+     "name": "ஒளிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடையைத் தேர்ந்தெடுத்து எழுதுவர்.",
+     "obj": "பயிற்சிநூல்  பயிற்சி 3.8",
+     "res": ""
+    }
+   ],
+   "TL|H|1|A|4": [
+    {
+     "act": "4.9",
+     "name": "ஒளிப்பகுதியைப் பார்த்துக் / கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடையை எழுதுவர்.",
+     "obj": "பயிற்சிநூல்  பயிற்சி 4.9 / பார்வை மாறினால் பாதை மாறலாம்",
+     "res": ""
+    }
+   ],
+   "TL|H|1|B|1": [
+    {
+     "act": "1.2",
+     "name": "கேட்டல்  கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர். / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "res": "பயிற்சிநூல்  பயிற்சி 1.1 / உடற்செல்வம்"
+    }
+   ],
+   "TL|H|1|B|2": [
+    {
+     "act": "2.10",
+     "name": "ஒளிக்காட்சியைப் பார்த்துக்  கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடையை எழுதுவர்.",
+     "obj": "பயிற்சிநூல்  பயிற்சி 2.8 / எங்கும் புதுமை! எதிலும் புதுமை!",
+     "res": "21-ஆம் நூ.தி.- நுண்ணாய்வுச் சிந்தனையும் புத்தாக்கச்  சிந்தனையும்."
+    }
+   ],
+   "TL|H|1|B|3": [
+    {
+     "act": "3.11",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "res": "பயிற்சிநூல்  பயிற்சி 3.11 / சென்றேன்! கற்றேன்!"
+    }
+   ],
+   "TL|G1|2|B|1": [
+    {
+     "act": "1.3",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "<w:tab w:val=\"left\" w:pos=\"72\"/></w:tabs><w:rPr><w:rFonts w:ascii=\"Anjal InaiMathi\" w:hAnsi=\"Anjal InaiMathi\" w:cs=\"Anjal InaiMathi\"/><w:sz w:val=\"24\"/><w:szCs w:val=\"24\"/><w:rtl/><w:cs/></w:rPr></w:pPr><w:r w:rsidRPr=\"00FB26A2\"><w:rPr><w:rFonts w:ascii=\"Anjal",
+     "res": "பயிற்சிநூல் – பயிற்சி 1.1 / ஒலிப்பகுதி -சேற்றில் கால் வைத்தால்தான்..."
+    }
+   ],
+   "TL|G1|2|B|2": [
+    {
+     "act": "2.3",
+     "name": "ஒளிக்காட்சியைப் பார்த்து அது உணர்த்தும் பொருள் குறித்த புரிந்துணர்வை வெளிப்படுத்துவர்.",
+     "obj": "பயிற்சிநூல் – பயிற்சி 2.1 ஒளிக்காட்சி சிந்தித்துச் செயற்படு",
+     "res": "மனவுணர்வு சார்ந்த திறன்  / பொறுப்புடன் முடிவெடுத்தல்"
+    }
+   ],
+   "TL|G1|2|B|3": [
+    {
+     "act": "3.3",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுப் புரிந்துணர்வை வெளிப்படுத்துவர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 3.1 ஒலிப்பகுதி- மாற்றத்தை உருவாக்குவோம்"
+    }
+   ],
+   "TL|G1|2|A|1": [
+    {
+     "act": "1.3",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதில் அளிப்பர்.",
+     "res": "ஒலிப்பகுதி -  நண்பன் அளித்த ஊக்கம் பயிற்சிநூல் - பயிற்சி 1.1"
+    }
+   ],
+   "TL|G1|2|A|2": [
+    {
+     "act": "2.2",
+     "name": "பாடநூல்  அப்பாவின் பொழுதுபோக்கு / ஒளிக்காட்சி – ‘ஓய்தல் ஒழி’",
+     "obj": "21-ஆம் நூ. தி.  / - நுண்ணாய்வுச் சிந்தனை / மற்றும் புத்தாக்கச் / சிந்தனை / - குடியியல்சார் அறிவு, / உலகளாவிய / விழிப்புணர்வு, பல்லினக் / கலாசாரப் புரிந்துணர்வு / விழுமியம்: மதிப்பு / முழுமையான மதிப்பீடு",
+     "res": ""
+    },
+    {
+     "act": "2.3",
+     "name": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதிலளித்துத் தங்கள் புரிந்துணர்வை வெளிப்படுத்துவர்.",
+     "obj": "ஒளிக்காட்சி - அரங்கேற்றம் பயிற்சிநூல் – பயிற்சி 2.1",
+     "res": "-"
+    }
+   ],
+   "TL|G1|2|A|3": [
+    {
+     "act": "3.3",
+     "name": "ஒளிக்காட்சியைக் கவனமாகப் பார்த்து வினாக்களுக்குப் பொருத்தமாகப் பதில் அளிப்பர்.",
+     "obj": "ஒளிக்காட்சி -  பயிற்சிநூல்-இது முடிவன்று; இதுவே தொடக்கம் / பயிற்சி 3.1",
+     "res": ""
+    }
+   ],
+   "TL|G1|2|A|4": [
+    {
+     "act": "4.7",
+     "name": "ஒளிக்காட்சியைக் கவனமாகப் பார்த்து வினாக்களுக்குப் பொருத்தமாகப் பதில் அளிப்பர்.",
+     "obj": "ஒளிக்காட்சி –  / கவரி வீசிய காவலன் / பயிற்சிநூல் - பயிற்சி 4.3",
+     "res": ""
+    }
+   ],
+   "TL|G2|2|B|1": [
+    {
+     "act": "1.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "<w:tab w:val=\"left\" w:pos=\"72\"/></w:tabs><w:ind w:left=\"271\" w:hanging=\"270\"/><w:contextualSpacing w:val=\"0\"/><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:sz w:val=\"22\"/>",
+     "res": "பயிற்சிநூல்  / (பயிற்சி 1.5)   / சேற்றில் கால் வைத்தால்தான்..."
+    }
+   ],
+   "TL|G2|2|B|2": [
+    {
+     "act": "2.9",
+     "name": "‘சிந்தித்துச் செயற்படு’ என்ற தலைப்பிலான ஒளிக்காட்சியைப் பார்த்துக் கொடுக்கப்பட்டிருக்கும் வினாக்களையொட்டிப் பேச்சுத்தமிழ",
+     "obj": "பயிற்சிநூல்  / சிந்தித்துச் செயற்படு /   பயிற்சி 2.5",
+     "res": "21-ஆம் நூ. தி – பொறுப்பாக முடிவெடுத்தல் திறனைப் பெறுவர்."
+    }
+   ],
+   "TL|G2|2|B|3": [
+    {
+     "act": "3.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "‘சமூகத்தில் இளைஞர்களின் பங்கு’ என்ற தலைப்பிலான பதிவைக் கேட்டுக் கொடுக்கப்பட்டிருக்கும் கேள்விகளையொட்டிப் பேச்சுத்தமிழில் கலந்துரையாடுவர். / கொடுக்கப்பட்டிருக்கும் வினாக்களுக்கு விடை எழுதுவர்.",
+     "res": "பயிற்சிநூல்  / சமூகத்தில் இளைஞர்களின் பங்கு   / பயிற்சி 3.6"
+    }
+   ],
+   "TL|G2|2|A|1": [
+    {
+     "act": "1.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "<w:tab w:val=\"left\" w:pos=\"72\"/></w:tabs><w:ind w:left=\"271\" w:hanging=\"270\"/><w:contextualSpacing w:val=\"0\"/><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:sz w:val=\"22\"/>",
+     "res": "பயிற்சிநூல்  / (பயிற்சி 1.5)   / ஒருவர் பொறை இருவர் நட்பு"
+    }
+   ],
+   "TL|G2|2|A|2": [
+    {
+     "act": "2.9",
+     "name": "ஒளிக்காட்சியைப் பார்த்துக் கொடுக்கப்பட்டிருக்கும் வினாக்களையொட்டிப் பேச்சுத்தமிழில் கலந்துரையாடிப் பயிற்சியைச் செய்வர்.",
+     "obj": "பயிற்சிநூல் (பயிற்சி 2.5)",
+     "res": "21-ஆம் நூ. தி –பொறுப்பான முறையில் முடிவெடுத்தல், சுய விழிப்புணர்வு, உறவுநிலை ஆளுமை போன்ற திறன்களைப் பெறுவர்."
+    }
+   ],
+   "TL|G2|2|A|3": [
+    {
+     "act": "3.8",
+     "name": "<w:tab w:val=\"left\" w:pos=\"72\"/></w:tabs><w:ind w:left=\"271\" w:hanging=\"270\"/><w:contextualSpacing w:val=\"0\"/><w:rPr><w:",
+     "obj": "பயிற்சிநூல்  / (பயிற்சி 3.5)   / இது முடிவன்று, இதுவே தொடக்கம்",
+     "res": "சமூக விழிப்புணர்வு சார்ந்த திறன்கள் – சமூக விழிப்புணர்வு"
+    }
+   ],
+   "TL|G2|2|A|4": [
+    {
+     "act": "4.9",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கொடுக்கப்பட்டிருக்கும் வினாக்களுக்கு விடை அளிப்பர்.",
+     "res": "பயிற்சிநூல் (பயிற்சி 4.5)"
+    }
+   ],
+   "TL|G3|2|B|1": [
+    {
+     "act": "1.3",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "தகவல்களை முன்னறிவோடு ஒப்பிட்டுப் பார்த்துப் புரிந்துணர்வை வெளிப்படுத்துவர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 1.1 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி (சேற்றில் கால் வைத்தால்தான்...)"
+    }
+   ],
+   "TL|G3|2|B|2": [
+    {
+     "act": "2.8",
+     "name": "சிந்தித்துச் செயற்படு என்னும்  ஒளிக்காட்சியைக் கவனமாகப்  பார்த்துக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "obj": "பயிற்சிநூல் – பயிற்சி 2.6 / மாணவர் கற்றல் தளம் – ஒளிக்காட்சி (சிந்தித்துச் செயற்படு)",
+     "res": "த.தொ.தி – பல்லூடகங்களைப் பயன்படுத்திக் கற்றல்"
+    }
+   ],
+   "TL|G3|2|B|3": [
+    {
+     "act": "3.1",
+     "name": "பாடநூல் – பக்கம் 41, 42 / மாணவர் கற்றல் தளம் - ஒலிப்பகுதி",
+     "obj": "21-ஆம் நூ.தி.- நுண்ணாய்வுச் சிந்தனையும் புத்தாக்கச்  சிந்தனையும் / மின்வழிக் கற்பித்தல் அணுகுமுறை – கலந்துரையாடல் அனுபவ வகைமை",
+     "res": ""
+    },
+    {
+     "act": "3.6",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "தகவல்களை முன்னறிவோடு ஒப்பிட்டுப் பார்த்துப் புரிந்துணர்வை வெளிப்படுத்துவர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 3.3 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி (கைகொடுப்போம்)"
+    }
+   ],
+   "TL|G3|2|A|1": [
+    {
+     "act": "1.6",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 1.5 / ஒலிப்பகுதி"
+    },
+    {
+     "act": "1.10",
+     "name": "ஒளிக்காட்சிப் பதிவு (Vlog) தயாரிப்பதற்குரிய வழிமுறைகளையும் அதற்குத் தேவையான திறனையும் அறிந்துகொள்வர்.",
+     "obj": "பாடநூல் – பக்கம் 18",
+     "res": "21-ஆம் நூ.தி.- நுண்ணாய்வுச் சிந்தனையும் புத்தாக்கச்  சிந்தனையும்"
+    }
+   ],
+   "TL|G3|2|A|2": [
+    {
+     "act": "2.8",
+     "name": "பொழுதுபோக்குகள் பலவிதம் என்னும் ஒளிக்காட்சியைப் பார்த்து வினாக்களுக்கு விடையளிப்பர்.",
+     "obj": "பயிற்சிநூல் 2.5",
+     "res": ""
+    }
+   ],
+   "TL|G3|2|A|3": [
+    {
+     "act": "3.4",
+     "name": "பயிற்சிநூல் – பயிற்சி 3.1  / ஒளிக்காட்சி",
+     "obj": "த.தொ.தி – பல்லூடகங்களைப் பயன்படுத்திக் கற்றல்",
+     "res": ""
+    }
+   ],
+   "TL|G3|2|A|4": [
+    {
+     "act": "4.8",
+     "name": "ஒளிக்காட்சியைக் கவனமாகப் பார்த்துக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடைளிப்பர்.",
+     "obj": "பயிற்சிநூல் – பயிற்சி 4.5 / ஒளிக்காட்சி",
+     "res": "21-ஆம் நூ.தி.- தகவல் மற்றும் கருத்துப்பரிமாற்றத் திறன்கள் / த.தொ.தி – பல்லூடகங்களைப் பயன்படுத்திக் கற்றல்"
+    }
+   ],
+   "TL|H|2|B|1": [
+    {
+     "act": "1.14",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக்   /  கேட்டுக் கருத்தைப்  /  புரிந்துகொள்வர். /  வினாக்களுக்கு ஏற்ற  /  விடைகளை   /  எழுதுவர்.",
+     "res": "பயிற்சிநூல்  பயிற்சி-1.10 / சேற்றில் கால் வைத்தல்தான்..."
+    }
+   ],
+   "TL|H|2|B|2": [
+    {
+     "act": "2.15",
+     "name": "மாணவர் ஒளிக்காட்சியைக் கவனமாகப் பார்த்து வினாக்களுக்கு விடையளிப்பர்.",
+     "obj": "பயிற்சிநூல்  பயிற்சி 2.10 / சிந்தித்துச் செயற்படு",
+     "res": "சமூக மனவுணர்வு சார்ந்த திறன்கள் - / சுய நிர்வாகம், / பொறுப்புணர்வு"
+    }
+   ],
+   "TL|H|2|B|3": [
+    {
+     "act": "3.1",
+     "name": "கொடுக்கப்பட்டிருக்கும்  வாக்கியங்களைத் தொடர்புபடுத்தும்போது அவர்களுக்கு எவையெல்லாம் நினைவுக்கு வருகின்றன என்பதை வகுப்பின",
+     "obj": "பாடநூல் / மாணவர் கற்றல் தள நடவடிக்கை",
+     "res": "21-ஆம் நூ.தி.- நுண்ணாய்வுச் சிந்தனையும் புத்தாக்கச்  சிந்தனையும்"
+    },
+    {
+     "act": "3.11",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "மாணவர் ஒலிக்காட்சியைக் கவனமாகக் கேட்டு வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் / பயிற்சி - 3.6 / கைகொடுப்போம்"
+    }
+   ],
+   "TL|H|2|A|1": [
+    {
+     "act": "1.3",
+     "name": "கேட்டல்  கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "res": "பயிற்சிநூல்  பயிற்சி 1.1 / ஒருவர் பொறை இருவர் நட்பு"
+    },
+    {
+     "act": "1.9",
+     "name": "ஒளிக்காட்சிப் பதிவைத் திட்டமிடுவர். / ஒளிக்காட்சிப் பதிவிற்கான வரைவை எழுதுவர். / ஒளிக்காட்சிப் பதிவுக்கான வரைவை உருவாக்க",
+     "obj": "பயிற்சிநூல் பயிற்சி 1.7",
+     "res": ""
+    }
+   ],
+   "TL|H|2|A|2": [
+    {
+     "act": "2.12",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "res": "பயிற்சிநூல்  பயிற்சி 2.9 / என்றும் வாழும்         வாசிப்பு"
+    }
+   ],
+   "TL|H|2|A|3": [
+    {
+     "act": "3.12",
+     "name": "ஒளிக்காட்சியைப் பார்த்துக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "obj": "பயிற்சிநூல்  பயிற்சி 3.10 / இது முடிவன்று, இதுவே தொடக்கம்!",
+     "res": "சமூக மனவுணர்வுசார் கற்றல் - / உறவுகளை நிர்வகித்தல்,  / சுய நிர்வாகம்"
+    }
+   ],
+   "TL|H|2|A|4": [
+    {
+     "act": "4.11",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "res": "பயிற்சிநூல்  பயிற்சி 4.7 /   மானங்காத்த  /   மன்னன்!"
+    }
+   ],
+   "TL|G1|3||1": [
+    {
+     "act": "1.10",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "மாணவர்கள் ஓர் ஒலிப்பகுதியைக் கேட்டுப் புரிந்துகொண்டு  வினாக்களுக்கேற்பப் பதிலளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 1.6 / ஒலிப்பகுதி – நிழலாட்டக்கலை"
+    }
+   ],
+   "TL|G1|3||2": [
+    {
+     "act": "2.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதிலளிப்பர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 2.4 / ஒலிப்பகுதி – சிங்கப்பூர்க் குழந்தைகள்"
+    }
+   ],
+   "TL|G1|3||3": [
+    {
+     "act": "3.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதிலளிப்பர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 3.4 / ஒலிப்பகுதி - வெளிப்புறக் கல்வியும் அனுபவமும்"
+    }
+   ],
+   "TL|G1|3||4": [
+    {
+     "act": "4.4",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டு வினாக்களுக்குப் பொருத்தமாக விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 4.1 / இயற்கைப் பாதுகாப்பில் புத்தாக்கம்"
+    }
+   ],
+   "TL|G1|3||5": [
+    {
+     "act": "5.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "உயர்ந்த உள்ளம் என்னும் ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதில் அளிப்பர்.",
+     "res": "ஒலிப்பகுதி – உயர்ந்த உள்ளம் / பயிற்சிநூல் – பயிற்சி 5.1"
+    }
+   ],
+   "TL|G1|3||6": [
+    {
+     "act": "6.3",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதில் அளிப்பர்.",
+     "res": "ஒலிப்பகுதி – பிறர் உதவியை நாடு -பயிற்சிநூல் – பயிற்சி 6.1"
+    }
+   ],
+   "TL|G1|3||7": [
+    {
+     "act": "7.4",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டு வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 7.2"
+    }
+   ],
+   "TL|G2|3||1": [
+    {
+     "act": "1.9",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "‘நிழலாட்டக்கலை’ என்னும் பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – நிழலாட்டக்கலை - பயிற்சி 1.5"
+    }
+   ],
+   "TL|G2|3||2": [
+    {
+     "act": "2.4",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "‘சிங்கப்பூர்க் குழந்தைகள்’ என்னும் ஒலிப்பகுதியைப்பற்றிக் கலந்துரையாடிய பின்னர்க் கொடுக்கப்பட்டிருக்கும் கேள்விகளுக்கு விடை எழுதுவர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 2.2"
+    }
+   ],
+   "TL|G2|3||3": [
+    {
+     "act": "3.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "‘வெளிப்புறக் கல்வியும் அதன் அனுபவமும்’ என்னும் ஒலிப்பகுதியைக் கேட்டுக் கொடுக்கப்பட்டிருக்கும் கேள்விகளையொட்டிப் பேச்சுத்தமிழில் கலந்துரையாடுவர். / ஒலிப்பகுதியைப்பற்றிக் கலந்துரையாடிய பின்னர்க் கொடுக்கப்பட்டிருக்கும் வினாக்களுக்கு விடை எழுதுவர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 3.5 - வெளிப்புறக் கல்வியும் அனுபவமும்"
+    }
+   ],
+   "TL|G2|3||4": [
+    {
+     "act": "4.4",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "இயற்கைக்கு என் பங்களிப்பு என்னும் ஒலிப்பகுதியைக் கேட்டுக் கொடுக்கப்பட்டிருக்கும் கேள்விகளையொட்டிப் பேச்சுத்தமிழில் கலந்துரையாடுவர். / கொடுக்கப்பட்டிருக்கும் வினாக்களுக்கு விடை எழுதுவர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 4.2 - இயற்கைக்கு என் பங்களிப்பு"
+    }
+   ],
+   "TL|G2|3||5": [
+    {
+     "act": "5.3",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "உயர்ந்த உள்ளம் என்னும் ஒலிப்பகுதியைக் கேட்டுக் கொடுக்கப்பட்டிருக்கும் வினாக்களையொட்டிப் பேச்சுத்தமிழில் கலந்துரையாடுவர். / ஒலிப்பகுதியைப்பற்றிக் கலந்துரையாடிய பின்னர்க் கொடுக்கப்பட்டிருக்கும் வினாக்களுக்கு விடை எழுதுவர்.",
+     "res": "பயிற்சி நூல் - பயிற்சி 5.1 - உயர்ந்த உள்ளம்"
+    }
+   ],
+   "TL|G2|3||6": [
+    {
+     "act": "6.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "நாடு! பிறர் உதவியை நாடு என்னும் தலைப்பிலான உரையாடலைக் கேட்டுப் புரிந்துகொள்வதுடன் வினாவிற்கேற்ற விடையளிப்பர். / பள்ளியிலும் பள்ளிக்கு அப்பாலும் மாணவர்களின் மனநலம் காக்கும் நிகழ்வுகள் குறித்துக் கலந்துரையாடுவர்.",
+     "res": "பயிற்சிநூல் - நாடு! பிறர் உதவியை நாடு - பயிற்சி 6.6"
+    }
+   ],
+   "TL|G2|3||7": [
+    {
+     "act": "7.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "நானும் தமிழாசிரியராக வேண்டும்! என்னும் தலைப்பிலான  ஒலிப்பகுதியைக் கேட்டுக் கொடுக்கப்பட்டிருக்கும் கேள்விகளையொட்டிப் பேச்சுத்தமிழில் கலந்துரையாடுவர். / பின்னர்க் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 7.6 - நானும் தமிழாசிரியராக வேண்டும்!"
+    }
+   ],
+   "TL|G3|3||1": [
+    {
+     "act": "1.3",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "நிழலாட்டக் கலை என்னும் ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும்  வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 1.1  / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி - நிழலாட்டக் கலை"
+    }
+   ],
+   "TL|G3|3||2": [
+    {
+     "act": "2.4",
+     "name": "ஒளிக்காட்சியைக் கவனமாகப் பார்த்துக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "obj": "பயிற்சிநூல் - பயிற்சி 2.1 / மாணவர் கற்றல் தளம் - ஒளிக்காட்சி",
+     "res": "21-ஆம் நூற்றாண்டுத் திறன்கள் - தகவல் மற்றும் கருத்துப்பரிமாற்றத் திறன்கள் / தகவல் தொடர்புத் தொழில்நுட்பத் திறன்கள் – பல்லூடகங்களைப் பயன்படுத்திக் கற்றல்"
+    }
+   ],
+   "TL|G3|3||3": [
+    {
+     "act": "3.4",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "வெளிப்புறக் கல்வியும் அனுபவமும் என்னும் ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும்  வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – 3.1 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி - வெளிப்புறக் கல்வியும் அனுபவமும்"
+    }
+   ],
+   "TL|G3|3||4": [
+    {
+     "act": "4.5",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 4.2 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி – இயற்கைக்கு என் பங்களிப்பு"
+    }
+   ],
+   "TL|G3|3||5": [
+    {
+     "act": "5.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "வணிகத்தில் தடம் பதித்த பண்டைய தமிழர்கள் என்னும் ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 5.6 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி - வணிகத்தில் தடம் பதித்த பண்டைய தமிழர்கள்"
+    }
+   ],
+   "TL|G3|3||6": [
+    {
+     "act": "6.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "சமூக வலைத்தளங்களும் இளைஞர் மனநலமும் என்னும் ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும்  வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 6.6 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி - சமூக வலைத்தளங்களும் இளைஞர் மனநலமும்"
+    }
+   ],
+   "TL|G3|3||7": [
+    {
+     "act": "7.6",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 7.5 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி – நானும் தமிழாசிரியராக வேண்டும்!"
+    }
+   ],
+   "TL|H|3||1": [
+    {
+     "act": "1.11",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 1.9 – நிழலாட்டக் கலை"
+    }
+   ],
+   "TL|H|3||2": [
+    {
+     "act": "2.4",
+     "name": "கேட்டல்  கருத்தறிதல்",
+     "obj": "ஒலிக்காட்சியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 2.1 - சிங்கப்பூர்க் குழந்தைகள்"
+    },
+    {
+     "act": "2.10",
+     "name": "நாளேட்டுச் செய்தியைப் படித்துவிட்டு, கேள்விக்குரிய பதிலை மாணவர் கற்றல் தளத்தில் பதிவு செய்வர்.  / ஒளிக்காட்சியைப் பார்த்",
+     "obj": "பாடநூல் / மாணவர் கற்றல் தள நடவடிக்கை / குடும்பப் பிணைப்பு / நல்வாழ்வுக்கு அடித்தளம்",
+     "res": "சமூக மனவுணர்வுசார் கற்றல் - சமூக விழிப்புணர்வு"
+    }
+   ],
+   "TL|H|3||3": [
+    {
+     "act": "3.11",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 3.8 - வெளிப்புறக் கல்வியும் அனுபவமும்"
+    }
+   ],
+   "TL|H|3||4": [
+    {
+     "act": "4.3",
+     "name": "கொடுக்கப்பட்டுள்ள நடப்புச் செய்திகளைப் படிப்பர். / கொடுக்கப்பட்டுள்ள ஒளிக்காட்சியைப் பார்ப்பர். / இவற்றையொட்டிய கருத்துக",
+     "obj": "பாடநூல் - சிங்கப்பூரை மேலும் பசுமையாக்கவிருக்கும் புதிய திட்டங்கள்",
+     "res": "21-ஆம் நூ. தி. – புத்தாக்கச் சிந்தனை / சமூக மனவுணர்வுசார் திறன் – சமூக விழிப்புணர்வு"
+    },
+    {
+     "act": "4.11",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 4.8 - இயற்கைக்கு என் பங்களிப்பு"
+    }
+   ],
+   "TL|H|3||5": [
+    {
+     "act": "5.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிக்காட்சியைக் கவனமாகக் கேட்டு வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் - பயிற்சி 5.4 - வணிகத்தில் தடம் பதித்த பண்டைய தமிழர்கள்"
+    }
+   ],
+   "TL|H|3||6": [
+    {
+     "act": "6.11",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டுக் கருத்தைப் புரிந்துகொள்வர்.  / வினாக்களுக்கு ஏற்ற விடைகளை எழுதுவர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 6.8 - சமூக வலைத்தளங்களும் இளைஞர் மனநலமும்"
+    }
+   ],
+   "TL|H|3||7": [
+    {
+     "act": "7.12",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிக்காட்சியைக் கவனமாகக் கேட்டு வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 7.9 - நானும் தமிழாசிரியராக வேண்டும்"
+    }
+   ],
+   "TL|G1|4||1": [
+    {
+     "act": "1.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியின்வழிப் பெறப்படும் தகவல்களைக் கவனமாகக் கேட்டு அவை உணர்த்தும் பொருள் குறித்த புரிந்துணர்வை வெளிப்படுத்துவர்.",
+     "res": "பயிற்சிநூல் 1.5 / பகுதி 1- விளம்பரம் / பகுதி 2 - சிற்றுரை"
+    }
+   ],
+   "TL|G1|4||2": [
+    {
+     "act": "2.5",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதில் அளிப்பர்.",
+     "res": "ஒலிப்பகுதி / பயிற்சிநூல் - 2.1"
+    }
+   ],
+   "TL|G1|4||3": [
+    {
+     "act": "3.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியின் வாயிலாகப் பெறப்படும் தகவல்களைக் கவனமாகக் கேட்டு அவை உணர்த்தும் பொருள் குறித்த புரிந்துணர்வை வெளிப்படுத்துவர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 3.4 / கேட்டல் கருத்தறிதல் ஒலிப்பகுதிகள்"
+    }
+   ],
+   "TL|G1|4||4": [
+    {
+     "act": "4.4",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கவனமாகக் கேட்டு வினாக்களுக்குப் பொருத்தமாகப் பதில் அளிப்பர்.",
+     "res": "பயிற்சிநூல்  / பயிற்சி 4.2 ஒலிப்பகுதிகள்"
+    }
+   ],
+   "TL|G1|4||5": [
+    {
+     "act": "5.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "மாணவர்கள் கொடுக்கப்பட்ட பகுதிகளைக் கேட்டு கருத்தறிதல் வினாக்களுக்குப் பொருத்தமான விடைகள் அளிப்பர்.",
+     "res": "பயிற்சிநூல்  பயிற்சி 5.5 / கேட்டல் கருத்தறிதல் ஒலிப்பகுதிகள்"
+    }
+   ],
+   "TL|G1|4||6": [
+    {
+     "act": "6.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "கேட்டல் கருத்தறிதல் ஒலிப்பகுதிகளைக் கேட்டுப் பயிற்சியைச் செய்வர்.",
+     "res": "பயிற்சிநூல்  / பயிற்சி 6.5 / கேட்டல் கருத்தறிதல் ஒலிப்பகுதிகள்"
+    }
+   ],
+   "TL|G2|4||1": [
+    {
+     "act": "1.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டு வினாக்களுக்கு விடை அளிப்பர்.",
+     "res": "பயிற்சிநூல்  / (பயிற்சி 1.5)"
+    }
+   ],
+   "TL|G2|4||2": [
+    {
+     "act": "2.9",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "மாணவர்கள் கேட்டல் கருத்தறிதலில் உள்ள உரையாடல், விளம்பரம் ஆகியவற்றைக் கேட்டுப்  புரிந்துகொள்வதுடன் வினாவிற்கேற்ற  விடையளிப்பர்.",
+     "res": "பயிற்சிநூல்  / உரையாடல் / விளம்பரம் / பயிற்சி 2.7"
+    }
+   ],
+   "TL|G2|4||3": [
+    {
+     "act": "3.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "ஒலிப்பகுதியைக் கேட்டு வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல்  / (பயிற்சி 3.5)   / நம் நாடு! நம் சிங்கப்பூர்!"
+    },
+    {
+     "act": "3.9",
+     "name": "ஒளிக்காட்சிகளை எப்படிப் பதிவுசெய்வது என்பதைத் தெரிந்துகொள்வர்.",
+     "obj": "பாடநூல் / ஒளிக்காட்சிப் பதிவுகளைச் செய்து பார்ப்போம்",
+     "res": ""
+    },
+    {
+     "act": "3.10",
+     "name": "<w:tab w:val=\"left\" w:pos=\"72\"/></w:tabs><w:contextualSpacing w:val=\"0\"/><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi S",
+     "obj": "பயிற்சிநூல்  / (பயிற்சி 3.7)",
+     "res": "முக்கியப் பண்புகள் மீளுந்தன்மை, பரிவு, அக்கறை"
+    }
+   ],
+   "TL|G2|4||4": [
+    {
+     "act": "4.3",
+     "name": "கற்றல் தளத்திலுள்ள நடப்புச் செய்தியைப் படித்தும் ஒளிக்காட்சியைப் பார்த்தும் அவற்றைப்பற்றிக் கலந்துரையாடுவர். / பெண் தொழி",
+     "obj": "பாடநூல்",
+     "res": "21-ஆம் நூ. தி.     நுண்ணாய்வுச் சிந்தனை மற்றும் புத்தாக்கச் சிந்தனை   / சமூக மனவுணர்வு சார்ந்த திறன்கள் / பொறுப்பான முறையில் முடிவெடுத்தல்"
+    },
+    {
+     "act": "4.9",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "மாணவர்கள் கேட்டல் கருத்தறிதலில் உள்ள உரையாடல், செய்தி, கதை, விளம்பரம் ஆகிய பனுவல்களைக் கேட்டுப்  புரிந்துகொள்வதுடன்  வினாவிற்கேற்ப விடையளிப்பர்.",
+     "res": "பயிற்சிநூல்  / உரையாடல் / விளம்பரம் / கதை / செய்தி / பயிற்சி 4.4"
+    }
+   ],
+   "TL|G2|4||5": [
+    {
+     "act": "5.7",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "மாணவர்கள் ஒலிப்பகுதியில் இடம்பெறும் பனுவல்களைக் கேட்டுக் கொடுக்கப்பட்டிருக்கும் வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல்  / (பயிற்சி 5.5)"
+    }
+   ],
+   "TL|G2|4||6": [
+    {
+     "act": "6.9",
+     "name": "கேட்டல்  / கருத்தறிதல்",
+     "obj": "மாணவர்கள் கேட்டல் கருத்தறிதலில் உள்ள உரையாடல், செய்தி, கதை, விளம்பரம் ஆகியவற்றைக் கேட்டுப்  புரிந்துகொள்வதுடன்  வினாவிற்கேற்ற  விடையளிப்பர்.",
+     "res": "பயிற்சிநூல்  / பயிற்சி 6.5  / உரையாடல் / விளம்பரம் / கதை / செய்தி"
+    }
+   ],
+   "TL|G3|4||1": [
+    {
+     "act": "1.9",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "உரிமையும் கடமையும் என்னும் ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும்  வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 1.7 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி – உரிமையும் கடமையும்"
+    }
+   ],
+   "TL|G3|4||2": [
+    {
+     "act": "2.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "அணிகலன்கள் என்னும் ஒலிப்பகுதியைக் கவனமாகக் கேட்ட பின்னர்க் கேட்கப்பட்டிருக்கும்  வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 2.7"
+    }
+   ],
+   "TL|G3|4||3": [
+    {
+     "act": "3.9",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "கேட்டல் கருத்தறிதல் ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும்  வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 3.9 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி – கேட்டல் கருத்தறிதல் பயிற்சி 1"
+    }
+   ],
+   "TL|G3|4||4": [
+    {
+     "act": "4.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "புத்தாக்கச் சிந்தனை என்னும் ஒலிப்பகுதியைக் கவனமாகக் கேட்ட பின்னர்க் கேட்கப்பட்டிருக்கும்  வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 4.6"
+    }
+   ],
+   "TL|G3|4||5": [
+    {
+     "act": "5.8",
+     "name": "கேட்டல் கருத்தறிதல்",
+     "obj": "கேட்டல் கருத்தறிதல் ஒலிப்பகுதியைக் கவனமாகக் கேட்டுக் கேட்கப்பட்டிருக்கும்  வினாக்களுக்கு விடையளிப்பர்.",
+     "res": "பயிற்சிநூல் – பயிற்சி 5.7 / மாணவர் கற்றல் தளம் – ஒலிப்பகுதி – கேட்டல் கருத்தறிதல் பயிற்சி 2"
+    }
+   ]
+  },
+  "ML": {
+   "ML|H|1|1B|5": [
+    "Bertutur untuk menyampaikan maklumat tentang kaitan diri dengan makanan. (2.2)",
+    "Berbincang untuk memberikan pandangan tentang kaitan diri dengan makanan. (5.2)",
+    "Mendengar dan menonton video untuk menyampaikan semula maklumat yang didengar. (1.1)",
+    "Bertutur untuk menerangkan makna simbolik dalam makanan. (2.3)"
+   ],
+   "ML|H|1|1B|6": [
+    "Mendengar dan melihat untuk membuat refleksi tentang lakonan (1.2)",
+    "Berbincang untuk memberikan pandangan tentang lakonan yang ditonton(5.2)",
+    "Mendengar dan melihat untuk memberikan pandangan(1.2)",
+    "Mendengar dan menonton video untuk menyampaikan pandangan tentang hubungan yang baik. (1.2)",
+    "Bertutur untuk menyampaikan pandangan tentang usaha menjalin hubungan. (2.3)"
+   ],
+   "ML|H|1|1B|7": [
+    "berbincang untuk mengemukakan pandangan tentang dapatan kajian dengan memberikan bukti (5.2)"
+   ],
+   "ML|H|1|1B|8": [
+    "berinteraksi dengan berbincang untuk mengemukakan pandangan tentang cabaran dan mengaitkannya dengan pengalaman peribadi (5.2)",
+    "bertutur untuk menerangkan cara untuk menghadapi cabaran yang dihadapi (2.3)"
+   ],
+   "ML|G3|1|1B|5": [
+    "bertutur untuk menyampaikan pandangan dan maklumat (2.3)",
+    "berbincang untuk mengemukakan pandangan tentang pentingnya menggunakan bahasa beralas (5.2)",
+    "bertutur untuk menyokong pandangan dengan sebab yang sesuai (2.3)"
+   ],
+   "ML|G3|1|1B|6": [
+    "bertutur untuk menerangkan pendapat (2.3)"
+   ],
+   "ML|G3|1|1B|8": [
+    "bertutur untuk mengaitkan dengan pengalaman peribadi dan kehidupan sebenar (2.3)",
+    "Berbincang untuk mengemukakan pandangan dengan alasan yang wajar (5.2)",
+    "bertutur untuk menyampaikan infografik dengan yakin, berkesan dan jelas (2.1)"
+   ],
+   "ML|H|1|1A|1": [
+    "mendengar dan melihat teks untuk membuat inferens tentang asal usul bahasa dengan tepat (1.1)",
+    "bertutur untuk menerangkan pandangan dengan perincian yang sesuai tentang bahasa (2.3)",
+    "berbincang untuk mengemukakan pandangan tentang manfaat mempelajari bahasa Melayu (5.2)"
+   ],
+   "ML|H|1|1A|4": [
+    "bertutur untuk menerangkan pandangan dengan perincian yang sesuai tentang muzik (2.3)"
+   ],
+   "ML|G3|1|1A|1": [
+    "mendengar ulasan produk dalam video untuk menyampaikan semula kandungannya dengan betul. (1.1), membaca artikel di media sosial untuk membuat rumusan. (3.4)",
+    "Bertutur untuk menyampaikan idea tentang corak kasut yang dipilih. (2.2)"
+   ],
+   "ML|G3|1|1A|2": [
+    "Bertutur untuk menerangkan pendapat tentang perkongsian yang dibaca (2.3)",
+    "Mendengar perbualan dalam video tentang kesan sesuatu perbuatan dan memberikan pandangan yang wajar (1.2)",
+    "Bertutur untuk menerangkan pendapat tentang tindakan yang akan diambil berdasarkan situasi (2.3)"
+   ],
+   "ML|G3|1|1A|3": [
+    "mendengar sambal menonton video mengenai CCA untuk membuat inferens (1.1)",
+    "bertutur untuk menyampaikan maklumat tentang kegiatan-kegiatan CCA (2.2)",
+    "berbincang untuk mengemukakan pandangan tentang cabaran -cabaran yang dihadapi (5.2)"
+   ],
+   "ML|G3|1|1A|4": [
+    "bertutur untuk menyampaikan pandangan dan maklumat tentang muzik atau lagu (2.3)",
+    "berbincang untuk mengemukakan pandangan tentang pilihan senarai lagu (5.2)",
+    "berbincang untuk mengubah suai lagu(5.2)"
+   ],
+   "ML|G2|1|1A|3": [
+    "bertutur untuk menceritakan pengalaman tentang kumpulan sembang (2.2)",
+    "mendengar dengan penyertaan visual teks untuk menilai isi dan membuat kesimpulan (1.3)",
+    "bertutur untuk menyampaikan semula isi dalam bentuk poster (2.2)"
+   ],
+   "ML|G2|1|1A|4": [
+    "bertutur untuk menerangkan pandangan tentang muzik dan mengaitkan pengalaman peribadi (2.3)",
+    "bertutur untuk menceritakan sesuatu pengalaman tentang lagu kontemporari yang digabungkan dengan elemen muzik tradisional (2.2)",
+    "mendengar untuk menyampaikan semula isi (1.1)"
+   ],
+   "ML|G1|1|1A|1": [
+    "mendengar perkongsian rakan dan menyampaikan maklumat tentang rakan berdasarkan panduan (1.1)",
+    "bertutur untuk berkongsi maklumat tentang diri (2.2)"
+   ],
+   "ML|G1|1|1A|2": [
+    "mendengar dan menyampaikan isi utama video yang ditonton (1.1)",
+    "bertutur untuk menerangkan pandangan tentang ciri-ciri ketua darjah berdasarkan panduan (2.3)",
+    "berbincang untuk mengemukakan pandangan tentang tindakan yang perlu diambil (5.2)"
+   ],
+   "ML|G1|1|1A|3": [
+    "mendengar dan menyampaikan semula isi utama dalam video (1.1)",
+    "bertutur untuk menerangkan pengalaman menyertai kegiatan kokurikulum (2.3)",
+    "berbincang untuk mengemukakan pandangan tentang dilema yang dihadapi oleh watak dalam cerita (5.2)"
+   ],
+   "ML|G1|1|1A|4": [
+    "bertutur untuk menerangkan pandangan tentang maklumat lagu (2.3)",
+    "mendengar teks lisan (lagu) untuk menghayati isi (1.2)",
+    "berbincang untuk mengemukakan pendapat tentang lagu rakyat (5.2)"
+   ],
+   "ML|G2|1|1B|5": [
+    "mendengar cerita dalam video untuk menyampaikan urutan idea atau peristiwa (1.1)",
+    "bertutur untuk menyatakan isi secara berurutan (2.3)",
+    "bertutur untuk menyampaikan sesuatu perkara dengan menceritakan sesuatu pengalaman (2.2)"
+   ],
+   "ML|G2|1|1B|6": [
+    "bertutur untuk memberikan deskripsi tentang adab makan orang Melayu (2.2)"
+   ],
+   "ML|G2|1|1B|7": [
+    "bertutur untuk menyampaikan pengalaman peribadi (2.2)",
+    "bertutur untuk menerangkan idea dengan menyatakan isi secara berurutan (2.3)"
+   ],
+   "ML|G2|1|1B|8": [
+    "bertutur untuk menyokong pandangan tentang reaksi seseorang dengan perincian yang sesuai (2.3)",
+    "bertutur untuk berkongsi pengalaman peribadi tentang perbuatan baik yang pernah dilakukan (2.3):"
+   ],
+   "ML|G1|1|1B|5": [
+    "bertutur untuk menceritakan sesuatu pengalaman (2.2)"
+   ],
+   "ML|G1|1|1B|6": [
+    "bertutur untuk menyampaikan ciri-ciri ‘Orang Singapura’ (2.2)",
+    "mendengar isi dan menyampaikan semula isi video yang ditonton (1.1)",
+    "bertutur untuk menyokong pandangan tentang sebab mereka bangga menjadi ‘Orang Singapura’ (2.3)"
+   ],
+   "ML|G1|1|1B|8": [
+    "mendengar dan menyampaikan semula isi utama video yang ditonton (1.1)",
+    "bertutur untuk menyatakan produk yang dihasilkan secara berurutan (2.3)",
+    "berbincang untuk mengemukakan pandangan tentang aktiviti memelihara alam di sekolah (5.2)"
+   ],
+   "ML|H|2|2B|5": [
+    "bertutur untuk menerangkan pendapat mereka tentang penghasilan kandungan media sosial (2.3)",
+    "berbincang untuk mengaitkan idea dengan pengalaman peribadi (5.2)",
+    "mendengar cerita dalam video untuk menilai isi tentang pengaruh media sosial (1.3)",
+    "berbincang untuk mengemukakan pandangan tentang kesan media sosial terhadap kehidupan pengguna (5.2)"
+   ],
+   "ML|H|2|2B|6": [
+    "bertutur untuk menjelaskan cara-cara seseorang dapat membuktikan cintanya terhadap aspek kehidupan yang dipilih (2.2)",
+    "berbincang untuk mengemukakan pandangan tentang takrifan cinta (5.2)"
+   ],
+   "ML|H|2|2B|7": [
+    "mendengar penerangan dalam video untuk menghayati isi tentang ilmu dan kemahiran dalam pekerjaan masa depan (1.1)",
+    "bertutur untuk menerangkan pandangan tentang kajian mengenai pekerjaan masa depan (2.3)",
+    "mendengar cerita dalam vodcast untuk menilai isi tentang latar belakang individu yang menghadapi cabaran dalam pekerjaan (1.3)",
+    "berbincang untuk mengemukakan pendapat tentang pandangan individu mengenai sesuatu perkara (5.2)"
+   ],
+   "ML|H|2|2B|8": [
+    "bertutur untuk menyampaikan papan visi (2.2)",
+    "mendengar penerangan dalam video untuk memahami langkah-langkah menjalankan debat (1.1)",
+    "berbincang untuk menyokong atau menolak pandangan orang lain dalam debat (5.3)"
+   ],
+   "ML|G1|2|2B|5": [
+    "berbincang untuk mengemukakan pendapat tentang ciri -ciri seseorang yang dipengaruhi oleh trend (5.2)",
+    "mendengar untuk menghayati dan memberikan pandangan tentang cerita dalam video (1.2)"
+   ],
+   "ML|G1|2|2B|6": [
+    "mendengar temu bual pemilik haiwan dalam video untuk memberikan pandangan (1.2)",
+    "bertutur untuk memberikan penerangan tentang pelbagai jenis cinta dan dikaitkan dengan pengalaman peribadi (2.3)"
+   ],
+   "ML|G1|2|2B|7": [
+    "Mendengar untuk menghayati dan memberikan pandangan tentang cerita dalam video (1.2)",
+    "berbincang untuk mengaitkan p andangan tentang kemahiran dan pekerjaan dengan pengalaman peribadi (5.2)",
+    "berbincang untuk bersoal jawab dalam sesi temu duga (5.2)"
+   ],
+   "ML|G1|2|2B|8": [
+    "mendengar cerita dalam video untuk membuat kesimpulan tentang aspirasi seorang remaja (1.3)",
+    "bertutur untuk menerangkan pendapat tentang minda yang positif (2.3)",
+    "berbincang untuk mengemukakan pandangan tentang aktiviti mengenal kelebihan diri (5.2)"
+   ],
+   "ML|G2|2|2B|5": [
+    "bertutur untuk menerangkan pandangan dengan alasan yang sesuai tentang pengaruh media sosial (2.3)"
+   ],
+   "ML|G2|2|2B|6": [
+    "bertutur untuk menerangkan pandangan tentang erti cinta (2.3)",
+    "berbincang untuk mengemukakan pandangan tentang peranan cinta dan media massa (5.2)"
+   ],
+   "ML|G2|2|2B|7": [
+    "bertutur untuk menerangkan pandangan tentang perkongsian di media sosial (2.3)"
+   ],
+   "ML|G2|2|2B|8": [
+    "bertutur untuk menerangkan idea dengan bukti tentang pengaruh aspirasi watak (2.3)",
+    "mendengar penerangan dalam video tentang perjalanan watak mencapai aspirasi (1.1)"
+   ],
+   "ML|G3|2|2A|1": [
+    "bertutur untuk mengaitkan teks yang dibaca dengan pengalaman peribadi (2.3)"
+   ],
+   "ML|G3|2|2A|2": [
+    "bertutur untuk menerangkan pandangan dengan memberikan perincian (pengalaman atau pengamatan) yang sesuai (2.3)",
+    "bertutur untuk menyampaikan dapatan kajian tentang cara-cara penjagaan diri berdasarkan kategori (2.2)",
+    "mendengar penerangan dalam video kepentingan penjagaan dirir untuk menghubungkaitkan maklumat dengan kehidupan sebenar (1.2)"
+   ],
+   "ML|G3|2|2A|3": [
+    "bertutur untuk menceritakan sesuatu pengalaman (2.2)",
+    "mendengar maklumat dalam video untuk membuat kesimpulan (1.3)"
+   ],
+   "ML|G3|2|2A|4": [
+    "berbincang untuk membuat penilaian tentang pengembaraan dan memberikan pandangan (5.3)",
+    "mendengar teks lisan dengan penyertaan visual untuk menyaring dan memilih maklumat (1.3)",
+    "bertutur untuk menerangkan pandangan dengan mengembangkan isi (2.3)",
+    "bertutur untuk menceritakan pengalaman mengembara melalui vlog (2.2)"
+   ],
+   "ML|H|2|2A|1": [
+    "bertutur untuk menceritakan pengalaman sewaktu hujung minggu dan cuti sekolah (2.2)",
+    "mendengar dan melihat video untuk menyaring maklumat (1.3)",
+    "berbincang untuk mengemukakan pandangan tentang pernyataan mengenai masa senggang (5.2)"
+   ],
+   "ML|H|2|2A|4": [
+    "berbincang untuk mengemukakan idea menjadi seorang perantau (5.2)",
+    "berbincang untuk membuat penilaian tentang maksud peribahasa yang dikemukakan (5.3)"
+   ],
+   "ML|G2|2|2A|1": [
+    "bertutur untuk menceritakan aktiviti masa senggang dan manfaatnya (2.3)"
+   ],
+   "ML|G2|2|2A|2": [
+    "bertutur untuk menerangkan pandangan tentang perasaan watak (2.3)",
+    "berbincang untuk mengemukakan pandangan tentang kekuatan dan kelemahan diri (5.2)",
+    "berbincang untuk mengemukakan idea atau pandangan tentang pelan tindakan untuk mengatasi kelemahan (5.2)"
+   ],
+   "ML|G2|2|2A|3": [
+    "bertutur untuk menceritakan sesuatu pengalaman yang meninggalkan kesan dalam kehidupan (2.3)",
+    "mendengar cerita dalam video untuk menyaring memilih maklumat tentang tanggungjawab keluarga watak (1.3)"
+   ],
+   "ML|G2|2|2A|4": [
+    "mendengar penerangan dalam video tentang tempat-tempat menarik di Singapura untuk membuat keputusan (1.3)",
+    "bertutur untuk menerangkan pandangan tentang destinasi berbasikal (2.3)",
+    "berbincang untuk mengemukakan idea tentang perancangan berbasikal (5.2)",
+    "berbincang untuk mengemukakan idea tentang perancangan projek inisiatif pelajar (5.2)"
+   ],
+   "ML|G1|2|2A|1": [
+    "bertutur untuk menceritakan aktiviti yang boleh dilakukan pada masa senggang (2.2)",
+    "mendengar dan menyampaikan semula isi utama dalam video (1.1)",
+    "bertutur untuk berkongsi pengalaman peribadi tentang aktiviti yang ingin dilakukan (2.3)"
+   ],
+   "ML|G1|2|2A|2": [
+    "bertutur untuk menceritakan pengalaman peribadi tentang kegiatan bersenam (2.2)",
+    "mendengar isi yang disampaikan dalam video untuk menghubungkaitkan dengan pengalaman peribadi (1.2)"
+   ],
+   "ML|G1|2|2A|3": [
+    "mendengar isi utama dalam video untuk menghubungkaitkan maklumat dengan pengalaman peribadi (1.2)",
+    "bertutur untuk menceritakan sesuatu pengalaman yang meninggalkan kesan dalam kehidupan (2.3)",
+    "bertutur tentang pengalaman watak yang mendewasakan dengan yakin, berkesan dan jelas (2.1)"
+   ],
+   "ML|G1|2|2A|4": [
+    "mendengar isi utama dalam video untuk disampaikan semula secara berurutan (1.1)",
+    "bertutur untuk menceritakan pengalaman peribadi tentang persiapan membuat lawatan (2.2)",
+    "berbincang untuk mengemukakan pendapat tentang persiapan untuk ke sesuatu tempat (5.2)",
+    "bertutur untuk menerangkan cara merakam kenangan semasa mengembara (2.2)"
+   ],
+   "ML|H|3||1": [
+    "berbincang untuk mengemukakan pandangan tentang isu menghormati hak orang lain (5.2)",
+    "menonton video untuk membuat kesimpulan mengenai hak dan tanggungjawab (1.3)",
+    "berbincang untuk mengemukakan pandangan tentang pengisytiharan hak asasi manusia (5.2)",
+    "berbincang untuk menyokong dan mengembangkan pandangan orang lain dalam Langkah-Hadap-Masalah (5.3)"
+   ],
+   "ML|H|3||2": [
+    "mendengar cerita dalam video untuk menilai isi dan cara isi disampaikan (1.2)"
+   ],
+   "ML|H|3||3": [
+    "mendengar penerangan dalam video untuk menganalisis maklumat mengenai tokoh dan ciri-ciri ketokohan (1.3)",
+    "bertutur untuk berkongsi pengalaman tentang kesan kehadiran individu (2.2)"
+   ],
+   "ML|H|3||4": [
+    "bertutur untuk menyampaikan maklumat mengenai keusahawanan sosial (2.2)",
+    "bertutur untuk menyampaikan pelan tindakan (2.2)",
+    "Pada akhir pelajaran, pelajar dapat:bertutur dalam bentuk rakaman video untuk menyampaikan teks penyampaian (2.3)"
+   ],
+   "ML|H|3||5": [
+    "mendengar dan melihat untuk memahami isi, membuat inferens dan mengemukakan pelbagai soalan berdasarkan video (1.1)",
+    "berbincang untuk menyokong atau menolak pandangan orang lain bagi mencapai keputusan (5.3)"
+   ],
+   "ML|H|3||6": [
+    "bertutur untuk menceritakan kehidupan di pulau terpencil (2.2)",
+    "berbincang untuk membuat kesimpulan mengenai kebergantungan antara negara-negara di dunia (5.3)",
+    "mendengar penerangan dalam video mengenai kecerdasan budaya untuk menghubungkaitkan maklumat dengan kehidupan sebenar (1.2)",
+    "bertutur untuk menceritakan pengalaman peribadi tentang negara- negara jiran di rantau ASEAN (2.3)",
+    "berbincang untuk mengembangkan isi mengenai empat faktor kecerdasan budaya (5.2); dan mengaitkan ehwal semasa dengan topik perbincangan",
+    "bertutur untuk menerangkan identiti warga dunia (2.3)",
+    "berbincang untuk mengemukakan ciri warga dunia yang lebih peka dan prihatin (5.2)"
+   ],
+   "ML|G3|3||2": [
+    "bertutur untuk menerangkan pandangan tentang ekspresi diri (2.3)",
+    "berbincang untuk membuat penilaian bagi menyokong atau menolak pandangan yang diberikan tentang peranan media sosial (5.3)",
+    "berbincang untuk mengemukakan pandangan tentang cara mengekspresikan diri dengan bertanggungjawab (5.2)"
+   ],
+   "ML|G3|3||3": [
+    "berbincang tentang dapatan pemerhatian sosial yang dijalankan untuk mengaitkan pandangan denganpengalaman peribadi (5.2)"
+   ],
+   "ML|G3|3||4": [
+    "mendengar cerita dalam video untuk memberikan pendapat yang wajar mengenai perusahaan sosial (1.2)",
+    "bertutur untuk menyampaikan isi tentang konsep perusahaan sosial (2.2)",
+    "mendengar ucapan kumpulan untuk menilai isi berdasarkan rubrik penyampaian (1.3)"
+   ],
+   "ML|G3|3||5": [
+    "mendengar temu ramah dalam video untuk memahami isi dan membuat inferens tentang kejadian yang berlaku (1.1)",
+    "berbincang untuk mengemukakan pendapat setelah membuat kajian di Internet (5.2)",
+    "berbincang untuk menyokong atau menolak pandangan orang lain bagi mencapai keputusan (5.3)"
+   ],
+   "ML|G3|3||6": [
+    "bertutur untuk menerangkan pandangan tentang konsep kebergantungan (2.3)",
+    "berbincang untuk mengaitkan idea tentang kebergantungan dengan pengalaman peribadi. (5.2)",
+    "mendengar penerangan dalam video untuk menghubungkaitkan maklumat dengan kehidupan sebenar (1.2)",
+    "bertutur untuk menerangkan pandangan tentang Kecerdasan budaya (2.3)"
+   ],
+   "ML|G2|3||1": [
+    "bertutur untuk menerangkan pandangan tentang hak dan mengaitkan dengan pengalaman peribadi (2.3)",
+    "berbincang untuk untuk menyokong atau menolak pandangan orang lain bagi mencapai keputusan (5.3)"
+   ],
+   "ML|G2|3||2": [
+    "bertutur untuk menerangkan cara mengekspresikan diri (2.3)",
+    "mendengar penerangan dalam video tentang sebab watak memilih cara mengekspresikan diri untuk membuat keputusan (1.3)"
+   ],
+   "ML|G2|3||3": [
+    "menonton video untuk menyatakan sumbangan tokoh kepada masyarakat (1.3)",
+    "berbincang untuk mengemukakan pandangan tentang ciri-ciri ketokohan (5.2)",
+    "bertutur dengan memberikan deskrispsi berkenaan tokoh pilihan melalui infografik (2.2)"
+   ],
+   "ML|G2|3||4": [
+    "bertutur untuk menyampaikan semula mesej perniagaan yang membantu masyarakat (2.2)",
+    "mendengar penerangan dalam video tentang kesan perniagaan yang membantu masyarakat untuk membuat keputusan (1.3)",
+    "mendengar penyampaian perancangan perniagaan rakan untuk menilai (1.3)",
+    "bertutur untuk menyampaikan perancangan perniagaan yang membantu masyarakat (2.2)"
+   ],
+   "ML|G2|3||5": [
+    "bertutur untuk menerangkan pandangan tentang misteri yang dibincangkan (2.3)",
+    "menonton video untuk memahami sebab orang ramai menggemari saluran misteri di media sosial (1.3)",
+    "berbincang untuk mengemukakan pandangan tentang sebab - sebab ramai orang menggemari misteri (5.1)"
+   ],
+   "ML|G2|3||6": [
+    "bertutur untuk menerangkan pendapat dan pandangan (2.3)",
+    "mendengar dan menonton wawancara dalam video untuk menghayati isi (1.3)"
+   ],
+   "ML|G1|3||1": [
+    "berbincang untuk mengemukakan pandangan dengan memberikan perincian tentang hak dan tanggungjawab (5.2)",
+    "bertutur untuk menerangkan idea tentang hak pembeli dan mengaitkannya dengan kehidupan sebenar (2.3)",
+    "bertutur untuk bertukar -tukar fikiran tentang cara untuk memenuhi hak masing-masing (2.2)"
+   ],
+   "ML|G1|3||2": [
+    "bertutur untuk menerangkan cara mengekspresikan diri (2.3)",
+    "mendengar penerangan dalam video tentang cara mengekspresikan diri (1.3)",
+    "berbincang untuk menerangkan pandangan tentang sebab kita perlu mengekspresikan diri (5.2)"
+   ],
+   "ML|G1|3||3": [
+    "berbincang untuk mengemukakan pandangan tentang ciri, sumbangan dan cabaran seorang suri teladan (5.2)",
+    "menonton video untuk menyatakan sumbangan seorang suri teladan kepada masyarakat (1.3)",
+    "bertutur untuk menerangkan pandangan tentang seorang suri teladan (2.3)"
+   ],
+   "ML|G1|3||4": [
+    "bertutur untuk menyampaikan semula isi tentang perniagaan yang membantu masyarakat (2.2)",
+    "berbincang untuk mengemukakan idea tentang isu sosial(5.2)",
+    "mendengar dan memahami usaha untuk membantu masyarakat yang disampaikan dalam video (1.1)",
+    "bertutur untuk berkongsi rancangan perniagaan yang membantu masyarakat (2.3)",
+    "bertutur untuk menyampaikan usaha perniagaan yang membantu masyarakat (2.2)"
+   ],
+   "ML|G1|3||5": [
+    "bertutur untuk menerangkan pandangan tentang misteri yang dibincangkan (2.3)",
+    "menonton video untuk memahami sebab misteri popular dalam kalangan masyarakat (1.3)",
+    "bertutur untuk menerangkan pandangan tentang sebab ramai orang menggemari misteri (2.3)"
+   ],
+   "ML|G1|3||6": [
+    "bertutur untuk menerangkan idea tentang asal sesuatu barang kaitannya dengan diri pelajar dengan dunia luar (2.3)",
+    "berbincang untuk mengemukakan dan menyokong idea tentang ciri-ciri yang dimiliki oleh warga dunia (5.2)",
+    "mendengar cerita dalam video untuk membincangkan usaha menangani isu global (1.3)"
+   ],
+   "ML|H|4||1": [
+    "menonton video untuk mendapatkan dan menganalisis maklumat tentang ciptaan teknologi yang wujud di Bandar Pintar (1.3)",
+    "bertutur untuk menerangkan idea atau pandangan tentang gangguan teknologi (2.3)",
+    "bertutur untuk menerangkan sikap yang perlu dimiliki untuk mengharungi situasi ketidaktentuan (2.3)",
+    "berbincang untuk mengemukakan pandangan tentang sikap (5.2)"
+   ],
+   "ML|G2|4||1": [
+    "bertutur untuk menerangkan idea yang berkaitan dengan kecerdasan buatan (2.3)",
+    "bertutur untuk menerangkan pandangan tentang manfaat dan peluang menggunakan kecerdasan buatan (5.2)"
+   ],
+   "ML|G2|4||2": [
+    "bertutur untuk menerangkan ciri-ciri kepemimpinan (2.3)",
+    "bertutur untuk menerangkan pandangan tentang cabaran yang dihadapi singapura (5.2)"
+   ],
+   "ML|G1|4||1": [
+    "bertutur untuk menerangkan idea tentang kecerdasan buatan (2.3)",
+    "mendengar penerangan dalam video tentang cabaran dan manfaat menggunakan kecerdasan buatan (1.3)"
+   ]
+  }
+ },
+ "tlUnits": {
+  "TL|G1|1|A|1": {
+   "theme": "மாற்றம் / புதிய தொடக்கம்",
+   "periods": "15"
+  },
+  "TL|G1|1|A|2": {
+   "theme": "மரபும் பண்பாடும் / அறுவடைத் திருநாள்",
+   "periods": "15"
+  },
+  "TL|G1|1|A|3": {
+   "theme": "உறவுகள் / தமிழும் நானும்",
+   "periods": "15"
+  },
+  "TL|G1|1|A|4": {
+   "theme": "பண்புநலன் / வாழ்க்கைத்திறன்",
+   "periods": "15"
+  },
+  "TL|G1|1|B|1": {
+   "theme": "சுகாதாரமும் உடல்நலமும் / உடல்நலம் பேணல்",
+   "periods": "15"
+  },
+  "TL|G1|1|B|2": {
+   "theme": "அறிவியலும் தொழில்நுட்பமும் / இணையம்",
+   "periods": "15"
+  },
+  "TL|G1|1|B|3": {
+   "theme": "இயற்கையும் சுற்றுச்சூழலும் / நீர் மேலாண்மை",
+   "periods": "15"
+  },
+  "TL|G2|1|A|1": {
+   "theme": "மாற்றம் / புதிய தொடக்கம்",
+   "periods": "20"
+  },
+  "TL|G2|1|A|2": {
+   "theme": "மரபும் பண்பாடும் / அறுவடைத் திருநாள்",
+   "periods": "20"
+  },
+  "TL|G2|1|A|3": {
+   "theme": "",
+   "periods": ""
+  },
+  "TL|G2|1|A|4": {
+   "theme": "வாழ்க்கைத் திறன்கள் / குறிக்கோள்",
+   "periods": "20"
+  },
+  "TL|G2|1|B|1": {
+   "theme": "சுகாதாரமும் உடல்நலமும் / உடல்நலம் பேணல்",
+   "periods": "20"
+  },
+  "TL|G2|1|B|2": {
+   "theme": "அறிவியலும் தொழில்நுட்பமும் / இணையம்",
+   "periods": "20"
+  },
+  "TL|G2|1|B|3": {
+   "theme": "இயற்கையும் சுற்றுச்சூழலும் / நீர் மேலாண்மை",
+   "periods": "20"
+  },
+  "TL|G3|1|A|1": {
+   "theme": "",
+   "periods": "24"
+  },
+  "TL|G3|1|A|2": {
+   "theme": "",
+   "periods": "24"
+  },
+  "TL|G3|1|A|3": {
+   "theme": "உறவுகள் / தமிழும் நானும்",
+   "periods": "24"
+  },
+  "TL|G3|1|A|4": {
+   "theme": "வாழ்க்கைத் திறன்கள் / குறிக்கோள்",
+   "periods": "20"
+  },
+  "TL|G3|1|B|1": {
+   "theme": "சுகாதாரமும் உடல்நலமும் / உடல்நலம் பேணல்",
+   "periods": "23"
+  },
+  "TL|G3|1|B|2": {
+   "theme": "அறிவியலும் தொழில்நுட்பமும் / இணையம்",
+   "periods": "24"
+  },
+  "TL|G3|1|B|3": {
+   "theme": "",
+   "periods": "24"
+  },
+  "TL|G3|1|B|4": {
+   "theme": "",
+   "periods": ""
+  },
+  "TL|G3|1|B|5": {
+   "theme": "",
+   "periods": ""
+  },
+  "TL|H|1|A|1": {
+   "theme": "மாற்றம் / புதிய அனுபவம்",
+   "periods": "18"
+  },
+  "TL|H|1|A|2": {
+   "theme": "",
+   "periods": "18"
+  },
+  "TL|H|1|A|3": {
+   "theme": "உறவு  / / தமிழும் நானும்",
+   "periods": "19"
+  },
+  "TL|H|1|A|4": {
+   "theme": "வாழ்க்கைத்திறன்கள் / என் குறிக்கோள்",
+   "periods": "18"
+  },
+  "TL|H|1|B|1": {
+   "theme": "சுகாதாரமும் உடல்நலமும் / உடல்நலம் பேணல்",
+   "periods": "18"
+  },
+  "TL|H|1|B|2": {
+   "theme": "அறிவியல் தொழில்நுட்பம் / இணையம்",
+   "periods": "18"
+  },
+  "TL|H|1|B|3": {
+   "theme": "இயற்கையும் சுற்றுச்சூழலும் / நீர் மேலாண்மை",
+   "periods": "18"
+  },
+  "TL|G1|2|B|1": {
+   "theme": "அறிவியலும் தொழில்நுட்பமும் / நேற்று இன்று நாளை",
+   "periods": "15"
+  },
+  "TL|G1|2|B|2": {
+   "theme": "வாழ்க்கைத்திறன்கள் / நிதியறிவு",
+   "periods": "15"
+  },
+  "TL|G1|2|B|3": {
+   "theme": "சமூகமும் நாடும் / : சமூகத்தில் இளைஞர்கள்",
+   "periods": "15"
+  },
+  "TL|G1|2|A|1": {
+   "theme": "உறவுகள் / நட்பு",
+   "periods": "15"
+  },
+  "TL|G1|2|A|2": {
+   "theme": "பொழுதுபோக்கும் கலைகளும் / பொழுதுபோக்கு",
+   "periods": "15"
+  },
+  "TL|G1|2|A|3": {
+   "theme": "இயற்கையும் சுற்றுச்சூழலும் / சுற்றுச்சூழல் பாதுகாப்பு",
+   "periods": "15"
+  },
+  "TL|G1|2|A|4": {
+   "theme": "மரபும் பண்பாடும் / பண்பாட்டு நெறிகளும் விழுமியங்களும்",
+   "periods": "15"
+  },
+  "TL|G2|2|B|1": {
+   "theme": "அறிவியலும் தொழில்நுட்பமும் / நேற்று இன்று நாளை",
+   "periods": "20"
+  },
+  "TL|G2|2|B|2": {
+   "theme": "வாழ்க்கைத் திறன் / நிதியறிவு",
+   "periods": "20"
+  },
+  "TL|G2|2|B|3": {
+   "theme": "சமூகமும் நாடும் / இளைஞர்களும் சமூகமும்",
+   "periods": "20"
+  },
+  "TL|G2|2|A|1": {
+   "theme": "உறவுகள் / நட்பு",
+   "periods": "20"
+  },
+  "TL|G2|2|A|2": {
+   "theme": "பொழுதுபோக்கும் கலைகளும் / பொழுதுபோக்கு",
+   "periods": "20"
+  },
+  "TL|G2|2|A|3": {
+   "theme": "இயற்கையும் சுற்றுச்சூழலும் / சுற்றுச்சூழல் பாதுகாப்பு",
+   "periods": "20"
+  },
+  "TL|G2|2|A|4": {
+   "theme": "பண்பாட்டு நெறிகளும் விழுமியங்களும் / தமிழ்நாட்டு மன்னர்கள்",
+   "periods": "20"
+  },
+  "TL|G3|2|B|1": {
+   "theme": "அறிவியலும் தொழில்நுட்பமும் / நேற்று இன்று நாளை",
+   "periods": "27"
+  },
+  "TL|G3|2|B|2": {
+   "theme": "வாழ்க்கைத் திறன்கள் / நிதியறிவு",
+   "periods": "24"
+  },
+  "TL|G3|2|B|3": {
+   "theme": "சமூகமும் நாடும் / இளைஞர்களும் சமூகமும்",
+   "periods": "22"
+  },
+  "TL|G3|2|A|1": {
+   "theme": "உறவுகள் / நட்பு",
+   "periods": "24"
+  },
+  "TL|G3|2|A|2": {
+   "theme": "பொழுதுபோக்கும் கலைகளும்  <w:t xml:space=\"preserve\"> / பொழுதுபோக்கு",
+   "periods": "24"
+  },
+  "TL|G3|2|A|3": {
+   "theme": "",
+   "periods": "24"
+  },
+  "TL|G3|2|A|4": {
+   "theme": "மரபும் பண்பாடும் / தமிழ்நாட்டு மன்னர்கள்",
+   "periods": "23"
+  },
+  "TL|H|2|B|1": {
+   "theme": "அறிவியலும் தொழில்நுட்பமும் / நேற்று இன்று நாளை",
+   "periods": "24"
+  },
+  "TL|H|2|B|2": {
+   "theme": "வாழ்க்கைத் திறன்கள் / நிதியறிவு",
+   "periods": "24"
+  },
+  "TL|H|2|B|3": {
+   "theme": "சமூகமும் நாடும் / இளைஞர்களும் சமூகமும்",
+   "periods": "24"
+  },
+  "TL|H|2|A|1": {
+   "theme": "உறவுகள் / நட்பு",
+   "periods": "18"
+  },
+  "TL|H|2|A|2": {
+   "theme": "பொழுதுபோக்கும் கலைகளும் / பொழுதுபோக்கு",
+   "periods": "18"
+  },
+  "TL|H|2|A|3": {
+   "theme": "இயற்கையும் சுற்றுச்சூழலும் / சுற்றுச்சூழல் பாதுகாப்பு",
+   "periods": "18"
+  },
+  "TL|H|2|A|4": {
+   "theme": "மரபும் பண்பாடும் / பண்பாட்டு நெறிகளும் விழுமியங்களும்",
+   "periods": "18"
+  },
+  "TL|G1|3||1": {
+   "theme": "பொழுதுபோக்கும் கலைகளும்                                                       </w:r><w:r w:rsidR=\"00532A8E\"><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:b/><w:bCs/><w:color w:val=\"000000\" w:themeColor=\"text1\"/><w:lang w:val=\"it-IT\"/></w:rPr><w:t xml:space=\"preserve\"> / கலைகள்",
+   "periods": "15"
+  },
+  "TL|G1|3||2": {
+   "theme": "உறவுகள்                                                            </w:r><w:r w:rsidR=\"005F226B\" w:rsidRPr=\"00D33446\"><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:b/><w:bCs/><w:color w:val=\"000000\" w:themeColor=\"text1\"/><w:cs/><w:lang w:val=\"it-IT\" w:bidi=\"ta-IN\"/></w:rPr><w:t xml:space=\"preserve\"> / நானும் என் உறவுகளும்",
+   "periods": "15"
+  },
+  "TL|G1|3||3": {
+   "theme": "வாழ்க்கைத் திறன்கள்                                              </w:r><w:r w:rsidR=\"00D06FE6\" w:rsidRPr=\"00D33446\"><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:eastAsia=\"Calibri\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:b/><w:bCs/><w:color w:val=\"000000\" w:themeColor=\"text1\"/><w:sz w:val=\"20\"/><w:szCs w:val=\"20\"/><w:cs/><w:lang w:val=\"it-IT\" w:bidi=\"ta-IN\"/></w:rPr><w:t xml:space=\"preserve\"> / தலைமைத்துவப் பண்புகள்",
+   "periods": "15"
+  },
+  "TL|G1|3||4": {
+   "theme": "இயற்கையும் சுற்றுச்சூழலும்                       </w:r><w:r w:rsidR=\"00D33446\"><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:b/><w:bCs/><w:color w:val=\"000000\" w:themeColor=\"text1\"/><w:lang w:val=\"it-IT\"/></w:rPr><w:t xml:space=\"preserve\"> / இயற்கையோடு இயைந்த வாழ்க்கை",
+   "periods": "15"
+  },
+  "TL|G1|3||5": {
+   "theme": "மரபும் பண்பாடும்                                                                     </w:r><w:r w:rsidR=\"00025F9E\" w:rsidRPr=\"00D33446\"><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:eastAsia=\"Calibri\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:b/><w:bCs/><w:color w:val=\"000000\" w:themeColor=\"text1\"/><w:sz w:val=\"20\"/><w:szCs w:val=\"20\"/><w:cs/><w:lang w:val=\"it-IT\" w:bidi=\"ta-IN\"/></w:rPr><w:t xml:space=\"preserve\"> / தமிழர் வாழ்வியல்",
+   "periods": "15"
+  },
+  "TL|G1|3||6": {
+   "theme": "சுகாதாரமும் உடல்நலமும்                                                    </w:r><w:r w:rsidR=\"001A4AD1\" w:rsidRPr=\"00D33446\"><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:eastAsia=\"Calibri\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:b/><w:bCs/><w:color w:val=\"000000\" w:themeColor=\"text1\"/><w:sz w:val=\"20\"/><w:szCs w:val=\"20\"/><w:cs/><w:lang w:val=\"it-IT\" w:bidi=\"ta-IN\"/></w:rPr><w:t xml:space=\"preserve\"> / மனநலம் பேணல்",
+   "periods": "15"
+  },
+  "TL|G1|3||7": {
+   "theme": "உலகமும் நாமும்                                                           </w:r><w:r w:rsidR=\"00221513\" w:rsidRPr=\"00D33446\"><w:rPr><w:rFonts w:ascii=\"Anjal New InaiMathi Sch Book\" w:hAnsi=\"Anjal New InaiMathi Sch Book\" w:cs=\"Anjal New InaiMathi Sch Book\"/><w:b/><w:bCs/><w:color w:val=\"000000\" w:themeColor=\"text1\"/><w:cs/><w:lang w:val=\"it-IT\" w:bidi=\"ta-IN\"/></w:rPr><w:t xml:space=\"preserve\"> / தமிழும் உலகமும்",
+   "periods": "15"
+  },
+  "TL|G2|3||1": {
+   "theme": "பொழுதுபோக்கும் கலைகளும் / கலைகள்",
+   "periods": "21"
+  },
+  "TL|G2|3||2": {
+   "theme": "உறவுகள் / நானும் என் உறவுகளும்",
+   "periods": "21"
+  },
+  "TL|G2|3||3": {
+   "theme": "வாழ்க்கைத் திறன்கள் / தலைமைத்துவப் பண்புகள்",
+   "periods": "21"
+  },
+  "TL|G2|3||4": {
+   "theme": "இயற்கையும் சுற்றுச்சூழலும் / இயற்கையோடு இயைந்த வாழ்க்கை",
+   "periods": "21"
+  },
+  "TL|G2|3||5": {
+   "theme": "மரபும் பண்பாடும் / தமிழர் வாழ்வியல்",
+   "periods": "21"
+  },
+  "TL|G2|3||6": {
+   "theme": "சுகாதாரமும் உடல்நலமும் / மனநலம் பேணல்",
+   "periods": "21"
+  },
+  "TL|G2|3||7": {
+   "theme": "உலகமும் நாமும் / தமிழும் உலகமும்",
+   "periods": "21"
+  },
+  "TL|G3|3||1": {
+   "theme": "பொழுதுபோக்கும் கலைகளும் / கலைகள்",
+   "periods": "24"
+  },
+  "TL|G3|3||2": {
+   "theme": "உறவுகள் / நானும் என் உறவுகளும்",
+   "periods": "24"
+  },
+  "TL|G3|3||3": {
+   "theme": "வாழ்க்கைத் திறன்கள் / தலைமைத்துவப் பண்புகள்",
+   "periods": "24"
+  },
+  "TL|G3|3||4": {
+   "theme": "இயற்கையும் சுற்றுச்சூழலும் / இயற்கையோடு இயைந்த வாழ்க்கை",
+   "periods": "24"
+  },
+  "TL|G3|3||5": {
+   "theme": "மரபும் பண்பாடும் / தமிழர் வாழ்வியல்",
+   "periods": "24"
+  },
+  "TL|G3|3||6": {
+   "theme": "சுகாதாரமும் உடல்நலமும் / மனநலம் பேணல்",
+   "periods": "27"
+  },
+  "TL|G3|3||7": {
+   "theme": "உலகமும் நாமும் / தமிழும் உலகமும்",
+   "periods": "24"
+  },
+  "TL|H|3||1": {
+   "theme": "பொழுதுபோக்கும் கலைகளும் / கலைகள்",
+   "periods": "24"
+  },
+  "TL|H|3||2": {
+   "theme": "உறவுகள் / நானும் என் உறவுகளும்",
+   "periods": "24"
+  },
+  "TL|H|3||3": {
+   "theme": "வாழ்க்கைத் திறன்கள் / தலைமைத்துவப் பண்புகள்",
+   "periods": "24"
+  },
+  "TL|H|3||4": {
+   "theme": "இயற்கையும் சுற்றுச்சூழலும் / இயற்கையோடு இயைந்த வாழ்க்கை",
+   "periods": "24"
+  },
+  "TL|H|3||5": {
+   "theme": "மரபும் பண்பாடும் / தமிழர் வாழ்வியல்",
+   "periods": "24"
+  },
+  "TL|H|3||6": {
+   "theme": "சுகாதாரமும் உடல்நலமும் / மனநலம் பேணல்",
+   "periods": "24"
+  },
+  "TL|H|3||7": {
+   "theme": "உலகமும் நாமும் / தமிழும் உலகமும்",
+   "periods": "24"
+  },
+  "TL|G1|4||1": {
+   "theme": "உறவுகள் / உரிமைகளும் கடமைகளும்",
+   "periods": "15"
+  },
+  "TL|G1|4||2": {
+   "theme": "மரபும் பண்பாடும் / பாரம்பரியமும் பழக்கவழக்கங்களும்",
+   "periods": "15"
+  },
+  "TL|G1|4||3": {
+   "theme": "சமூகமும் நாடும் / நாட்டுருவாக்கம்",
+   "periods": "15"
+  },
+  "TL|G1|4||4": {
+   "theme": "வாழ்க்கைத்திறன்கள் / தொழில்முனைப்பு",
+   "periods": "15"
+  },
+  "TL|G1|4||5": {
+   "theme": "அறிவியலும் தொழில்நுட்பமும் / ஆக்கமும் வளர்ச்சியும்",
+   "periods": "15"
+  },
+  "TL|G1|4||6": {
+   "theme": "உலகமும் நாமும் / புத்தம் புது பூமி",
+   "periods": "15"
+  },
+  "TL|G2|4||1": {
+   "theme": "உறவுகள் / உரிமைகளும் கடமைகளும்",
+   "periods": "20"
+  },
+  "TL|G2|4||2": {
+   "theme": "மரபும் பண்பாடும் / பாரம்பரியமும் பழக்கவழக்கமும்",
+   "periods": "20"
+  },
+  "TL|G2|4||3": {
+   "theme": "சமூகமும் நாடும் / நாட்டுருவாக்கம்",
+   "periods": "20"
+  },
+  "TL|G2|4||4": {
+   "theme": "வாழ்க்கைத் திறன்கள் / தொழில்முனைப்பு",
+   "periods": "20"
+  },
+  "TL|G2|4||5": {
+   "theme": "அறிவியலும் தொழில்நுட்பமும் / ஆக்கமும் வளர்ச்சியும்",
+   "periods": "20"
+  },
+  "TL|G2|4||6": {
+   "theme": "உலகமும் நாமும் / புத்தம் புது பூமி",
+   "periods": "20"
+  },
+  "TL|G3|4||1": {
+   "theme": "உறவுகள் / உரிமைகளும் கடமைகளும்",
+   "periods": "24"
+  },
+  "TL|G3|4||2": {
+   "theme": "மரபும் பண்பாடும் / பாரம்பரியமும் பழக்கவழக்கங்களும்",
+   "periods": "22"
+  },
+  "TL|G3|4||3": {
+   "theme": "சமூகமும் நாடும் / நாட்டுருவாக்கம்",
+   "periods": "23"
+  },
+  "TL|G3|4||4": {
+   "theme": "வாழ்க்கைத் திறன்கள் / தொழில்முனைப்பு",
+   "periods": "23"
+  },
+  "TL|G3|4||5": {
+   "theme": "அறிவியலும் தொழில்நுட்பமும் / ஆக்கமும் வளர்ச்சியும்",
+   "periods": "24"
+  }
+ },
+ "vmv": {
+  "source": "BVSS Strategic Plan 2027 to 2031 (draft for leadership discussion) and Envisioning VMV updates for SCT, 14 Sep 2026",
+  "vision": "Adaptive Learners. Caring Leaders. Ethical Changemakers.",
+  "mission": "Empowering Bukit Viewans to embrace growth, lead with care and make a difference.",
+  "values": "Grit. Empathy. Moral Courage.",
+  "motto": "Care & Share, Achieve & Excel.",
+  "dso": [
    {
-    "q": "Which 2027 WA formats stay as in 2026 (paper versus authentic assessment) for each level?",
-    "why": "Every SOW's Term 2 and Term 3 column depends on it; the S2 WA2 40 Stories and the S1 and S3 WA3 authentic assessments are the department's main E21CC and inquiry touchpoints.",
-    "owner": "HOD with level coordinators",
-    "by": "Term 4 2026 department meeting"
+    "k": "PA_AT",
+    "dso": "Adaptive Learners",
+    "value": "Grit",
+    "i": "I adapt to new situations and adopt a growth mindset.",
+    "focus": "Adaptive Thinking",
+    "domain": "Critical, Adaptive and Inventive Thinking",
+    "lower": "CAIT 3.3, 4.3",
+    "upper": "CAIT 3.4, 4.4",
+    "mtl": "Tasks that take another perspective, weigh a dilemma, change register for a new audience or apply a skill in an unfamiliar context: role-play, debate, functional writing to a new reader, oral Q2 and Q3 (reasons, impact, suggestions)."
    },
    {
-    "q": "Confirm the Sec 4 oral in Term 1 and the prelim written date (29 Jul 2027) for all three languages.",
-    "why": "Recorded in the CL G3 four-year plan draft; the ML and TL SOWs need the same anchor dates.",
-    "owner": "HOD",
-    "by": "Before the 2027 calendar is released to teachers"
+    "k": "PA_CM",
+    "dso": "Caring Leaders",
+    "value": "Empathy",
+    "i": "I communicate with empathy and lead by serving others.",
+    "focus": "Communication (and Collaboration)",
+    "domain": "Communication, Collaboration and Information Skills",
+    "lower": "CCI 1.3, 2.3 (3.3, 4.3)",
+    "upper": "CCI 1.4, 2.4 (3.4, 4.4)",
+    "mtl": "Spoken interaction and functional writing for a real audience and purpose; group discussion with listening and response; presentations and the authentic assessments; oral Q1 (personal experience and perspective-taking)."
    },
    {
-    "q": "Confirm the TL G1 Paper 1 format with the TL unit against SEAB K122.",
-    "why": "The Overview still shows the format as provisional; the TL G1 SOW cannot fix when the exam writing form becomes regular until it is settled.",
-    "owner": "TL unit",
-    "by": "Term 4 2026"
-   },
-   {
-    "q": "Adopt the ten-column frame as the department SOW template, with a Word/Excel export for each unit.",
-    "why": "The stock-take shows three CL formats in use, none for ML and TL on the drive, and no column anywhere for E21CC or inquiry.",
-    "owner": "HOD, then level coordinators",
-    "by": "First SOW draft for Term 1 2027"
-   },
-   {
-    "q": "Choose one guided inquiry per term per level to run department-wide, starting from the sketches on the IBL roadmap.",
-    "why": "CL's guides tag no unit for inquiry (the 综合任务 and 文化探索 in every unit are the openings) and only two CL sketches exist; a department choice avoids each teacher inventing one.",
-    "owner": "Three units",
-    "by": "Term 1 2027 SOWs"
-   },
-   {
-    "q": "Decide what the department's E21CC evidence will be in 2027 (which WA or AA shows each priority area).",
-    "why": "Inferred tags are proposals; evidence of impact needs a product students make (the PLT direction from the LDC conversation).",
-    "owner": "HOD with PLT leads",
-    "by": "Term 1 2027"
+    "k": "PA_CL",
+    "dso": "Ethical Changemakers",
+    "value": "Moral Courage",
+    "i": "I act with courage and integrity to make a positive change.",
+    "focus": "Civic Literacy",
+    "domain": "Civic, Global and Cross-Cultural Literacy",
+    "lower": "CGC 1.3, 2.3",
+    "upper": "CGC 1.4, 2.4",
+    "mtl": "Units on community, Singapore, culture and the world; proposals and reports that address a school or community issue; MT Fortnight, cultural festivals and the 40 Stories project."
    }
   ],
-  "planning": [
+  "note": "Inventive Thinking (CAIT 5 and 6) is not a school focus area in the strategic plan; it stays on this site as a fourth tag because the CPDD guides ask for it in about 23 units."
+ },
+ "grid": {
+  "note": "Rows follow the CPDD Tamil unit-overview (கண்ணோட்டம்) headers, with the columns that only the Malay Skema Pengajaran sample has (Fungsi Bahasa, Nilai Budaya / Arif Budiman, Hasil Pembelajaran, Alat Penilaian dan Kriteria Kejayaan) added. Columns are the four terms.",
+  "rows": [
    {
-    "find": "Communication is the priority area the guides open most often in every language and course.",
-    "impl": "Treat Communication as the default E21CC thread; spend design effort on the three thinner areas.",
-    "next": "Department view below: look down the AT, IT and CL columns."
+    "k": "units",
+    "en": "Units and periods",
+    "src": "TL தொகுதி · பாட வேளை / ML Unit dan Komponen · Minggu"
    },
    {
-    "find": "Measured against MOE's definitions (CAIT 3 to 6), Adaptive Thinking appears in only about 17 units across all three languages and Inventive Thinking in 23, almost all in Sec 3 and 4: debates, adjusting register to the listener, role-based replies, a change of view; community plans, proposals and the food-waste email.",
-    "impl": "These two priority areas will not come from the textbooks. Design them into the authentic assessments and the term inquiry: a dilemma to decide, a perspective to take, an idea to generate and refine.",
-    "next": "Department view below: the AT and IT columns show where each course has nothing."
+    "k": "theme",
+    "en": "Theme and sub-theme",
+    "src": "TL கருப்பொருள் · துணைக்கருப்பொருள்"
    },
    {
-    "find": "ML carries almost all CPDD inquiry tags (STAR Team Inquiry, inquiry tasks usable as a WA) and TL two. The CL guides name 引导——探究 as a teaching mode and end every unit with 文化探索 and 综合任务, which are inquiry-shaped but untagged.",
-    "impl": "Use ML's STAR shape (scenario, team inquiry, application, reflection) as the department's shared inquiry routine; map CL 综合任务 and TL production tasks onto it.",
-    "next": "Exemplars view: the three worked units each end in a STAR-shaped inquiry."
+    "k": "values",
+    "en": "Values and culture",
+    "src": "ML Nilai Budaya / Arif Budiman"
    },
    {
-    "find": "The existing CL SOWs are weekly pacing documents; the skills, exam link and assessment live in a separate yearly grid that only Sec 1 and Sec 2 have.",
-    "impl": "The redesigned SOW merges the two, so the pacing and the purpose sit in one row.",
-    "next": "Read the SOW stock-take (Planning menu)."
+    "k": "skills",
+    "en": "Language skills",
+    "src": "TL மொழித்திறன்கள்"
+   },
+   {
+    "k": "func",
+    "en": "Language functions",
+    "src": "ML Fungsi Bahasa"
+   },
+   {
+    "k": "lo",
+    "en": "Learning outcomes",
+    "src": "TL கற்பித்தல் நோக்கங்கள் / ML Hasil Pembelajaran"
+   },
+   {
+    "k": "fw",
+    "en": "Functional writing tasks (CPDD)",
+    "src": "Teacher guide writing tasks"
+   },
+   {
+    "k": "comp",
+    "en": "Composition tasks (CPDD)",
+    "src": "Teacher guide writing tasks"
+   },
+   {
+    "k": "oral",
+    "en": "Oral tasks (CPDD)",
+    "src": "Teacher guide 听说 / Bertutur / பேசுதல்"
+   },
+   {
+    "k": "listen",
+    "en": "Listening tasks (CPDD)",
+    "src": "Teacher guide 听力 / Mendengar / கேட்டல்"
+   },
+   {
+    "k": "act",
+    "en": "Teaching activities and inquiry",
+    "src": "TL கற்பித்தல் நடவடிக்கைகள் / ML Pengalaman Pembelajaran"
+   },
+   {
+    "k": "res",
+    "en": "Resources",
+    "src": "TL துணைக்கருவிகள் / ML Bahan Pengajaran"
+   },
+   {
+    "k": "moe",
+    "en": "MOE initiatives (CPDD 21CC tags)",
+    "src": "TL கல்வியமைச்சின் முனைப்புகள்"
+   },
+   {
+    "k": "e21",
+    "en": "BVSS E21CC focus and DSO",
+    "src": "Strategic Plan 2027 to 2031"
+   },
+   {
+    "k": "assess",
+    "en": "Assessment and success criteria",
+    "src": "ML Alat Penilaian dan Kriteria Kejayaan · 2026 standardisation"
+   },
+   {
+    "k": "events",
+    "en": "School and MT events",
+    "src": "2027 BVSS calendar"
    }
   ]
  },
- "exemplars": [
-  {
-   "id": "CL|G3|1|1A|6",
-   "lang": "CL",
-   "course": "G3",
-   "sec": 1,
-   "book": "1B",
-   "unit": "6",
-   "title": "小人物 大贡献 · Small people, big contributions",
-   "weeks": "Term 3, weeks 8 to 10 (about 9 periods, 4 in-person lessons a week less HBL)",
-   "why": "Chosen because the 2026 1G3 SOW already teaches it with named learning goals, it feeds the Term 3 authentic assessment (presentation), and its theme is the department's clearest Civic Literacy opening in Sec 1.",
-   "domain": [
-    "community",
-    "nation"
-   ],
-   "lo": [
-    [
-     "Reading",
-     "理解和判断新闻中的事实与意见 (生活空间《我们的无名英雄》; 核心《我为狮城做贡献——走访地铁维修人员》)",
-     "P2 reading 2, open-ended: fact versus opinion items"
-    ],
-    [
-     "Listening",
-     "听出新闻中的事实与意见",
-     "P3 listening comprehension"
-    ],
-    [
-     "Speaking",
-     "根据事实发表意见 (口语互动 #)",
-     "P3 video-prompted conversation: give a view with reasons"
-    ],
-    [
-     "Writing",
-     "根据事实写出意见: 电邮三，分享经验并提出看法（无名英雄，如校工）",
-     "P1 functional writing: personal email with experience and view"
-    ],
-    [
-     "Language",
-     "了解新闻报道的结构",
-     "P2 language use"
-    ]
-   ],
-   "weeksPlan": [
-    {
-     "w": "W8",
-     "focus": "生活空间《我们的无名英雄》 + unit vocabulary",
-     "learn": "导入: who is an unsung hero in our school? Think-pair-share, then 初读 for gist; 再读 with 阅读放大镜 on what each worker does. Vocabulary: 凭、塔台、范围、警惕、一旦、不堪设想.",
-     "e21": "Civic Literacy: students name three people who keep the school running and what the school would lose without them.",
-     "assess": "活动本 单元六 生活空间; exit slip: one fact and one opinion from the text.",
-     "res": "CPDD 教师手册 1下 单元六; SLS 阅读配套; 2026 1G3 SOW W8 notes"
-    },
-    {
-     "w": "W9",
-     "focus": "核心《我为狮城做贡献》: news report structure, fact and opinion",
-     "learn": "初读 疏通词句; 再读 掌握新闻报道的结构 (headline, lead, body, quotes); 三读 sort statements into 事实 and 意见 and say how they know. Pairs rewrite one opinion as a fact and one fact as an opinion.",
-     "e21": "Civic Literacy and Adaptive Thinking: weigh what the reporter chose to include; whose voice is missing from the report?",
-     "assess": "活动本 核心 阅读理解; success criteria: HR explains how wording signals opinion; MR sorts six statements correctly; LR finds the facts with a word bank.",
-     "res": "活动本 单元六 核心; news clips on SLS"
-    },
-    {
-     "w": "W10",
-     "focus": "电邮三 (share experience, give a view) and the inquiry task",
-     "learn": "先说后写再查: oral rehearsal of the email in pairs using the 六何法 frame, write in class, peer check against the checklist (format, 经验, 看法, 建议). Inquiry task launched (see below).",
-     "e21": "Communication: a real reader (a school worker or the principal) and a response from them where possible.",
-     "assess": "电邮三 marked with the WA2 rubric for feedback only; checklist self-assessment.",
-     "res": "2026 电邮 学生版 and 教师版 notes; WA2 私人电邮 rubric"
-    },
-    {
-     "w": "T3 W10 to T4 W1",
-     "focus": "Guided inquiry and presentation (feeds WA3 authentic assessment)",
-     "learn": "STAR shape. Scenario: the school wants to thank its unsung heroes but does not know their stories. Team inquiry: groups interview one worker (five questions prepared in class, 口语互动), check facts against a second source. Application: a 150-character news-style report with one fact-based opinion, plus a two-minute presentation. Reflection: what changed in how you see their work?",
-     "e21": "All four: Adaptive (interview does not go to plan), Inventive (the report and poster), Civic (community contributors), Communication (presentation and response to questions).",
-     "assess": "WA3 presentation rubric (2026 面试101 rubric adapted): content, language, interaction, reflection.",
-     "res": "2026 1G3 WA3 面试101 package; 40 Stories interview guide"
-    }
-   ],
-   "inquiry": {
-    "q": "Who keeps our school running, and what do they wish we understood about their work?",
-    "approach": "Guided (STAR)",
-    "phases": [
-     "Orientation: the school's thank-you wall has no stories on it. Watch the unit's news clip; list who is missing from it.",
-     "Conceptualisation: groups pick a worker and draft five questions that will give facts, not just opinions.",
-     "Investigation: interview, record, check one fact with a second source; sort notes into fact and opinion.",
-     "Conclusion: news report plus presentation; the class decides which stories go on the wall and why."
-    ]
-   },
-   "adjust": [
-    "2026 taught only 生活空间 and 核心 before the WA3 submission; 巩固《小人物的心声》 moves to the T4 revision week as extended reading.",
-    "The 电邮三 topic is kept (unsung heroes) so the email and the inquiry share one body of knowledge.",
-    "Gap: no oral-interaction rubric for interviews in Sec 1; borrow from the 40 Stories Sec 2 rubric and simplify."
-   ]
+ "hod": {
+  "decisions": []
+ },
+ "oralfw": {
+  "source": "2026 MTL Dept Deployment.xlsx, sheet Oral Exam Qn Coaching Framework",
+  "prep": {
+   "1": "Prep 8 min (AA +2 min)",
+   "2": "Prep 10 min (AA +3 min)",
+   "3": "Prep 10 min (AA +3 min)",
+   "4": "Prep 10 min (AA +3 min)"
   },
-  {
-   "id": "ML|G3|1|1A|1",
-   "lang": "ML",
-   "course": "G3",
-   "sec": 1,
-   "book": "1A",
-   "unit": "1",
-   "title": "Perlu atau Mahu · Need or want",
-   "weeks": "Term 1, weeks 1 to 4 (about 15 periods; CPDD Skema Pengajaran allots M1 to M4)",
-   "why": "Chosen because CPDD's own Skema Pengajaran sample for JATi Ekspres 1A works this unit in full, with learning outcomes, STP routines, assessment tools and success criteria: it is the closest existing model for the redesigned frame.",
-   "domain": [
-    "self"
-   ],
-   "lo": [
-    [
-     "Listening and viewing",
-     "Mendengar ulasan produk dari video dan menyampaikan semula kandungannya (1.1)",
-     "P3 listening comprehension"
-    ],
-    [
-     "Speaking",
-     "Bertutur untuk menyampaikan idea tentang corak kasut yang dipilih (2.2); memberikan pandangan tentang evolusi fesyen remaja",
-     "P3 conversation: give and support a view"
-    ],
-    [
-     "Reading",
-     "Membaca artikel media sosial untuk membuat rumusan (3.4); membaca dan menyampaikan semula isi teks (3.2)",
-     "P2 reading"
-    ],
-    [
-     "Writing",
-     "Mengembangkan idea dengan perincian (4.1); menghasilkan teks refleksi dalam hantaran",
-     "P1 functional writing: forum or blog post"
-    ],
-    [
-     "Language",
-     "Ayat tanya; peribahasa dalam konteks",
-     "P2 language use"
-    ]
-   ],
-   "weeksPlan": [
-    {
-     "w": "W1",
-     "focus": "Pembuka Bicara: evolusi fesyen remaja",
-     "learn": "Lihat-Fikir-Tanya on the textbook pictures (hlm. 2 to 3); Fikir-Berpasangan-Berkongsi; IRF questioning to draw out views on personal appearance.",
-     "e21": "Communication: give a view and respond to a partner's view. Adaptive Thinking: notice how fashion changes and why.",
-     "assess": "Anecdotal: can students describe and justify a view on fashion evolution?",
-     "res": "Buku Teks hlm. 2 to 3; CPDD Skema Pengajaran Ekspres 1A, Unit 1"
-    },
-    {
-     "w": "W1 to 2",
-     "focus": "Bahagian 1 Fikirkan Dahulu: product review video 'Berbaloi', ayat tanya, Ehwal Semasa 'Kilang Peras Tenaga'",
-     "learn": "Read the Farid and jurujual transaction (hlm. 4 to 5), role-play with ayat tanya; T-I-P before the SLS video, then a short oral presentation using Panduan Membuat Penyampaian (hlm. 8); read the sweatshop news item and search Berita Harian via SLS.",
-     "e21": "Civic Literacy: connect the news item on sweatshops to the shoes students buy; who pays for cheap fashion? Communication: presentation with T-I-P.",
-     "assess": "Buku Aktiviti hlm. 2 (ayat tanya), hlm. 3 to 4 (video and news). Success criteria: can build questions to get information about a product; can retell a review with T-I-P.",
-     "res": "Video 'Berbaloi!' on SLS; Buku Aktiviti hlm. 2 to 4; Berita Harian, BeritaMediacorp"
-    },
-    {
-     "w": "W2 to 3",
-     "focus": "Bahagian 2 Ada Cara Lain?: the dilemma, peribahasa, designing a pattern",
-     "learn": "Whiteboarding: predict Farid's options and justify; peribahasa in context (hlm. 9, 11); explore traditional and modern patterns online and design a combined pattern (Buku Aktiviti hlm. 6 to 7); present it; 3-2-1 exit.",
-     "e21": "Inventive Thinking: a new pattern students can explain. Adaptive Thinking: the dilemma has no single right answer.",
-     "assess": "Buku Aktiviti hlm. 5 to 7; anecdotal on the whiteboard presentations. Success criteria: explains at least two options and their consequences; design shows one traditional and one modern element.",
-     "res": "Buku Teks hlm. 11 to 13; Buku Aktiviti hlm. 5 to 7"
-    },
-    {
-     "w": "W3 to 4",
-     "focus": "Bahagian 3 Cantik!: reflection post and the inquiry",
-     "learn": "Model a reflection post (hantaran); students draft with Panduan Menulis, peer review for perincian, publish on SLS and reply to two classmates' posts.",
-     "e21": "Communication: a real audience and replies. Adaptive Thinking: the reflection names what they would decide differently now.",
-     "assess": "Reflection post marked with the WA2 functional-writing rubric for feedback; replies checked for a view plus a reason.",
-     "res": "Buku Teks hlm. 14 to 16; SLS discussion board"
-    }
-   ],
-   "inquiry": {
-    "q": "Perlu atau mahu? How do we decide whether something is worth buying, and who else is affected by our choice?",
-    "approach": "Structured, moving to guided",
-    "phases": [
-     "Orientation: Farid's sneakers and the sweatshop news item; students list what they would want to know before buying.",
-     "Conceptualisation: groups agree three questions about one product a teenager buys (price, who made it, how long it lasts).",
-     "Investigation: find answers from two sources (a review and a news item), record as fact or opinion.",
-     "Conclusion: a one-minute recommendation to the class and a reflection post; the class votes on the most convincing reasoning, not the most popular product."
-    ]
+  "by": {
+   "G1": {
+    "1": "Reading aloud + 2 questions: Q1 personal experience / perspective-taking (training focus); Q2 reasoning: reasons, impact and suggestions.",
+    "2": "Reading aloud + 3 questions: Q1 experience; Q2 reasoning (training focus, min 2 points); Q3 opinion, higher-order (PEEL/OREO, min 1 point).",
+    "3": "Reading aloud + 3 questions; Q3 opinion with argumentative reasoning (min 2 points).",
+    "4": "Reading aloud + all three skills in SEC format."
    },
-   "adjust": [
-    "CPDD allots four weeks; BVSS Term 1 loses W1 to orientation and W6 to 7 to CNY, so Unit 2 starts in W5 and runs to W9 with WA1 (P2) in W8.",
-    "Keep the Ehwal Semasa step: it is the unit's Civic Literacy opening and its only link to a real source.",
-    "Gap: no BVSS rubric yet for the short oral presentation with T-I-P; adapt the Sec 1 WA3 presentation rubric."
-   ]
-  },
-  {
-   "id": "TL|G1|1|1A|2",
-   "lang": "TL",
-   "course": "G1",
-   "sec": 1,
-   "book": "1A",
-   "unit": "2",
-   "title": "மரபும் பண்பாடும் · அறுவடைத் திருநாள் · Heritage and culture: the harvest festival",
-   "weeks": "Term 1, weeks 4 to 7 (15 periods per the CPDD பாடக் கண்ணோட்டம், spread over four weeks with CNY and MT Fortnight)",
-   "why": "Chosen because the CPDD overview already tags this unit for 21CC (civic literacy, global awareness, cross-cultural understanding) and values (harmony), and its production task (an e-banner) is a ready-made Inventive Thinking product for a G1 class with 65% of marks in oral and listening.",
-   "domain": [
-    "family",
-    "community"
-   ],
-   "lo": [
-    [
-     "Speaking",
-     "பொங்கலைப்பற்றி அறிந்த தகவல்களையொட்டிக் கலந்துரையாடுதல்; சூழலுக்கேற்பத் தன்னம்பிக்கையோடு பேசுதல்",
-     "P3 conversation (45%): speak about a familiar festival with confidence"
-    ],
-    [
-     "Reading",
-     "தமிழ் மாதங்களும் பழமொழிகளும்: பனுவலைத் தெளிவான உச்சரிப்போடும் சரளத்தோடும் படித்தல்; சொற்பொருள்",
-     "P3 read aloud; P2 reading MCQ"
-    ],
-    [
-     "Listening",
-     "கேட்டல் கருத்தறிதல்: festival audio",
-     "P3 listening comprehension (20%)"
-    ],
-    [
-     "Writing / production",
-     "கற்போம்; படைப்போம்: தகவல்களைச் சேகரித்து மின் பதாகை தயாரித்தல் (சிற்றேட்டின் கூறுகள்)",
-     "P1 social-media post (format provisional): short typed text for an audience"
-    ],
-    [
-     "Language",
-     "இனிய இலக்கணம்; மரபுத்தொடர்கள்",
-     "P2 grammar and idioms MCQ"
-    ]
-   ],
-   "weeksPlan": [
-    {
-     "w": "W4",
-     "focus": "நுழைவாயில்: Pongal video and discussion",
-     "learn": "Watch the Pongal clip; Think-Pair-Share what students already know; peer-assessment sheet for the discussion (பின்னிணைப்பு).",
-     "e21": "Civic Literacy: Pongal in Singapore versus Tamil Nadu; what is shared and what is local. Communication: speak in full sentences about a known topic.",
-     "assess": "Holistic (முழுமையான மதிப்பீடு): peer sheet on confidence and vocabulary.",
-     "res": "பாடநூல்; ஒளிக்காட்சி பொங்கல்; CPDD கண்ணோட்டம் 1A தொகுதி 2"
-    },
-    {
-     "w": "W5",
-     "focus": "படிப்போம்: Tamil months and proverbs; read aloud",
-     "learn": "Choral then paired read-aloud with attention to pronunciation and pausing; சொற்பொருள் அறிவோம் with picture cards; match proverbs to months.",
-     "e21": "Civic Literacy: proverbs as community knowledge; students ask a family member for one more saying.",
-     "assess": "Read-aloud checklist (pronunciation, pausing); workbook 2.1.",
-     "res": "பாடநூல் அறுவடைத் திருநாள்; பயிற்சிநூல் 2.1"
-    },
-    {
-     "w": "W6",
-     "focus": "கேட்டல் கருத்தறிதல்; இனிய இலக்கணம்; மொழி விளையாட்டு",
-     "learn": "Listening task with the audio clip; grammar point through a game; idiom of the week.",
-     "e21": "Adaptive Thinking: the listening text describes a festival celebrated differently; students adjust their earlier list.",
-     "assess": "Workbook listening item; quick grammar quiz on SLS.",
-     "res": "ஒலிப்பகுதி; பயிற்சிநூல்; SLS quiz"
-    },
-    {
-     "w": "W7",
-     "focus": "கற்போம்; படைப்போம்: the e-banner and the inquiry",
-     "learn": "Study the parts of a brochure (சிற்றேடு); groups collect three facts about how Singapore Tamil families celebrate Pongal today (one from a family interview), design an e-banner on Canva, present it in spoken Tamil for one minute.",
-     "e21": "Inventive Thinking: the banner. Communication: the one-minute presentation and answering one question from the class.",
-     "assess": "Self-assessment sheet (பின்னிணைப்பு) plus teacher holistic grade; presentation counts toward the Term 3 WA3 presentation rubric as a rehearsal.",
-     "res": "பாடநூல் சிற்றேடு; பயிற்சிநூல் 2.1 அ, ஆ; Canva template"
-    }
-   ],
-   "inquiry": {
-    "q": "How do Singapore Tamil families celebrate Pongal today, and what has changed since our grandparents' time?",
-    "approach": "Guided",
-    "phases": [
-     "Orientation: the Pongal video shows a village celebration; students list what looks different from their own homes.",
-     "Conceptualisation: each group chooses one aspect (food, kolam, clothes, games) and two questions to ask an older family member.",
-     "Investigation: short home interview in Tamil (or Tamil with support), photos or drawings, notes in the workbook.",
-     "Conclusion: e-banner and one-minute presentation; the class compares then and now and discusses why traditions change."
-    ]
+   "G2": {
+    "1": "Reading aloud + 2 questions: Q1 personal experience / perspective-taking (training focus); Q2 reasoning: reasons, impact and suggestions.",
+    "2": "Reading aloud + 3 questions: Q1 experience; Q2 reasoning (training focus, min 2 points); Q3 opinion, higher-order (PEEL/OREO, min 1 point).",
+    "3": "Reading aloud + 3 questions; Q3 demands argumentative reasoning (CL: 举例论证、对比论证; min 2 points).",
+    "4": "Reading aloud + all three skills in SEC format."
    },
-   "adjust": [
-    "CPDD's 15 periods run across CNY week and MT Fortnight; the MT Fortnight cultural booth can double as the e-banner showcase.",
-    "The P1 format for TL G1 is still provisional on this site; the e-banner caption is written as a short typed social-media post so it serves either outcome.",
-    "Gap: no TL G1 oral rubric for a one-minute presentation; adapt the G1 Oral Rubrics document in the TL folder."
-   ]
+   "G3": {
+    "1": "Reading aloud + 2 questions: Q1 personal experience / perspective-taking (training focus); Q2 reasoning: reasons, impact and suggestions.",
+    "2": "Reading aloud + 3 questions: Q1 experience; Q2 reasoning (training focus, min 2 points); Q3 opinion, higher-order (PEEL/OREO, min 1 point). CL: 口头报告只要求两个分论点.",
+    "3": "Reading aloud + 3 questions; Q3 demands argumentative reasoning (CL: 举例论证、对比论证; min 2 points).",
+    "4": "Reading aloud + all three skills in SEC format."
+   },
+   "H": {
+    "1": "No reading aloud. 3 questions: Q1 experience / perspective-taking (training focus); Q2 reasons and impact plus suggestions (min 2 points); Q3 opinion, higher-order (PEEL/OREO, min 1 point).",
+    "2": "Planned response (higher-order thinking, training focus) + 2 questions: Q1 reasons and impact; Q2 suggestions.",
+    "3": "Planned response + discussion: elaboration and explanation; reasoning: support an opinion, give evidence and suggestions.",
+    "4": "Planned response + discussion in SEC format."
+   }
   }
- ],
- "e21src": "Definitions, learning goals and secondary milestones: MOE 21st Century Competencies Office, Learning Goals and Developmental Milestones for Emerging 21CC (20 Oct 2023), read on OPAL2 on 31 Oct 2026; assessment principles: Guidelines on the Assessment of Emerging 21CC (Feb 2025). School descriptors: BVSS E21CC priority areas slide."
+ }
 }
