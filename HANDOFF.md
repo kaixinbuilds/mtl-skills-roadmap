@@ -11,6 +11,15 @@ A department wall chart of what the CPDD 2021-syllabus teacher guides teach in C
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
+## EL mode covers the whole site (31 Oct 2026, fifth update)
+
+The HOD found that with the EL toggle on, the Writing task bank and the Scheme of work still showed CL, ML and TL text with no English (textbook prompts, Panduan Guru outcomes, TL overview activities, themes, listening tasks, SEAB assessment objectives). Now every string on every tab and in every unit dialog has an English rendering in EL mode; MTL mode is unchanged.
+
+- **How it works**: `tools/en.json` (`map`: exact source string → English, 1,974 entries) is embedded as `DATA.en` by `enrich.py`. In EL mode `esc()` swaps any string found in `DATA.en` for its English, so new rows that reuse existing source text are covered automatically. `lang` attributes follow the toggle (`LG()`); the CL type labels next to the English writing types are hidden in EL mode; page refs read "Textbook p. n".
+- **Finding gaps**: in EL mode the page records any CL or TL string (and, if `window.__MSR` is set to a Malay word regex, any Malay string) that reached `esc()` without an English entry in `window.__miss`. Render every tab, course, year and unit dialog in EL mode and read `__miss`: it was empty on 31 Oct. Add the missing strings to `tools/en.json` and rerun `enrich.py`.
+- **Writing bank CSV** now carries `Skill (English)` and `Task (English)` columns.
+- **Translations need checking by each language team.** They were machine-assisted on 31 Oct. Points the translators flagged: CL names follow the e-mail addresses where given (谢宝华 Chia Pohhua), otherwise pinyin; 感恩日 rendered "Thanksgiving Day"; 比喻论证法 "argument by analogy". ML: "Instapos" kept as is; "perantau" glossed; source typos "dirir", "sambal" read as "diri", "sambil"; one SEAB objective string carries a page-footer fragment from the PDF. TL: நிகழ்வுக் கட்டுரை "event recount essay", திறனாய்வு "literary appreciation", கோட்டோவியக் கதை "comic-strip story", ஒலிக்காட்சி (likely a typo) "audio-visual clip"; a few proverb titles are given by meaning; one Pongal objective is truncated in the source.
+
 ## Writing task bank tab (31 Oct 2026, fourth update)
 
 `Writing task bank` (完整写作题库) in the Planning group (`vWrite`, `wbCSV`; data `tools/sow.json` `wbank`). Two tables for the language and course chosen in the side panel:
@@ -78,7 +87,7 @@ The HOD found the first planning layer too much to digest. It was replaced:
 7. **Review the inferred tags** (rules are deliberately broad); consider a `confirmed` provenance value for department-vetted tags.
 8. **Get the missing guides**: ML Sec 4 Units 4 to 6 Panduan Guru; TL 4G1 Unit 6 lesson prep; TL lesson-prep PDFs need OCR or Word versions.
 9. **Design-matrix text for G2, G3 and HMT** on the Pedagogical design tab.
-10. **Translations** for the SOW grid labels (English only in MTL mode, the page's convention for overview text).
+10. **Translations**: review `tools/en.json` per language (see the fifth update); the SOW grid labels stay English in MTL mode, the page's convention for overview text.
 11. **SOW export to Word or Excel**: the CSV covers the grid; a formatted export is the next step if teachers want to edit offline.
 
 ## Sources read for the 31 Oct update

@@ -139,6 +139,9 @@ D["ui"]["t_sow"] = {"en":"Scheme of work 2027","zh":"2027教学进度表","ms":"
 D["iblTg"]["CL"] = "《华文伴我行》教师手册 do not tag units for inquiry. Every book's 差异教学 notes name 引导——探究 (guided inquiry) as one of two teaching modes, and every unit ends with 文化探索 (look it up and share) and a 综合任务 (integrated task: 展示、交流、反思). 探究 itself appears once or twice per book; 综合任务 about twenty times."
 D["iblTgEn"]["CL"] = "The CL guides don't tag units for inquiry. Every book's differentiated-instruction notes name guided inquiry (引导——探究) as one of two teaching modes, and every unit ends with a culture-exploration extension (look it up online and share) and an integrated task (make, present, reflect). The word inquiry appears once or twice per book; the integrated task about twenty times."
 
+# ---------- 6. English renderings for EL mode (tools/en.json: exact source string -> English) ----------
+D["en"] = json.loads((ROOT / "tools" / "en.json").read_text(encoding="utf-8")).get("map", {})
+
 new = json.dumps(D, ensure_ascii=False)
 HTML.write_text(h[:i] + new + h[i+end:], encoding="utf-8")
 from collections import Counter
