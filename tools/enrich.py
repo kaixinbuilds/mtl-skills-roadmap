@@ -152,6 +152,8 @@ D["design"].setdefault("about", {})["sow"] = D["sow"]["about"]
 D["ui"].pop("t_stock", None)
 D["ui"]["t_write"] = {"en":"Writing task bank","zh":"完整写作题库","ms":"Bank tugasan penulisan","ta":"எழுத்துப் பணித் தொகுப்பு"}
 D["design"]["about"]["write"] = D["sow"].get("wbankAbout", {"what":"","points":[],"use":""})
+D["ui"]["t_psle"] = {"en":"PSLE to SEC","zh":"小六会考到中学","ms":"PSLE ke SEC","ta":"PSLE முதல் SEC வரை"}
+D["design"]["about"]["psle"] = D["sow"].get("psle", {}).get("about", {"what":"","points":[],"use":""})
 D["ui"]["t_sow"] = {"en":"Scheme of work 2027","zh":"2027教学进度表","ms":"Skema Pengajaran 2027","ta":"2027 பாடத்திட்டம்"}
 
 # ---------- 5. CL inquiry wording (recheck of all 44 CL 教师手册 PDFs, 31 Oct 2026) ----------

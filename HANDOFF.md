@@ -11,6 +11,12 @@ A department wall chart of what the CPDD 2021-syllabus teacher guides teach in C
 
 Two comparisons must always be easy: across languages for the same course, and within a language across levels of demand.
 
+## Clickable writing charts, PSLE to SEC tab, WA labels (31 Oct 2026, tenth update)
+
+- **Writing task bank**: every item in `tools/sow.json` `wbank.items` has `gist` (source language) and `gist_en` (English), at most about 12 characters or 7 words, written by reading each task. The task bank shows the gist as one line; clicking it opens the full prompt, sub-type and page (`wbItem`). Each S1 to S4 bar in the first table is a button: it opens a pop-up list of that year's tasks as gists with unit links (`wbPop`, `wbPopClose`; Esc or a click outside closes it). Hover and selected states on bars and task lines. Charts are taller so the glow ring clears the count; the hero scene viewBox is padded and inset from the page edge.
+- **PSLE to SEC tab** (`psle`, `vPsle`; data `sow.json` `psle`, built from the nine SEAB PSLE syllabuses examined in 2026, codes 0005 to 0027, against SEC 2027 K120 to K357): for each language, Foundation to G1, Standard to G2 and G3, Higher to Higher MTL, by Paper 1 writing, Paper 2 language use and comprehension, Paper 3 oral and listening, with a "students must learn to" column. Caveats are listed on the tab: no 2027 PSLE format page yet; SEC ML and TL detail comes from the site's `exam` data, not a re-read of the PDFs.
+- **Assessment row (SOW grid)**: Sec 1 to 3 WA1 to WA3 follow the 2026 MT Assessment Framework, with no weeks shown (`nodate`). P1 component = functional writing; P2 component = language application and comprehension. Authentic assessments per language in `aa`: Sec 1 presentation (CL interview video); Sec 2 newspaper making, personality profile (人物专访), BVSS 40th anniversary; Sec 3 video essay (CL), debate (ML, TL), with the Term 3 O-level oral note. The earlier Sec 3 HMT note (timed practice on the G3 prelim paper) was replaced by the framework entry.
+
 ## CPDD 21CC tags re-read from every guide (31 Oct 2026, ninth update)
 
 `tools/cpdd21.py` reads the guides on the drive and writes `tools/cpdd21.json` (unit → 21CC domain → E21CC area named, with the activity and original wording); `tools/enrich.py` attaches each domain once per unit as a `cpdd` tag and adds the E21CC area as `derived` only where the guide names the specific competency.
